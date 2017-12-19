@@ -9,37 +9,50 @@ class Header extends Component {
         return;
       case false:
         return  (
-          <a href="/auth/google" className="navbar-item">
-            Sign In with Google
-          </a>
+          <li>
+            <a href="/auth/google" className="navbar-item waves-effect waves-light">
+              <i className="material-icons left">person</i>
+              Sign In with Google
+            </a>
+          </li>
         );
       default:
-        return <a href="/api/logout" className="navbar-item">Sign Out</a>;
+        return (
+          <li>
+            <a href="/api/logout" className="navbar-item waves-effect waves-light">
+              <i className="material-icons left">person</i>
+              Sign Out
+            </a>
+          </li>
+        );
     }
   }
 
   render() {
     return (
-      <header>
-        <nav className="navbar is-light">
+      <nav>
+        <div className="nav-wrapper container">
+          <Link to="/" className="brand-logo">
+            Simple Polls
+          </Link>
 
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item">
-              Simple Polls
-            </Link>
-          </div>
-
-          <div className="navbar-menu">
-            <div className="navbar-start">
-              <NavLink to="/polls" className="navbar-item">View Polls</NavLink>
-              <NavLink to="/polls/new" className="navbar-item">Create a Poll</NavLink>
-            </div>
-            <div className="navbar-end">
-              {this.renderContent()}
-            </div>
-          </div>
-        </nav>
-      </header>
+          <ul className="right">
+            <li>
+              <NavLink to="/polls" className="waves-effect waves-light">
+                <i className="material-icons left">dashboard</i>
+                Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/polls/new" className="waves-effect waves-light">
+                <i className="material-icons left">add</i>
+                Create a Poll
+              </NavLink>
+            </li>
+            {this.renderContent()}
+          </ul>
+        </div>
+      </nav>
     );
   }
 }

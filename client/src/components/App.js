@@ -6,6 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
+import CreatePoll from './polls/CreatePoll';
 
 class App extends Component {
   componentDidMount() {
@@ -19,11 +20,9 @@ class App extends Component {
 
           <Header />
 
-          <main className="container">
-              <Route exact path="/" component={Landing} />
-              <Route exact path="/polls" component={Dashboard} />
-              <Route path="/polls/new" component={Dashboard} />
-          </main>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/polls" component={Dashboard} />
+          <Route path="/polls/new" component={CreatePoll} />
 
           <Footer />
 
