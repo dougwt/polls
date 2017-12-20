@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
+import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Link } from 'react-router-dom';
-import { Button, Row, Icon } from 'react-materialize';
+import { Col, Button, Row, Icon } from 'react-materialize';
 import PollField from './PollField';
 
 class PollForm extends Component {
@@ -12,7 +12,7 @@ class PollForm extends Component {
     };
   }
 
-  mapChoiceToField(index) {
+  renderChoiceField(index) {
     const choiceIcons = {
       1: 'looks_one',
       2: 'looks_two',
@@ -36,12 +36,36 @@ class PollForm extends Component {
     );
   }
 
-  renderChoiceFields(length) {
-    let fields = []
-    for (let i = 1; i <= length; i++) {
-      fields.push(this.mapChoiceToField(i));
-    }
-    return fields;
+  renderChoices({ fields, meta: { error } }) {
+    return (
+      <ul>
+        {fields.map((choice, index) => (
+          <li key={index}>
+            <Col s={11}>
+              { this.renderChoiceField(index + 1) }
+            </Col>
+            <Col s={1}>
+              <Button
+                title="Remove Choice"
+                icon="delete"
+                flat
+                node="a"
+                onClick={() => fields.remove(index)}
+              />
+            </Col>
+          </li>
+        ))}
+        <li className="center-align">
+          <Button
+            flat
+            className={ fields.length > 5 ? 'disabled' : '' }
+            onClick={() => {if (fields.length < 6) { fields.push() }}}
+          >
+            Add Choice
+          </Button>
+        </li>
+      </ul>
+    );
   }
 
   render() {
@@ -53,9 +77,10 @@ class PollForm extends Component {
             label="What question would you like to ask?"
             icon="question_answer"
             name="question"
-            component={PollField} />
+            component={PollField}
+          />
 
-          {this.renderChoiceFields(this.state.numChoices)}
+          <FieldArray name="choices" component={this.renderChoices.bind(this)} />
 
           <Row>
             <Link to="/surveys" className="red btn-flat white-text">
