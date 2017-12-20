@@ -1,73 +1,10 @@
 import React, { Component } from 'react';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Link } from 'react-router-dom';
-import { Col, Button, Row, Icon } from 'react-materialize';
+import { Button, Row, Icon } from 'react-materialize';
 import PollField from './PollField';
 
 class PollForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      numChoices: 2
-    };
-  }
-
-  renderChoiceField(index) {
-    const choiceIcons = {
-      1: 'looks_one',
-      2: 'looks_two',
-      3: 'looks_3',
-      4: 'looks_4',
-      5: 'looks_5',
-      6: 'looks_6',
-      7: 'looks_7',
-      8: 'looks_8',
-      9: 'looks_9'
-    };
-
-    return (
-      <Field
-        label={`Choice ${index}`}
-        icon={choiceIcons[index]}
-        name={`choice_${index}`}
-        key={index}
-        component={PollField}
-      />
-    );
-  }
-
-  renderChoices({ fields, meta: { error } }) {
-    return (
-      <ul>
-        {fields.map((choice, index) => (
-          <li key={index}>
-            <Col s={11}>
-              { this.renderChoiceField(index + 1) }
-            </Col>
-            <Col s={1}>
-              <Button
-                title="Remove Choice"
-                icon="delete"
-                flat
-                node="a"
-                onClick={() => fields.remove(index)}
-              />
-            </Col>
-          </li>
-        ))}
-        <li className="center-align">
-          <Button
-            flat
-            className={ fields.length > 5 ? 'disabled' : '' }
-            onClick={() => {if (fields.length < 6) { fields.push() }}}
-          >
-            Add Choice
-          </Button>
-        </li>
-      </ul>
-    );
-  }
-
   render() {
     return (
       <div>
@@ -80,7 +17,7 @@ class PollForm extends Component {
             component={PollField}
           />
 
-          <FieldArray name="choices" component={this.renderChoices.bind(this)} />
+          <FieldArray name="choices" component={renderChoices} />
 
           <Row>
             <Link to="/surveys" className="red btn-flat white-text">
@@ -96,6 +33,64 @@ class PollForm extends Component {
       </div>
     );
   }
+}
+
+function renderChoiceField(index) {
+  const choiceIcons = {
+    1: 'looks_one',
+    2: 'looks_two',
+    3: 'looks_3',
+    4: 'looks_4',
+    5: 'looks_5',
+    6: 'looks_6',
+    7: 'looks_7',
+    8: 'looks_8',
+    9: 'looks_9'
+  };
+
+  return (
+    <Field
+      label={`Choice ${index}`}
+      icon={choiceIcons[index]}
+      name={`choice_${index}`}
+      key={index}
+      component={PollField}
+    />
+  );
+}
+
+function renderChoices({ fields, meta: { error } }) {
+  return (
+    <ul>
+      {fields.map((choice, index) => (
+        <li key={index}>
+          { renderChoiceField(index + 1) }
+        </li>
+      ))}
+      <li className="center-align">
+        <Button
+          flat
+          className={ fields.length > 5 ? 'disabled' : '' }
+          onClick={() => fields.push() }
+        >
+          <Icon left>add</Icon>
+          Add Choice
+        </Button>
+        <Button
+          flat
+          className={ fields.length < 3 ? 'disabled' : '' }
+          onClick={() => {
+            console.log(fields);
+            console.log('length:', fields.length);
+            fields.remove(fields.length - 1)
+          } }
+        >
+          <Icon left>delete</Icon>
+          Remove Choice
+        </Button>
+      </li>
+    </ul>
+  );
 }
 
 function validate(values) {
