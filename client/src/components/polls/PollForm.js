@@ -9,15 +9,18 @@ class PollForm extends Component {
     return (
       <div>
         <form onSubmit={this.props.handleSubmit(this.props.onPollSubmit)}>
+          <Row>
+            <Field
+              label="What question would you like to ask?"
+              icon="question_answer"
+              name="question"
+              component={PollField}
+            />
+          </Row>
 
-          <Field
-            label="What question would you like to ask?"
-            icon="question_answer"
-            name="question"
-            component={PollField}
-          />
-
-          <FieldArray name="choices" component={renderChoices} />
+          <Row>
+            <FieldArray name="choices" component={renderChoices} />
+          </Row>
 
           <Row>
             <Link to="/surveys" className="red btn-flat white-text">
@@ -79,11 +82,7 @@ function renderChoices({ fields, meta: { error } }) {
         <Button
           flat
           className={ fields.length < 3 ? 'disabled' : '' }
-          onClick={() => {
-            console.log(fields);
-            console.log('length:', fields.length);
-            fields.remove(fields.length - 1)
-          } }
+          onClick={() => fields.pop() }
         >
           <Icon left>delete</Icon>
           Remove Choice
