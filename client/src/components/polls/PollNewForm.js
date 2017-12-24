@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { Button, Row, Icon } from 'react-materialize';
-import PollField from './PollField';
+import PollNewField from './PollNewField';
 
 class PollForm extends Component {
   render() {
@@ -14,7 +14,7 @@ class PollForm extends Component {
               label="What question would you like to ask?"
               icon="question_answer"
               name="question"
-              component={PollField}
+              component={PollNewField}
             />
           </Row>
 
@@ -58,7 +58,7 @@ function renderChoiceField(index) {
       icon={choiceIcons[index]}
       name={`choice_${index}`}
       key={index}
-      component={PollField}
+      component={PollNewField}
     />
   );
 }
@@ -129,6 +129,6 @@ function validate(values) {
 
 export default reduxForm({
   validate,
-  form: 'pollForm',
+  form: 'pollNewForm',
   destroyOnUnmount: false
 })(PollForm);

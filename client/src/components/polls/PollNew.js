@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
-import PollForm from './PollForm';
-import PollFormReview from './PollFormReview';
+import PollNewForm from './PollNewForm';
+import PollNewFormReview from './PollNewFormReview';
 
 const initialValues = {
   choices: [
@@ -15,11 +15,11 @@ class PollNew extends Component {
 
   renderContent() {
     if (this.state.showFormReview) {
-      return <PollFormReview onCancel={() => this.setState({ showFormReview: false})}/>;
+      return <PollNewFormReview onCancel={() => this.setState({ showFormReview: false})}/>;
     }
 
     return (
-      <PollForm
+      <PollNewForm
         onPollSubmit={() => this.setState({ showFormReview: true })}
         initialValues={initialValues}
       />);
@@ -40,5 +40,5 @@ class PollNew extends Component {
 }
 
 export default reduxForm({
-  form: 'pollForm'
+  form: 'pollNewForm'
 })(PollNew);
