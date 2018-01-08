@@ -1,0 +1,1320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PollList renders properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PollList />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Row>
+          <h6
+                    className="header section-title"
+          />
+</Row>,
+        <Row>
+          <Collection>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 1
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 2
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 3
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 4
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 5
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 6
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 7
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 8
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 9
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+                    <CollectionItem
+                              href="#"
+                    >
+                              Sample Poll 10
+                              <Badge>
+                                        1
+                              </Badge>
+                    </CollectionItem>
+          </Collection>
+</Row>,
+        <Row
+          className="center-align"
+>
+          <Pagination
+                    activePage={2}
+                    items={10}
+                    maxButtons={8}
+          />
+</Row>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <h6
+            className="header section-title"
+/>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "header section-title",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h6",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Collection>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 1
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 2
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 3
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 4
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 5
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 6
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 7
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 8
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 9
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+            <CollectionItem
+                        href="#"
+            >
+                        Sample Poll 10
+                        <Badge>
+                                    1
+                        </Badge>
+            </CollectionItem>
+</Collection>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 1
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 2
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 3
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 4
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 5
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 6
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 7
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 8
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 9
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+              <CollectionItem
+                href="#"
+>
+                Sample Poll 10
+                <Badge>
+                                1
+                </Badge>
+</CollectionItem>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 1",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 1",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 2",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 2",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 3",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 3",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 4",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 4",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 5",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 5",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 6",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 6",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 7",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 7",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 8",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 8",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 9",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 9",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Sample Poll 10",
+                  <Badge>
+                    1
+</Badge>,
+                ],
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Sample Poll 10",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "1",
+                  },
+                  "ref": null,
+                  "rendered": "1",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Pagination
+            activePage={2}
+            items={10}
+            maxButtons={8}
+/>,
+          "className": "center-align",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activePage": 2,
+            "items": 10,
+            "maxButtons": 8,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Row>
+            <h6
+                        className="header section-title"
+            />
+</Row>,
+          <Row>
+            <Collection>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 1
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 2
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 3
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 4
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 5
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 6
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 7
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 8
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 9
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+                        <CollectionItem
+                                    href="#"
+                        >
+                                    Sample Poll 10
+                                    <Badge>
+                                                1
+                                    </Badge>
+                        </CollectionItem>
+            </Collection>
+</Row>,
+          <Row
+            className="center-align"
+>
+            <Pagination
+                        activePage={2}
+                        items={10}
+                        maxButtons={8}
+            />
+</Row>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <h6
+              className="header section-title"
+/>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "header section-title",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h6",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Collection>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 1
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 2
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 3
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 4
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 5
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 6
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 7
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 8
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 9
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+              <CollectionItem
+                            href="#"
+              >
+                            Sample Poll 10
+                            <Badge>
+                                          1
+                            </Badge>
+              </CollectionItem>
+</Collection>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 1
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 2
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 3
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 4
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 5
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 6
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 7
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 8
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 9
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+                <CollectionItem
+                  href="#"
+>
+                  Sample Poll 10
+                  <Badge>
+                                    1
+                  </Badge>
+</CollectionItem>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 1",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 1",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 2",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 2",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 3",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 3",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 4",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 4",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 5",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 5",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 6",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 6",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 7",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 7",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 8",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 8",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 9",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 9",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Sample Poll 10",
+                    <Badge>
+                      1
+</Badge>,
+                  ],
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Sample Poll 10",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "1",
+                    },
+                    "ref": null,
+                    "rendered": "1",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Pagination
+              activePage={2}
+              items={10}
+              maxButtons={8}
+/>,
+            "className": "center-align",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "activePage": 2,
+              "items": 10,
+              "maxButtons": 8,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

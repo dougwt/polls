@@ -10,7 +10,7 @@ const initialValues = {
   ]
 };
 
-class PollNew extends Component {
+export class PollNew extends Component {
   state = { showFormReview: false };
 
   renderContent() {

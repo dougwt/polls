@@ -4,12 +4,12 @@ import { withRouter } from 'react-router-dom';
 import { Card, Input, Button, Row, Icon } from 'react-materialize';
 import * as actions from '../../actions';
 
-const PollFormReview = ({ onCancel, formValues, submitPoll, history }) => {
+export const PollNewFormReview = ({ onCancel, formValues, submitPoll, history }) => {
   return (
     <div>
       <h5>Please confirm your poll</h5>
 
-      {console.log(formValues)}
+      {/* {console.log(formValues)} */}
 
       <Row>
     		<Card className='darken-1' title={formValues.question}>
@@ -35,7 +35,7 @@ const PollFormReview = ({ onCancel, formValues, submitPoll, history }) => {
       <Row>
         <Button
           node="a"
-          className="red btn-flat white-text"
+          className="red btn-back btn-flat white-text"
           waves="light"
           onClick={onCancel}
         >
@@ -44,7 +44,7 @@ const PollFormReview = ({ onCancel, formValues, submitPoll, history }) => {
         </Button>
 
         <Button
-          className="teal btn-flat right white-text"
+          className="teal btn-create btn-flat right white-text"
           waves="light"
           onClick={() => submitPoll(formValues, history)}
         >
@@ -61,11 +61,13 @@ function renderChoices(values) {
 
   for (let choice = 1; choice <= values.choices.length; choice++) {
     let field = `choice_${choice}`;
-    choices.push(
-      <Row key={choice}>
-        <Input name="group1" type="radio" value='{choice}' label={values[field]} />
-      </Row>
-    )
+    if(values[field]) {
+      choices.push(
+        <Row key={choice}>
+          <Input name="choices" type="radio" value={choice.toString()} label={values[field]} />
+        </Row>
+      )
+    }
   }
 
   return choices;
@@ -73,8 +75,8 @@ function renderChoices(values) {
 
 function mapStateToProps(state) {
   return {
-    formValues: state.form.pollForm.values
+    formValues: state.form.pollNewForm.values
   };
 }
 
-export default connect(mapStateToProps, actions)(withRouter(PollFormReview));
+export default connect(mapStateToProps, actions)(withRouter(PollNewFormReview));

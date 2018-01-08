@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button, Row, Icon } from 'react-materialize';
 import PollNewField from './PollNewField';
 
-class PollForm extends Component {
+export class PollNewForm extends Component {
   render() {
     return (
       <div>
@@ -131,4 +131,4 @@ export default reduxForm({
   validate,
   form: 'pollNewForm',
   destroyOnUnmount: false
-})(PollForm);
+})(PollNewForm);

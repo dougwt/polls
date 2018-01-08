@@ -1,0 +1,776 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard renders properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Dashboard />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Container>
+        <Row>
+                <div
+                        className="col s12"
+                >
+                        <h3>
+                                Dashboard
+                        </h3>
+                        <ul
+                                className="tabs"
+                        >
+                                <li
+                                        className="tab col s3"
+                                >
+                                        <a
+                                                href="#my"
+                                        >
+                                                My Polls
+                                        </a>
+                                </li>
+                                <li
+                                        className="tab col s3"
+                                >
+                                        <a
+                                                href="#other"
+                                        >
+                                                Other Polls
+                                        </a>
+                                </li>
+                        </ul>
+                </div>
+        </Row>
+        <Row>
+                <div
+                        className="col s12"
+                        id="my"
+                >
+                        <PollList
+                                title="This list contains all the polls created by you."
+                        />
+                </div>
+                <div
+                        className="col s12"
+                        id="other"
+                >
+                        <PollList
+                                title="This list contains all the polls created by other users."
+                        />
+                </div>
+        </Row>
+</Container>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Row>
+            <div
+                        className="col s12"
+            >
+                        <h3>
+                                    Dashboard
+                        </h3>
+                        <ul
+                                    className="tabs"
+                        >
+                                    <li
+                                                className="tab col s3"
+                                    >
+                                                <a
+                                                            href="#my"
+                                                >
+                                                            My Polls
+                                                </a>
+                                    </li>
+                                    <li
+                                                className="tab col s3"
+                                    >
+                                                <a
+                                                            href="#other"
+                                                >
+                                                            Other Polls
+                                                </a>
+                                    </li>
+                        </ul>
+            </div>
+</Row>,
+          <Row>
+            <div
+                        className="col s12"
+                        id="my"
+            >
+                        <PollList
+                                    title="This list contains all the polls created by you."
+                        />
+            </div>
+            <div
+                        className="col s12"
+                        id="other"
+            >
+                        <PollList
+                                    title="This list contains all the polls created by other users."
+                        />
+            </div>
+</Row>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <div
+              className="col s12"
+>
+              <h3>
+                            Dashboard
+              </h3>
+              <ul
+                            className="tabs"
+              >
+                            <li
+                                          className="tab col s3"
+                            >
+                                          <a
+                                                        href="#my"
+                                          >
+                                                        My Polls
+                                          </a>
+                            </li>
+                            <li
+                                          className="tab col s3"
+                            >
+                                          <a
+                                                        href="#other"
+                                          >
+                                                        Other Polls
+                                          </a>
+                            </li>
+              </ul>
+</div>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  Dashboard
+</h3>,
+                <ul
+                  className="tabs"
+>
+                  <li
+                                    className="tab col s3"
+                  >
+                                    <a
+                                                      href="#my"
+                                    >
+                                                      My Polls
+                                    </a>
+                  </li>
+                  <li
+                                    className="tab col s3"
+                  >
+                                    <a
+                                                      href="#other"
+                                    >
+                                                      Other Polls
+                                    </a>
+                  </li>
+</ul>,
+              ],
+              "className": "col s12",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Dashboard",
+                },
+                "ref": null,
+                "rendered": "Dashboard",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li
+                      className="tab col s3"
+>
+                      <a
+                                            href="#my"
+                      >
+                                            My Polls
+                      </a>
+</li>,
+                    <li
+                      className="tab col s3"
+>
+                      <a
+                                            href="#other"
+                      >
+                                            Other Polls
+                      </a>
+</li>,
+                  ],
+                  "className": "tabs",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="#my"
+>
+                        My Polls
+</a>,
+                      "className": "tab col s3",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "My Polls",
+                        "href": "#my",
+                      },
+                      "ref": null,
+                      "rendered": "My Polls",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="#other"
+>
+                        Other Polls
+</a>,
+                      "className": "tab col s3",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Other Polls",
+                        "href": "#other",
+                      },
+                      "ref": null,
+                      "rendered": "Other Polls",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <div
+                className="col s12"
+                id="my"
+>
+                <PollList
+                                title="This list contains all the polls created by you."
+                />
+</div>,
+              <div
+                className="col s12"
+                id="other"
+>
+                <PollList
+                                title="This list contains all the polls created by other users."
+                />
+</div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <PollList
+                  title="This list contains all the polls created by you."
+/>,
+                "className": "col s12",
+                "id": "my",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "title": "This list contains all the polls created by you.",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <PollList
+                  title="This list contains all the polls created by other users."
+/>,
+                "className": "col s12",
+                "id": "other",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "title": "This list contains all the polls created by other users.",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Container>
+          <Row>
+                    <div
+                              className="col s12"
+                    >
+                              <h3>
+                                        Dashboard
+                              </h3>
+                              <ul
+                                        className="tabs"
+                              >
+                                        <li
+                                                  className="tab col s3"
+                                        >
+                                                  <a
+                                                            href="#my"
+                                                  >
+                                                            My Polls
+                                                  </a>
+                                        </li>
+                                        <li
+                                                  className="tab col s3"
+                                        >
+                                                  <a
+                                                            href="#other"
+                                                  >
+                                                            Other Polls
+                                                  </a>
+                                        </li>
+                              </ul>
+                    </div>
+          </Row>
+          <Row>
+                    <div
+                              className="col s12"
+                              id="my"
+                    >
+                              <PollList
+                                        title="This list contains all the polls created by you."
+                              />
+                    </div>
+                    <div
+                              className="col s12"
+                              id="other"
+                    >
+                              <PollList
+                                        title="This list contains all the polls created by other users."
+                              />
+                    </div>
+          </Row>
+</Container>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Row>
+              <div
+                            className="col s12"
+              >
+                            <h3>
+                                          Dashboard
+                            </h3>
+                            <ul
+                                          className="tabs"
+                            >
+                                          <li
+                                                        className="tab col s3"
+                                          >
+                                                        <a
+                                                                      href="#my"
+                                                        >
+                                                                      My Polls
+                                                        </a>
+                                          </li>
+                                          <li
+                                                        className="tab col s3"
+                                          >
+                                                        <a
+                                                                      href="#other"
+                                                        >
+                                                                      Other Polls
+                                                        </a>
+                                          </li>
+                            </ul>
+              </div>
+</Row>,
+            <Row>
+              <div
+                            className="col s12"
+                            id="my"
+              >
+                            <PollList
+                                          title="This list contains all the polls created by you."
+                            />
+              </div>
+              <div
+                            className="col s12"
+                            id="other"
+              >
+                            <PollList
+                                          title="This list contains all the polls created by other users."
+                            />
+              </div>
+</Row>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <div
+                className="col s12"
+>
+                <h3>
+                                Dashboard
+                </h3>
+                <ul
+                                className="tabs"
+                >
+                                <li
+                                                className="tab col s3"
+                                >
+                                                <a
+                                                                href="#my"
+                                                >
+                                                                My Polls
+                                                </a>
+                                </li>
+                                <li
+                                                className="tab col s3"
+                                >
+                                                <a
+                                                                href="#other"
+                                                >
+                                                                Other Polls
+                                                </a>
+                                </li>
+                </ul>
+</div>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Dashboard
+</h3>,
+                  <ul
+                    className="tabs"
+>
+                    <li
+                                        className="tab col s3"
+                    >
+                                        <a
+                                                            href="#my"
+                                        >
+                                                            My Polls
+                                        </a>
+                    </li>
+                    <li
+                                        className="tab col s3"
+                    >
+                                        <a
+                                                            href="#other"
+                                        >
+                                                            Other Polls
+                                        </a>
+                    </li>
+</ul>,
+                ],
+                "className": "col s12",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Dashboard",
+                  },
+                  "ref": null,
+                  "rendered": "Dashboard",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li
+                        className="tab col s3"
+>
+                        <a
+                                                href="#my"
+                        >
+                                                My Polls
+                        </a>
+</li>,
+                      <li
+                        className="tab col s3"
+>
+                        <a
+                                                href="#other"
+                        >
+                                                Other Polls
+                        </a>
+</li>,
+                    ],
+                    "className": "tabs",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="#my"
+>
+                          My Polls
+</a>,
+                        "className": "tab col s3",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "My Polls",
+                          "href": "#my",
+                        },
+                        "ref": null,
+                        "rendered": "My Polls",
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="#other"
+>
+                          Other Polls
+</a>,
+                        "className": "tab col s3",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Other Polls",
+                          "href": "#other",
+                        },
+                        "ref": null,
+                        "rendered": "Other Polls",
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col s12"
+                  id="my"
+>
+                  <PollList
+                                    title="This list contains all the polls created by you."
+                  />
+</div>,
+                <div
+                  className="col s12"
+                  id="other"
+>
+                  <PollList
+                                    title="This list contains all the polls created by other users."
+                  />
+</div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <PollList
+                    title="This list contains all the polls created by you."
+/>,
+                  "className": "col s12",
+                  "id": "my",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "title": "This list contains all the polls created by you.",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <PollList
+                    title="This list contains all the polls created by other users."
+/>,
+                  "className": "col s12",
+                  "id": "other",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "title": "This list contains all the polls created by other users.",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

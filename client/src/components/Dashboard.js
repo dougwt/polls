@@ -16,17 +16,17 @@ class Dashboard extends Component {
             <div className="col s12">
               <h3>Dashboard</h3>
               <ul className="tabs">
-                <li className="tab col s3"><a href="#test1">My Polls</a></li>
-                <li className="tab col s3"><a href="#test2">Other Polls</a></li>
+                <li className="tab col s3"><a href="#my">My Polls</a></li>
+                <li className="tab col s3"><a href="#other">Other Polls</a></li>
               </ul>
             </div>
           </Row>
 
           <Row>
-            <div id="test1" className="col s12">
+            <div id="my" className="col s12">
               <PollList title="This list contains all the polls created by you." />
             </div>
-            <div id="test2" className="col s12">
+            <div id="other" className="col s12">
               <PollList title="This list contains all the polls created by other users." />
             </div>
           </Row>

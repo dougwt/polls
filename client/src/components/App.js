@@ -9,7 +9,7 @@ import Dashboard from './Dashboard';
 import PollNew from './polls/PollNew';
 import PollDetail from './polls/PollDetail';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
   }
