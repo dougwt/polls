@@ -1,65 +1,30 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { PollNew } from './PollNew';
+import PollNewForm from './PollNewForm';
+import PollNewFormReview from './PollNewFormReview';
 
 describe('PollNew', () => {
-
-  let props = {
-    handleSubmit: () => {}
-  }
-
-  let wrapper = shallow(<PollNew {...props} />)
+  let wrapper = shallow(<PollNew />)
 
   it('renders properly', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
   describe('when the form is initially loaded', () => {
-    beforeEach(() => {
-      let props = {
-        formValues: {
-          choices: [ 0, 1, undefined, undefined, undefined, undefined ],
-          question: 'Who is your favorite Starfleet captain?',
-          choice_1: 'Kirk (TOS)',
-          choice_2: 'Picard (TNG)',
-          choice_3: 'Sisko (DS9)'
-        }
-      }
-
-      wrapper = shallow(<PollNew {...props} />)
-    });
-
-    xit('shows the PollNewForm component', () => {
-
+    it('shows the PollNewForm component', () => {
+      expect(wrapper.find(PollNewForm).exists()).toBe(true);
     })
-
-    xit('can be completed and submitted', () => {
-
-    });
   });
 
   describe('when the form has been submitted for review', () => {
     beforeEach(() => {
-      let props = {
-        formValues: {
-          choices: [ 0, 1, undefined, undefined, undefined, undefined ],
-          question: 'Who is your favorite Starfleet captain?',
-          choice_1: 'Kirk (TOS)',
-          choice_2: 'Picard (TNG)',
-          choice_3: 'Sisko (DS9)'
-        }
-      }
-
-      wrapper = shallow(<PollNew {...props} />)
+      wrapper.setState({ showFormReview: true });
     });
 
-    xit('shows the PollNewFormReview component', () => {
-
+    it('shows the PollNewFormReview component', () => {
+      expect(wrapper.find(PollNewFormReview).exists()).toBe(true);
     })
-
-    xit('can be approved for creation', () => {
-
-    });
   });
 
 });
