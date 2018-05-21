@@ -10,6 +10,7 @@ describe('PollDetail', () => {
   });
 
   xit('contains a PollDetailForm', () => {
+    console.log(polLDetail.find('PollDetailForm').debug());
     expect(polLDetail.find('PollDetailForm').exists()).toBe(true);
   });
 

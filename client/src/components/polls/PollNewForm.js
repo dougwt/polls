@@ -23,12 +23,12 @@ export class PollNewForm extends Component {
           </Row>
 
           <Row>
-            <Link to="/polls" className="red btn-flat white-text">
+            <Link to="/polls" className="btn-cancel red btn-flat white-text">
               Cancel
               <Icon left>close</Icon>
             </Link>
 
-            <Button className="teal btn-flat right white-text" waves="light">
+            <Button className="btn-preview teal btn-flat right white-text" waves="light">
                 Preview
                 <Icon right>keyboard_arrow_right</Icon>
             </Button>
@@ -82,8 +82,8 @@ function renderChoices({ fields, meta: { error } }) {
       <li className="center-align">
         <Button
           flat
-          className={ fields.length > 5 ? 'disabled' : '' }
-          onClick={() => fields.push() }
+          className={ 'btn-add-choice' + (fields.length > 5 ? ' disabled' : '') }
+          onClick={() => addField(fields) }
           node="a"
         >
           <Icon left>add</Icon>
@@ -91,8 +91,8 @@ function renderChoices({ fields, meta: { error } }) {
         </Button>
         <Button
           flat
-          className={ fields.length < 3 ? 'disabled' : '' }
-          onClick={() => fields.pop() }
+          className={ 'btn-remove-choice' + (fields.length < 3 ? ' disabled' : '') }
+          onClick={() => removeField(fields) }
           node="a"
         >
           <Icon left>delete</Icon>
@@ -101,6 +101,18 @@ function renderChoices({ fields, meta: { error } }) {
       </li>
     </ul>
   );
+}
+
+function addField(fields) {
+  if (fields.length <= 5) {
+    return fields.push();
+  }
+}
+
+function removeField(fields) {
+  if (fields.length >= 3) {
+    return fields.pop()
+  }
 }
 
 function validate(values) {

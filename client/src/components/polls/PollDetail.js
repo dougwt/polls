@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { reduxForm } from 'redux-form';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+// import { reduxForm } from 'redux-form';
+// import { connect } from 'react-redux';
+// import { withRouter } from 'react-router-dom';
 import { Card, Input, Button, Row } from 'react-materialize';
 import PollDetailForm from './PollDetailForm';
 // import PollDetailFormReview from './PollDetailFormReview';
-import * as actions from '../../actions';
+// import * as actions from '../../actions';
 import './PollDetail.css';
 
 const defaultPoll = {
