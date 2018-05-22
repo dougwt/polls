@@ -9,7 +9,7 @@ import PollDetailForm from './PollDetailForm';
 import './PollDetail.css';
 
 const defaultPoll = {
-  choices: [ 0, 1, undefined, undefined, undefined, undefined ],
+  choices: [ 0, 1, 2, 3, 4, 5 ],
   question: 'Who is your favorite Starfleet captain?',
   choice_1: 'Kirk (TOS)',
   choice_2: 'Picard (TNG)',
@@ -66,6 +66,7 @@ class PollDetail extends Component {
         </Row>
       )
     }
+    return choices;
   }
 }
 

@@ -2,16 +2,16 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import PollDetail from './PollDetail';
 
-const polLDetail = shallow(<PollDetail />);
+const wrapper = shallow(<PollDetail />);
 describe('PollDetail', () => {
 
   it('renders correctly', () => {
-    expect(polLDetail).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   xit('contains a PollDetailForm', () => {
-    console.log(polLDetail.find('PollDetailForm').debug());
-    expect(polLDetail.find('PollDetailForm').exists()).toBe(true);
+    console.log(wrapper.debug());
+    expect(wrapper.find('PollDetailForm').exists()).toBe(true);
   });
 
 });
