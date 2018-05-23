@@ -102,12 +102,10 @@ describe('API routes', () => {
               {
                 text: 'Red',
                 votes: 0
-              },
-              {
+              }, {
                 text: 'Blue',
                 votes: 0
-              },
-              {
+              }, {
                 text: 'Green',
                 votes: 0
               }
@@ -126,127 +124,122 @@ describe('API routes', () => {
         .catch((err) => console.log(err));
     })
 
-    // describe('unauthenticated', () => {
-    //   beforeEach(() => {
-    //
-    //   });
-    //
-    //   it('responds to a GET request to /api/polls');
-    //
-    //   it('responds to a POST request to /api/polls/new');
-    //
-    //   it('responds to a GET request to /api/polls/:id');
-    //
-    //   it('responds to a POST request to /api/polls/:id');
-    //
-    //   it('responds to a DELETE request to /api/polls/:id');
-    //
-    //   it('responds to requests for an unrecognized path');
-    // });
+    describe('unauthenticated', () => {
+      // TODO: Add tests for unauthenticated requests
+    });
 
     describe('authenticated', () => {
-
-      it('responds to a GET request to /api/polls', (done) => {
-        request(app)
-          .get('/api/polls')
-          .set('Accept', 'application/json')
-          .expect('Content-Type', /json/)
-          .expect(200)
-          .then(res => {
-            expect(res.body.length).to.equal(3);
-            res.body.forEach(poll => {
-              expect(poll).to.have.property('owner');
-              expect(poll).to.have.property('question');
-              expect(poll).to.have.property('choices');
-              expect(poll).to.have.property('respondents');
+      describe('GET /api/polls', () => {
+        it('responds to a request', (done) => {
+          request(app)
+            .get('/api/polls')
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then(res => {
+              expect(res.body.length).to.equal(3);
+              res.body.forEach(poll => {
+                expect(poll).to.have.property('owner');
+                expect(poll).to.have.property('question');
+                expect(poll).to.have.property('choices');
+                expect(poll).to.have.property('respondents');
+              })
+              done();
             })
-            done();
-          })
-          .catch(err => {
-            console.log(err);
-            done();
-          });
-      });
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
+      })
 
-      it('responds to an invalid POST request to /api/polls/new', (done) => {
-        request(app)
-          .post('/api/polls/new')
-          .send({
-              owner: 'invalid-id',
-              question: 'Who has the best fast food tacos?',
-              choices: [
-                {
-                  text: 'Taco Time',
-                  votes: 0
-                }, {
-                  text: 'Taco Bell',
-                  votes: 0
-                }, {
-                  text: 'Jack in the Box',
-                  votes: 0
-                }
-              ],
-              respondents: []
-          })
-          .set('Accept', 'application/json')
-          .expect('Content-Type', /json/)
-          .expect(400)
-          .then(res => {
-            expect(res.body).to.have.property('error');
-            expect(res.body.error).to.equal('Invalid user');
-            done();
-          })
-          .catch(err => {
-            console.log(err);
-            done();
-          });
-      });
+      describe('POST /api/polls/new', () => {
+        it('responds to an invalid owner', (done) => {
+          request(app)
+            .post('/api/polls/new')
+            .send({
+                owner: 'invalid-id',
+                question: 'Who has the best fast food tacos?',
+                choices: [
+                  {
+                    text: 'Taco Time',
+                    votes: 0
+                  }, {
+                    text: 'Taco Bell',
+                    votes: 0
+                  }, {
+                    text: 'Jack in the Box',
+                    votes: 0
+                  }
+                ],
+                respondents: []
+            })
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('Invalid user');
+              done();
+            })
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
 
-      it('responds to a valid POST request to /api/polls/new', (done) => {
-        request(app)
-          .post('/api/polls/new')
-          .send({
-              owner: alex._id,
-              question: 'Who has the best fast food tacos?',
-              choices: [
-                {
-                  text: 'Taco Time',
-                  votes: 0
-                }, {
-                  text: 'Taco Bell',
-                  votes: 0
-                }, {
-                  text: 'Jack in the Box',
-                  votes: 0
-                }
-              ],
-              respondents: []
-          })
-          .set('Accept', 'application/json')
-          .expect('Content-Type', /json/)
-          .expect(200)
-          .then(res => {
-            expect(res.body).to.have.property('owner');
-            expect(res.body.question).to.equal('Who has the best fast food tacos?');
-            expect(res.body.choices.length).to.equal(3);
-            expect(res.body.choices[0].text).to.equal('Taco Time');
-            expect(res.body.choices[1].text).to.equal('Taco Bell');
-            expect(res.body.choices[2].text).to.equal('Jack in the Box');
-            expect(res.body).to.have.property('respondents');
-            expect(res.body.respondents.length).to.equal(0);
-            done();
-          })
-          .catch(err => {
-            console.log(err);
-            done();
-          });
-      });
+        it('responds to a valid request', (done) => {
+          request(app)
+            .post('/api/polls/new')
+            .send({
+                owner: alex._id,
+                question: 'Who has the best fast food tacos?',
+                choices: [
+                  {
+                    text: 'Taco Time',
+                    votes: 0
+                  }, {
+                    text: 'Taco Bell',
+                    votes: 0
+                  }, {
+                    text: 'Jack in the Box',
+                    votes: 0
+                  }
+                ],
+                respondents: []
+            })
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then(res => {
+              expect(res.body).to.have.property('owner');
+              expect(res.body.question).to.equal('Who has the best fast food tacos?');
+              expect(res.body.choices.length).to.equal(3);
+              expect(res.body.choices[0].text).to.equal('Taco Time');
+              expect(res.body.choices[1].text).to.equal('Taco Bell');
+              expect(res.body.choices[2].text).to.equal('Jack in the Box');
+              expect(res.body).to.have.property('respondents');
+              expect(res.body.respondents.length).to.equal(0);
+              done();
+            })
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
+      })
 
-      it('responds to a GET request to /api/polls/:id');
+      describe('GET /api/polls/:id', () => {
+        it('responds to a GET request to /api/polls/:id');
+      })
 
-      it('responds to a POST request to /api/polls/:id');
+      describe('POST /api/polls/:id', () => {
+        it('responds to a POST request to /api/polls/:id');
+      })
 
-      it('responds to a DELETE request to /api/polls/:id');
+      describe('DELETE /api/polls/:id', () => {
+        it('responds to a DELETE request to /api/polls/:id');
+      })
 
       it('responds to requests for an unrecognized path');
     });
