@@ -40,6 +40,7 @@ describe('API routes', () => {
     const app = express();
     app.use(bodyParser.json());
     require('../routes/pollRoutes')(app);
+    let poll1, poll2, poll3;
 
     beforeEach((done) => {
       alex = new User({ googleId: 'alex' });
@@ -227,10 +228,49 @@ describe('API routes', () => {
               done();
             });
         });
-      })
+      });
 
       describe('GET /api/polls/:id', () => {
-        it('responds to a GET request to /api/polls/:id');
+        it('responds to an invalid owner', (done) => {
+          request(app)
+            .get('/api/polls/fakeid')
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('Invalid poll');
+              done();
+            })
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
+
+        it('responds to a valid request', (done) => {
+          request(app)
+            .get(`/api/polls/${poll1.id}`)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then(res => {
+              expect(res.body).to.have.property('owner');
+              expect(res.body).to.have.property('question');
+              expect(res.body).to.have.property('choices');
+              expect(res.body).to.have.property('respondents');
+              expect(res.body.choices.length).to.equal(6);
+              res.body.choices.forEach(choice => {
+                expect(choice).to.have.property('text');
+                expect(choice).to.have.property('votes');
+              })
+              done();
+            })
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
       })
 
       describe('POST /api/polls/:id', () => {

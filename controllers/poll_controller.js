@@ -2,7 +2,7 @@ const User = require('../models/User');
 const Poll = require('../models/Poll');
 
 module.exports = {
-  fetch(req, res, next) {
+  fetchAll(req, res, next) {
     Poll.find({})
       .then((polls) => {
           res.json(polls);
@@ -25,7 +25,13 @@ module.exports = {
       .catch(err => {
         res.status(400).send({ error: 'Invalid user' });
       });
+  },
 
-
+  fetchById(req, res, next) {
+    Poll.findById(req.params.id)
+      .then(poll => res.send(poll))
+      .catch(err => {
+        res.status(400).send({ error: 'Invalid poll' });
+      });
   }
 };
