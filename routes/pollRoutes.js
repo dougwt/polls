@@ -1,10 +1,13 @@
-// const PollController = require('../controllers/poll_controller');
+const PollController = require('../controllers/poll_controller');
 
 module.exports = (app) => {
   app.get(
     '/api/polls',
-    (req, res) => {
-      res.json({ msg: 'Received!' });
-    }
+    PollController.fetch
+  );
+
+  app.post(
+    '/api/polls/new',
+    PollController.create
   );
 }
