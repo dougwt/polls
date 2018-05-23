@@ -231,7 +231,7 @@ describe('API routes', () => {
       });
 
       describe('GET /api/polls/:id', () => {
-        it('responds to an invalid owner', (done) => {
+        it('responds to an invalid id', (done) => {
           request(app)
             .get('/api/polls/fakeid')
             .set('Accept', 'application/json')
@@ -248,7 +248,7 @@ describe('API routes', () => {
             });
         });
 
-        it('responds to a valid request', (done) => {
+        it('responds to a valid id', (done) => {
           request(app)
             .get(`/api/polls/${poll1.id}`)
             .set('Accept', 'application/json')
@@ -274,11 +274,132 @@ describe('API routes', () => {
       })
 
       describe('POST /api/polls/:id', () => {
-        it('responds to a POST request to /api/polls/:id');
+        it('responds to an invalid id', (done) => {
+          request(app)
+            .post('/api/polls/fakeid')
+            .send({
+              question: 'What is your favorite color?',
+              choices: [
+                {
+                  text: 'Red',
+                  votes: 0
+                }, {
+                  text: 'Blue',
+                  votes: 0
+                }, {
+                  text: 'Green',
+                  votes: 0
+                }, {
+                  text: 'Purple',
+                  votes: 0
+                }
+              ]
+            })
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('Invalid poll');
+              done();
+            })
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
+        it('responds to a valid id', (done) => {
+          request(app)
+            .post(`/api/polls/${poll3.id}`)
+            .send({
+              question: 'What is your favorite color?',
+              choices: [
+                {
+                  text: 'Red',
+                  votes: 0
+                }, {
+                  text: 'Blue',
+                  votes: 0
+                }, {
+                  text: 'Green',
+                  votes: 0
+                }, {
+                  text: 'Purple',
+                  votes: 0
+                }
+              ]
+            })
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then(res => {
+              expect(res.body).to.have.property('owner');
+              expect(res.body).to.have.property('question');
+              expect(res.body).to.have.property('choices');
+              expect(res.body).to.have.property('respondents');
+              expect(res.body.choices.length).to.equal(4);
+              res.body.choices.forEach(choice => {
+                expect(choice).to.have.property('text');
+                expect(choice).to.have.property('votes');
+              })
+              expect(res.body.choices[3].text).to.equal('Purple');
+              done();
+            })
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
       })
 
       describe('DELETE /api/polls/:id', () => {
-        it('responds to a DELETE request to /api/polls/:id');
+        it('responds to an invalid id', (done) => {
+          request(app)
+            .delete('/api/polls/fakeid')
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('Invalid poll');
+              done();
+            })
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
+
+        it('responds to a valid id', (done) => {
+          const { id } = poll3;
+
+          request(app)
+            .delete(`/api/polls/${id}`)
+            .set('Accept', 'application/json')
+            .expect(204)
+            .then(res1 => {
+              expect(res1.body.length).to.equal(undefined);
+
+              request(app)
+                .get(`/api/polls/${id}`)
+                .set('Accept', 'application/json')
+                .expect('Content-Type', /json/)
+                .expect(400)
+                .then(res2 => {
+                  expect(res2.body).to.have.property('error');
+                  expect(res2.body.error).to.equal('Invalid poll');
+                  done();
+                })
+                .catch(err => {
+                  console.log(err);
+                  done();
+                });
+            })
+            .catch(err => {
+              console.log(err);
+              done();
+            });
+        });
       })
 
       it('responds to requests for an unrecognized path');

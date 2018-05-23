@@ -15,4 +15,14 @@ module.exports = (app) => {
     '/api/polls/:id',
     PollController.fetchById
   );
+
+  app.post(
+    '/api/polls/:id',
+    PollController.updateById
+  );
+
+  app.delete(
+    '/api/polls/:id',
+    PollController.deleteById
+  );
 }
