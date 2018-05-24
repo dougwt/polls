@@ -9,6 +9,10 @@ module.exports = {
       })
   },
 
+  // vote(req, res, next) {
+  //   const { poll, choice } = req.body;
+  // },
+
   create(req, res, next) {
     const { owner, question, choices } = req.body;
 
@@ -56,6 +60,9 @@ module.exports = {
         if (!poll) {
           return res.status(400).send({ error: 'Invalid poll' });
         }
+        if (poll.owner != req.user.id) {
+          return res.status(401).send({ error: 'You are unauthorized to make this request.' });
+        }
         if (question) {
           poll.question = question;
         }
@@ -77,6 +84,9 @@ module.exports = {
       .then(poll => {
         if (!poll) {
           return res.status(400).send({ error: 'Invalid poll' });
+        }
+        if (poll.owner != req.user.id) {
+          return res.status(401).send({ error: 'You are unauthorized to make this request.' });
         }
         Poll.findByIdAndRemove(id)
           .then(() => {

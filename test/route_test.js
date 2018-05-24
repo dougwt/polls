@@ -454,6 +454,38 @@ describe('API routes', () => {
             .catch((err) => done(err));
         });
 
+        it('rejects request to update a poll belonging to a different user', (done) => {
+          request(app)
+            .post(`/api/polls/${poll1.id}`)
+            .send({
+              question: 'What is your favorite color?',
+              choices: [
+                {
+                  text: 'Red',
+                  votes: 0
+                }, {
+                  text: 'Blue',
+                  votes: 0
+                }, {
+                  text: 'Green',
+                  votes: 0
+                }, {
+                  text: 'Purple',
+                  votes: 0
+                }
+              ]
+            })
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(401)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('You are unauthorized to make this request.');
+              done();
+            })
+            .catch((err) => done(err));
+        });
+
         it('responds to a valid id', (done) => {
           request(app)
             .post(`/api/polls/${poll3.id}`)
@@ -505,6 +537,22 @@ describe('API routes', () => {
             .then(res => {
               expect(res.body).to.have.property('error');
               expect(res.body.error).to.equal('Invalid poll');
+              done();
+            })
+            .catch((err) => done(err));
+        });
+
+        it('rejects request to delete a poll belonging to a different user', (done) => {
+          const { id } = poll1;
+
+          request(app)
+            .delete(`/api/polls/${id}`)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(401)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('You are unauthorized to make this request.');
               done();
             })
             .catch((err) => done(err));
