@@ -47,7 +47,7 @@ describe('API routes', () => {
       alex = new User({ googleId: 'alex' });
       maria = new User({ googleId: 'maria' });
       zach = new User({ googleId: 'zach' });
-      Promise.all([alex.save(), maria.save()])
+      Promise.all([alex.save(), maria.save(), zach.save()])
         .then(() => {
           poll1 = new Poll({
             owner: alex,
@@ -237,7 +237,31 @@ describe('API routes', () => {
     });
 
     describe('authenticated', () => {
-      // TODO: Add authentication mock
+      const Layer = require('express/lib/router/layer');
+      function login(user) {
+        var fn = function insertUser(req, res, next) {
+          req.user = user;
+          next();
+        }
+
+        var layer = new Layer('/', {
+          sensitive: false,
+          strict: false,
+          end: false
+        }, fn);
+        layer.route = undefined;
+
+        app._router.stack.unshift(layer);
+      }
+
+      function logout() {
+        app._router.stack.shift();
+      }
+
+      beforeEach(() => login(zach));
+
+      afterEach(() => logout());
+
       describe('GET /api/polls', () => {
         it('responds to a request', (done) => {
           request(app)
@@ -291,11 +315,42 @@ describe('API routes', () => {
             .catch((err) => done(err));
         });
 
-        it('responds to a valid request', (done) => {
+        it('rejects request to save a poll as a different user', (done) => {
           request(app)
             .post('/api/polls/new')
             .send({
                 owner: alex._id,
+                question: 'Who has the best fast food tacos?',
+                choices: [
+                  {
+                    text: 'Taco Time',
+                    votes: 0
+                  }, {
+                    text: 'Taco Bell',
+                    votes: 0
+                  }, {
+                    text: 'Jack in the Box',
+                    votes: 0
+                  }
+                ],
+                respondents: []
+            })
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(401)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('You are unauthorized to make this request.');
+              done();
+            })
+            .catch((err) => done(err));
+        });
+
+        it('responds to a valid request', (done) => {
+          request(app)
+            .post('/api/polls/new')
+            .send({
+                owner: zach._id,
                 question: 'Who has the best fast food tacos?',
                 choices: [
                   {

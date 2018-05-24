@@ -17,6 +17,10 @@ module.exports = {
         if (!user) {
           return res.status(400).send({ error: 'Invalid user' });
         }
+        if (user.id != req.user.id) {
+          return res.status(401).send({ error: 'You are unauthorized to make this request.' });
+        }
+
         Poll.create({ owner: user, question, choices })
           .then(poll => res.send(poll))
           .catch(err => {
