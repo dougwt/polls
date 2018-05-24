@@ -14,6 +14,12 @@ module.exports = (app) => {
     PollController.create
   );
 
+  app.post(
+    '/api/polls/:id/:choice',
+    requireLogin,
+    PollController.vote
+  );
+
   app.get(
     '/api/polls/:id',
     requireLogin,

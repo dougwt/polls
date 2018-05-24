@@ -234,6 +234,23 @@ describe('API routes', () => {
           })
           .catch((err) => done(err));
       });
+
+      it('POST api/polls/:id/:choice', (done) => {
+        const { id } = poll1;
+        const choice = poll1.choices[2].id;
+
+        request(app)
+          .post(`/api/polls/${id}/${choice}`)
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(401)
+          .then(res => {
+            expect(res.body).to.have.property('error');
+            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            done();
+          })
+          .catch((err) => done(err));
+      });
     });
 
     describe('authenticated', () => {
@@ -576,6 +593,91 @@ describe('API routes', () => {
                 .then(res2 => {
                   expect(res2.body).to.have.property('error');
                   expect(res2.body.error).to.equal('Invalid poll');
+                  done();
+                })
+                .catch((err) => done(err));
+            })
+            .catch((err) => done(err));
+        });
+      })
+
+      describe('POST api/polls/:id/:choice', () => {
+        it('responds to an invalid poll id', (done) => {
+          const id = 'fakeid'
+          const choice = poll1.choices[2].id;
+
+          request(app)
+            .post(`/api/polls/${id}/${choice}`)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('Invalid poll');
+              done();
+            })
+            .catch((err) => done(err));
+        });
+
+        it('responds to an invalid choice id', (done) => {
+          const { id } = poll1;
+          const choice = 'fakechoice';
+
+          request(app)
+            .post(`/api/polls/${id}/${choice}`)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(400)
+            .then(res => {
+              expect(res.body).to.have.property('error');
+              expect(res.body.error).to.equal('Invalid choice');
+              done();
+            })
+            .catch((err) => done(err));
+        });
+
+        it('responds to a valid id', (done) => {
+          const { id } = poll1;
+          const choice = poll1.choices[2].id;
+
+          expect(poll1.choices[2].votes).to.equal(3);
+
+          request(app)
+            .post(`/api/polls/${id}/${choice}`)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then(res => {
+              expect(res.body.choices[2].votes).to.equal(4);
+              expect(res.body.respondents).to.contain(zach.id);
+              done();
+            })
+            .catch((err) => done(err));
+        });
+
+        it('rejects attempts to vote multiple times', (done) => {
+          const { id } = poll1;
+          let choice = poll1.choices[2].id;
+
+          expect(poll1.choices[2].votes).to.equal(3);
+
+          request(app)
+            .post(`/api/polls/${id}/${choice}`)
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then(res => {
+              expect(res.body.choices[2].votes).to.equal(4);
+              expect(res.body.respondents).to.contain(zach.id);
+              choice = poll1.choices[1].id;
+              request(app)
+                .post(`/api/polls/${id}/${choice}`)
+                .set('Accept', 'application/json')
+                .expect('Content-Type', /json/)
+                .expect(400)
+                .then(res => {
+                  expect(res.body).to.have.property('error');
+                  expect(res.body.error).to.equal('You have already voted on this poll.');
                   done();
                 })
                 .catch((err) => done(err));

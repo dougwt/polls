@@ -9,9 +9,49 @@ module.exports = {
       })
   },
 
-  // vote(req, res, next) {
-  //   const { poll, choice } = req.body;
-  // },
+  vote(req, res, next) {
+    const userId = req.user;
+    const pollId = req.params.id;
+    const choiceId = req.params.choice;
+
+    // Find the poll
+    Poll.findById(pollId)
+    .then(poll => {
+      if (!poll) {
+        return res.status(400).send({ error: 'Invalid poll' });
+      }
+      // Find the choice
+      let results = poll.choices.filter(choice => choice.id === choiceId);
+      if (results.length < 1) {
+        return res.status(400).send({ error: 'Invalid choice' });
+      }
+      // console.log(results);
+
+      // Update the vote count
+      results[0].votes += 1;
+      // Update the respondents list
+      User.findById(userId)
+        .then(user => {
+          // console.log(user);
+          // console.log(poll.respondents);
+          results = poll.respondents.filter(responder => responder !== userId);
+          // console.log(results);
+          if (results.length > 0) {
+            return res.status(400).send({ error: 'You have already voted on this poll.' });
+          }
+          poll.respondents.push(user);
+          poll.save()
+            .then(poll => {
+              // console.log(poll);
+              return res.json(poll);
+            })
+            .catch(err => console.log(err))
+        })
+    })
+    .catch(err => {
+      return res.status(400).send({ error: 'Invalid poll' });
+    });
+  },
 
   create(req, res, next) {
     const { owner, question, choices } = req.body;
