@@ -26,6 +26,7 @@
     "chai": "^4.1.2",
     "concurrently": "^3.5.1",
     "mocha": "^5.2.0",
+    "passport-mock": "0.0.3",
     "sinon": "^5.0.7",
     "supertest": "^3.1.0"
   }

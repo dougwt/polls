@@ -1,4 +1,5 @@
 const express = require('express');
+const passport = require('passport');
 const expect = require('chai').expect;
 const request = require('supertest');
 const sinon = require('sinon');
@@ -122,14 +123,121 @@ describe('API routes', () => {
               done();
             });
         })
-        .catch((err) => console.log(err));
+        .catch((err) => done(err));
     })
 
     describe('unauthenticated', () => {
-      // TODO: Add tests for unauthenticated requests
+      it('GET /api/polls', (done) => {
+        request(app)
+          .get('/api/polls')
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(401)
+          .then(res => {
+            expect(res.body).to.have.property('error');
+            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            done();
+          })
+          .catch((err) => done(err));
+      });
+
+      it('POST /api/polls/new', (done) => {
+        request(app)
+          .post(`/api/polls/${poll3.id}`)
+          .send({
+            question: 'What is your favorite color?',
+            choices: [
+              {
+                text: 'Red',
+                votes: 0
+              }, {
+                text: 'Blue',
+                votes: 0
+              }, {
+                text: 'Green',
+                votes: 0
+              }, {
+                text: 'Purple',
+                votes: 0
+              }
+            ]
+          })
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(401)
+          .then(res => {
+            expect(res.body).to.have.property('error');
+            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            done();
+          })
+          .catch((err) => done(err));
+      });
+
+      it('GET /api/polls/:id', (done) => {
+        request(app)
+          .get(`/api/polls/${poll1.id}`)
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(401)
+          .then(res => {
+            expect(res.body).to.have.property('error');
+            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            done();
+          })
+          .catch((err) => done(err));
+      });
+
+      it('POST /api/polls/:id', (done) => {
+        request(app)
+          .post(`/api/polls/${poll3.id}`)
+          .send({
+            question: 'What is your favorite color?',
+            choices: [
+              {
+                text: 'Red',
+                votes: 0
+              }, {
+                text: 'Blue',
+                votes: 0
+              }, {
+                text: 'Green',
+                votes: 0
+              }, {
+                text: 'Purple',
+                votes: 0
+              }
+            ]
+          })
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(401)
+          .then(res => {
+            expect(res.body).to.have.property('error');
+            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            done();
+          })
+          .catch((err) => done(err));
+      });
+
+      it('DELETE /api/polls/:id', (done) => {
+        const { id } = poll3;
+
+        request(app)
+          .delete(`/api/polls/${id}`)
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(401)
+          .then(res => {
+            expect(res.body).to.have.property('error');
+            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            done();
+          })
+          .catch((err) => done(err));
+      });
     });
 
     describe('authenticated', () => {
+      // TODO: Add authentication mock
       describe('GET /api/polls', () => {
         it('responds to a request', (done) => {
           request(app)
@@ -147,10 +255,7 @@ describe('API routes', () => {
               })
               done();
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
       })
 
@@ -183,10 +288,7 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid user');
               done();
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
 
         it('responds to a valid request', (done) => {
@@ -223,10 +325,7 @@ describe('API routes', () => {
               expect(res.body.respondents.length).to.equal(0);
               done();
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
       });
 
@@ -242,10 +341,7 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid poll');
               done();
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
 
         it('responds to a valid id', (done) => {
@@ -266,10 +362,7 @@ describe('API routes', () => {
               })
               done();
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
       })
 
@@ -303,11 +396,9 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid poll');
               done();
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
+
         it('responds to a valid id', (done) => {
           request(app)
             .post(`/api/polls/${poll3.id}`)
@@ -345,10 +436,7 @@ describe('API routes', () => {
               expect(res.body.choices[3].text).to.equal('Purple');
               done();
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
       })
 
@@ -364,10 +452,7 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid poll');
               done();
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
 
         it('responds to a valid id', (done) => {
@@ -390,15 +475,9 @@ describe('API routes', () => {
                   expect(res2.body.error).to.equal('Invalid poll');
                   done();
                 })
-                .catch(err => {
-                  console.log(err);
-                  done();
-                });
+                .catch((err) => done(err));
             })
-            .catch(err => {
-              console.log(err);
-              done();
-            });
+            .catch((err) => done(err));
         });
       })
 
@@ -413,12 +492,8 @@ describe('API routes', () => {
             expect(res.body.error).to.equal('Resource not found');
             done();
           })
-          .catch(err => {
-            console.log(err);
-            done();
-          });
+          .catch((err) => done(err));
       });
     });
-
   });
 });
