@@ -39,7 +39,7 @@ describe('API routes', () => {
   describe('Poll routes', () => {
     const app = express();
     app.use(bodyParser.json());
-    require('../routes/pollRoutes')(app);
+    require('../routes')(app);
     let poll1, poll2, poll3;
 
     beforeEach((done) => {
@@ -402,7 +402,22 @@ describe('API routes', () => {
         });
       })
 
-      it('responds to requests for an unrecognized path');
+      it('responds to requests for an unrecognized path', (done) => {
+        request(app)
+          .get('/some/fake-path')
+          .set('Accept', 'application/json')
+          .expect('Content-Type', /json/)
+          .expect(404)
+          .then(res => {
+            expect(res.body).to.have.property('error');
+            expect(res.body.error).to.equal('Resource not found');
+            done();
+          })
+          .catch(err => {
+            console.log(err);
+            done();
+          });
+      });
     });
 
   });
