@@ -17,34 +17,32 @@ module.exports = {
     // Find the poll
     Poll.findById(pollId)
     .then(poll => {
+      // Reject if pollId not found in the database
       if (!poll) {
         return res.status(400).send({ error: 'Invalid poll' });
       }
-      // Find the choice
+
+      // Reject if choiceId not found in the poll choices
       let results = poll.choices.filter(choice => choice.id === choiceId);
       if (results.length < 1) {
         return res.status(400).send({ error: 'Invalid choice' });
       }
-      // console.log(results);
 
-      // Update the vote count
+      // Increment the vote count
       results[0].votes += 1;
+
       // Update the respondents list
       User.findById(userId)
         .then(user => {
-          // console.log(user);
-          // console.log(poll.respondents);
           results = poll.respondents.filter(responder => responder !== userId);
-          // console.log(results);
+          // Reject if userId has already voted on this poll
           if (results.length > 0) {
             return res.status(400).send({ error: 'You have already voted on this poll.' });
           }
+          // Add userId to list of poll respondents
           poll.respondents.push(user);
           poll.save()
-            .then(poll => {
-              // console.log(poll);
-              return res.json(poll);
-            })
+            .then(poll => res.json(poll))
             .catch(err => console.log(err))
         })
     })
@@ -56,15 +54,20 @@ module.exports = {
   create(req, res, next) {
     const { owner, question, choices } = req.body;
 
+    // Find the user creating the poll
     User.findById(owner)
       .then(user => {
+        // Reject if owner not found in the database
         if (!user) {
           return res.status(400).send({ error: 'Invalid user' });
         }
+
+        // Reject if the form data doesn't much same id as auth'ed user id
         if (user.id != req.user.id) {
           return res.status(401).send({ error: 'You are unauthorized to make this request.' });
         }
 
+        // Create the new poll
         Poll.create({ owner: user, question, choices })
           .then(poll => res.send(poll))
           .catch(err => {
@@ -79,8 +82,10 @@ module.exports = {
   fetchById(req, res, next) {
     const { id } = req.params;
 
+    // Find the poll
     Poll.findById(id)
       .then(poll => {
+        // Reject if id not found in the database
         if (!poll) {
           return res.status(400).send({ error: 'Invalid poll' });
         }
@@ -95,14 +100,20 @@ module.exports = {
     const { id } = req.params;
     const { question, choices } = req.body;
 
+    // Find the poll
     Poll.findById(id)
       .then(poll => {
+        // Reject if id not found in the database
         if (!poll) {
           return res.status(400).send({ error: 'Invalid poll' });
         }
+
+        // Reject if owner of poll being updated doesn't mach auth'ed user
         if (poll.owner != req.user.id) {
           return res.status(401).send({ error: 'You are unauthorized to make this request.' });
         }
+
+        // Update the poll fields
         if (question) {
           poll.question = question;
         }
@@ -120,14 +131,20 @@ module.exports = {
   deleteById(req, res, next) {
     const { id } = req.params;
 
+    // Find the poll
     Poll.findById(id)
       .then(poll => {
+        // Reject if id not found in the database
         if (!poll) {
           return res.status(400).send({ error: 'Invalid poll' });
         }
+
+        // Reject if owner of poll being deleted doesn't mach auth'ed user
         if (poll.owner != req.user.id) {
           return res.status(401).send({ error: 'You are unauthorized to make this request.' });
         }
+
+        // Delete the poll
         Poll.findByIdAndRemove(id)
           .then(() => {
             return res.status(204).end();

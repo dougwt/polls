@@ -2,118 +2,32 @@ const express = require('express');
 const passport = require('passport');
 const expect = require('chai').expect;
 const request = require('supertest');
-const sinon = require('sinon');
 var bodyParser = require('body-parser');
 const User = require('../models/User');
 const Poll = require('../models/Poll');
+const { starfleet, starwars, color, color_extra, taco } = require('./fixtures');
 
 describe('API routes', () => {
-  // describe('Authentication routes', () => {
-  //   let stub;
-  //
-  //   const app = express();
-  //   app.use(passport.initialize());
-  //   app.use(passport.session());
-  //   require('../routes/authRoutes')(app);
-  //
-  //   beforeEach(() => {
-  //     stub = sinon.stub(passport, 'authenticate').returns(function() {});
-  //     // stub.yields(null, { statusCode: 200 }, [{ name: 'org-one' }, { name: 'org-two'}]);
-  //   })
-  //
-  //   it('can authenticate with google', (done) => {
-  //     request(app)
-  //       .get('/auth/google')
-  //       // .set('Accept', 'application/json')
-  //       .expect(() => {
-  //         if (!stub.called) {
-  //           console.log(stub);
-  //           throw new Error('Stub not called');
-  //         }
-  //       })
-  //       // .expect('Content-Type', /json/)
-  //       .expect(200, done);
-  //
-  //   });
-  // });
-
   describe('Poll routes', () => {
+    // Create a test app environment
     const app = express();
     app.use(bodyParser.json());
     require('../routes')(app);
-    let poll1, poll2, poll3;
 
+    // Declare variables for use in all tests
+    let poll1, poll2, poll3;
+    let alex, maria, zach;
+
+    // Reload fixtures into mongo before each test
     beforeEach((done) => {
       alex = new User({ googleId: 'alex' });
       maria = new User({ googleId: 'maria' });
       zach = new User({ googleId: 'zach' });
       Promise.all([alex.save(), maria.save(), zach.save()])
         .then(() => {
-          poll1 = new Poll({
-            owner: alex,
-            question: 'Who is your favorite Starfleet captain?',
-            choices: [
-              {
-                text: 'Kirk (TOS)',
-                votes: 5
-              }, {
-                text: 'Picard (TNG)',
-                votes: 4
-              }, {
-                text: 'Sisko (DS9)',
-                votes: 3
-              }, {
-                text: 'Janeway (Voyager)',
-                votes: 2
-              }, {
-                text: 'Archer (Enterprise)',
-                votes: 1
-              }, {
-                text: 'Lorca (Discovery)',
-                votes: 0
-              }
-            ],
-            respondents: []
-          });
-
-          poll2 = new Poll({
-            owner: maria,
-            question: 'Who is your favorite Star Wars captain?',
-            choices: [
-              {
-                text: 'Han Solo',
-                votes: 5
-              }, {
-                text: 'Wedge Antilles',
-                votes: 4
-              }, {
-                text: 'Lando Calrissian',
-                votes: 3
-              }, {
-                text: 'Phasma',
-                votes: 2
-              }
-            ],
-            respondents: []
-          });
-
-          poll3 = new Poll({
-            owner: zach,
-            question: 'What is your favorite color?',
-            choices: [
-              {
-                text: 'Red',
-                votes: 0
-              }, {
-                text: 'Blue',
-                votes: 0
-              }, {
-                text: 'Green',
-                votes: 0
-              }
-            ],
-            respondents: []
-          })
+          poll1 = new Poll({ ...starfleet, owner: alex });
+          poll2 = new Poll({ ...starwars, owner: maria });
+          poll3 = new Poll({ ...color, owner: zach });
 
           Promise.all([poll1.save(), poll2.save(), poll3.save()])
             .then(() => {
@@ -126,6 +40,9 @@ describe('API routes', () => {
         .catch((err) => done(err));
     })
 
+    //////////////////////
+    // UNAUTHENTICATED
+    //////////////////////
     describe('unauthenticated', () => {
       it('GET /api/polls', (done) => {
         request(app)
@@ -144,24 +61,7 @@ describe('API routes', () => {
       it('POST /api/polls/new', (done) => {
         request(app)
           .post(`/api/polls/${poll3.id}`)
-          .send({
-            question: 'What is your favorite color?',
-            choices: [
-              {
-                text: 'Red',
-                votes: 0
-              }, {
-                text: 'Blue',
-                votes: 0
-              }, {
-                text: 'Green',
-                votes: 0
-              }, {
-                text: 'Purple',
-                votes: 0
-              }
-            ]
-          })
+          .send({ ...color_extra })
           .set('Accept', 'application/json')
           .expect('Content-Type', /json/)
           .expect(401)
@@ -190,24 +90,7 @@ describe('API routes', () => {
       it('POST /api/polls/:id', (done) => {
         request(app)
           .post(`/api/polls/${poll3.id}`)
-          .send({
-            question: 'What is your favorite color?',
-            choices: [
-              {
-                text: 'Red',
-                votes: 0
-              }, {
-                text: 'Blue',
-                votes: 0
-              }, {
-                text: 'Green',
-                votes: 0
-              }, {
-                text: 'Purple',
-                votes: 0
-              }
-            ]
-          })
+          .send({ ...color_extra })
           .set('Accept', 'application/json')
           .expect('Content-Type', /json/)
           .expect(401)
@@ -253,7 +136,12 @@ describe('API routes', () => {
       });
     });
 
+    //////////////////////
+    // AUTHENTICATED
+    //////////////////////
     describe('authenticated', () => {
+      // Utility func to mock user auth
+      // Source: https://stackoverflow.com/a/27866991
       const Layer = require('express/lib/router/layer');
       function login(user) {
         var fn = function insertUser(req, res, next) {
@@ -270,13 +158,12 @@ describe('API routes', () => {
 
         app._router.stack.unshift(layer);
       }
-
       function logout() {
         app._router.stack.shift();
       }
 
+      // Login to the Zach account before each test in this section
       beforeEach(() => login(zach));
-
       afterEach(() => logout());
 
       describe('GET /api/polls', () => {
@@ -304,23 +191,7 @@ describe('API routes', () => {
         it('responds to an invalid owner', (done) => {
           request(app)
             .post('/api/polls/new')
-            .send({
-                owner: 'invalid-id',
-                question: 'Who has the best fast food tacos?',
-                choices: [
-                  {
-                    text: 'Taco Time',
-                    votes: 0
-                  }, {
-                    text: 'Taco Bell',
-                    votes: 0
-                  }, {
-                    text: 'Jack in the Box',
-                    votes: 0
-                  }
-                ],
-                respondents: []
-            })
+            .send({ ...taco, owner: 'invalid-id' })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(400)
@@ -335,23 +206,7 @@ describe('API routes', () => {
         it('rejects request to save a poll as a different user', (done) => {
           request(app)
             .post('/api/polls/new')
-            .send({
-                owner: alex._id,
-                question: 'Who has the best fast food tacos?',
-                choices: [
-                  {
-                    text: 'Taco Time',
-                    votes: 0
-                  }, {
-                    text: 'Taco Bell',
-                    votes: 0
-                  }, {
-                    text: 'Jack in the Box',
-                    votes: 0
-                  }
-                ],
-                respondents: []
-            })
+            .send({ ...taco, owner: alex._id })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(401)
@@ -366,23 +221,7 @@ describe('API routes', () => {
         it('responds to a valid request', (done) => {
           request(app)
             .post('/api/polls/new')
-            .send({
-                owner: zach._id,
-                question: 'Who has the best fast food tacos?',
-                choices: [
-                  {
-                    text: 'Taco Time',
-                    votes: 0
-                  }, {
-                    text: 'Taco Bell',
-                    votes: 0
-                  }, {
-                    text: 'Jack in the Box',
-                    votes: 0
-                  }
-                ],
-                respondents: []
-            })
+            .send({ ...taco, owner: zach._id })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200)
@@ -442,24 +281,7 @@ describe('API routes', () => {
         it('responds to an invalid id', (done) => {
           request(app)
             .post('/api/polls/fakeid')
-            .send({
-              question: 'What is your favorite color?',
-              choices: [
-                {
-                  text: 'Red',
-                  votes: 0
-                }, {
-                  text: 'Blue',
-                  votes: 0
-                }, {
-                  text: 'Green',
-                  votes: 0
-                }, {
-                  text: 'Purple',
-                  votes: 0
-                }
-              ]
-            })
+            .send({ ...color_extra })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(400)
@@ -474,24 +296,7 @@ describe('API routes', () => {
         it('rejects request to update a poll belonging to a different user', (done) => {
           request(app)
             .post(`/api/polls/${poll1.id}`)
-            .send({
-              question: 'What is your favorite color?',
-              choices: [
-                {
-                  text: 'Red',
-                  votes: 0
-                }, {
-                  text: 'Blue',
-                  votes: 0
-                }, {
-                  text: 'Green',
-                  votes: 0
-                }, {
-                  text: 'Purple',
-                  votes: 0
-                }
-              ]
-            })
+            .send({ ...color_extra })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(401)
@@ -506,24 +311,7 @@ describe('API routes', () => {
         it('responds to a valid id', (done) => {
           request(app)
             .post(`/api/polls/${poll3.id}`)
-            .send({
-              question: 'What is your favorite color?',
-              choices: [
-                {
-                  text: 'Red',
-                  votes: 0
-                }, {
-                  text: 'Blue',
-                  votes: 0
-                }, {
-                  text: 'Green',
-                  votes: 0
-                }, {
-                  text: 'Purple',
-                  votes: 0
-                }
-              ]
-            })
+            .send({ ...color_extra })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200)
