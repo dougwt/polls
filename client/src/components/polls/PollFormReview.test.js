@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PollNewFormReview } from './PollNewFormReview';
+import { PollFormReview } from './PollFormReview';
 
-describe('PollNewFormReview', () => {
+describe('PollFormReview', () => {
   let props = {
     formValues: {
       choices: [ 0, 1, undefined, undefined, undefined, undefined ],
@@ -10,7 +10,7 @@ describe('PollNewFormReview', () => {
     },
   }
 
-  let wrapper = shallow(<PollNewFormReview {...props} />)
+  let wrapper = shallow(<PollFormReview {...props} />)
 
   it('renders properly', () => {
     expect(wrapper).toMatchSnapshot();
@@ -47,7 +47,7 @@ describe('PollNewFormReview', () => {
         }
       }
 
-      wrapper = shallow(<PollNewFormReview {...props} />)
+      wrapper = shallow(<PollFormReview {...props} />)
     });
 
     it('shows the appropriate number of choices', () => {
@@ -67,7 +67,7 @@ describe('PollNewFormReview', () => {
         }
       }
 
-      wrapper = shallow(<PollNewFormReview {...props} />)
+      wrapper = shallow(<PollFormReview {...props} />)
     });
 
     it('shows the appropriate number of choices', () => {
@@ -88,7 +88,7 @@ describe('PollNewFormReview', () => {
         }
       }
 
-      wrapper = shallow(<PollNewFormReview {...props} />)
+      wrapper = shallow(<PollFormReview {...props} />)
     });
 
     it('shows the appropriate number of choices', () => {
@@ -118,7 +118,7 @@ describe('PollNewFormReview', () => {
         }
       }
 
-      wrapper = shallow(<PollNewFormReview {...props} />)
+      wrapper = shallow(<PollFormReview {...props} />)
     });
 
     it('shows the appropriate number of choices', () => {
@@ -154,7 +154,7 @@ describe('PollNewFormReview', () => {
         }
       }
 
-      wrapper = shallow(<PollNewFormReview {...props} />)
+      wrapper = shallow(<PollFormReview {...props} />)
     });
 
     it('shows the appropriate number of choices', () => {

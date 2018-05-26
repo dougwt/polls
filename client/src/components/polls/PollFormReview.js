@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { Card, Input, Button, Row, Icon } from 'react-materialize';
 import * as actions from '../../actions';
 
-export const PollNewFormReview = ({ onCancel, formValues, submitPoll, history }) => {
+export const PollFormReview = ({ onCancel, formValues, submitPoll, history }) => {
   return (
     <div>
       <h5>Please confirm your poll</h5>
@@ -79,4 +79,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, actions)(withRouter(PollNewFormReview));
+export default connect(mapStateToProps, actions)(withRouter(PollFormReview));

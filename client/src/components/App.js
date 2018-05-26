@@ -7,7 +7,7 @@ import Footer from './Footer';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
 import PollNew from './polls/PollNew';
-import PollDetail from './polls/PollDetail';
+import Poll from './polls/Poll';
 
 export class App extends Component {
   componentDidMount() {
@@ -24,7 +24,7 @@ export class App extends Component {
           <Route exact path="/" component={Landing} />
           <Route exact path="/polls" component={Dashboard} />
           <Route exact path="/polls/new" component={PollNew} />
-          <Route exact path="/polls/1" component={PollDetail} />
+          {/* <Route exact path="/polls/1" component={Poll} /> */}
 
           <Footer />
 

@@ -5,7 +5,7 @@ import { reducer as formReducer } from 'redux-form'
 import { createStore, combineReducers } from 'redux'
 import { StaticRouter } from 'react-router';
 
-import ReduxForm, { PollNewForm } from './PollNewForm';
+import ReduxForm, { PollForm } from './PollForm';
 
 let props;
 let wrapper;
@@ -17,7 +17,7 @@ describe('PollNewForm', () => {
       handleSubmit: jest.fn()
     };
 
-    wrapper = shallow(<PollNewForm {...props} />);
+    wrapper = shallow(<PollForm {...props} />);
   });
 
   it('renders properly', () => {

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { Button, Row, Icon } from 'react-materialize';
-import PollNewField from './PollNewField';
+import PollField from './PollField';
 
-class PollDetailForm extends Component {
+class PollEdit extends Component {
   render() {
     return (
       <div>
@@ -130,4 +130,4 @@ function validate(values) {
 export default reduxForm({
   validate,
   form: 'pollDetailForm'
-})(PollDetailForm);
+})(PollEdit);

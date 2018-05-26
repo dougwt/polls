@@ -18,7 +18,7 @@
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.3",
     "mongoose": "^5.1.2",
-    "nodemon": "^1.17.4",
+    "nodemon": "^1.17.5",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0"
   },
@@ -27,7 +27,7 @@
     "concurrently": "^3.5.1",
     "mocha": "^5.2.0",
     "passport-mock": "0.0.3",
-    "sinon": "^5.0.7",
+    "sinon": "^5.0.10",
     "supertest": "^3.1.0"
   }
 }

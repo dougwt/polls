@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 // import { withRouter } from 'react-router-dom';
 import { Card, Input, Button, Row } from 'react-materialize';
-import PollDetailForm from './PollDetailForm';
+import PollForm from './PollForm';
 // import PollDetailFormReview from './PollDetailFormReview';
 // import * as actions from '../../actions';
 import './PollDetail.css';
@@ -27,7 +27,7 @@ class PollDetail extends Component {
     // }
 
     return (
-      <PollDetailForm
+      <PollForm
         onPollSubmit={() => this.setState({ showFormReview: true })}
       />);
   }

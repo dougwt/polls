@@ -1,28 +1,17 @@
 import React, { Component } from 'react';
-import { reduxForm } from 'redux-form';
-import PollNewForm from './PollNewForm';
-import PollNewFormReview from './PollNewFormReview';
-
-const initialValues = {
-  choices: [
-    0: null,
-    1: null,
-  ]
-};
+import PollNewEdit from './PollNewEdit';
+import PollNewReview from './PollNewReview';
 
 export class PollNew extends Component {
-  state = { showFormReview: false };
+  state = { showReview: false };
 
   renderContent() {
-    if (this.state.showFormReview) {
-      return <PollNewFormReview onCancel={() => this.setState({ showFormReview: false})}/>;
+    if (this.state.showReview) {
+      return <PollNewReview />;
     }
 
     return (
-      <PollNewForm
-        onPollSubmit={() => this.setState({ showFormReview: true })}
-        initialValues={initialValues}
-      />);
+      <PollNewEdit  />);
   }
 
   render() {
@@ -37,8 +26,6 @@ export class PollNew extends Component {
       </div>
     );
   }
-}
+};
 
-export default reduxForm({
-  form: 'pollNewForm'
-})(PollNew);
+export default PollNew;

@@ -32,7 +32,7 @@ ShallowWrapper {
                 path="/polls"
         />
         <Route
-                component={[Function]}
+                component={Object {}}
                 exact={true}
                 path="/polls/new"
         />
@@ -63,7 +63,7 @@ ShallowWrapper {
             path="/polls"
 />,
           <Route
-            component={[Function]}
+            component={Object {}}
             exact={true}
             path="/polls/new"
 />,
@@ -118,7 +118,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
+            "component": Object {},
             "exact": true,
             "path": "/polls/new",
           },
@@ -174,7 +174,7 @@ ShallowWrapper {
                     path="/polls"
           />
           <Route
-                    component={[Function]}
+                    component={Object {}}
                     exact={true}
                     path="/polls/new"
           />
@@ -205,7 +205,7 @@ ShallowWrapper {
               path="/polls"
 />,
             <Route
-              component={[Function]}
+              component={Object {}}
               exact={true}
               path="/polls/new"
 />,
@@ -260,7 +260,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "component": [Function],
+              "component": Object {},
               "exact": true,
               "path": "/polls/new",
             },
