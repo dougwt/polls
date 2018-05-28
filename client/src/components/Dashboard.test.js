@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import Dashboard from './Dashboard';
 
 describe('Dashboard', () => {
-
   const dashboard = shallow(<Dashboard />);
 
   it('renders properly', () => {

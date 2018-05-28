@@ -5,9 +5,9 @@ import Header from './Header';
 import Footer from './Footer';
 
 describe('App', () => {
-  let props = {}
+  let props = {};
 
-  let app = shallow(<App {...props} />)
+  let app = shallow(<App {...props} />);
 
   it('renders properly', () => {
     expect(app).toMatchSnapshot();

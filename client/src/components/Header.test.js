@@ -4,8 +4,8 @@ import { Header } from './Header';
 
 describe('Header', () => {
   let props = {
-    auth: undefined,
-  }
+    auth: undefined
+  };
 
   let header = shallow(<Header />);
 
@@ -28,15 +28,15 @@ describe('Header', () => {
   describe('when the user is authenticated', () => {
     beforeEach(() => {
       let props = {
-        auth: true,
-      }
+        auth: true
+      };
 
       header = shallow(<Header {...props} />);
     });
 
     it('doesnt show a `Sign In` lin', () => {
       expect(header.find('[href="/auth/google"]').length).toBe(0);
-    })
+    });
 
     it('shows a `Sign Out` link', () => {
       expect(header.find('[href="/api/logout"]').length).toBe(1);
@@ -46,8 +46,8 @@ describe('Header', () => {
   describe('when the user is not authenticated', () => {
     beforeEach(() => {
       let props = {
-        auth: false,
-      }
+        auth: false
+      };
 
       header = shallow(<Header {...props} />);
     });

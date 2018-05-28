@@ -1,5 +1,4 @@
-module.exports = (app) => {
-
+module.exports = app => {
   require('./authRoutes')(app);
   require('./pollRoutes')(app);
 
@@ -13,6 +12,6 @@ module.exports = (app) => {
   }
 
   app.get('*', (req, res) => {
-    return res.status(404).send({ error: 'Resource not found'});
+    return res.status(404).send({ error: 'Resource not found' });
   });
-}
+};

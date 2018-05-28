@@ -1,40 +1,16 @@
 const PollController = require('../controllers/poll_controller');
 const requireLogin = require('../middlewares/requireLogin');
 
-module.exports = (app) => {
-  app.get(
-    '/api/polls',
-    requireLogin,
-    PollController.fetchAll
-  );
+module.exports = app => {
+  app.get('/api/polls', requireLogin, PollController.fetchAll);
 
-  app.post(
-    '/api/polls/new',
-    requireLogin,
-    PollController.create
-  );
+  app.post('/api/polls/new', requireLogin, PollController.create);
 
-  app.post(
-    '/api/polls/:id/:choice',
-    requireLogin,
-    PollController.vote
-  );
+  app.post('/api/polls/:id/:choice', requireLogin, PollController.vote);
 
-  app.get(
-    '/api/polls/:id',
-    requireLogin,
-    PollController.fetchById
-  );
+  app.get('/api/polls/:id', requireLogin, PollController.fetchById);
 
-  app.post(
-    '/api/polls/:id',
-    requireLogin,
-    PollController.updateById
-  );
+  app.post('/api/polls/:id', requireLogin, PollController.updateById);
 
-  app.delete(
-    '/api/polls/:id',
-    requireLogin,
-    PollController.deleteById
-  );
-}
+  app.delete('/api/polls/:id', requireLogin, PollController.deleteById);
+};

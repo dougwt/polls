@@ -1,10 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Card, Input, Button, Row, Icon } from 'react-materialize';
 import * as actions from '../../actions';
 
-export const PollFormReview = ({ onCancel, formValues, submitPoll, history }) => {
+export const PollFormReview = ({
+  onCancel,
+  formValues,
+  submitPoll,
+  history
+}) => {
   return (
     <div>
       <h5>Please confirm your poll</h5>
@@ -12,23 +18,16 @@ export const PollFormReview = ({ onCancel, formValues, submitPoll, history }) =>
       {/* {console.log(formValues)} */}
 
       <Row>
-    		<Card className='darken-1' title={formValues.question}>
-
+        <Card className="darken-1" title={formValues.question}>
           {/* TODO: add spacing here via CSS */}
 
-          <div className="choices">
-            {renderChoices(formValues)}
-          </div>
+          <div className="choices">{renderChoices(formValues)}</div>
 
           <Row className="center-align">
-            <Button
-              className="teal"
-              disabled
-            >
+            <Button className="teal" disabled>
               Vote
             </Button>
           </Row>
-
         </Card>
       </Row>
 
@@ -53,7 +52,13 @@ export const PollFormReview = ({ onCancel, formValues, submitPoll, history }) =>
         </Button>
       </Row>
     </div>
-  )
+  );
+};
+PollFormReview.propTypes = {
+  onCancel: PropTypes.func.isRequired,
+  formValues: PropTypes.object.isRequired,
+  submitPoll: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 function renderChoices(values) {
@@ -61,21 +66,26 @@ function renderChoices(values) {
 
   for (let choice = 1; choice <= values.choices.length; choice++) {
     let field = `choice_${choice}`;
-    if(values[field]) {
+    if (values[field]) {
       choices.push(
         <Row key={choice}>
-          <Input name="choices" type="radio" value={choice.toString()} label={values[field]} />
+          <Input
+            name="choices"
+            type="radio"
+            value={choice.toString()}
+            label={values[field]}
+          />
         </Row>
-      )
+      );
     }
   }
 
   return choices;
-};
+}
 
 function mapStateToProps(state) {
   return {
-    formValues: state.form.pollNewForm.values
+    formValues: state.form.pollForm.values
   };
 }
 

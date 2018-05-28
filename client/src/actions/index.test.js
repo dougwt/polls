@@ -9,14 +9,15 @@ describe('actions', () => {
     const mock = new MockAdapter(axios);
     mock.onGet('/api/current_user').reply(200, 'PAYLOAD');
 
-    const expectedAction = { type: types.FETCH_USER, payload: 'PAYLOAD' }
+    const expectedAction = { type: types.FETCH_USER, payload: 'PAYLOAD' };
 
     // Process async action creator
     const dispatch = jest.fn();
-    actions.fetchUser()(dispatch)
+    actions
+      .fetchUser()(dispatch)
       .then(() => dispatch.mock.calls[0][0])
       .then(action => {
         expect(action).toEqual(expectedAction);
-      })
-  })
+      });
+  });
 });

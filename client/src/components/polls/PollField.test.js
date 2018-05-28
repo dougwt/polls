@@ -12,7 +12,7 @@ describe('PollField', () => {
       error: null,
       touched: null
     }
-  }
+  };
 
   const pollField = render(<PollField {...props} />);
 
@@ -28,5 +28,4 @@ describe('PollField', () => {
   it('contains an input', () => {
     expect(pollField.find('input').length).toBe(1);
   });
-
 });

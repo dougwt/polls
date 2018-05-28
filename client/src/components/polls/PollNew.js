@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
-import PollNewEdit from './PollNewEdit';
-import PollNewReview from './PollNewReview';
+import PollForm from './PollForm';
+import PollFormReview from './PollFormReview';
+
+const initialValues = { choices: [0, 1] };
 
 export class PollNew extends Component {
-  state = { showReview: false };
+  constructor() {
+    super();
+    this.state = { showReview: false };
+  }
 
   renderContent() {
     if (this.state.showReview) {
-      return <PollNewReview />;
+      return (
+        <PollFormReview onCancel={() => this.setState({ showReview: false })} />
+      );
     }
 
     return (
-      <PollNewEdit  />);
+      <PollForm
+        onPollSubmit={() => this.setState({ showReview: true })}
+        initialValues={initialValues}
+      />
+    );
   }
 
   render() {
@@ -26,6 +37,6 @@ export class PollNew extends Component {
       </div>
     );
   }
-};
+}
 
 export default PollNew;

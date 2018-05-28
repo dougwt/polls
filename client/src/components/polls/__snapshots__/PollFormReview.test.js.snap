@@ -18,6 +18,9 @@ ShallowWrapper {
             "question": "Who is your favorite Starfleet captain?",
           }
     }
+    history={Object {}}
+    onCancel={[Function]}
+    submitPoll={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -62,7 +65,7 @@ ShallowWrapper {
           <Button
                     className="red btn-back btn-flat white-text"
                     node="a"
-                    onClick={undefined}
+                    onClick={[Function]}
                     waves="light"
           >
                     Back
@@ -132,7 +135,7 @@ ShallowWrapper {
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "children": Array [
               <div
@@ -214,7 +217,7 @@ ShallowWrapper {
             <Button
               className="red btn-back btn-flat white-text"
               node="a"
-              onClick={undefined}
+              onClick={[Function]}
               waves="light"
 >
               Back
@@ -256,7 +259,7 @@ ShallowWrapper {
               ],
               "className": "red btn-back btn-flat white-text",
               "node": "a",
-              "onClick": undefined,
+              "onClick": [Function],
               "waves": "light",
             },
             "ref": null,
@@ -356,7 +359,7 @@ ShallowWrapper {
             <Button
                         className="red btn-back btn-flat white-text"
                         node="a"
-                        onClick={undefined}
+                        onClick={[Function]}
                         waves="light"
             >
                         Back
@@ -426,7 +429,7 @@ ShallowWrapper {
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "class",
             "props": Object {
               "children": Array [
                 <div
@@ -508,7 +511,7 @@ ShallowWrapper {
               <Button
                 className="red btn-back btn-flat white-text"
                 node="a"
-                onClick={undefined}
+                onClick={[Function]}
                 waves="light"
 >
                 Back
@@ -550,7 +553,7 @@ ShallowWrapper {
                 ],
                 "className": "red btn-back btn-flat white-text",
                 "node": "a",
-                "onClick": undefined,
+                "onClick": [Function],
                 "waves": "light",
               },
               "ref": null,

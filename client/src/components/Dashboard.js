@@ -11,13 +11,16 @@ class Dashboard extends Component {
     return (
       <Section>
         <Container>
-
           <Row>
             <div className="col s12">
               <h3>Dashboard</h3>
               <ul className="tabs">
-                <li className="tab col s3"><a href="#my">My Polls</a></li>
-                <li className="tab col s3"><a href="#other">Other Polls</a></li>
+                <li className="tab col s3">
+                  <a href="#my">My Polls</a>
+                </li>
+                <li className="tab col s3">
+                  <a href="#other">Other Polls</a>
+                </li>
               </ul>
             </div>
           </Row>
@@ -30,7 +33,6 @@ class Dashboard extends Component {
               <PollList title="This list contains all the polls created by other users." />
             </div>
           </Row>
-
         </Container>
       </Section>
     );

@@ -19,7 +19,7 @@ describe('API routes', () => {
     let alex, maria, zach;
 
     // Reload fixtures into mongo before each test
-    beforeEach((done) => {
+    beforeEach(done => {
       alex = new User({ googleId: 'alex' });
       maria = new User({ googleId: 'maria' });
       zach = new User({ googleId: 'zach' });
@@ -29,22 +29,21 @@ describe('API routes', () => {
           poll2 = new Poll({ ...starwars, owner: maria });
           poll3 = new Poll({ ...color, owner: zach });
 
-          Promise.all([poll1.save(), poll2.save(), poll3.save()])
-            .then(() => {
-              expect(poll1.isNew).to.equal(false);
-              expect(poll2.isNew).to.equal(false);
-              expect(poll3.isNew).to.equal(false);
-              done();
-            });
+          Promise.all([poll1.save(), poll2.save(), poll3.save()]).then(() => {
+            expect(poll1.isNew).to.equal(false);
+            expect(poll2.isNew).to.equal(false);
+            expect(poll3.isNew).to.equal(false);
+            done();
+          });
         })
-        .catch((err) => done(err));
-    })
+        .catch(err => done(err));
+    });
 
     //////////////////////
     // UNAUTHENTICATED
     //////////////////////
     describe('unauthenticated', () => {
-      it('GET /api/polls', (done) => {
+      it('GET /api/polls', done => {
         request(app)
           .get('/api/polls')
           .set('Accept', 'application/json')
@@ -52,13 +51,15 @@ describe('API routes', () => {
           .expect(401)
           .then(res => {
             expect(res.body).to.have.property('error');
-            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            expect(res.body.error).to.equal(
+              'You are unauthorized to make this request.'
+            );
             done();
           })
-          .catch((err) => done(err));
+          .catch(err => done(err));
       });
 
-      it('POST /api/polls/new', (done) => {
+      it('POST /api/polls/new', done => {
         request(app)
           .post(`/api/polls/${poll3.id}`)
           .send({ ...color_extra })
@@ -67,13 +68,15 @@ describe('API routes', () => {
           .expect(401)
           .then(res => {
             expect(res.body).to.have.property('error');
-            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            expect(res.body.error).to.equal(
+              'You are unauthorized to make this request.'
+            );
             done();
           })
-          .catch((err) => done(err));
+          .catch(err => done(err));
       });
 
-      it('GET /api/polls/:id', (done) => {
+      it('GET /api/polls/:id', done => {
         request(app)
           .get(`/api/polls/${poll1.id}`)
           .set('Accept', 'application/json')
@@ -81,13 +84,15 @@ describe('API routes', () => {
           .expect(401)
           .then(res => {
             expect(res.body).to.have.property('error');
-            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            expect(res.body.error).to.equal(
+              'You are unauthorized to make this request.'
+            );
             done();
           })
-          .catch((err) => done(err));
+          .catch(err => done(err));
       });
 
-      it('POST /api/polls/:id', (done) => {
+      it('POST /api/polls/:id', done => {
         request(app)
           .post(`/api/polls/${poll3.id}`)
           .send({ ...color_extra })
@@ -96,13 +101,15 @@ describe('API routes', () => {
           .expect(401)
           .then(res => {
             expect(res.body).to.have.property('error');
-            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            expect(res.body.error).to.equal(
+              'You are unauthorized to make this request.'
+            );
             done();
           })
-          .catch((err) => done(err));
+          .catch(err => done(err));
       });
 
-      it('DELETE /api/polls/:id', (done) => {
+      it('DELETE /api/polls/:id', done => {
         const { id } = poll3;
 
         request(app)
@@ -112,13 +119,15 @@ describe('API routes', () => {
           .expect(401)
           .then(res => {
             expect(res.body).to.have.property('error');
-            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            expect(res.body.error).to.equal(
+              'You are unauthorized to make this request.'
+            );
             done();
           })
-          .catch((err) => done(err));
+          .catch(err => done(err));
       });
 
-      it('POST api/polls/:id/:choice', (done) => {
+      it('POST api/polls/:id/:choice', done => {
         const { id } = poll1;
         const choice = poll1.choices[2].id;
 
@@ -129,10 +138,12 @@ describe('API routes', () => {
           .expect(401)
           .then(res => {
             expect(res.body).to.have.property('error');
-            expect(res.body.error).to.equal('You are unauthorized to make this request.');
+            expect(res.body.error).to.equal(
+              'You are unauthorized to make this request.'
+            );
             done();
           })
-          .catch((err) => done(err));
+          .catch(err => done(err));
       });
     });
 
@@ -147,13 +158,17 @@ describe('API routes', () => {
         var fn = function insertUser(req, res, next) {
           req.user = user;
           next();
-        }
+        };
 
-        var layer = new Layer('/', {
-          sensitive: false,
-          strict: false,
-          end: false
-        }, fn);
+        var layer = new Layer(
+          '/',
+          {
+            sensitive: false,
+            strict: false,
+            end: false
+          },
+          fn
+        );
         layer.route = undefined;
 
         app._router.stack.unshift(layer);
@@ -167,7 +182,7 @@ describe('API routes', () => {
       afterEach(() => logout());
 
       describe('GET /api/polls', () => {
-        it('responds to a request', (done) => {
+        it('responds to a request', done => {
           request(app)
             .get('/api/polls')
             .set('Accept', 'application/json')
@@ -180,15 +195,15 @@ describe('API routes', () => {
                 expect(poll).to.have.property('question');
                 expect(poll).to.have.property('choices');
                 expect(poll).to.have.property('respondents');
-              })
+              });
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
-      })
+      });
 
       describe('POST /api/polls/new', () => {
-        it('responds to an invalid owner', (done) => {
+        it('responds to an invalid owner', done => {
           request(app)
             .post('/api/polls/new')
             .send({ ...taco, owner: 'invalid-id' })
@@ -200,10 +215,10 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid user');
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('rejects request to save a poll as a different user', (done) => {
+        it('rejects request to save a poll as a different user', done => {
           request(app)
             .post('/api/polls/new')
             .send({ ...taco, owner: alex._id })
@@ -212,13 +227,15 @@ describe('API routes', () => {
             .expect(401)
             .then(res => {
               expect(res.body).to.have.property('error');
-              expect(res.body.error).to.equal('You are unauthorized to make this request.');
+              expect(res.body.error).to.equal(
+                'You are unauthorized to make this request.'
+              );
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('responds to a valid request', (done) => {
+        it('responds to a valid request', done => {
           request(app)
             .post('/api/polls/new')
             .send({ ...taco, owner: zach._id })
@@ -227,7 +244,9 @@ describe('API routes', () => {
             .expect(200)
             .then(res => {
               expect(res.body).to.have.property('owner');
-              expect(res.body.question).to.equal('Who has the best fast food tacos?');
+              expect(res.body.question).to.equal(
+                'Who has the best fast food tacos?'
+              );
               expect(res.body.choices.length).to.equal(3);
               expect(res.body.choices[0].text).to.equal('Taco Time');
               expect(res.body.choices[1].text).to.equal('Taco Bell');
@@ -236,12 +255,12 @@ describe('API routes', () => {
               expect(res.body.respondents.length).to.equal(0);
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
       });
 
       describe('GET /api/polls/:id', () => {
-        it('responds to an invalid id', (done) => {
+        it('responds to an invalid id', done => {
           request(app)
             .get('/api/polls/fakeid')
             .set('Accept', 'application/json')
@@ -252,10 +271,10 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid poll');
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('responds to a valid id', (done) => {
+        it('responds to a valid id', done => {
           request(app)
             .get(`/api/polls/${poll1.id}`)
             .set('Accept', 'application/json')
@@ -270,15 +289,15 @@ describe('API routes', () => {
               res.body.choices.forEach(choice => {
                 expect(choice).to.have.property('text');
                 expect(choice).to.have.property('votes');
-              })
+              });
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
-      })
+      });
 
       describe('POST /api/polls/:id', () => {
-        it('responds to an invalid id', (done) => {
+        it('responds to an invalid id', done => {
           request(app)
             .post('/api/polls/fakeid')
             .send({ ...color_extra })
@@ -290,10 +309,10 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid poll');
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('rejects request to update a poll belonging to a different user', (done) => {
+        it('rejects request to update a poll belonging to a different user', done => {
           request(app)
             .post(`/api/polls/${poll1.id}`)
             .send({ ...color_extra })
@@ -302,13 +321,15 @@ describe('API routes', () => {
             .expect(401)
             .then(res => {
               expect(res.body).to.have.property('error');
-              expect(res.body.error).to.equal('You are unauthorized to make this request.');
+              expect(res.body.error).to.equal(
+                'You are unauthorized to make this request.'
+              );
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('responds to a valid id', (done) => {
+        it('responds to a valid id', done => {
           request(app)
             .post(`/api/polls/${poll3.id}`)
             .send({ ...color_extra })
@@ -324,16 +345,16 @@ describe('API routes', () => {
               res.body.choices.forEach(choice => {
                 expect(choice).to.have.property('text');
                 expect(choice).to.have.property('votes');
-              })
+              });
               expect(res.body.choices[3].text).to.equal('Purple');
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
-      })
+      });
 
       describe('DELETE /api/polls/:id', () => {
-        it('responds to an invalid id', (done) => {
+        it('responds to an invalid id', done => {
           request(app)
             .delete('/api/polls/fakeid')
             .set('Accept', 'application/json')
@@ -344,10 +365,10 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid poll');
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('rejects request to delete a poll belonging to a different user', (done) => {
+        it('rejects request to delete a poll belonging to a different user', done => {
           const { id } = poll1;
 
           request(app)
@@ -357,13 +378,15 @@ describe('API routes', () => {
             .expect(401)
             .then(res => {
               expect(res.body).to.have.property('error');
-              expect(res.body.error).to.equal('You are unauthorized to make this request.');
+              expect(res.body.error).to.equal(
+                'You are unauthorized to make this request.'
+              );
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('responds to a valid id', (done) => {
+        it('responds to a valid id', done => {
           const { id } = poll3;
 
           request(app)
@@ -383,15 +406,15 @@ describe('API routes', () => {
                   expect(res2.body.error).to.equal('Invalid poll');
                   done();
                 })
-                .catch((err) => done(err));
+                .catch(err => done(err));
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
-      })
+      });
 
       describe('POST api/polls/:id/:choice', () => {
-        it('responds to an invalid poll id', (done) => {
-          const id = 'fakeid'
+        it('responds to an invalid poll id', done => {
+          const id = 'fakeid';
           const choice = poll1.choices[2].id;
 
           request(app)
@@ -404,10 +427,10 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid poll');
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('responds to an invalid choice id', (done) => {
+        it('responds to an invalid choice id', done => {
           const { id } = poll1;
           const choice = 'fakechoice';
 
@@ -421,10 +444,10 @@ describe('API routes', () => {
               expect(res.body.error).to.equal('Invalid choice');
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('responds to a valid id', (done) => {
+        it('responds to a valid id', done => {
           const { id } = poll1;
           const choice = poll1.choices[2].id;
 
@@ -440,10 +463,10 @@ describe('API routes', () => {
               expect(res.body.respondents).to.contain(zach.id);
               done();
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
 
-        it('rejects attempts to vote multiple times', (done) => {
+        it('rejects attempts to vote multiple times', done => {
           const { id } = poll1;
           let choice = poll1.choices[2].id;
 
@@ -465,16 +488,18 @@ describe('API routes', () => {
                 .expect(400)
                 .then(res => {
                   expect(res.body).to.have.property('error');
-                  expect(res.body.error).to.equal('You have already voted on this poll.');
+                  expect(res.body.error).to.equal(
+                    'You have already voted on this poll.'
+                  );
                   done();
                 })
-                .catch((err) => done(err));
+                .catch(err => done(err));
             })
-            .catch((err) => done(err));
+            .catch(err => done(err));
         });
-      })
+      });
 
-      it('responds to requests for an unrecognized path', (done) => {
+      it('responds to requests for an unrecognized path', done => {
         request(app)
           .get('/some/fake-path')
           .set('Accept', 'application/json')
@@ -485,7 +510,7 @@ describe('API routes', () => {
             expect(res.body.error).to.equal('Resource not found');
             done();
           })
-          .catch((err) => done(err));
+          .catch(err => done(err));
       });
     });
   });

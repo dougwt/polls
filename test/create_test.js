@@ -5,14 +5,15 @@ const Poll = require('../models/Poll');
 describe('Creating records', () => {
   let user;
 
-  beforeEach((done) => {
+  beforeEach(done => {
     user = new User({ googleId: 'sample-id' });
-    user.save()
+    user
+      .save()
       .then(() => done())
-      .catch((err) => console.log(err));
-  })
+      .catch(err => console.log(err));
+  });
 
-  it('saves a poll', (done) => {
+  it('saves a poll', done => {
     const poll = new Poll({
       owner: user,
       question: 'Who is your favorite Starfleet captain?',
@@ -20,19 +21,24 @@ describe('Creating records', () => {
         {
           text: 'Kirk (TOS)',
           votes: 5
-        }, {
+        },
+        {
           text: 'Picard (TNG)',
           votes: 4
-        }, {
+        },
+        {
           text: 'Sisko (DS9)',
           votes: 3
-        }, {
+        },
+        {
           text: 'Janeway (Voyager)',
           votes: 2
-        }, {
+        },
+        {
           text: 'Archer (Enterprise)',
           votes: 1
-        }, {
+        },
+        {
           text: 'Lorca (Discovery)',
           votes: 0
         }
@@ -40,10 +46,9 @@ describe('Creating records', () => {
       respondents: []
     });
 
-    poll.save()
-      .then(() => {
-        assert(!poll.isNew);
-        done();
-      });
+    poll.save().then(() => {
+      assert(!poll.isNew);
+      done();
+    });
   });
 });

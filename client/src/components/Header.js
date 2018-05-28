@@ -4,27 +4,33 @@ import { Link, NavLink } from 'react-router-dom';
 
 export class Header extends Component {
   renderContent() {
-    switch(this.props.auth) {
-      case null:
-        return;
-      case false:
-        return  (
-          <li>
-            <a href="/auth/google" className="navbar-item waves-effect waves-light">
-              <i className="material-icons left">person</i>
+    switch (this.props.auth) {
+    case null:
+      return;
+    case false:
+      return (
+        <li>
+          <a
+            href="/auth/google"
+            className="navbar-item waves-effect waves-light"
+          >
+            <i className="material-icons left">person</i>
               Sign In with Google
-            </a>
-          </li>
-        );
-      default:
-        return (
-          <li>
-            <a href="/api/logout" className="navbar-item waves-effect waves-light">
-              <i className="material-icons left">person</i>
+          </a>
+        </li>
+      );
+    default:
+      return (
+        <li>
+          <a
+            href="/api/logout"
+            className="navbar-item waves-effect waves-light"
+          >
+            <i className="material-icons left">person</i>
               Sign Out
-            </a>
-          </li>
-        );
+          </a>
+        </li>
+      );
     }
   }
 

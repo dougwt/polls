@@ -1,7 +1,13 @@
 import React from 'react';
 import { Row, Input } from 'react-materialize';
 
-export default ({ input, label, icon, s=12, meta: { active, error, touched } }) => {
+export default ({
+  input,
+  label,
+  icon,
+  s = 12,
+  meta: { active, error, touched }
+}) => {
   return (
     <Row>
       <Input
@@ -14,4 +20,4 @@ export default ({ input, label, icon, s=12, meta: { active, error, touched } }) 
       />
     </Row>
   );
-}
+};

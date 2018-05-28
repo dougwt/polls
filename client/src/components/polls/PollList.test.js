@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import PollList from './PollList';
 
 describe('PollList', () => {
-
   const pollList = shallow(<PollList />);
 
   it('renders properly', () => {
@@ -21,5 +20,4 @@ describe('PollList', () => {
   it('contains a Pagination', () => {
     expect(pollList.find('Pagination').exists()).toBe(true);
   });
-
 });

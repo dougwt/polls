@@ -18,7 +18,6 @@ export class App extends Component {
     return (
       <BrowserRouter>
         <div className="app">
-
           <Header />
 
           <Route exact path="/" component={Landing} />
@@ -27,7 +26,6 @@ export class App extends Component {
           {/* <Route exact path="/polls/1" component={Poll} /> */}
 
           <Footer />
-
         </div>
       </BrowserRouter>
     );

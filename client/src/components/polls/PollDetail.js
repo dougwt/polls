@@ -9,7 +9,7 @@ import PollForm from './PollForm';
 import './PollDetail.css';
 
 const defaultPoll = {
-  choices: [ 0, 1, 2, 3, 4, 5 ],
+  choices: [0, 1, 2, 3, 4, 5],
   question: 'Who is your favorite Starfleet captain?',
   choice_1: 'Kirk (TOS)',
   choice_2: 'Picard (TNG)',
@@ -17,40 +17,31 @@ const defaultPoll = {
   choice_4: 'Janeway (Voyager)',
   choice_5: 'Archer (Enterprise)',
   choice_6: 'Lorca (Discovery)'
-}
+};
 
 class PollDetail extends Component {
-
   renderContent() {
     // if (this.state.showFormReview) {
     //   return <PollDetailFormReview onCancel={() => this.setState({ showFormReview: false})}/>;
     // }
 
     return (
-      <PollForm
-        onPollSubmit={() => this.setState({ showFormReview: true })}
-      />);
+      <PollForm onPollSubmit={() => this.setState({ showFormReview: true })} />
+    );
   }
 
   render() {
     return (
       <div className="container">
-      		<Card className='darken-1' title={defaultPoll.question}>
+        <Card className="darken-1" title={defaultPoll.question}>
+          <div className="choices">{this.renderChoices(defaultPoll)}</div>
 
-            <div className="choices">
-              {this.renderChoices(defaultPoll)}
-            </div>
-
-            <Row className="center-align">
-              <Button
-                className="teal"
-                disabled
-              >
-                Vote
-              </Button>
-            </Row>
-
-          </Card>
+          <Row className="center-align">
+            <Button className="teal" disabled>
+              Vote
+            </Button>
+          </Row>
+        </Card>
       </div>
     );
   }
@@ -62,9 +53,14 @@ class PollDetail extends Component {
       let field = `choice_${choice}`;
       choices.push(
         <Row key={choice}>
-          <Input name="group1" type="radio" value='{choice}' label={values[field]} />
+          <Input
+            name="group1"
+            type="radio"
+            value="{choice}"
+            label={values[field]}
+          />
         </Row>
-      )
+      );
     }
     return choices;
   }

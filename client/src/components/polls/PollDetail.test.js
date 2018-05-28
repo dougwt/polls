@@ -4,7 +4,6 @@ import PollDetail from './PollDetail';
 
 const wrapper = shallow(<PollDetail />);
 describe('PollDetail', () => {
-
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
@@ -13,5 +12,4 @@ describe('PollDetail', () => {
     console.log(wrapper.debug());
     expect(wrapper.find('PollDetailForm').exists()).toBe(true);
   });
-
 });

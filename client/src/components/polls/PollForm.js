@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { Button, Row, Icon } from 'react-materialize';
@@ -28,9 +29,12 @@ export class PollForm extends Component {
               <Icon left>close</Icon>
             </Link>
 
-            <Button className="btn-preview teal btn-flat right white-text" waves="light">
-                Preview
-                <Icon right>keyboard_arrow_right</Icon>
+            <Button
+              className="btn-preview teal btn-flat right white-text"
+              waves="light"
+            >
+              Preview
+              <Icon right>keyboard_arrow_right</Icon>
             </Button>
           </Row>
         </form>
@@ -38,6 +42,10 @@ export class PollForm extends Component {
     );
   }
 }
+PollForm.propTypes = {
+  onPollSubmit: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
+};
 
 const choiceIcons = {
   1: 'looks_one',
@@ -73,17 +81,15 @@ function renderChoices({ fields, meta: { error } }) {
   return (
     <ul>
       {fields.map((choice, index) => (
-        <li key={index}>
-          { renderChoiceField(index + 1) }
-        </li>
+        <li key={index}>{renderChoiceField(index + 1)}</li>
       ))}
       {renderChoiceError(error)}
 
       <li className="center-align">
         <Button
           flat
-          className={ 'btn-add-choice' + (fields.length > 5 ? ' disabled' : '') }
-          onClick={() => addField(fields) }
+          className={'btn-add-choice' + (fields.length > 5 ? ' disabled' : '')}
+          onClick={() => addField(fields)}
           node="a"
         >
           <Icon left>add</Icon>
@@ -91,8 +97,10 @@ function renderChoices({ fields, meta: { error } }) {
         </Button>
         <Button
           flat
-          className={ 'btn-remove-choice' + (fields.length < 3 ? ' disabled' : '') }
-          onClick={() => removeField(fields) }
+          className={
+            'btn-remove-choice' + (fields.length < 3 ? ' disabled' : '')
+          }
+          onClick={() => removeField(fields)}
           node="a"
         >
           <Icon left>delete</Icon>
@@ -102,6 +110,10 @@ function renderChoices({ fields, meta: { error } }) {
     </ul>
   );
 }
+renderChoices.propTypes = {
+  fields: PropTypes.object.isRequired,
+  meta: PropTypes.object.isRequired
+};
 
 function addField(fields) {
   if (fields.length <= 5) {
@@ -111,7 +123,7 @@ function addField(fields) {
 
 function removeField(fields) {
   if (fields.length >= 3) {
-    return fields.pop()
+    return fields.pop();
   }
 }
 
@@ -119,7 +131,7 @@ function validate(values) {
   const errors = {};
 
   if (!values.question) {
-    errors.question = 'You must provide a poll question'
+    errors.question = 'You must provide a poll question';
   }
 
   if (!values.choices || values.choices.length < 2) {
