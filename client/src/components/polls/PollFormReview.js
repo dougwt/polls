@@ -8,7 +8,7 @@ import * as actions from '../../actions';
 export const PollFormReview = ({
   onCancel,
   formValues,
-  submitPoll,
+  createPoll,
   history
 }) => {
   return (
@@ -45,7 +45,7 @@ export const PollFormReview = ({
         <Button
           className="teal btn-create btn-flat right white-text"
           waves="light"
-          onClick={() => submitPoll(formValues, history)}
+          onClick={() => createPoll(formValues, history)}
         >
           Create
           <Icon right>create</Icon>
@@ -57,7 +57,7 @@ export const PollFormReview = ({
 PollFormReview.propTypes = {
   onCancel: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
-  submitPoll: PropTypes.func.isRequired,
+  createPoll: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired
 };
 

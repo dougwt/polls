@@ -8,8 +8,8 @@ describe('PollFormReview', () => {
       choices: [0, 1, undefined, undefined, undefined, undefined],
       question: 'Who is your favorite Starfleet captain?'
     },
-    onCancel: () => {},
-    submitPoll: () => {},
+    onCancel: jest.fn(),
+    createPoll: jest.fn(),
     history: {}
   };
 
@@ -34,12 +34,18 @@ describe('PollFormReview', () => {
     expect(wrapper.find('Button.btn-back').length).toBe(1);
   });
 
-  xit('submits the form when Create button clicked', () => {
-    // TODO: mock onCancel();
+  describe('when the Next button is clicked', () => {
+    it('submits the form', () => {
+      wrapper.find('Button.btn-create').simulate('click');
+      expect(props.createPoll).toHaveBeenCalled();
+    });
   });
 
-  xit('returns to the previous screen of the form when Back button clicked', () => {
-    // TODO: mock submitPoll();
+  describe('when the Back button is clicked', () => {
+    it('returns to the previous screen of the form', () => {
+      wrapper.find('Button.btn-back').simulate('click');
+      expect(props.onCancel).toHaveBeenCalled();
+    });
   });
 
   describe('with two choices', () => {

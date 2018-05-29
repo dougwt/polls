@@ -1,9 +1,9 @@
-import { FETCH_POLL } from '../actions/types';
+import { CREATE_POLL } from '../actions/types';
 
 export default function(state = null, action) {
   switch (action.type) {
-  case FETCH_POLL:
-    return action.payload || true;
+  case CREATE_POLL:
+    return { ...state, polls: [...state.polls, action.payload] };
   default:
     return state;
   }
