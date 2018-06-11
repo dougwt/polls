@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Row, Input } from 'react-materialize';
 
 const PollField = ({
@@ -6,7 +7,7 @@ const PollField = ({
   label,
   icon,
   s = 12,
-  meta: { active, error, touched }
+  meta: { error, touched }
 }) => {
   return (
     <Row>
@@ -20,6 +21,13 @@ const PollField = ({
       />
     </Row>
   );
+};
+PollField.propTypes = {
+  input: PropTypes.object.isRequired,
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+  s: PropTypes.number,
+  meta: PropTypes.object.isRequired
 };
 
 export default PollField;

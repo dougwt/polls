@@ -4,7 +4,7 @@ import PollField from '../PollField';
 
 describe('PollField', () => {
   const props = {
-    input: true,
+    input: {},
     label: 'Sample label',
     icon: null,
     meta: {

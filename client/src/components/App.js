@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -7,7 +8,7 @@ import Footer from './Footer';
 import Landing from './Landing';
 import Dashboard from './Dashboard';
 import PollNew from './polls/PollNew';
-import Poll from './polls/Poll';
+// import Poll from './polls/Poll';
 
 export class App extends Component {
   componentDidMount() {
@@ -31,5 +32,8 @@ export class App extends Component {
     );
   }
 }
+App.propTypes = {
+  fetchUser: PropTypes.func.isRequired
+};
 
 export default connect(null, actions)(App);

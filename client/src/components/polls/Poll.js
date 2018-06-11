@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { Button, Row, Icon } from 'react-materialize';
@@ -35,6 +36,10 @@ const Poll = props => {
       </form>
     </div>
   );
+};
+Poll.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  onPollSubmit: PropTypes.func.isRequired
 };
 
 const choiceIcons = {
@@ -98,6 +103,10 @@ function renderChoices({ fields, meta: { error } }) {
     </ul>
   );
 }
+renderChoices.propTypes = {
+  fields: PropTypes.object.isRequired,
+  meta: PropTypes.object.isRequired
+};
 
 function validate(values) {
   const errors = {};

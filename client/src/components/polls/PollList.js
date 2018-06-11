@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Row,
   Collection,
@@ -54,6 +55,10 @@ const PollList = props => {
       </Row>
     </div>
   );
+};
+PollList.propTypes = {
+  title: PropTypes.string.isRequired
+  // polls: PropTypes.object.isRequired
 };
 
 export default PollList;

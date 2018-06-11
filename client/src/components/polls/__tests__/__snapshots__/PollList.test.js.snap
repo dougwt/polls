@@ -4,7 +4,9 @@ exports[`PollList renders properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PollList />,
+  Symbol(enzyme.__unrendered__): <PollList
+    title="Test Title"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -21,7 +23,9 @@ ShallowWrapper {
         <Row>
           <h6
                     className="header section-title"
-          />
+          >
+                    Test Title
+          </h6>
 </Row>,
         <Row>
           <Collection>
@@ -127,7 +131,9 @@ ShallowWrapper {
         "props": Object {
           "children": <h6
             className="header section-title"
-/>,
+>
+            Test Title
+</h6>,
         },
         "ref": null,
         "rendered": Object {
@@ -135,11 +141,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "Test Title",
             "className": "header section-title",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "Test Title",
           "type": "h6",
         },
         "type": [Function],
@@ -669,7 +675,9 @@ ShallowWrapper {
           <Row>
             <h6
                         className="header section-title"
-            />
+            >
+                        Test Title
+            </h6>
 </Row>,
           <Row>
             <Collection>
@@ -775,7 +783,9 @@ ShallowWrapper {
           "props": Object {
             "children": <h6
               className="header section-title"
-/>,
+>
+              Test Title
+</h6>,
           },
           "ref": null,
           "rendered": Object {
@@ -783,11 +793,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "Test Title",
               "className": "header section-title",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "Test Title",
             "type": "h6",
           },
           "type": [Function],

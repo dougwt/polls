@@ -3,7 +3,8 @@ import { shallow } from 'enzyme';
 import PollList from '../PollList';
 
 describe('PollList', () => {
-  const wrapper = shallow(<PollList />);
+  const props = { title: 'Test Title' };
+  const wrapper = shallow(<PollList {...props} />);
 
   it('renders properly', () => {
     expect(wrapper).toMatchSnapshot();

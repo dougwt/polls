@@ -5,7 +5,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 
 describe('App', () => {
-  let props = {};
+  let props = { fetchUser: () => {} };
 
   let wrapper = shallow(<App {...props} />);
 

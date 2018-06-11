@@ -39,7 +39,8 @@ export const PollForm = props => {
 };
 PollForm.propTypes = {
   onPollSubmit: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
+  initialValues: PropTypes.object
 };
 
 const choiceIcons = {

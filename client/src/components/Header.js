@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -59,6 +60,9 @@ export const Header = props => {
       </div>
     </nav>
   );
+};
+Header.propTypes = {
+  auth: PropTypes.object
 };
 
 function mapStateToProps(state) {

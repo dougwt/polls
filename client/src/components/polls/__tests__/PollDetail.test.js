@@ -9,7 +9,7 @@ describe('PollDetail', () => {
   });
 
   xit('contains a PollDetailForm', () => {
-    console.log(wrapper.debug());
+    // console.log(wrapper.debug());
     expect(wrapper.find('PollDetailForm').exists()).toBe(true);
   });
 });
