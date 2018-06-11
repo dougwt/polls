@@ -3,21 +3,21 @@ import { shallow } from 'enzyme';
 import Dashboard from '../Dashboard';
 
 describe('Dashboard', () => {
-  const dashboard = shallow(<Dashboard />);
+  const wrapper = shallow(<Dashboard />);
 
   it('renders properly', () => {
-    expect(dashboard).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('contains a page title', () => {
-    expect(dashboard.find('h3').exists()).toBe(true);
+    expect(wrapper.find('h3').exists()).toBe(true);
   });
 
   it('contains a `My Polls` PollList', () => {
-    expect(dashboard.find('#my > PollList').exists()).toBe(true);
+    expect(wrapper.find('#my > PollList').length).toEqual(1);
   });
 
   it('contains a `Other Polls` PollList', () => {
-    expect(dashboard.find('#other > PollList').exists()).toBe(true);
+    expect(wrapper.find('#other > PollList').length).toEqual(1);
   });
 });

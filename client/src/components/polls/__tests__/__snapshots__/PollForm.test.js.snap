@@ -4,7 +4,7 @@ exports[`PollForm renders properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PollForm
+  Symbol(enzyme.__unrendered__): <Unknown
     handleSubmit={[Function]}
     onPollSubmit={[Function]}
 />,

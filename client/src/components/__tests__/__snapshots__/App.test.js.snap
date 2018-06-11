@@ -20,7 +20,7 @@ ShallowWrapper {
       "children": <div
         className="app"
 >
-        <Connect(Header) />
+        <Connect(Component) />
         <Route
                 component={[Function]}
                 exact={true}
@@ -46,7 +46,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(Header) />,
+          <Connect(Component) />,
           <Route
             component={[Function]}
             exact={true}
@@ -139,7 +139,7 @@ ShallowWrapper {
         "children": <div
           className="app"
 >
-          <Connect(Header) />
+          <Connect(Component) />
           <Route
                     component={[Function]}
                     exact={true}
@@ -165,7 +165,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Connect(Header) />,
+            <Connect(Component) />,
             <Route
               component={[Function]}
               exact={true}

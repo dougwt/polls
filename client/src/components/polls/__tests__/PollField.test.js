@@ -14,18 +14,18 @@ describe('PollField', () => {
     }
   };
 
-  const pollField = render(<PollField {...props} />);
+  const wrapper = render(<PollField {...props} />);
 
   it('renders properly', () => {
-    expect(pollField).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('contains a label', () => {
-    expect(pollField.find('label').length).toBe(1);
-    expect(pollField.find('label').text()).toEqual(props.label);
+    expect(wrapper.find('label').length).toBe(1);
+    expect(wrapper.find('label').text()).toEqual(props.label);
   });
 
   it('contains an input', () => {
-    expect(pollField.find('input').length).toBe(1);
+    expect(wrapper.find('input').length).toBe(1);
   });
 });

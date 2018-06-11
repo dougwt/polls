@@ -7,22 +7,26 @@ describe('Header', () => {
     auth: undefined
   };
 
-  let header = shallow(<Header />);
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Header />);
+  });
 
   it('renders properly', () => {
-    expect(header).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('shows a title that links to the homepage', () => {
-    expect(header.find('Link.brand-logo[to="/"]').length).toBe(1);
+    expect(wrapper.find('Link.brand-logo[to="/"]').length).toBe(1);
   });
 
   it('shows a nav link to the `Dashboard` page', () => {
-    expect(header.find('NavLink[to="/polls"]').length).toBe(1);
+    expect(wrapper.find('NavLink[to="/polls"]').length).toBe(1);
   });
 
   it('shows a nav link to the `Create a Poll` page', () => {
-    expect(header.find('NavLink[to="/polls/new"]').length).toBe(1);
+    expect(wrapper.find('NavLink[to="/polls/new"]').length).toBe(1);
   });
 
   describe('when the user is authenticated', () => {
@@ -31,15 +35,15 @@ describe('Header', () => {
         auth: true
       };
 
-      header = shallow(<Header {...props} />);
+      wrapper = shallow(<Header {...props} />);
     });
 
     it('doesnt show a `Sign In` lin', () => {
-      expect(header.find('[href="/auth/google"]').length).toBe(0);
+      expect(wrapper.find('[href="/auth/google"]').length).toBe(0);
     });
 
     it('shows a `Sign Out` link', () => {
-      expect(header.find('[href="/api/logout"]').length).toBe(1);
+      expect(wrapper.find('[href="/api/logout"]').length).toBe(1);
     });
   });
 
@@ -49,15 +53,15 @@ describe('Header', () => {
         auth: false
       };
 
-      header = shallow(<Header {...props} />);
+      wrapper = shallow(<Header {...props} />);
     });
 
     it('shows a `Sign In` link', () => {
-      expect(header.find('[href="/auth/google"]').length).toBe(1);
+      expect(wrapper.find('[href="/auth/google"]').length).toBe(1);
     });
 
     it('doesnt show a `Sign Out` link', () => {
-      expect(header.find('[href="/api/logout"]').length).toBe(0);
+      expect(wrapper.find('[href="/api/logout"]').length).toBe(0);
     });
   });
 });

@@ -7,17 +7,17 @@ import Footer from '../Footer';
 describe('App', () => {
   let props = {};
 
-  let app = shallow(<App {...props} />);
+  let wrapper = shallow(<App {...props} />);
 
   it('renders properly', () => {
-    expect(app).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('shows a Header', () => {
-    expect(app.find(Header).exists()).toBe(true);
+    expect(wrapper.find(Header).length).toEqual(1);
   });
 
   it('shows a Footer', () => {
-    expect(app.find(Footer).exists()).toBe(true);
+    expect(wrapper.find(Footer).length).toEqual(1);
   });
 });

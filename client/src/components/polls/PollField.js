@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Input } from 'react-materialize';
 
-export default ({
+const PollField = ({
   input,
   label,
   icon,
@@ -21,3 +21,5 @@ export default ({
     </Row>
   );
 };
+
+export default PollField;

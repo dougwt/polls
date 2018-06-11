@@ -3,13 +3,13 @@ import { shallow } from 'enzyme';
 import Footer from '../Footer';
 
 describe('Footer', () => {
-  const footer = shallow(<Footer />);
+  const wrapper = shallow(<Footer />);
 
   it('renders properly', () => {
-    expect(footer).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('contains a copyright', () => {
-    expect(footer.find('.footer-copyright').exists()).toBe(true);
+    expect(wrapper.find('.footer-copyright').length).toEqual(1);
   });
 });

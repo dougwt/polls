@@ -1,44 +1,42 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { Button, Row, Icon } from 'react-materialize';
 import PollField from './PollField';
 
-export class PollForm extends Component {
-  render() {
-    return (
-      <div>
-        <form onSubmit={this.props.handleSubmit(this.props.onPollSubmit)}>
-          <Row>
-            <Field
-              label="What question would you like to ask?"
-              icon="question_answer"
-              name="question"
-              component={PollField}
-            />
-          </Row>
+export const PollForm = props => {
+  return (
+    <div>
+      <form onSubmit={props.handleSubmit(props.onPollSubmit)}>
+        <Row>
+          <Field
+            label="What question would you like to ask?"
+            icon="question_answer"
+            name="question"
+            component={PollField}
+          />
+        </Row>
 
-          <Row>
-            <FieldArray name="choices" component={renderChoices} />
-          </Row>
+        <Row>
+          <FieldArray name="choices" component={renderChoices} />
+        </Row>
 
-          <Row>
-            <Link to="/polls" className="btn btn-cancel red white-text">
-              Cancel
-              <Icon left>close</Icon>
-            </Link>
+        <Row>
+          <Link to="/polls" className="btn btn-cancel red white-text">
+            Cancel
+            <Icon left>close</Icon>
+          </Link>
 
-            <Button className="btn-preview teal right white-text" waves="light">
-              Preview
-              <Icon right>keyboard_arrow_right</Icon>
-            </Button>
-          </Row>
-        </form>
-      </div>
-    );
-  }
-}
+          <Button className="btn-preview teal right white-text" waves="light">
+            Preview
+            <Icon right>keyboard_arrow_right</Icon>
+          </Button>
+        </Row>
+      </form>
+    </div>
+  );
+};
 PollForm.propTypes = {
   onPollSubmit: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired

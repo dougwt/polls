@@ -3,21 +3,21 @@ import { shallow } from 'enzyme';
 import PollList from '../PollList';
 
 describe('PollList', () => {
-  const pollList = shallow(<PollList />);
+  const wrapper = shallow(<PollList />);
 
   it('renders properly', () => {
-    expect(pollList).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('contains a section title', () => {
-    expect(pollList.find('.section-title').exists()).toBe(true);
+    expect(wrapper.find('.section-title').exists()).toBe(true);
   });
 
   it('contains a list of polls', () => {
-    expect(pollList.find('Collection').exists()).toBe(true);
+    expect(wrapper.find('Collection').exists()).toBe(true);
   });
 
   it('contains a Pagination', () => {
-    expect(pollList.find('Pagination').exists()).toBe(true);
+    expect(wrapper.find('Pagination').exists()).toBe(true);
   });
 });
