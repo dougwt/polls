@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PollNew } from './PollNew';
-import PollForm from './PollForm';
-import PollFormReview from './PollFormReview';
+import { PollNew } from '../PollNew';
+import PollForm from '../PollForm';
+import PollFormReview from '../PollFormReview';
 
 describe('PollNew', () => {
   let wrapper = shallow(<PollNew />);

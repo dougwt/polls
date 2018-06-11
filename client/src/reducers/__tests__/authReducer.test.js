@@ -1,5 +1,5 @@
-import authReducer from './authReducer';
-import { FETCH_USER } from '../actions/types';
+import authReducer from '../authReducer';
+import { FETCH_USER } from '../../actions/types';
 
 describe('authReducer', () => {
   it('returns the initial state', () => {

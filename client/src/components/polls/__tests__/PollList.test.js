@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PollList from './PollList';
+import PollList from '../PollList';
 
 describe('PollList', () => {
   const pollList = shallow(<PollList />);

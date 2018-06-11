@@ -39,7 +39,7 @@ ShallowWrapper {
         </Row>
         <Row>
                 <Link
-                        className="btn-cancel red btn-flat white-text"
+                        className="btn btn-cancel red white-text"
                         replace={false}
                         to="/polls"
                 >
@@ -51,7 +51,7 @@ ShallowWrapper {
                         </Icon>
                 </Link>
                 <Button
-                        className="btn-preview teal btn-flat right white-text"
+                        className="btn-preview teal right white-text"
                         node="button"
                         waves="light"
                 >
@@ -88,7 +88,7 @@ ShallowWrapper {
 </Row>,
           <Row>
             <Link
-                        className="btn-cancel red btn-flat white-text"
+                        className="btn btn-cancel red white-text"
                         replace={false}
                         to="/polls"
             >
@@ -100,7 +100,7 @@ ShallowWrapper {
                         </Icon>
             </Link>
             <Button
-                        className="btn-preview teal btn-flat right white-text"
+                        className="btn-preview teal right white-text"
                         node="button"
                         waves="light"
             >
@@ -178,7 +178,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Link
-                className="btn-cancel red btn-flat white-text"
+                className="btn btn-cancel red white-text"
                 replace={false}
                 to="/polls"
 >
@@ -190,7 +190,7 @@ ShallowWrapper {
                 </Icon>
 </Link>,
               <Button
-                className="btn-preview teal btn-flat right white-text"
+                className="btn-preview teal right white-text"
                 node="button"
                 waves="light"
 >
@@ -218,7 +218,7 @@ ShallowWrapper {
                     close
 </Icon>,
                 ],
-                "className": "btn-cancel red btn-flat white-text",
+                "className": "btn btn-cancel red white-text",
                 "replace": false,
                 "to": "/polls",
               },
@@ -253,7 +253,7 @@ ShallowWrapper {
                     keyboard_arrow_right
 </Icon>,
                 ],
-                "className": "btn-preview teal btn-flat right white-text",
+                "className": "btn-preview teal right white-text",
                 "node": "button",
                 "waves": "light",
               },
@@ -308,7 +308,7 @@ ShallowWrapper {
           </Row>
           <Row>
                     <Link
-                              className="btn-cancel red btn-flat white-text"
+                              className="btn btn-cancel red white-text"
                               replace={false}
                               to="/polls"
                     >
@@ -320,7 +320,7 @@ ShallowWrapper {
                               </Icon>
                     </Link>
                     <Button
-                              className="btn-preview teal btn-flat right white-text"
+                              className="btn-preview teal right white-text"
                               node="button"
                               waves="light"
                     >
@@ -357,7 +357,7 @@ ShallowWrapper {
 </Row>,
             <Row>
               <Link
-                            className="btn-cancel red btn-flat white-text"
+                            className="btn btn-cancel red white-text"
                             replace={false}
                             to="/polls"
               >
@@ -369,7 +369,7 @@ ShallowWrapper {
                             </Icon>
               </Link>
               <Button
-                            className="btn-preview teal btn-flat right white-text"
+                            className="btn-preview teal right white-text"
                             node="button"
                             waves="light"
               >
@@ -447,7 +447,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Link
-                  className="btn-cancel red btn-flat white-text"
+                  className="btn btn-cancel red white-text"
                   replace={false}
                   to="/polls"
 >
@@ -459,7 +459,7 @@ ShallowWrapper {
                   </Icon>
 </Link>,
                 <Button
-                  className="btn-preview teal btn-flat right white-text"
+                  className="btn-preview teal right white-text"
                   node="button"
                   waves="light"
 >
@@ -487,7 +487,7 @@ ShallowWrapper {
                       close
 </Icon>,
                   ],
-                  "className": "btn-cancel red btn-flat white-text",
+                  "className": "btn btn-cancel red white-text",
                   "replace": false,
                   "to": "/polls",
                 },
@@ -522,7 +522,7 @@ ShallowWrapper {
                       keyboard_arrow_right
 </Icon>,
                   ],
-                  "className": "btn-preview teal btn-flat right white-text",
+                  "className": "btn-preview teal right white-text",
                   "node": "button",
                   "waves": "light",
                 },

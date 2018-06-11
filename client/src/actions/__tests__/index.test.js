@@ -1,8 +1,8 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import * as actions from './index';
-import * as types from './types';
-import { poll } from '../data/fixtures';
+import * as actions from '../index';
+import * as types from '../types';
+import { poll } from '../../data/fixtures';
 
 const getAsyncAction = async actionCreator => {
   const dispatch = jest.fn();

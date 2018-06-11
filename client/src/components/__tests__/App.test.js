@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { App } from './App';
-import Header from './Header';
-import Footer from './Footer';
+import { App } from '../App';
+import Header from '../Header';
+import Footer from '../Footer';
 
 describe('App', () => {
   let props = {};

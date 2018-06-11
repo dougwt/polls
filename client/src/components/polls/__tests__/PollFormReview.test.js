@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PollFormReview } from './PollFormReview';
+import { PollFormReview } from '../PollFormReview';
 
 describe('PollFormReview', () => {
   let props = {

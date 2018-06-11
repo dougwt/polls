@@ -24,15 +24,12 @@ export class PollForm extends Component {
           </Row>
 
           <Row>
-            <Link to="/polls" className="btn-cancel red btn-flat white-text">
+            <Link to="/polls" className="btn btn-cancel red white-text">
               Cancel
               <Icon left>close</Icon>
             </Link>
 
-            <Button
-              className="btn-preview teal btn-flat right white-text"
-              waves="light"
-            >
+            <Button className="btn-preview teal right white-text" waves="light">
               Preview
               <Icon right>keyboard_arrow_right</Icon>
             </Button>

@@ -1,6 +1,6 @@
-import pollReducer from './pollReducer';
-import { CREATE_POLL } from '../actions/types';
-import { poll } from '../data/fixtures';
+import pollReducer from '../pollReducer';
+import { CREATE_POLL } from '../../actions/types';
+import { poll } from '../../data/fixtures';
 
 describe('pollReducer', () => {
   it('returns the initial state', () => {

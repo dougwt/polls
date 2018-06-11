@@ -23,12 +23,12 @@ class Poll extends Component {
           </Row>
 
           <Row>
-            <Link to="/polls" className="red btn-flat white-text">
+            <Link to="/polls" className="red white-text">
               Cancel
               <Icon left>close</Icon>
             </Link>
 
-            <Button className="teal btn-flat right white-text" waves="light">
+            <Button className="teal right white-text" waves="light">
               Preview
               <Icon right>keyboard_arrow_right</Icon>
             </Button>

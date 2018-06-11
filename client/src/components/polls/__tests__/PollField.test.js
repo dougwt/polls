@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'enzyme';
-import PollField from './PollField';
+import PollField from '../PollField';
 
 describe('PollField', () => {
   const props = {

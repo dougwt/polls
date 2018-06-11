@@ -5,7 +5,7 @@ import { reducer as formReducer } from 'redux-form';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { StaticRouter } from 'react-router';
-import ReduxForm, { PollForm } from './PollForm';
+import ReduxForm, { PollForm } from '../PollForm';
 
 let props;
 let wrapper;

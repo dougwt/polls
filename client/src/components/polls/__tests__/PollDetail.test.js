@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PollDetail from './PollDetail';
+import PollDetail from '../PollDetail';
 
 const wrapper = shallow(<PollDetail />);
 describe('PollDetail', () => {
