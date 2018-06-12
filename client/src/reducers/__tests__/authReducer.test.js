@@ -7,8 +7,10 @@ describe('authReducer', () => {
   });
 
   it('fetches the currently auth\'d user', () => {
-    const user = 'user';
+    const payload = { data: 'user' };
 
-    expect(authReducer({}, { type: FETCH_USER, payload: user })).toEqual(user);
+    expect(authReducer({}, { type: FETCH_USER, payload })).toEqual(
+      payload.data
+    );
   });
 });
