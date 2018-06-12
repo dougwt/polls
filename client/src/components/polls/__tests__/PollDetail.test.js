@@ -8,8 +8,8 @@ describe('PollDetail', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  xit('contains a PollDetailForm', () => {
-    // console.log(wrapper.debug());
-    expect(wrapper.find('PollDetailForm').exists()).toBe(true);
-  });
+  // xit('contains a PollDetailForm', () => {
+  //   // console.log(wrapper.debug());
+  //   expect(wrapper.find('PollDetailForm').exists()).toBe(true);
+  // });
 });

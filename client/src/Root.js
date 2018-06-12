@@ -6,7 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 
-const wrapWithProvider = ({ children, initialState = {} }) => {
+const Root = ({ children, initialState = {} }) => {
   const store = createStore(
     reducers,
     initialState,
@@ -15,9 +15,9 @@ const wrapWithProvider = ({ children, initialState = {} }) => {
 
   return <Provider store={store}>{children}</Provider>;
 };
-wrapWithProvider.propTypes = {
+Root.propTypes = {
   children: PropTypes.object.isRequired,
   initialState: PropTypes.object
 };
 
-export default wrapWithProvider;
+export default Root;

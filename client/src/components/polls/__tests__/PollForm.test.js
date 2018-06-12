@@ -28,25 +28,20 @@ describe('PollForm', () => {
     expect(wrapper.find('form').exists()).toBe(true);
   });
 
-  // TODO: Add owner field to form as a hidden field
-  // xit('shows a hidden `Owner` field', () => {
-  //   expect(wrapper.find('input[name="owner"]').exists()).toBe(true);
-  // });
-
   it('should ask for a question', () => {
-    expect(wrapper.find('Field[name="question"]').exists()).toBe(true);
+    expect(wrapper.find('Field[name="question"]').length).toEqual(1);
   });
 
   it('should ask for choices', () => {
-    expect(wrapper.find('FieldArray[name="choices"]').exists()).toBe(true);
+    expect(wrapper.find('FieldArray[name="choices"]').length).toEqual(1);
   });
 
   it('shows a `Preview` button', () => {
-    expect(wrapper.find('.btn-preview').exists()).toBe(true);
+    expect(wrapper.find('.btn-preview').length).toEqual(1);
   });
 
   it('shows a `Cancel` button', () => {
-    expect(wrapper.find('.btn-cancel').exists()).toBe(true);
+    expect(wrapper.find('.btn-cancel').length).toEqual(1);
   });
 
   describe('when the `Preview` button is clicked', () => {

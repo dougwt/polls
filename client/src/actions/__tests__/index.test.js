@@ -25,7 +25,7 @@ describe('actions', () => {
     });
   });
 
-  // TODO: write tests for createPoll thunk
+  // TODO: Expand tests for updated createPoll thunk
   xit('creates an action to add a new poll', () => {
     const mock = new MockAdapter(axios);
     mock.onPost('/api/polls/new').reply(200, poll);
