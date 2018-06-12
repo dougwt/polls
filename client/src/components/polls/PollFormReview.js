@@ -5,12 +5,7 @@ import { withRouter } from 'react-router-dom';
 import { Card, Input, Button, Row, Icon } from 'react-materialize';
 import * as actions from '../../actions';
 
-export const PollFormReview = ({
-  onCancel,
-  formValues,
-  createPoll,
-  history
-}) => {
+export const PollFormReview = props => {
   return (
     <div>
       <h5>Please confirm your poll</h5>
@@ -18,10 +13,10 @@ export const PollFormReview = ({
       {/* {console.log(formValues)} */}
 
       <Row>
-        <Card className="darken-1" title={formValues.question}>
+        <Card className="darken-1" title={props.formValues.question}>
           {/* TODO: add spacing here via CSS */}
 
-          <div className="choices">{renderChoices(formValues)}</div>
+          <div className="choices">{renderChoices(props.formValues)}</div>
 
           <Row className="center-align">
             <Button className="teal" disabled>
@@ -31,25 +26,20 @@ export const PollFormReview = ({
         </Card>
       </Row>
 
+      {renderError(props.error)}
+
       <Row>
         <Button
           node="a"
-          className="red btn-back btn-flat white-text"
+          className="red btn-back white-text"
           waves="light"
-          onClick={onCancel}
+          onClick={props.onCancel}
         >
           Back
           <Icon left>keyboard_arrow_left</Icon>
         </Button>
 
-        <Button
-          className="teal btn-create btn-flat right white-text"
-          waves="light"
-          onClick={() => createPoll(formValues, history)}
-        >
-          Create
-          <Icon right>create</Icon>
-        </Button>
+        {renderButton(props)}
       </Row>
     </div>
   );
@@ -58,7 +48,53 @@ PollFormReview.propTypes = {
   onCancel: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
   createPoll: PropTypes.func.isRequired,
-  history: PropTypes.object.isRequired
+  history: PropTypes.object.isRequired,
+  waiting: PropTypes.bool.isRequired,
+  error: PropTypes.object
+};
+
+function renderButton({ formValues, createPoll, history, waiting }) {
+  if (waiting) {
+    return (
+      <Button
+        className="teal btn-create disabled right white-text"
+        waves="light"
+      >
+        Saving...
+        <Icon right>create</Icon>
+      </Button>
+    );
+  }
+
+  return (
+    <Button
+      className="teal btn-create right white-text"
+      waves="light"
+      onClick={() => createPoll(formValues, history)}
+    >
+      Create
+      <Icon right>create</Icon>
+    </Button>
+  );
+}
+renderButton.propTypes = {
+  formValues: PropTypes.object.isRequired,
+  createPoll: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+  waiting: PropTypes.bool.isRequired
+};
+
+function renderError(error) {
+  if (error) {
+    return (
+      <Row className="red-text center-align">
+        <strong>Error:</strong> {error.message}
+      </Row>
+    );
+  }
+}
+renderError.propTypes = {
+  error: PropTypes.object
 };
 
 function renderChoices(values) {
@@ -85,6 +121,8 @@ function renderChoices(values) {
 
 function mapStateToProps(state) {
   return {
+    waiting: state.poll.waiting,
+    error: state.poll.error,
     formValues: state.form.pollForm.values
   };
 }

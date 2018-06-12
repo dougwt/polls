@@ -7,8 +7,15 @@ export const fetchUser = () => async dispatch => {
   dispatch({ type: types.FETCH_USER, payload: res.data });
 };
 
-export const createPoll = poll => async dispatch => {
-  const res = await axios.post('/api/polls/new', poll);
+export const createPoll = poll => dispatch => {
+  dispatch({ type: types.CREATE_POLL_REQUEST });
 
-  dispatch({ type: types.CREATE_POLL, payload: res.data });
+  axios
+    .post('/api/polls/new', poll)
+    .then(res => {
+      dispatch({ type: types.CREATE_POLL_SUCCESS, payload: res.data });
+    })
+    .catch(err => {
+      dispatch({ type: types.CREATE_POLL_FAILURE, payload: err });
+    });
 };
