@@ -15,7 +15,11 @@ describe('PollFormReview', () => {
     history: {}
   };
 
-  let wrapper = shallow(<PollFormReview {...props} />);
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<PollFormReview {...props} />);
+  });
 
   it('renders properly', () => {
     expect(wrapper).toMatchSnapshot();
