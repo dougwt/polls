@@ -5,8 +5,8 @@ import PollFormReview from './PollFormReview';
 const initialValues = { choices: [0, 1] };
 
 export class PollNew extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { showReview: false };
   }
 
