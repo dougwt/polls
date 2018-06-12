@@ -52,10 +52,11 @@ PollFormReview.propTypes = {
   createPoll: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   waiting: PropTypes.bool.isRequired,
-  error: PropTypes.object
+  error: PropTypes.object,
+  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
 };
 
-function renderButton({ formValues, createPoll, history, waiting }) {
+function renderButton({ formValues, createPoll, history, waiting, auth }) {
   if (waiting) {
     return (
       <Button
@@ -68,11 +69,23 @@ function renderButton({ formValues, createPoll, history, waiting }) {
     );
   }
 
+  const poll = {
+    question: formValues.question,
+    choices: formValues.choices.map((choice, i) => {
+      return { text: formValues[`choice_${i + 1}`], votes: 0 };
+    })
+  };
+
   return (
     <Button
       className="teal btn-create right white-text"
       waves="light"
-      onClick={() => createPoll(formValues, history)}
+      onClick={() => {
+        if (auth) {
+          poll.owner = auth._id;
+        }
+        createPoll(poll, history);
+      }}
     >
       Create
       <Icon right>create</Icon>
@@ -83,14 +96,16 @@ renderButton.propTypes = {
   formValues: PropTypes.object.isRequired,
   createPoll: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
-  waiting: PropTypes.bool.isRequired
+  waiting: PropTypes.bool.isRequired,
+  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
 };
 
 function renderError(error) {
   if (error) {
     return (
       <Row className="red-text center-align">
-        <strong>Error:</strong> {error.message}
+        {/* <strong>Error:</strong> {error.message} */}
+        <strong>Error:</strong> {error.response.data.error}
       </Row>
     );
   }
@@ -138,6 +153,7 @@ function renderChoices(values) {
 
 function mapStateToProps(state) {
   return {
+    auth: state.auth,
     waiting: state.poll.waiting,
     error: state.poll.error,
     formValues: state.form.pollForm.values
