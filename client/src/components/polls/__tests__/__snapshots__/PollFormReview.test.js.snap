@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
     createPoll={[Function]}
+    error={null}
     formValues={
         Object {
             "choices": Array [
@@ -21,6 +22,7 @@ ShallowWrapper {
     }
     history={Object {}}
     onCancel={[Function]}
+    waiting={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -62,8 +64,11 @@ ShallowWrapper {
           </Card>
 </Row>,
         <Row>
+           
+</Row>,
+        <Row>
           <Button
-                    className="red btn-back btn-flat white-text"
+                    className="red btn-back white-text"
                     node="a"
                     onClick={[Function]}
                     waves="light"
@@ -76,7 +81,7 @@ ShallowWrapper {
                     </Icon>
           </Button>
           <Button
-                    className="teal btn-create btn-flat right white-text"
+                    className="teal btn-create right white-text"
                     node="button"
                     onClick={[Function]}
                     waves="light"
@@ -213,9 +218,20 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "children": " ",
+        },
+        "ref": null,
+        "rendered": " ",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
           "children": Array [
             <Button
-              className="red btn-back btn-flat white-text"
+              className="red btn-back white-text"
               node="a"
               onClick={[Function]}
               waves="light"
@@ -228,7 +244,7 @@ ShallowWrapper {
               </Icon>
 </Button>,
             <Button
-              className="teal btn-create btn-flat right white-text"
+              className="teal btn-create right white-text"
               node="button"
               onClick={[Function]}
               waves="light"
@@ -257,7 +273,7 @@ ShallowWrapper {
                   keyboard_arrow_left
 </Icon>,
               ],
-              "className": "red btn-back btn-flat white-text",
+              "className": "red btn-back white-text",
               "node": "a",
               "onClick": [Function],
               "waves": "light",
@@ -293,7 +309,7 @@ ShallowWrapper {
                   create
 </Icon>,
               ],
-              "className": "teal btn-create btn-flat right white-text",
+              "className": "teal btn-create right white-text",
               "node": "button",
               "onClick": [Function],
               "waves": "light",
@@ -356,8 +372,11 @@ ShallowWrapper {
             </Card>
 </Row>,
           <Row>
+             
+</Row>,
+          <Row>
             <Button
-                        className="red btn-back btn-flat white-text"
+                        className="red btn-back white-text"
                         node="a"
                         onClick={[Function]}
                         waves="light"
@@ -370,7 +389,7 @@ ShallowWrapper {
                         </Icon>
             </Button>
             <Button
-                        className="teal btn-create btn-flat right white-text"
+                        className="teal btn-create right white-text"
                         node="button"
                         onClick={[Function]}
                         waves="light"
@@ -507,9 +526,20 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "children": " ",
+          },
+          "ref": null,
+          "rendered": " ",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
             "children": Array [
               <Button
-                className="red btn-back btn-flat white-text"
+                className="red btn-back white-text"
                 node="a"
                 onClick={[Function]}
                 waves="light"
@@ -522,7 +552,7 @@ ShallowWrapper {
                 </Icon>
 </Button>,
               <Button
-                className="teal btn-create btn-flat right white-text"
+                className="teal btn-create right white-text"
                 node="button"
                 onClick={[Function]}
                 waves="light"
@@ -551,7 +581,7 @@ ShallowWrapper {
                     keyboard_arrow_left
 </Icon>,
                 ],
-                "className": "red btn-back btn-flat white-text",
+                "className": "red btn-back white-text",
                 "node": "a",
                 "onClick": [Function],
                 "waves": "light",
@@ -587,7 +617,7 @@ ShallowWrapper {
                     create
 </Icon>,
                 ],
-                "className": "teal btn-create btn-flat right white-text",
+                "className": "teal btn-create right white-text",
                 "node": "button",
                 "onClick": [Function],
                 "waves": "light",

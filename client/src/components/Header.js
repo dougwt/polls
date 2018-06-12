@@ -62,7 +62,7 @@ export const Header = props => {
   );
 };
 Header.propTypes = {
-  auth: PropTypes.object
+  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
 };
 
 function mapStateToProps(state) {

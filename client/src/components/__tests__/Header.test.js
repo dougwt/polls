@@ -32,7 +32,7 @@ describe('Header', () => {
   describe('when the user is authenticated', () => {
     beforeEach(() => {
       let props = {
-        auth: { googleId: 'FAKE_GOOGLE_USER_ID' }
+        auth: true
       };
 
       wrapper = shallow(<Header {...props} />);

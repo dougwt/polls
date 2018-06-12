@@ -4,6 +4,8 @@ import { PollFormReview } from '../PollFormReview';
 
 describe('PollFormReview', () => {
   let props = {
+    waiting: false,
+    error: null,
     formValues: {
       choices: [0, 1, undefined, undefined, undefined, undefined],
       question: 'Who is your favorite Starfleet captain?'
