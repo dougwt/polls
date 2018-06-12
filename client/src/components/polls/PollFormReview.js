@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { Card, Input, Button, Row, Icon } from 'react-materialize';
+import { Card, Input, Button, Row, Icon, ProgressBar } from 'react-materialize';
 import * as actions from '../../actions';
 
 export const PollFormReview = props => {
@@ -26,7 +26,9 @@ export const PollFormReview = props => {
         </Card>
       </Row>
 
-      {renderError(props.error)}
+      {renderError(props.error)
+        ? renderError(props.error)
+        : renderSpinner(props.waiting)}
 
       <Row>
         <Button
@@ -95,6 +97,21 @@ function renderError(error) {
 }
 renderError.propTypes = {
   error: PropTypes.object
+};
+
+function renderSpinner(waiting) {
+  if (waiting) {
+    return (
+      <Row>
+        <ProgressBar />
+      </Row>
+    );
+  }
+
+  return <Row>&nbsp;</Row>;
+}
+renderSpinner.propTypes = {
+  waiting: PropTypes.bool
 };
 
 function renderChoices(values) {
