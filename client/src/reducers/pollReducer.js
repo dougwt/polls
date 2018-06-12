@@ -7,7 +7,7 @@ import {
 
 const initialState = {
   waiting: false,
-  polls: {},
+  polls: [],
   error: null
 };
 
@@ -22,7 +22,7 @@ export default function(state = initialState, action) {
       ...state,
       waiting: false,
       error: null,
-      polls: [...state.polls, action.payload]
+      polls: [...(state.polls ? state.polls : []), action.payload]
     };
   case CREATE_POLL_FAILURE:
     return { ...state, waiting: false, error: action.payload };
