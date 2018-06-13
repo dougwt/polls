@@ -8,46 +8,34 @@ import {
   Pagination
 } from 'react-materialize';
 
-const PollList = props => {
+const renderPolls = polls => {
+  if (polls.length < 1) {
+    return (
+      <CollectionItem className="center-align">
+        There are no polls to show. Why don&#39;t you create one?
+      </CollectionItem>
+    );
+  }
+
+  return polls.map(poll => {
+    return (
+      <CollectionItem href={`/polls/${poll.id}`} key={poll.id}>
+        {poll.question}
+        <Badge>1</Badge>
+      </CollectionItem>
+    );
+  });
+};
+
+const PollList = ({ title, polls = [] }) => {
   return (
     <div>
       <Row>
-        <h6 className="header section-title">{props.title}</h6>
+        <h6 className="header section-title">{title}</h6>
       </Row>
 
       <Row>
-        <Collection>
-          <CollectionItem href="#">
-            Sample Poll 1<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 2<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 3<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 4<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 5<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 6<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 7<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 8<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 9<Badge>1</Badge>
-          </CollectionItem>
-          <CollectionItem href="#">
-            Sample Poll 10<Badge>1</Badge>
-          </CollectionItem>
-        </Collection>
+        <Collection>{renderPolls(polls)}</Collection>
       </Row>
 
       <Row className="center-align">
@@ -57,8 +45,8 @@ const PollList = props => {
   );
 };
 PollList.propTypes = {
-  title: PropTypes.string.isRequired
-  // polls: PropTypes.object.isRequired
+  title: PropTypes.string.isRequired,
+  polls: PropTypes.array
 };
 
 export default PollList;

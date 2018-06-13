@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Section, Container, Row } from 'react-materialize';
 import PollList from './polls/PollList';
 
-class Dashboard extends Component {
+export class Dashboard extends Component {
   componentDidMount() {
     window.$('ul.tabs').tabs();
   }
@@ -27,7 +29,10 @@ class Dashboard extends Component {
 
           <Row>
             <div id="my" className="col s12">
-              <PollList title="This list contains all the polls created by you." />
+              <PollList
+                title="This list contains all the polls created by you."
+                polls={this.props.polls}
+              />
             </div>
             <div id="other" className="col s12">
               <PollList title="This list contains all the polls created by other users." />
@@ -38,5 +43,14 @@ class Dashboard extends Component {
     );
   }
 }
+Dashboard.propTypes = {
+  polls: PropTypes.object
+};
 
-export default Dashboard;
+function mapStateToProps(state) {
+  return {
+    polls: state.polls
+  };
+}
+
+export default connect(mapStateToProps)(Dashboard);

@@ -1,9 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Dashboard from '../Dashboard';
+import { Dashboard } from '../Dashboard';
 
 describe('Dashboard', () => {
-  const wrapper = shallow(<Dashboard />);
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Dashboard />);
+  });
 
   it('renders properly', () => {
     expect(wrapper).toMatchSnapshot();
