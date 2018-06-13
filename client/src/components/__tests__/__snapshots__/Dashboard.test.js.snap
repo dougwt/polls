@@ -56,7 +56,7 @@ ShallowWrapper {
                 >
                         <PollList
                                 polls={undefined}
-                                title="This list contains all the polls created by you."
+                                title="Polls created by you:"
                         />
                 </div>
                 <div
@@ -64,7 +64,8 @@ ShallowWrapper {
                         id="other"
                 >
                         <PollList
-                                title="This list contains all the polls created by other users."
+                                polls={undefined}
+                                title="Polls created by other users:"
                         />
                 </div>
         </Row>
@@ -116,7 +117,7 @@ ShallowWrapper {
             >
                         <PollList
                                     polls={undefined}
-                                    title="This list contains all the polls created by you."
+                                    title="Polls created by you:"
                         />
             </div>
             <div
@@ -124,7 +125,8 @@ ShallowWrapper {
                         id="other"
             >
                         <PollList
-                                    title="This list contains all the polls created by other users."
+                                    polls={undefined}
+                                    title="Polls created by other users:"
                         />
             </div>
 </Row>,
@@ -318,7 +320,7 @@ ShallowWrapper {
 >
                 <PollList
                                 polls={undefined}
-                                title="This list contains all the polls created by you."
+                                title="Polls created by you:"
                 />
 </div>,
               <div
@@ -326,7 +328,8 @@ ShallowWrapper {
                 id="other"
 >
                 <PollList
-                                title="This list contains all the polls created by other users."
+                                polls={undefined}
+                                title="Polls created by other users:"
                 />
 </div>,
             ],
@@ -340,7 +343,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <PollList
                   polls={undefined}
-                  title="This list contains all the polls created by you."
+                  title="Polls created by you:"
 />,
                 "className": "col s12",
                 "id": "my",
@@ -352,7 +355,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "polls": undefined,
-                  "title": "This list contains all the polls created by you.",
+                  "title": "Polls created by you:",
                 },
                 "ref": null,
                 "rendered": null,
@@ -366,7 +369,8 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <PollList
-                  title="This list contains all the polls created by other users."
+                  polls={undefined}
+                  title="Polls created by other users:"
 />,
                 "className": "col s12",
                 "id": "other",
@@ -377,7 +381,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "title": "This list contains all the polls created by other users.",
+                  "polls": undefined,
+                  "title": "Polls created by other users:",
                 },
                 "ref": null,
                 "rendered": null,
@@ -438,7 +443,7 @@ ShallowWrapper {
                     >
                               <PollList
                                         polls={undefined}
-                                        title="This list contains all the polls created by you."
+                                        title="Polls created by you:"
                               />
                     </div>
                     <div
@@ -446,7 +451,8 @@ ShallowWrapper {
                               id="other"
                     >
                               <PollList
-                                        title="This list contains all the polls created by other users."
+                                        polls={undefined}
+                                        title="Polls created by other users:"
                               />
                     </div>
           </Row>
@@ -498,7 +504,7 @@ ShallowWrapper {
               >
                             <PollList
                                           polls={undefined}
-                                          title="This list contains all the polls created by you."
+                                          title="Polls created by you:"
                             />
               </div>
               <div
@@ -506,7 +512,8 @@ ShallowWrapper {
                             id="other"
               >
                             <PollList
-                                          title="This list contains all the polls created by other users."
+                                          polls={undefined}
+                                          title="Polls created by other users:"
                             />
               </div>
 </Row>,
@@ -700,7 +707,7 @@ ShallowWrapper {
 >
                   <PollList
                                     polls={undefined}
-                                    title="This list contains all the polls created by you."
+                                    title="Polls created by you:"
                   />
 </div>,
                 <div
@@ -708,7 +715,8 @@ ShallowWrapper {
                   id="other"
 >
                   <PollList
-                                    title="This list contains all the polls created by other users."
+                                    polls={undefined}
+                                    title="Polls created by other users:"
                   />
 </div>,
               ],
@@ -722,7 +730,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": <PollList
                     polls={undefined}
-                    title="This list contains all the polls created by you."
+                    title="Polls created by you:"
 />,
                   "className": "col s12",
                   "id": "my",
@@ -734,7 +742,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "polls": undefined,
-                    "title": "This list contains all the polls created by you.",
+                    "title": "Polls created by you:",
                   },
                   "ref": null,
                   "rendered": null,
@@ -748,7 +756,8 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <PollList
-                    title="This list contains all the polls created by other users."
+                    polls={undefined}
+                    title="Polls created by other users:"
 />,
                   "className": "col s12",
                   "id": "other",
@@ -759,7 +768,8 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "title": "This list contains all the polls created by other users.",
+                    "polls": undefined,
+                    "title": "Polls created by other users:",
                   },
                   "ref": null,
                   "rendered": null,

@@ -30,12 +30,15 @@ export class Dashboard extends Component {
           <Row>
             <div id="my" className="col s12">
               <PollList
-                title="This list contains all the polls created by you."
+                title="Polls created by you:"
                 polls={this.props.polls}
               />
             </div>
             <div id="other" className="col s12">
-              <PollList title="This list contains all the polls created by other users." />
+              <PollList
+                title="Polls created by other users:"
+                polls={this.props.polls}
+              />
             </div>
           </Row>
         </Container>
