@@ -12,14 +12,14 @@ const renderPolls = polls => {
   if (polls.length < 1) {
     return (
       <CollectionItem className="center-align">
-        There are no polls to show. Why don&#39;t you create one?
+        There are no polls to show. Why don&#x27;t you create one?
       </CollectionItem>
     );
   }
 
   return polls.map(poll => {
     return (
-      <CollectionItem href={`/polls/${poll.id}`} key={poll.id}>
+      <CollectionItem href={`/polls/${poll._id}`} key={poll._id}>
         {poll.question}
         <Badge>1</Badge>
       </CollectionItem>

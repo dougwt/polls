@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Section, Container, Row } from 'react-materialize';
 import PollList from './polls/PollList';
+import { fetchPolls } from '../actions';
 
 export class Dashboard extends Component {
   componentDidMount() {
+    this.props.fetchPolls();
     window.$('ul.tabs').tabs();
   }
 
@@ -47,13 +49,14 @@ export class Dashboard extends Component {
   }
 }
 Dashboard.propTypes = {
-  polls: PropTypes.object
+  polls: PropTypes.array,
+  fetchPolls: PropTypes.func
 };
 
 function mapStateToProps(state) {
   return {
-    polls: state.polls
+    polls: state.poll.polls
   };
 }
 
-export default connect(mapStateToProps)(Dashboard);
+export default connect(mapStateToProps, { fetchPolls })(Dashboard);

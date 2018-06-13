@@ -1,4 +1,5 @@
 import {
+  FETCH_POLLS,
   CREATE_POLL_RESET,
   CREATE_POLL_REQUEST,
   CREATE_POLL_SUCCESS,
@@ -13,6 +14,8 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
+  case FETCH_POLLS:
+    return { ...state, polls: action.payload.data };
   case CREATE_POLL_RESET:
     return { ...state, waiting: false, error: null };
   case CREATE_POLL_REQUEST:

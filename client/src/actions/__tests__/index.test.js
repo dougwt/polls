@@ -4,29 +4,61 @@ import * as actions from '../index';
 import * as types from '../types';
 import { poll } from '../../data/fixtures';
 
-const getAsyncAction = async (actionCreator, args = []) => {
-  const dispatch = jest.fn();
-
-  await actionCreator(...args)(dispatch);
-  const action = dispatch.mock.calls[0][0];
-
-  return action;
-};
-
 describe('actions', () => {
-  it('creates an action to fetch the currently auth\'d user', () => {
-    const mock = new MockAdapter(axios);
-    mock.onGet('/api/current_user').reply(200, 'PAYLOAD');
+  describe('fetchUser', () => {
+    let mock;
+    let action;
 
-    const expectedAction = { type: types.FETCH_USER, payload: 'PAYLOAD' };
+    beforeEach(() => {
+      mock = new MockAdapter(axios);
+      mock.onGet('/api/current_user').reply(200, 'PAYLOAD');
 
-    getAsyncAction(actions.fetchUser).then(action => {
-      expect(action).toEqual(expectedAction);
+      action = actions.fetchUser();
+    });
+
+    it('creates an action to fetch the currently auth\'d user', () => {
+      expect(action.type).toEqual(types.FETCH_USER);
+      action.payload.then(payload => {
+        expect(payload.data).toEqual('PAYLOAD');
+      });
+    });
+  });
+
+  describe('fetchPolls', () => {
+    let mock;
+    let action;
+
+    beforeEach(() => {
+      mock = new MockAdapter(axios);
+      mock
+        .onGet('/api/polls')
+        .reply(200, [{ question: 'Question 1' }, { question: 'Question 2' }]);
+
+      action = actions.fetchPolls();
+    });
+
+    it('creates an action to fetch a list of polls', () => {
+      expect(action.type).toEqual(types.FETCH_POLLS);
+      action.payload.then(payload => {
+        expect(payload.data).toEqual([
+          { question: 'Question 1' },
+          { question: 'Question 2' }
+        ]);
+      });
     });
   });
 
   // TODO: Expand tests for updated createPoll thunk
   describe('createPoll', () => {
+    const getAsyncAction = async (actionCreator, args = []) => {
+      const dispatch = jest.fn();
+
+      await actionCreator(...args)(dispatch);
+      const action = dispatch.mock.calls[0][0];
+
+      return action;
+    };
+
     let history;
     let action;
 

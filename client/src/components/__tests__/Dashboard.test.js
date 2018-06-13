@@ -1,12 +1,17 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { Dashboard } from '../Dashboard';
+import Root from '../../Root';
 
 describe('Dashboard', () => {
   let wrapper;
+  let props;
 
   beforeEach(() => {
-    wrapper = shallow(<Dashboard />);
+    props = {
+      fetchPolls: jest.fn()
+    };
+    wrapper = shallow(<Dashboard {...props} />);
   });
 
   it('renders properly', () => {
@@ -23,5 +28,20 @@ describe('Dashboard', () => {
 
   it('contains a `Other Polls` PollList', () => {
     expect(wrapper.find('#other > PollList').length).toEqual(1);
+  });
+
+  it('calls the fetchPolls action creator', () => {
+    global.$ = () => {
+      return {
+        tabs: jest.fn()
+      };
+    };
+    wrapper = mount(
+      <Root>
+        <Dashboard {...props} />
+      </Root>
+    );
+
+    expect(props.fetchPolls).toHaveBeenCalled();
   });
 });

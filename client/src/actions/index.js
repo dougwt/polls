@@ -7,6 +7,12 @@ export const fetchUser = () => {
   return { type: types.FETCH_USER, payload: res };
 };
 
+export const fetchPolls = () => {
+  const res = axios.get('/api/polls');
+
+  return { type: types.FETCH_POLLS, payload: res };
+};
+
 export const createPoll = (poll, history) => dispatch => {
   dispatch({ type: types.CREATE_POLL_REQUEST });
 

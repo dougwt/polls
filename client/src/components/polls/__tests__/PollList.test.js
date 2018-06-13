@@ -43,7 +43,7 @@ describe('PollList', () => {
     beforeEach(() => {
       props = {
         title: 'Test Title',
-        polls: [{ id: 1, question: 'Question 1' }]
+        polls: [{ _id: 1, question: 'Question 1' }]
       };
       wrapper = shallow(<PollList {...props} />);
     });
@@ -64,8 +64,8 @@ describe('PollList', () => {
       props = {
         title: 'Test Title',
         polls: [
-          { id: 1, question: 'Question 1' },
-          { id: 2, question: 'Question 2' }
+          { _id: 1, question: 'Question 1' },
+          { _id: 2, question: 'Question 2' }
         ]
       };
       wrapper = shallow(<PollList {...props} />);
@@ -93,7 +93,7 @@ describe('PollList', () => {
             .find('CollectionItem')
             .at(i)
             .html()
-        ).toContain(`href="/polls/${poll.id}"`);
+        ).toContain(`href="/polls/${poll._id}"`);
       });
     });
   });
@@ -103,16 +103,16 @@ describe('PollList', () => {
       props = {
         title: 'Test Title',
         polls: [
-          { id: 1, question: 'Question 1' },
-          { id: 2, question: 'Question 2' },
-          { id: 3, question: 'Question 3' },
-          { id: 4, question: 'Question 4' },
-          { id: 5, question: 'Question 5' },
-          { id: 6, question: 'Question 6' },
-          { id: 7, question: 'Question 7' },
-          { id: 8, question: 'Question 8' },
-          { id: 9, question: 'Question 9' },
-          { id: 10, question: 'Question 10' }
+          { _id: 1, question: 'Question 1' },
+          { _id: 2, question: 'Question 2' },
+          { _id: 3, question: 'Question 3' },
+          { _id: 4, question: 'Question 4' },
+          { _id: 5, question: 'Question 5' },
+          { _id: 6, question: 'Question 6' },
+          { _id: 7, question: 'Question 7' },
+          { _id: 8, question: 'Question 8' },
+          { _id: 9, question: 'Question 9' },
+          { _id: 10, question: 'Question 10' }
         ]
       };
       wrapper = shallow(<PollList {...props} />);
@@ -140,7 +140,7 @@ describe('PollList', () => {
             .find('CollectionItem')
             .at(i)
             .html()
-        ).toContain(`href="/polls/${poll.id}"`);
+        ).toContain(`href="/polls/${poll._id}"`);
       });
     });
   });
@@ -150,26 +150,26 @@ describe('PollList', () => {
       props = {
         title: 'Test Title',
         polls: [
-          { id: 1, question: 'Question 1' },
-          { id: 2, question: 'Question 2' },
-          { id: 3, question: 'Question 3' },
-          { id: 4, question: 'Question 4' },
-          { id: 5, question: 'Question 5' },
-          { id: 6, question: 'Question 6' },
-          { id: 7, question: 'Question 7' },
-          { id: 8, question: 'Question 8' },
-          { id: 9, question: 'Question 9' },
-          { id: 10, question: 'Question 10' },
-          { id: 11, question: 'Question 11' },
-          { id: 12, question: 'Question 12' },
-          { id: 13, question: 'Question 13' },
-          { id: 14, question: 'Question 14' },
-          { id: 15, question: 'Question 15' },
-          { id: 16, question: 'Question 16' },
-          { id: 17, question: 'Question 17' },
-          { id: 18, question: 'Question 18' },
-          { id: 19, question: 'Question 19' },
-          { id: 20, question: 'Question 20' }
+          { _id: 1, question: 'Question 1' },
+          { _id: 2, question: 'Question 2' },
+          { _id: 3, question: 'Question 3' },
+          { _id: 4, question: 'Question 4' },
+          { _id: 5, question: 'Question 5' },
+          { _id: 6, question: 'Question 6' },
+          { _id: 7, question: 'Question 7' },
+          { _id: 8, question: 'Question 8' },
+          { _id: 9, question: 'Question 9' },
+          { _id: 10, question: 'Question 10' },
+          { _id: 11, question: 'Question 11' },
+          { _id: 12, question: 'Question 12' },
+          { _id: 13, question: 'Question 13' },
+          { _id: 14, question: 'Question 14' },
+          { _id: 15, question: 'Question 15' },
+          { _id: 16, question: 'Question 16' },
+          { _id: 17, question: 'Question 17' },
+          { _id: 18, question: 'Question 18' },
+          { _id: 19, question: 'Question 19' },
+          { _id: 20, question: 'Question 20' }
         ]
       };
       wrapper = shallow(<PollList {...props} />);
@@ -197,7 +197,7 @@ describe('PollList', () => {
             .find('CollectionItem')
             .at(i)
             .html()
-        ).toContain(`href="/polls/${poll.id}"`);
+        ).toContain(`href="/polls/${poll._id}"`);
       });
     });
   });

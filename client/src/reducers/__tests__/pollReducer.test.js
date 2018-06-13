@@ -1,5 +1,6 @@
 import pollReducer from '../pollReducer';
 import {
+  FETCH_POLLS,
   CREATE_POLL_RESET,
   CREATE_POLL_REQUEST,
   CREATE_POLL_SUCCESS,
@@ -10,6 +11,16 @@ import { poll } from '../../data/fixtures';
 describe('pollReducer', () => {
   it('returns the initial state', () => {
     expect(pollReducer({}, {})).toEqual({});
+  });
+
+  it('fetches a list of polls', () => {
+    const payload = {
+      data: [{ question: 'Question 1' }, { question: 'Question 2' }]
+    };
+
+    expect(pollReducer({}, { type: FETCH_POLLS, payload }).polls).toEqual(
+      payload.data
+    );
   });
 
   it('resets a Poll form submission', () => {
