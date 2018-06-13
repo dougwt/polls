@@ -27,7 +27,14 @@ const renderPolls = polls => {
   });
 };
 
-const PollList = ({ title, polls = [] }) => {
+const PollList = ({
+  title,
+  polls = [],
+  items = 10,
+  activePage = 3,
+  maxButtons = 7,
+  onSelect = () => {}
+}) => {
   return (
     <div>
       <Row>
@@ -39,14 +46,23 @@ const PollList = ({ title, polls = [] }) => {
       </Row>
 
       <Row className="center-align">
-        <Pagination items={10} activePage={2} maxButtons={8} />
+        <Pagination
+          items={items}
+          activePage={activePage}
+          maxButtons={maxButtons}
+          onSelect={onSelect}
+        />
       </Row>
     </div>
   );
 };
 PollList.propTypes = {
   title: PropTypes.string.isRequired,
-  polls: PropTypes.array
+  polls: PropTypes.array,
+  items: PropTypes.number,
+  activePage: PropTypes.number,
+  maxButtons: PropTypes.number,
+  onSelect: PropTypes.func
 };
 
 export default PollList;

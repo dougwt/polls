@@ -57,7 +57,11 @@ ShallowWrapper {
                         id="my"
                 >
                         <PollList
-                                polls={undefined}
+                                activePage={1}
+                                items={1000}
+                                maxButtons={7}
+                                onSelect={[Function]}
+                                polls={Array []}
                                 title="Polls created by you:"
                         />
                 </div>
@@ -66,7 +70,11 @@ ShallowWrapper {
                         id="other"
                 >
                         <PollList
-                                polls={undefined}
+                                activePage={1}
+                                items={1000}
+                                maxButtons={7}
+                                onSelect={[Function]}
+                                polls={Array []}
                                 title="Polls created by other users:"
                         />
                 </div>
@@ -118,7 +126,11 @@ ShallowWrapper {
                         id="my"
             >
                         <PollList
-                                    polls={undefined}
+                                    activePage={1}
+                                    items={1000}
+                                    maxButtons={7}
+                                    onSelect={[Function]}
+                                    polls={Array []}
                                     title="Polls created by you:"
                         />
             </div>
@@ -127,7 +139,11 @@ ShallowWrapper {
                         id="other"
             >
                         <PollList
-                                    polls={undefined}
+                                    activePage={1}
+                                    items={1000}
+                                    maxButtons={7}
+                                    onSelect={[Function]}
+                                    polls={Array []}
                                     title="Polls created by other users:"
                         />
             </div>
@@ -321,7 +337,11 @@ ShallowWrapper {
                 id="my"
 >
                 <PollList
-                                polls={undefined}
+                                activePage={1}
+                                items={1000}
+                                maxButtons={7}
+                                onSelect={[Function]}
+                                polls={Array []}
                                 title="Polls created by you:"
                 />
 </div>,
@@ -330,7 +350,11 @@ ShallowWrapper {
                 id="other"
 >
                 <PollList
-                                polls={undefined}
+                                activePage={1}
+                                items={1000}
+                                maxButtons={7}
+                                onSelect={[Function]}
+                                polls={Array []}
                                 title="Polls created by other users:"
                 />
 </div>,
@@ -344,7 +368,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <PollList
-                  polls={undefined}
+                  activePage={1}
+                  items={1000}
+                  maxButtons={7}
+                  onSelect={[Function]}
+                  polls={Array []}
                   title="Polls created by you:"
 />,
                 "className": "col s12",
@@ -356,7 +384,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "polls": undefined,
+                  "activePage": 1,
+                  "items": 1000,
+                  "maxButtons": 7,
+                  "onSelect": [Function],
+                  "polls": Array [],
                   "title": "Polls created by you:",
                 },
                 "ref": null,
@@ -371,7 +403,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <PollList
-                  polls={undefined}
+                  activePage={1}
+                  items={1000}
+                  maxButtons={7}
+                  onSelect={[Function]}
+                  polls={Array []}
                   title="Polls created by other users:"
 />,
                 "className": "col s12",
@@ -383,7 +419,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "polls": undefined,
+                  "activePage": 1,
+                  "items": 1000,
+                  "maxButtons": 7,
+                  "onSelect": [Function],
+                  "polls": Array [],
                   "title": "Polls created by other users:",
                 },
                 "ref": null,
@@ -444,7 +484,11 @@ ShallowWrapper {
                               id="my"
                     >
                               <PollList
-                                        polls={undefined}
+                                        activePage={1}
+                                        items={1000}
+                                        maxButtons={7}
+                                        onSelect={[Function]}
+                                        polls={Array []}
                                         title="Polls created by you:"
                               />
                     </div>
@@ -453,7 +497,11 @@ ShallowWrapper {
                               id="other"
                     >
                               <PollList
-                                        polls={undefined}
+                                        activePage={1}
+                                        items={1000}
+                                        maxButtons={7}
+                                        onSelect={[Function]}
+                                        polls={Array []}
                                         title="Polls created by other users:"
                               />
                     </div>
@@ -505,7 +553,11 @@ ShallowWrapper {
                             id="my"
               >
                             <PollList
-                                          polls={undefined}
+                                          activePage={1}
+                                          items={1000}
+                                          maxButtons={7}
+                                          onSelect={[Function]}
+                                          polls={Array []}
                                           title="Polls created by you:"
                             />
               </div>
@@ -514,7 +566,11 @@ ShallowWrapper {
                             id="other"
               >
                             <PollList
-                                          polls={undefined}
+                                          activePage={1}
+                                          items={1000}
+                                          maxButtons={7}
+                                          onSelect={[Function]}
+                                          polls={Array []}
                                           title="Polls created by other users:"
                             />
               </div>
@@ -708,7 +764,11 @@ ShallowWrapper {
                   id="my"
 >
                   <PollList
-                                    polls={undefined}
+                                    activePage={1}
+                                    items={1000}
+                                    maxButtons={7}
+                                    onSelect={[Function]}
+                                    polls={Array []}
                                     title="Polls created by you:"
                   />
 </div>,
@@ -717,7 +777,11 @@ ShallowWrapper {
                   id="other"
 >
                   <PollList
-                                    polls={undefined}
+                                    activePage={1}
+                                    items={1000}
+                                    maxButtons={7}
+                                    onSelect={[Function]}
+                                    polls={Array []}
                                     title="Polls created by other users:"
                   />
 </div>,
@@ -731,7 +795,11 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <PollList
-                    polls={undefined}
+                    activePage={1}
+                    items={1000}
+                    maxButtons={7}
+                    onSelect={[Function]}
+                    polls={Array []}
                     title="Polls created by you:"
 />,
                   "className": "col s12",
@@ -743,7 +811,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "polls": undefined,
+                    "activePage": 1,
+                    "items": 1000,
+                    "maxButtons": 7,
+                    "onSelect": [Function],
+                    "polls": Array [],
                     "title": "Polls created by you:",
                   },
                   "ref": null,
@@ -758,7 +830,11 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <PollList
-                    polls={undefined}
+                    activePage={1}
+                    items={1000}
+                    maxButtons={7}
+                    onSelect={[Function]}
+                    polls={Array []}
                     title="Polls created by other users:"
 />,
                   "className": "col s12",
@@ -770,7 +846,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "polls": undefined,
+                    "activePage": 1,
+                    "items": 1000,
+                    "maxButtons": 7,
+                    "onSelect": [Function],
+                    "polls": Array [],
                     "title": "Polls created by other users:",
                   },
                   "ref": null,

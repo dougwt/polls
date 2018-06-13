@@ -14,8 +14,16 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch (action.type) {
-  case FETCH_POLLS:
-    return { ...state, polls: action.payload.data };
+  case FETCH_POLLS: {
+    // return { ...state, polls: action.payload.data };
+
+    const polls = [];
+    for (let i = 1; i <= 500; i++) {
+      const owner = i % 2 !== 0 ? '5a3738b6499d8baa793491a5' : 'OTHER';
+      polls.push({ _id: i, owner, question: `Question ${i}` });
+    }
+    return { ...state, polls };
+  }
   case CREATE_POLL_RESET:
     return { ...state, waiting: false, error: null };
   case CREATE_POLL_REQUEST:
