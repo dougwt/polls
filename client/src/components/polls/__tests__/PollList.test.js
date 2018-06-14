@@ -37,6 +37,10 @@ describe('PollList', () => {
         'There are no polls to show. Why don&#x27;t you create one?'
       );
     });
+
+    it('shows a pagination with 1 item', () => {
+      expect(wrapper.find('Pagination').props().items).toEqual(1);
+    });
   });
 
   describe('1 polls', () => {
@@ -57,6 +61,8 @@ describe('PollList', () => {
         expect(wrapper.find('CollectionItem').html()).toContain(poll.question);
       });
     });
+
+    it('shows a pagination with 1 item');
   });
 
   describe('2 polls', () => {
@@ -96,6 +102,8 @@ describe('PollList', () => {
         ).toContain(`href="/polls/${poll._id}"`);
       });
     });
+
+    it('shows a pagination with 1 item');
   });
 
   describe('10 polls', () => {
@@ -143,6 +151,8 @@ describe('PollList', () => {
         ).toContain(`href="/polls/${poll._id}"`);
       });
     });
+
+    it('shows a pagination with 1 item');
   });
 
   describe('20 polls', () => {
@@ -200,5 +210,7 @@ describe('PollList', () => {
         ).toContain(`href="/polls/${poll._id}"`);
       });
     });
+
+    it('shows a pagination with 2 items');
   });
 });

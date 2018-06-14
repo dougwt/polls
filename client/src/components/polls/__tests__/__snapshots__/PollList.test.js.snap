@@ -40,9 +40,10 @@ ShallowWrapper {
           className="center-align"
 >
           <Pagination
-                    activePage={2}
+                    activePage={3}
                     items={10}
-                    maxButtons={8}
+                    maxButtons={7}
+                    onSelect={[Function]}
           />
 </Row>,
       ],
@@ -123,9 +124,10 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <Pagination
-            activePage={2}
+            activePage={3}
             items={10}
-            maxButtons={8}
+            maxButtons={7}
+            onSelect={[Function]}
 />,
           "className": "center-align",
         },
@@ -135,9 +137,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "activePage": 2,
+            "activePage": 3,
             "items": 10,
-            "maxButtons": 8,
+            "maxButtons": 7,
+            "onSelect": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -175,9 +178,10 @@ ShallowWrapper {
             className="center-align"
 >
             <Pagination
-                        activePage={2}
+                        activePage={3}
                         items={10}
-                        maxButtons={8}
+                        maxButtons={7}
+                        onSelect={[Function]}
             />
 </Row>,
         ],
@@ -258,9 +262,10 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Pagination
-              activePage={2}
+              activePage={3}
               items={10}
-              maxButtons={8}
+              maxButtons={7}
+              onSelect={[Function]}
 />,
             "className": "center-align",
           },
@@ -270,9 +275,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "activePage": 2,
+              "activePage": 3,
               "items": 10,
-              "maxButtons": 8,
+              "maxButtons": 7,
+              "onSelect": [Function],
             },
             "ref": null,
             "rendered": null,
