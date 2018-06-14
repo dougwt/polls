@@ -23,11 +23,11 @@ describe('Dashboard', () => {
   });
 
   it('contains a `My Polls` PollList', () => {
-    expect(wrapper.find('#my > PollList').length).toEqual(1);
+    expect(wrapper.find('#my > Connect(PollList)').length).toEqual(1);
   });
 
   it('contains a `Other Polls` PollList', () => {
-    expect(wrapper.find('#other > PollList').length).toEqual(1);
+    expect(wrapper.find('#other > Connect(PollList)').length).toEqual(1);
   });
 
   it('calls the fetchPolls action creator', () => {
