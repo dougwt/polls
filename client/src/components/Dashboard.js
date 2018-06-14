@@ -16,11 +16,34 @@ export class Dashboard extends Component {
   }
   componentDidMount() {
     this.props.fetchPolls();
+
     // Ensure Materialize Tabs are initialized every time the component
     // is mounted. Without this, they only appear when the component is
     // present during the initial page load. This ensures that it works
     // properly when the user loads another page and navigates here.
     window.$('ul.tabs').tabs();
+  }
+
+  calcSlice(list, page) {
+    const startIndex = (page - 1) * ITEMS_PER_PAGE;
+    const endIndex = page * ITEMS_PER_PAGE;
+
+    return list.slice(startIndex, endIndex);
+  }
+
+  calcItems(list) {
+    if (this.props.fetched) {
+      if (list.length > 0) {
+        return Math.ceil(list.length / ITEMS_PER_PAGE);
+      }
+
+      return 1;
+    }
+
+    // Page hasn't finished fetching the list of polls, so let's return
+    // a reasonable maximum so pagination doesn't initialize itself
+    // with a list size of  1.
+    return 1000;
   }
 
   render() {
@@ -54,11 +77,8 @@ export class Dashboard extends Component {
             <div id="my" className="col s12">
               <PollList
                 title="Polls created by you:"
-                polls={myPolls.slice(
-                  (this.state.mine_page - 1) * ITEMS_PER_PAGE,
-                  this.state.mine_page * ITEMS_PER_PAGE
-                )}
-                items={Math.ceil(myPolls.length / ITEMS_PER_PAGE) || 1000}
+                polls={this.calcSlice(myPolls, this.state.mine_page)}
+                items={this.calcItems(myPolls)}
                 activePage={this.state.mine_page}
                 maxButtons={MAX_PAGINATION_BUTTONS}
                 onSelect={page => {
@@ -69,11 +89,8 @@ export class Dashboard extends Component {
             <div id="other" className="col s12">
               <PollList
                 title="Polls created by other users:"
-                polls={othersPolls.slice(
-                  (this.state.others_page - 1) * ITEMS_PER_PAGE,
-                  this.state.others_page * ITEMS_PER_PAGE
-                )}
-                items={Math.ceil(othersPolls.length / ITEMS_PER_PAGE) || 1000}
+                polls={this.calcSlice(othersPolls, this.state.others_page)}
+                items={this.calcItems(othersPolls)}
                 activePage={this.state.others_page}
                 maxButtons={MAX_PAGINATION_BUTTONS}
                 onSelect={page => {
@@ -90,13 +107,15 @@ export class Dashboard extends Component {
 Dashboard.propTypes = {
   auth: PropTypes.object,
   polls: PropTypes.array,
+  fetched: PropTypes.bool,
   fetchPolls: PropTypes.func
 };
 
 function mapStateToProps(state) {
   return {
     auth: state.auth,
-    polls: state.poll.polls
+    polls: state.poll.polls,
+    fetched: state.poll.fetched
   };
 }
 
