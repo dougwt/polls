@@ -32,18 +32,14 @@ export class Dashboard extends Component {
   }
 
   calcItems(list) {
-    if (this.props.fetched) {
-      if (list.length > 0) {
-        return Math.ceil(list.length / ITEMS_PER_PAGE);
-      }
-
-      return 1;
+    if (!this.props.fetched) {
+      // Page hasn't finished fetching the list of polls, so let's
+      // return a reasonable maximum so pagination doesn't limit
+      // itself to an activePage of 1.
+      return 1000;
     }
 
-    // Page hasn't finished fetching the list of polls, so let's return
-    // a reasonable maximum so pagination doesn't initialize itself
-    // with a list size of  1.
-    return 1000;
+    return Math.max(Math.ceil(list.length / ITEMS_PER_PAGE), 1);
   }
 
   render() {
