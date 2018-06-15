@@ -13,14 +13,14 @@ export const fetchPolls = () => {
   return { type: types.FETCH_POLLS, payload: res };
 };
 
-export const createPoll = (poll, history) => dispatch => {
+export const createPoll = (poll, callback) => dispatch => {
   dispatch({ type: types.CREATE_POLL_REQUEST });
 
   axios
     .post('/api/polls/new', poll)
     .then(res => {
       dispatch({ type: types.CREATE_POLL_SUCCESS, payload: res.data });
-      history.push('/polls');
+      callback();
     })
     .catch(err => {
       dispatch({ type: types.CREATE_POLL_FAILURE, payload: err });

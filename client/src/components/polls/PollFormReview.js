@@ -84,7 +84,9 @@ function renderButton({ formValues, createPoll, history, waiting, auth }) {
         if (auth) {
           poll.owner = auth._id;
         }
-        createPoll(poll, history);
+        createPoll(poll, () => {
+          history.push('/polls');
+        });
       }}
     >
       Create

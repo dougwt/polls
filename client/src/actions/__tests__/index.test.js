@@ -59,25 +59,28 @@ describe('actions', () => {
       return action;
     };
 
-    let history;
+    let callback;
     let action;
 
     beforeEach(done => {
       const mock = new MockAdapter(axios);
       mock.onPost('/api/polls/new').reply(200, poll);
 
-      history = { push: jest.fn() };
+      callback = jest.fn();
 
-      getAsyncAction(actions.createPoll, [{}, history]).then(returnedAction => {
-        action = returnedAction;
-        done();
-      });
+      getAsyncAction(actions.createPoll, [{}, callback]).then(
+        returnedAction => {
+          action = returnedAction;
+          done();
+        }
+      );
     });
 
-    it('redirects the user to the Dashboard page', () => {
-      expect(history.push).toHaveBeenCalledWith('/polls');
+    it('executes the callback function', () => {
+      expect(callback).toHaveBeenCalledWith();
     });
 
+    // TODO: do something with this
     xit('does something', () => {
       const expectedAction = { type: types.CREATE_POLL, payload: poll };
       expect(action).toEqual(expectedAction);
