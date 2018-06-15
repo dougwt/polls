@@ -1,138 +1,79 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { reduxForm, Field, FieldArray } from 'redux-form';
-import { Link } from 'react-router-dom';
-import { Button, Row, Icon } from 'react-materialize';
-import PollField from './PollField';
+import { connect } from 'react-redux';
+import { Button, Icon, Row, Section, Container } from 'react-materialize';
+import PollDetail from './PollDetail';
+import PollEdit from './PollEdit';
+import { fetchPolls } from '../../actions';
 
-const Poll = props => {
-  return (
-    <div>
-      <form onSubmit={props.handleSubmit(props.onPollSubmit)}>
-        <Row>
-          <Field
-            label="What question would you like to ask?"
-            icon="question_answer"
-            name="question"
-            component={PollField}
-          />
-        </Row>
+export class Poll extends Component {
+  constructor(props) {
+    super(props);
 
-        <Row>
-          <FieldArray name="choices" component={renderChoices} />
-        </Row>
-
-        <Row>
-          <Link to="/polls" className="red white-text">
-            Cancel
-            <Icon left>close</Icon>
-          </Link>
-
-          <Button className="teal right white-text" waves="light">
-            Preview
-            <Icon right>keyboard_arrow_right</Icon>
-          </Button>
-        </Row>
-      </form>
-    </div>
-  );
-};
-Poll.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  onPollSubmit: PropTypes.func.isRequired
-};
-
-const choiceIcons = {
-  1: 'looks_one',
-  2: 'looks_two',
-  3: 'looks_3',
-  4: 'looks_4',
-  5: 'looks_5',
-  6: 'looks_6',
-  7: 'looks_7',
-  8: 'looks_8',
-  9: 'looks_9'
-};
-
-function renderChoiceField(index) {
-  return (
-    <Field
-      label={`Choice ${index}`}
-      icon={choiceIcons[index]}
-      name={`choice_${index}`}
-      key={index}
-      component={PollField}
-    />
-  );
-}
-
-function renderChoiceError(error) {
-  if (error) {
-    return <li className="center-align red-text">{error}</li>;
-  }
-}
-
-function renderChoices({ fields, meta: { error } }) {
-  return (
-    <ul>
-      {fields.map((choice, index) => (
-        <li key={index}>{renderChoiceField(index + 1)}</li>
-      ))}
-      {renderChoiceError(error)}
-
-      <li className="center-align">
-        <Button
-          flat
-          className={fields.length > 5 ? 'disabled' : ''}
-          onClick={() => fields.push()}
-          node="a"
-        >
-          <Icon left>add</Icon>
-          Add Choice
-        </Button>
-        <Button
-          flat
-          className={fields.length < 3 ? 'disabled' : ''}
-          onClick={() => fields.pop()}
-          node="a"
-        >
-          <Icon left>delete</Icon>
-          Remove Choice
-        </Button>
-      </li>
-    </ul>
-  );
-}
-renderChoices.propTypes = {
-  fields: PropTypes.object.isRequired,
-  meta: PropTypes.object.isRequired
-};
-
-function validate(values) {
-  const errors = {};
-
-  if (!values.question) {
-    errors.question = 'You must provide a poll question';
+    this.state = { showEdit: false };
   }
 
-  if (!values.choices || values.choices.length < 2) {
-    errors.choices = { _error: 'At least two choices must be entered' };
-  } else if (values.choices.length > 6) {
-    errors.choices = { _error: 'No more than six choices allowed' };
-  }
-
-  for (let choice = 1; choice <= values.choices.length; choice++) {
-    let field = `choice_${choice}`;
-    if (!values[field]) {
-      errors[field] = `You must provide text for Choice ${choice}`;
-      // errors[field] = `You must provide text for all available choices`;
+  componentDidMount() {
+    if (!this.props.fetched) {
+      this.props.fetchPolls();
     }
   }
 
-  return errors;
+  renderContent() {
+    const { pollId } = this.props.match.params;
+    // TODO: this is inefficient! Switch to a map for faster lookups.
+    const poll = this.props.polls.filter(poll => poll._id === pollId);
+
+    if (this.state.showEdit) {
+      return <PollEdit poll={poll} />;
+    }
+
+    return (
+      <div>
+        <PollDetail poll={poll} />
+
+        <Row className="right-align">
+          <Button
+            id="edit"
+            className="btn"
+            waves="light"
+            node="a"
+            flat={true}
+            onClick={() => this.setState({ showEdit: true })}
+          >
+            Edit
+            <Icon right>edit</Icon>
+          </Button>
+        </Row>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <Section>
+        <Container>
+          <Row>
+            <h3 className="header section-title">Poll</h3>
+          </Row>
+          {this.renderContent()}
+        </Container>
+      </Section>
+    );
+  }
+}
+Poll.propTypes = {
+  polls: PropTypes.array,
+  fetched: PropTypes.bool,
+  match: PropTypes.object,
+  fetchPolls: PropTypes.func
+};
+
+function mapStateToProps(state) {
+  return {
+    polls: state.poll.polls,
+    fetched: state.poll.fetched
+  };
 }
 
-export default reduxForm({
-  validate,
-  form: 'pollDetailForm'
-})(Poll);
+export default connect(mapStateToProps, { fetchPolls })(Poll);

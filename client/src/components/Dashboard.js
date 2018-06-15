@@ -24,17 +24,15 @@ export class Dashboard extends Component {
       <Section>
         <Container>
           <Row>
-            <div className="col s12">
-              <h3>Dashboard</h3>
-              <ul className="tabs">
-                <li className="tab col s3">
-                  <a href="#my">My Polls</a>
-                </li>
-                <li className="tab col s3">
-                  <a href="#other">Other Polls</a>
-                </li>
-              </ul>
-            </div>
+            <h3>Dashboard</h3>
+            <ul className="tabs">
+              <li className="tab col s3">
+                <a href="#my">My Polls</a>
+              </li>
+              <li className="tab col s3">
+                <a href="#other">Other Polls</a>
+              </li>
+            </ul>
           </Row>
 
           <Row>

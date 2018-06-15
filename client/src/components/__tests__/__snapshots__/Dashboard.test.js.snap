@@ -21,35 +21,31 @@ ShallowWrapper {
     "props": Object {
       "children": <Container>
         <Row>
-                <div
-                        className="col s12"
+                <h3>
+                        Dashboard
+                </h3>
+                <ul
+                        className="tabs"
                 >
-                        <h3>
-                                Dashboard
-                        </h3>
-                        <ul
-                                className="tabs"
+                        <li
+                                className="tab col s3"
                         >
-                                <li
-                                        className="tab col s3"
+                                <a
+                                        href="#my"
                                 >
-                                        <a
-                                                href="#my"
-                                        >
-                                                My Polls
-                                        </a>
-                                </li>
-                                <li
-                                        className="tab col s3"
+                                        My Polls
+                                </a>
+                        </li>
+                        <li
+                                className="tab col s3"
+                        >
+                                <a
+                                        href="#other"
                                 >
-                                        <a
-                                                href="#other"
-                                        >
-                                                Other Polls
-                                        </a>
-                                </li>
-                        </ul>
-                </div>
+                                        Other Polls
+                                </a>
+                        </li>
+                </ul>
         </Row>
         <Row>
                 <div
@@ -86,35 +82,31 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Row>
-            <div
-                        className="col s12"
+            <h3>
+                        Dashboard
+            </h3>
+            <ul
+                        className="tabs"
             >
-                        <h3>
-                                    Dashboard
-                        </h3>
-                        <ul
-                                    className="tabs"
+                        <li
+                                    className="tab col s3"
                         >
-                                    <li
-                                                className="tab col s3"
+                                    <a
+                                                href="#my"
                                     >
-                                                <a
-                                                            href="#my"
-                                                >
-                                                            My Polls
-                                                </a>
-                                    </li>
-                                    <li
-                                                className="tab col s3"
+                                                My Polls
+                                    </a>
+                        </li>
+                        <li
+                                    className="tab col s3"
+                        >
+                                    <a
+                                                href="#other"
                                     >
-                                                <a
-                                                            href="#other"
-                                                >
-                                                            Other Polls
-                                                </a>
-                                    </li>
-                        </ul>
-            </div>
+                                                Other Polls
+                                    </a>
+                        </li>
+            </ul>
 </Row>,
           <Row>
             <div
@@ -149,173 +141,134 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <div
-              className="col s12"
->
+            "children": Array [
               <h3>
-                            Dashboard
-              </h3>
+                Dashboard
+</h3>,
               <ul
-                            className="tabs"
-              >
-                            <li
-                                          className="tab col s3"
-                            >
-                                          <a
-                                                        href="#my"
-                                          >
-                                                        My Polls
-                                          </a>
-                            </li>
-                            <li
-                                          className="tab col s3"
-                            >
-                                          <a
-                                                        href="#other"
-                                          >
-                                                        Other Polls
-                                          </a>
-                            </li>
-              </ul>
-</div>,
+                className="tabs"
+>
+                <li
+                                className="tab col s3"
+                >
+                                <a
+                                                href="#my"
+                                >
+                                                My Polls
+                                </a>
+                </li>
+                <li
+                                className="tab col s3"
+                >
+                                <a
+                                                href="#other"
+                                >
+                                                Other Polls
+                                </a>
+                </li>
+</ul>,
+            ],
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <h3>
-                  Dashboard
-</h3>,
-                <ul
-                  className="tabs"
->
-                  <li
-                                    className="tab col s3"
-                  >
-                                    <a
-                                                      href="#my"
-                                    >
-                                                      My Polls
-                                    </a>
-                  </li>
-                  <li
-                                    className="tab col s3"
-                  >
-                                    <a
-                                                      href="#other"
-                                    >
-                                                      Other Polls
-                                    </a>
-                  </li>
-</ul>,
-              ],
-              "className": "col s12",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Dashboard",
+              },
+              "ref": null,
+              "rendered": "Dashboard",
+              "type": "h3",
             },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Dashboard",
-                },
-                "ref": null,
-                "rendered": "Dashboard",
-                "type": "h3",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <li
-                      className="tab col s3"
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="tab col s3"
 >
-                      <a
-                                            href="#my"
-                      >
-                                            My Polls
-                      </a>
+                    <a
+                                        href="#my"
+                    >
+                                        My Polls
+                    </a>
 </li>,
-                    <li
-                      className="tab col s3"
+                  <li
+                    className="tab col s3"
 >
-                      <a
-                                            href="#other"
-                      >
-                                            Other Polls
-                      </a>
+                    <a
+                                        href="#other"
+                    >
+                                        Other Polls
+                    </a>
 </li>,
-                  ],
-                  "className": "tabs",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <a
-                        href="#my"
->
-                        My Polls
-</a>,
-                      "className": "tab col s3",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "My Polls",
-                        "href": "#my",
-                      },
-                      "ref": null,
-                      "rendered": "My Polls",
-                      "type": "a",
-                    },
-                    "type": "li",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <a
-                        href="#other"
->
-                        Other Polls
-</a>,
-                      "className": "tab col s3",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Other Polls",
-                        "href": "#other",
-                      },
-                      "ref": null,
-                      "rendered": "Other Polls",
-                      "type": "a",
-                    },
-                    "type": "li",
-                  },
                 ],
-                "type": "ul",
+                "className": "tabs",
               },
-            ],
-            "type": "div",
-          },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="#my"
+>
+                      My Polls
+</a>,
+                    "className": "tab col s3",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "My Polls",
+                      "href": "#my",
+                    },
+                    "ref": null,
+                    "rendered": "My Polls",
+                    "type": "a",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="#other"
+>
+                      Other Polls
+</a>,
+                    "className": "tab col s3",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Other Polls",
+                      "href": "#other",
+                    },
+                    "ref": null,
+                    "rendered": "Other Polls",
+                    "type": "a",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
           "type": [Function],
         },
         Object {
@@ -428,35 +381,31 @@ ShallowWrapper {
       "props": Object {
         "children": <Container>
           <Row>
-                    <div
-                              className="col s12"
+                    <h3>
+                              Dashboard
+                    </h3>
+                    <ul
+                              className="tabs"
                     >
-                              <h3>
-                                        Dashboard
-                              </h3>
-                              <ul
-                                        className="tabs"
+                              <li
+                                        className="tab col s3"
                               >
-                                        <li
-                                                  className="tab col s3"
+                                        <a
+                                                  href="#my"
                                         >
-                                                  <a
-                                                            href="#my"
-                                                  >
-                                                            My Polls
-                                                  </a>
-                                        </li>
-                                        <li
-                                                  className="tab col s3"
+                                                  My Polls
+                                        </a>
+                              </li>
+                              <li
+                                        className="tab col s3"
+                              >
+                                        <a
+                                                  href="#other"
                                         >
-                                                  <a
-                                                            href="#other"
-                                                  >
-                                                            Other Polls
-                                                  </a>
-                                        </li>
-                              </ul>
-                    </div>
+                                                  Other Polls
+                                        </a>
+                              </li>
+                    </ul>
           </Row>
           <Row>
                     <div
@@ -493,35 +442,31 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Row>
-              <div
-                            className="col s12"
+              <h3>
+                            Dashboard
+              </h3>
+              <ul
+                            className="tabs"
               >
-                            <h3>
-                                          Dashboard
-                            </h3>
-                            <ul
-                                          className="tabs"
+                            <li
+                                          className="tab col s3"
                             >
-                                          <li
-                                                        className="tab col s3"
+                                          <a
+                                                        href="#my"
                                           >
-                                                        <a
-                                                                      href="#my"
-                                                        >
-                                                                      My Polls
-                                                        </a>
-                                          </li>
-                                          <li
-                                                        className="tab col s3"
+                                                        My Polls
+                                          </a>
+                            </li>
+                            <li
+                                          className="tab col s3"
+                            >
+                                          <a
+                                                        href="#other"
                                           >
-                                                        <a
-                                                                      href="#other"
-                                                        >
-                                                                      Other Polls
-                                                        </a>
-                                          </li>
-                            </ul>
-              </div>
+                                                        Other Polls
+                                          </a>
+                            </li>
+              </ul>
 </Row>,
             <Row>
               <div
@@ -556,173 +501,134 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": <div
-                className="col s12"
->
+              "children": Array [
                 <h3>
-                                Dashboard
-                </h3>
+                  Dashboard
+</h3>,
                 <ul
-                                className="tabs"
-                >
-                                <li
-                                                className="tab col s3"
-                                >
-                                                <a
-                                                                href="#my"
-                                                >
-                                                                My Polls
-                                                </a>
-                                </li>
-                                <li
-                                                className="tab col s3"
-                                >
-                                                <a
-                                                                href="#other"
-                                                >
-                                                                Other Polls
-                                                </a>
-                                </li>
-                </ul>
-</div>,
+                  className="tabs"
+>
+                  <li
+                                    className="tab col s3"
+                  >
+                                    <a
+                                                      href="#my"
+                                    >
+                                                      My Polls
+                                    </a>
+                  </li>
+                  <li
+                                    className="tab col s3"
+                  >
+                                    <a
+                                                      href="#other"
+                                    >
+                                                      Other Polls
+                                    </a>
+                  </li>
+</ul>,
+              ],
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h3>
-                    Dashboard
-</h3>,
-                  <ul
-                    className="tabs"
->
-                    <li
-                                        className="tab col s3"
-                    >
-                                        <a
-                                                            href="#my"
-                                        >
-                                                            My Polls
-                                        </a>
-                    </li>
-                    <li
-                                        className="tab col s3"
-                    >
-                                        <a
-                                                            href="#other"
-                                        >
-                                                            Other Polls
-                                        </a>
-                    </li>
-</ul>,
-                ],
-                "className": "col s12",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Dashboard",
+                },
+                "ref": null,
+                "rendered": "Dashboard",
+                "type": "h3",
               },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Dashboard",
-                  },
-                  "ref": null,
-                  "rendered": "Dashboard",
-                  "type": "h3",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <li
-                        className="tab col s3"
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li
+                      className="tab col s3"
 >
-                        <a
-                                                href="#my"
-                        >
-                                                My Polls
-                        </a>
+                      <a
+                                            href="#my"
+                      >
+                                            My Polls
+                      </a>
 </li>,
-                      <li
-                        className="tab col s3"
+                    <li
+                      className="tab col s3"
 >
-                        <a
-                                                href="#other"
-                        >
-                                                Other Polls
-                        </a>
+                      <a
+                                            href="#other"
+                      >
+                                            Other Polls
+                      </a>
 </li>,
-                    ],
-                    "className": "tabs",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <a
-                          href="#my"
->
-                          My Polls
-</a>,
-                        "className": "tab col s3",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "My Polls",
-                          "href": "#my",
-                        },
-                        "ref": null,
-                        "rendered": "My Polls",
-                        "type": "a",
-                      },
-                      "type": "li",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <a
-                          href="#other"
->
-                          Other Polls
-</a>,
-                        "className": "tab col s3",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Other Polls",
-                          "href": "#other",
-                        },
-                        "ref": null,
-                        "rendered": "Other Polls",
-                        "type": "a",
-                      },
-                      "type": "li",
-                    },
                   ],
-                  "type": "ul",
+                  "className": "tabs",
                 },
-              ],
-              "type": "div",
-            },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="#my"
+>
+                        My Polls
+</a>,
+                      "className": "tab col s3",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "My Polls",
+                        "href": "#my",
+                      },
+                      "ref": null,
+                      "rendered": "My Polls",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        href="#other"
+>
+                        Other Polls
+</a>,
+                      "className": "tab col s3",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Other Polls",
+                        "href": "#other",
+                      },
+                      "ref": null,
+                      "rendered": "Other Polls",
+                      "type": "a",
+                    },
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
             "type": [Function],
           },
           Object {

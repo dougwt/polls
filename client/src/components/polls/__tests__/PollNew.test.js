@@ -5,15 +5,23 @@ import PollForm from '../PollForm';
 import PollFormReview from '../PollFormReview';
 
 describe('PollNew', () => {
-  let wrapper = shallow(<PollNew />);
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<PollNew />);
+  });
 
   it('renders properly', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
   describe('when the form is initially loaded', () => {
-    it('shows the PollNewForm component', () => {
-      expect(wrapper.find(PollForm).exists()).toBe(true);
+    it('contains the proper component state', () => {
+      expect(wrapper.state('showReview')).toEqual(false);
+    });
+
+    it('shows the PollForm component', () => {
+      expect(wrapper.find(PollForm).length).toEqual(1);
     });
   });
 
@@ -22,8 +30,12 @@ describe('PollNew', () => {
       wrapper.setState({ showReview: true });
     });
 
-    it('shows the PollNewFormReview component', () => {
-      expect(wrapper.find(PollFormReview).exists()).toBe(true);
+    it('shows the PollFormReview component', () => {
+      expect(wrapper.find(PollFormReview).length).toEqual(1);
+    });
+
+    it('does not show the PollForm component', () => {
+      expect(wrapper.find(PollForm).length).toEqual(0);
     });
   });
 });

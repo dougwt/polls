@@ -38,6 +38,11 @@ ShallowWrapper {
                 exact={true}
                 path="/polls/new"
         />
+        <Route
+                component={[Function]}
+                exact={true}
+                path="/polls/:pollId"
+        />
         <Footer />
 </div>,
     },
@@ -63,6 +68,11 @@ ShallowWrapper {
             component={[Function]}
             exact={true}
             path="/polls/new"
+/>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/polls/:pollId"
 />,
           <Footer />,
         ],
@@ -121,6 +131,19 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/polls/:pollId",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "function",
           "props": Object {},
           "ref": null,
@@ -157,6 +180,11 @@ ShallowWrapper {
                     exact={true}
                     path="/polls/new"
           />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/polls/:pollId"
+          />
           <Footer />
 </div>,
       },
@@ -182,6 +210,11 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/polls/new"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/polls/:pollId"
 />,
             <Footer />,
           ],
@@ -232,6 +265,19 @@ ShallowWrapper {
               "component": [Function],
               "exact": true,
               "path": "/polls/new",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/polls/:pollId",
             },
             "ref": null,
             "rendered": null,
