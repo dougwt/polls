@@ -23,26 +23,25 @@ ShallowWrapper {
         className="app"
 >
         <Connect(Component) />
-        <Route
-                component={[Function]}
-                exact={true}
-                path="/"
-        />
-        <Route
-                component={[Function]}
-                exact={true}
-                path="/polls"
-        />
-        <Route
-                component={[Function]}
-                exact={true}
-                path="/polls/new"
-        />
-        <Route
-                component={[Function]}
-                exact={true}
-                path="/polls/:pollId"
-        />
+        <Switch>
+                <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/"
+                />
+                <Route
+                        component={[Function]}
+                        path="/polls/new"
+                />
+                <Route
+                        component={[Function]}
+                        path="/polls/:pollId"
+                />
+                <Route
+                        component={[Function]}
+                        path="/polls"
+                />
+        </Switch>
         <Footer />
 </div>,
     },
@@ -54,26 +53,25 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(Component) />,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/polls"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/polls/new"
-/>,
-          <Route
-            component={[Function]}
-            exact={true}
-            path="/polls/:pollId"
-/>,
+          <Switch>
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/"
+            />
+            <Route
+                        component={[Function]}
+                        path="/polls/new"
+            />
+            <Route
+                        component={[Function]}
+                        path="/polls/:pollId"
+            />
+            <Route
+                        component={[Function]}
+                        path="/polls"
+            />
+</Switch>,
           <Footer />,
         ],
         "className": "app",
@@ -94,51 +92,78 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/",
+            "children": Array [
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
+/>,
+              <Route
+                component={[Function]}
+                path="/polls/new"
+/>,
+              <Route
+                component={[Function]}
+                path="/polls/:pollId"
+/>,
+              <Route
+                component={[Function]}
+                path="/polls"
+/>,
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/polls",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/polls/new",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": [Function],
-            "exact": true,
-            "path": "/polls/:pollId",
-          },
-          "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/polls/new",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/polls/:pollId",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "path": "/polls",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         Object {
@@ -165,26 +190,25 @@ ShallowWrapper {
           className="app"
 >
           <Connect(Component) />
-          <Route
-                    component={[Function]}
-                    exact={true}
-                    path="/"
-          />
-          <Route
-                    component={[Function]}
-                    exact={true}
-                    path="/polls"
-          />
-          <Route
-                    component={[Function]}
-                    exact={true}
-                    path="/polls/new"
-          />
-          <Route
-                    component={[Function]}
-                    exact={true}
-                    path="/polls/:pollId"
-          />
+          <Switch>
+                    <Route
+                              component={[Function]}
+                              exact={true}
+                              path="/"
+                    />
+                    <Route
+                              component={[Function]}
+                              path="/polls/new"
+                    />
+                    <Route
+                              component={[Function]}
+                              path="/polls/:pollId"
+                    />
+                    <Route
+                              component={[Function]}
+                              path="/polls"
+                    />
+          </Switch>
           <Footer />
 </div>,
       },
@@ -196,26 +220,25 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Connect(Component) />,
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/"
-/>,
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/polls"
-/>,
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/polls/new"
-/>,
-            <Route
-              component={[Function]}
-              exact={true}
-              path="/polls/:pollId"
-/>,
+            <Switch>
+              <Route
+                            component={[Function]}
+                            exact={true}
+                            path="/"
+              />
+              <Route
+                            component={[Function]}
+                            path="/polls/new"
+              />
+              <Route
+                            component={[Function]}
+                            path="/polls/:pollId"
+              />
+              <Route
+                            component={[Function]}
+                            path="/polls"
+              />
+</Switch>,
             <Footer />,
           ],
           "className": "app",
@@ -236,51 +259,78 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/",
+              "children": Array [
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/"
+/>,
+                <Route
+                  component={[Function]}
+                  path="/polls/new"
+/>,
+                <Route
+                  component={[Function]}
+                  path="/polls/:pollId"
+/>,
+                <Route
+                  component={[Function]}
+                  path="/polls"
+/>,
+              ],
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/polls",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/polls/new",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/polls/:pollId",
-            },
-            "ref": null,
-            "rendered": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/polls/new",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/polls/:pollId",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "path": "/polls",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
           Object {

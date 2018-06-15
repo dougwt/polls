@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Header from './Header';
@@ -21,10 +21,12 @@ export class App extends Component {
         <div className="app">
           <Header />
 
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/polls" component={Dashboard} />
-          <Route exact path="/polls/new" component={PollNew} />
-          <Route exact path="/polls/:pollId" component={Poll} />
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route path="/polls/new" component={PollNew} />
+            <Route path="/polls/:pollId" component={Poll} />
+            <Route path="/polls" component={Dashboard} />
+          </Switch>
 
           <Footer />
         </div>
