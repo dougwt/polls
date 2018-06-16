@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PollForm from './PollForm';
 import PollFormReview from './PollFormReview';
+import requireAuth from '../requireAuth';
 
 const initialValues = { choices: [0, 1] };
 
@@ -39,4 +40,4 @@ export class PollNew extends Component {
   }
 }
 
-export default PollNew;
+export default requireAuth(PollNew);

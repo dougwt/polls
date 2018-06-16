@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Section, Container, Row } from 'react-materialize';
 import PollList from './polls/PollList';
+import requireAuth from './requireAuth';
 import { fetchPolls } from '../actions';
 
 const ITEMS_PER_PAGE = 15;
@@ -81,4 +83,6 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { fetchPolls })(Dashboard);
+export default compose(connect(mapStateToProps, { fetchPolls }), requireAuth)(
+  Dashboard
+);
