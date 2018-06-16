@@ -1,10 +1,14 @@
 import axios from 'axios';
 import * as types from './types';
 
-export const fetchUser = () => {
-  const res = axios.get('/api/current_user');
+export const fetchUser = () => async dispatch => {
+  const res = await axios.get('/api/current_user');
 
-  return { type: types.FETCH_USER, payload: res };
+  if (res) {
+    localStorage.setItem('auth', JSON.stringify(res.data));
+  }
+
+  dispatch({ type: types.FETCH_USER, payload: res });
 };
 
 export const fetchPolls = () => {
