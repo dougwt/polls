@@ -1,21 +1,23 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PollNew } from '../PollNew';
+import { PollEdit } from '../PollEdit';
 import PollForm from '../PollForm';
 import PollFormReview from '../PollFormReview';
 
-describe('PollNew', () => {
+describe('PollEdit', () => {
+  let props = {};
+
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<PollNew />);
+    wrapper = shallow(<PollEdit {...props} />);
   });
 
   it('renders properly', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  describe('when the form is initially loaded', () => {
+  describe('when the page is initially loaded', () => {
     it('contains the proper component state', () => {
       expect(wrapper.state('showReview')).toEqual(false);
     });
@@ -29,7 +31,7 @@ describe('PollNew', () => {
     });
   });
 
-  describe('when the form has been submitted for review', () => {
+  describe('when the page has been submitted for review', () => {
     beforeEach(() => {
       wrapper.setState({ showReview: true });
     });

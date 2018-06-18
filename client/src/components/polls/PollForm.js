@@ -136,7 +136,11 @@ function validate(values) {
     errors.choices = { _error: 'No more than six choices allowed' };
   }
 
-  for (let choice = 1; choice <= values.choices.length; choice++) {
+  for (
+    let choice = 1;
+    choice <= (values.choices ? values.choices.length : 0);
+    choice++
+  ) {
     let field = `choice_${choice}`;
     if (!values[field]) {
       errors[field] = `You must provide text for Choice ${choice}`;

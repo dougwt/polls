@@ -45,7 +45,11 @@ PollDetail.propTypes = {
 function renderChoices(values) {
   let choices = [];
 
-  for (let choice = 1; choice <= values.choices.length; choice++) {
+  for (
+    let choice = 1;
+    choice <= (values.choices ? values.choices.length : 0);
+    choice++
+  ) {
     let field = `choice_${choice}`;
     if (values[field]) {
       choices.push(

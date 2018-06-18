@@ -6,6 +6,24 @@ import PollDetail from './PollDetail';
 import PollEdit from './PollEdit';
 import { fetchPolls } from '../../actions';
 
+function convertPollToFormValues(poll) {
+  if (poll.length < 1) {
+    poll = { question: '', choices: [] };
+  }
+  const formValues = {
+    question: poll.question,
+    choices: []
+  };
+
+  poll.choices &&
+    poll.choices.forEach((choice, i) => {
+      formValues.choices.push(i);
+      formValues[`choice_${i + 1}`] = choice.text;
+    });
+
+  return formValues;
+}
+
 export class Poll extends Component {
   constructor(props) {
     super(props);
@@ -22,15 +40,20 @@ export class Poll extends Component {
   renderContent() {
     const { pollId } = this.props.match.params;
     // TODO: this is inefficient! Switch to a map for faster lookups.
-    const poll = this.props.polls.filter(poll => poll._id === pollId);
+    let poll = this.props.polls.filter(poll => poll._id === pollId);
+    if (poll.length > 0) {
+      poll = poll[0];
+    }
 
     if (this.state.showEdit) {
-      return <PollEdit poll={poll} />;
+      return (
+        <PollEdit poll={poll} formValues={convertPollToFormValues(poll)} />
+      );
     }
 
     return (
       <div>
-        <PollDetail poll={poll} />
+        <PollDetail poll={poll} formValues={convertPollToFormValues(poll)} />
 
         <Row className="right-align">
           <Button

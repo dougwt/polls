@@ -38,6 +38,12 @@ ShallowWrapper {
         </Row>
         <div>
                 <PollDetail
+                        formValues={
+                                Object {
+                                        "choices": Array [],
+                                        "question": "",
+                                      }
+                        }
                         poll={Array []}
                 />
                 <Row
@@ -79,6 +85,12 @@ ShallowWrapper {
 </Row>,
           <div>
             <PollDetail
+                        formValues={
+                                    Object {
+                                                "choices": Array [],
+                                                "question": "",
+                                              }
+                        }
                         poll={Array []}
             />
             <Row
@@ -138,6 +150,12 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <PollDetail
+                formValues={
+                                Object {
+                                                "choices": Array [],
+                                                "question": "",
+                                              }
+                }
                 poll={Array []}
 />,
               <Row
@@ -168,6 +186,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "formValues": Object {
+                  "choices": Array [],
+                  "question": "",
+                },
                 "poll": Array [],
               },
               "ref": null,
@@ -261,6 +283,12 @@ ShallowWrapper {
           </Row>
           <div>
                     <PollDetail
+                              formValues={
+                                        Object {
+                                                  "choices": Array [],
+                                                  "question": "",
+                                                }
+                              }
                               poll={Array []}
                     />
                     <Row
@@ -302,6 +330,12 @@ ShallowWrapper {
 </Row>,
             <div>
               <PollDetail
+                            formValues={
+                                          Object {
+                                                        "choices": Array [],
+                                                        "question": "",
+                                                      }
+                            }
                             poll={Array []}
               />
               <Row
@@ -361,6 +395,12 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <PollDetail
+                  formValues={
+                                    Object {
+                                                      "choices": Array [],
+                                                      "question": "",
+                                                    }
+                  }
                   poll={Array []}
 />,
                 <Row
@@ -391,6 +431,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+                  "formValues": Object {
+                    "choices": Array [],
+                    "question": "",
+                  },
                   "poll": Array [],
                 },
                 "ref": null,
