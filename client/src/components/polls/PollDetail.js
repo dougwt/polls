@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
-// import { reduxForm } from 'redux-form';
-// import { connect } from 'react-redux';
-// import { withRouter } from 'react-router-dom';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Card, Input, Button, Row } from 'react-materialize';
-import PollForm from './PollForm';
-// import PollDetailFormReview from './PollDetailFormReview';
-// import * as actions from '../../actions';
+
 import './PollDetail.css';
 
 const defaultPoll = {
@@ -19,43 +15,21 @@ const defaultPoll = {
   choice_6: 'Lorca (Discovery)'
 };
 
-function renderContent() {
-  // if (this.state.showFormReview) {
-  //   return <PollDetailFormReview onCancel={() => this.setState({ showFormReview: false})}/>;
-  // }
+const onVoteSubmit = () => {
+  // TODO: tell api server to save vote
+  console.log('ya voted! good on ya');
+};
 
-  return (
-    <PollForm onPollSubmit={() => this.setState({ showFormReview: true })} />
-  );
-}
-
-function renderChoices(values) {
-  let choices = [];
-
-  for (let choice = 1; choice <= values.choices.length; choice++) {
-    let field = `choice_${choice}`;
-    choices.push(
-      <Row key={choice}>
-        <Input
-          name="group1"
-          type="radio"
-          value="{choice}"
-          label={values[field]}
-        />
-      </Row>
-    );
-  }
-  return choices;
-}
-
-const PollDetail = props => {
+const PollDetail = ({ formValues = defaultPoll, disabled = false }) => {
   return (
     <div className="container">
-      <Card className="darken-1" title={defaultPoll.question}>
-        <div className="choices">{renderChoices(defaultPoll)}</div>
+      <Card className="darken-1" title={formValues.question}>
+        {/* TODO: add spacing here via CSS */}
+
+        <div className="choices">{renderChoices(formValues)}</div>
 
         <Row className="center-align">
-          <Button className="teal" disabled>
+          <Button className="teal" disabled={disabled} onClick={onVoteSubmit}>
             Vote
           </Button>
         </Row>
@@ -63,5 +37,31 @@ const PollDetail = props => {
     </div>
   );
 };
+PollDetail.propTypes = {
+  formValues: PropTypes.object,
+  disabled: PropTypes.bool
+};
+
+function renderChoices(values) {
+  let choices = [];
+
+  for (let choice = 1; choice <= values.choices.length; choice++) {
+    let field = `choice_${choice}`;
+    if (values[field]) {
+      choices.push(
+        <Row key={choice}>
+          <Input
+            name="choices"
+            type="radio"
+            value={choice.toString()}
+            label={values[field]}
+          />
+        </Row>
+      );
+    }
+  }
+
+  return choices;
+}
 
 export default PollDetail;

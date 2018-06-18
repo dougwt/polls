@@ -4,27 +4,14 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Card, Input, Button, Row, Icon, ProgressBar } from 'react-materialize';
 import * as actions from '../../actions';
+import PollDetail from './PollDetail';
 
 export const PollFormReview = props => {
   return (
     <div>
       <h5>Please confirm your poll</h5>
 
-      {/* {console.log(formValues)} */}
-
-      <Row>
-        <Card className="darken-1" title={props.formValues.question}>
-          {/* TODO: add spacing here via CSS */}
-
-          <div className="choices">{renderChoices(props.formValues)}</div>
-
-          <Row className="center-align">
-            <Button className="teal" disabled>
-              Vote
-            </Button>
-          </Row>
-        </Card>
-      </Row>
+      <PollDetail formValues={props.formValues} disabled={true} />
 
       {renderError(props.error)
         ? renderError(props.error)
@@ -130,28 +117,6 @@ function renderSpinner(waiting) {
 renderSpinner.propTypes = {
   waiting: PropTypes.bool
 };
-
-function renderChoices(values) {
-  let choices = [];
-
-  for (let choice = 1; choice <= values.choices.length; choice++) {
-    let field = `choice_${choice}`;
-    if (values[field]) {
-      choices.push(
-        <Row key={choice}>
-          <Input
-            name="choices"
-            type="radio"
-            value={choice.toString()}
-            label={values[field]}
-          />
-        </Row>
-      );
-    }
-  }
-
-  return choices;
-}
 
 function mapStateToProps(state) {
   return {

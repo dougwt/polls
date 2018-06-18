@@ -40,29 +40,22 @@ ShallowWrapper {
         <h5>
           Please confirm your poll
 </h5>,
-        <Row>
-          <Card
-                    className="darken-1"
-                    title="Who is your favorite Starfleet captain?"
-          >
-                    <div
-                              className="choices"
-                    >
-                              
-                    </div>
-                    <Row
-                              className="center-align"
-                    >
-                              <Button
-                                        className="teal"
-                                        disabled={true}
-                                        node="button"
-                              >
-                                        Vote
-                              </Button>
-                    </Row>
-          </Card>
-</Row>,
+        <PollDetail
+          disabled={true}
+          formValues={
+                    Object {
+                              "choices": Array [
+                                0,
+                                1,
+                                undefined,
+                                undefined,
+                                undefined,
+                                undefined,
+                              ],
+                              "question": "Who is your favorite Starfleet captain?",
+                            }
+          }
+/>,
         <Row>
            
 </Row>,
@@ -114,103 +107,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Card
-            className="darken-1"
-            title="Who is your favorite Starfleet captain?"
->
-            <div
-                        className="choices"
-            >
-                        
-            </div>
-            <Row
-                        className="center-align"
-            >
-                        <Button
-                                    className="teal"
-                                    disabled={true}
-                                    node="button"
-                        >
-                                    Vote
-                        </Button>
-            </Row>
-</Card>,
+          "disabled": true,
+          "formValues": Object {
+            "choices": Array [
+              0,
+              1,
+              undefined,
+              undefined,
+              undefined,
+              undefined,
+            ],
+            "question": "Who is your favorite Starfleet captain?",
+          },
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": Array [
-              <div
-                className="choices"
->
-                
-</div>,
-              <Row
-                className="center-align"
->
-                <Button
-                                className="teal"
-                                disabled={true}
-                                node="button"
-                >
-                                Vote
-                </Button>
-</Row>,
-            ],
-            "className": "darken-1",
-            "title": "Who is your favorite Starfleet captain?",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [],
-                "className": "choices",
-              },
-              "ref": null,
-              "rendered": Array [],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": <Button
-                  className="teal"
-                  disabled={true}
-                  node="button"
->
-                  Vote
-</Button>,
-                "className": "center-align",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Vote",
-                  "className": "teal",
-                  "disabled": true,
-                  "node": "button",
-                },
-                "ref": null,
-                "rendered": "Vote",
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
+        "rendered": null,
         "type": [Function],
       },
       Object {
@@ -348,29 +259,22 @@ ShallowWrapper {
           <h5>
             Please confirm your poll
 </h5>,
-          <Row>
-            <Card
-                        className="darken-1"
-                        title="Who is your favorite Starfleet captain?"
-            >
-                        <div
-                                    className="choices"
-                        >
-                                    
-                        </div>
-                        <Row
-                                    className="center-align"
-                        >
-                                    <Button
-                                                className="teal"
-                                                disabled={true}
-                                                node="button"
-                                    >
-                                                Vote
-                                    </Button>
-                        </Row>
-            </Card>
-</Row>,
+          <PollDetail
+            disabled={true}
+            formValues={
+                        Object {
+                                    "choices": Array [
+                                      0,
+                                      1,
+                                      undefined,
+                                      undefined,
+                                      undefined,
+                                      undefined,
+                                    ],
+                                    "question": "Who is your favorite Starfleet captain?",
+                                  }
+            }
+/>,
           <Row>
              
 </Row>,
@@ -422,103 +326,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Card
-              className="darken-1"
-              title="Who is your favorite Starfleet captain?"
->
-              <div
-                            className="choices"
-              >
-                            
-              </div>
-              <Row
-                            className="center-align"
-              >
-                            <Button
-                                          className="teal"
-                                          disabled={true}
-                                          node="button"
-                            >
-                                          Vote
-                            </Button>
-              </Row>
-</Card>,
+            "disabled": true,
+            "formValues": Object {
+              "choices": Array [
+                0,
+                1,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ],
+              "question": "Who is your favorite Starfleet captain?",
+            },
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": Array [
-                <div
-                  className="choices"
->
-                  
-</div>,
-                <Row
-                  className="center-align"
->
-                  <Button
-                                    className="teal"
-                                    disabled={true}
-                                    node="button"
-                  >
-                                    Vote
-                  </Button>
-</Row>,
-              ],
-              "className": "darken-1",
-              "title": "Who is your favorite Starfleet captain?",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [],
-                  "className": "choices",
-                },
-                "ref": null,
-                "rendered": Array [],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": <Button
-                    className="teal"
-                    disabled={true}
-                    node="button"
->
-                    Vote
-</Button>,
-                  "className": "center-align",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Vote",
-                    "className": "teal",
-                    "disabled": true,
-                    "node": "button",
-                  },
-                  "ref": null,
-                  "rendered": "Vote",
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-            ],
-            "type": [Function],
-          },
+          "rendered": null,
           "type": [Function],
         },
         Object {
