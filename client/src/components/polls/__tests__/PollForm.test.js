@@ -14,7 +14,6 @@ describe('PollForm', () => {
   beforeEach(() => {
     props = {
       handleSubmit: jest.fn(),
-      initialValues: {},
       onCancel: jest.fn(),
       onSubmit: jest.fn()
     };
@@ -38,7 +37,7 @@ describe('PollForm', () => {
     expect(wrapper.find('FieldArray[name="choices"]').length).toEqual(1);
   });
 
-  it('shows a `Preview` button', () => {
+  it('shows a `Next` button', () => {
     expect(wrapper.find('.btn-next').length).toEqual(1);
   });
 
@@ -46,7 +45,7 @@ describe('PollForm', () => {
     expect(wrapper.find('.btn-back').length).toEqual(1);
   });
 
-  describe('when the `Preview` button is clicked', () => {
+  describe('when the `Next` button is clicked', () => {
     let store;
 
     beforeEach(() => {
@@ -118,9 +117,52 @@ describe('PollForm', () => {
   });
 
   describe('when the `Cancel` button is clicked', () => {
-    it('executes `onCancel` callback when Cancel button is clicked', () => {
+    it('executes the `onCancel` callback', () => {
       wrapper.find('Button.btn-back').simulate('click');
       expect(props.onCancel).toHaveBeenCalled();
+    });
+  });
+
+  describe('when `initialValues` are present', () => {
+    let store;
+    let initialValues;
+
+    beforeEach(() => {
+      store = createStore(
+        combineReducers({ form: formReducer }),
+        applyMiddleware(thunk)
+      );
+      initialValues = {
+        question: 'What should I choose?',
+        choices: [0, 1, 2, 3],
+        choice_1: 'choice 1',
+        choice_2: 'choice 2',
+        choice_3: 'choice 3',
+        choice_4: 'choice 4'
+      };
+
+      wrapper = mount(
+        <Provider store={store}>
+          <StaticRouter context={{}}>
+            <ReduxForm {...props} initialValues={initialValues} />
+          </StaticRouter>
+        </Provider>
+      );
+    });
+
+    it('populates the question with initial values', () => {
+      expect(store.getState().form.pollForm.values.question).toEqual(
+        'What should I choose?'
+      );
+    });
+
+    it('populates the choices with initial values', () => {
+      expect(store.getState().form.pollForm.values.choices.length).toEqual(4);
+      initialValues.choices.forEach((value, i) => {
+        expect(
+          store.getState().form.pollForm.values[`choice_${i + 1}`]
+        ).toEqual(`choice ${i + 1}`);
+      });
     });
   });
 
