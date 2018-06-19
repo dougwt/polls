@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { Card, Input, Button, Row, Icon, ProgressBar } from 'react-materialize';
-import * as actions from '../../actions';
+import { Button, Row, Icon, ProgressBar } from 'react-materialize';
 import PollDetail from './PollDetail';
 
 export const PollFormReview = props => {
@@ -28,22 +26,21 @@ export const PollFormReview = props => {
           <Icon left>keyboard_arrow_left</Icon>
         </Button>
 
-        {renderButton(props)}
+        {renderAsyncButton(props)}
       </Row>
     </div>
   );
 };
 PollFormReview.propTypes = {
   onCancel: PropTypes.func.isRequired,
+  onSave: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
-  createPoll: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   waiting: PropTypes.bool.isRequired,
-  error: PropTypes.object,
-  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
+  error: PropTypes.object
 };
 
-function renderButton({ formValues, createPoll, history, waiting, auth }) {
+function renderAsyncButton({ onSave, waiting }) {
   if (waiting) {
     return (
       <Button
@@ -56,37 +53,20 @@ function renderButton({ formValues, createPoll, history, waiting, auth }) {
     );
   }
 
-  const poll = {
-    question: formValues.question,
-    choices: formValues.choices.map((choice, i) => {
-      return { text: formValues[`choice_${i + 1}`], votes: 0 };
-    })
-  };
-
   return (
     <Button
       className="teal btn-create right white-text"
       waves="light"
-      onClick={() => {
-        if (auth) {
-          poll.owner = auth._id;
-        }
-        createPoll(poll, () => {
-          history.push('/polls');
-        });
-      }}
+      onClick={onSave}
     >
       Create
       <Icon right>create</Icon>
     </Button>
   );
 }
-renderButton.propTypes = {
-  formValues: PropTypes.object.isRequired,
-  createPoll: PropTypes.func.isRequired,
-  history: PropTypes.object.isRequired,
-  waiting: PropTypes.bool.isRequired,
-  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
+renderAsyncButton.propTypes = {
+  onSave: PropTypes.func.isRequired,
+  waiting: PropTypes.bool.isRequired
 };
 
 function renderError(error) {
@@ -120,11 +100,10 @@ renderSpinner.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    auth: state.auth,
     waiting: state.poll.waiting,
     error: state.poll.error,
     formValues: state.form.pollForm.values
   };
 }
 
-export default connect(mapStateToProps, actions)(withRouter(PollFormReview));
+export default connect(mapStateToProps)(PollFormReview);

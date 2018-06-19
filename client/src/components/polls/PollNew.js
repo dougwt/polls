@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import requireAuth from '../requireAuth';
 import PollForm from './PollForm';
 import PollFormReview from './PollFormReview';
-import requireAuth from '../requireAuth';
+import * as actions from '../../actions';
 
 const initialValues = { choices: [0, 1] };
 
@@ -14,13 +19,34 @@ export class PollNew extends Component {
   renderContent() {
     if (this.state.showReview) {
       return (
-        <PollFormReview onCancel={() => this.setState({ showReview: false })} />
+        <PollFormReview
+          onCancel={() => this.setState({ showReview: false })}
+          onSave={() => {
+            const poll = {
+              question: this.props.formValues.question,
+              choices: this.props.formValues.choices.map((choice, i) => {
+                return {
+                  text: this.props.formValues[`choice_${i + 1}`],
+                  votes: 0
+                };
+              })
+            };
+
+            if (this.props.auth) {
+              poll.owner = this.props.auth._id;
+            }
+            this.props.createPoll(poll, () => {
+              this.props.history.push('/polls');
+            });
+          }}
+        />
       );
     }
 
     return (
       <PollForm
-        onPollSubmit={() => this.setState({ showReview: true })}
+        onCancel={() => this.props.history.push('/polls')}
+        onSubmit={() => this.setState({ showReview: true })}
         initialValues={initialValues}
       />
     );
@@ -39,5 +65,22 @@ export class PollNew extends Component {
     );
   }
 }
+PollNew.propTypes = {
+  createPoll: PropTypes.func.isRequired,
+  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  history: PropTypes.object.isRequired,
+  formValues: PropTypes.object.isRequired
+};
 
-export default requireAuth(PollNew);
+function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+    formValues: (state.form.pollForm && state.form.pollForm.values) || {}
+  };
+}
+
+export default compose(
+  connect(mapStateToProps, actions),
+  requireAuth,
+  withRouter
+)(PollNew);

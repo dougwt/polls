@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm, Field, FieldArray } from 'redux-form';
-import { Link } from 'react-router-dom';
 import { Button, Row, Icon } from 'react-materialize';
 import PollField from './PollField';
 
 export const PollForm = props => {
   return (
     <div>
-      <form onSubmit={props.handleSubmit(props.onPollSubmit)}>
+      <form onSubmit={props.handleSubmit(props.onSubmit)}>
         <Row>
           <Field
             label="What question would you like to ask?"
@@ -23,13 +22,16 @@ export const PollForm = props => {
         </Row>
 
         <Row>
-          <Link to="/polls" className="btn btn-cancel red white-text">
+          <Button
+            className="btn btn-cancel red white-text"
+            onClick={props.onCancel}
+          >
             Cancel
             <Icon left>close</Icon>
-          </Link>
+          </Button>
 
           <Button className="btn-preview teal right white-text" waves="light">
-            Preview
+            Next
             <Icon right>keyboard_arrow_right</Icon>
           </Button>
         </Row>
@@ -38,8 +40,9 @@ export const PollForm = props => {
   );
 };
 PollForm.propTypes = {
-  onPollSubmit: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
   initialValues: PropTypes.object
 };
 
@@ -154,5 +157,6 @@ function validate(values) {
 export default reduxForm({
   validate,
   form: 'pollForm',
-  destroyOnUnmount: false
+  destroyOnUnmount: false,
+  enableReinitialize: true
 })(PollForm);
