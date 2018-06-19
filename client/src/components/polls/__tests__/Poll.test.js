@@ -6,15 +6,17 @@ import PollEdit from '../PollEdit';
 import Root from '../../../Root';
 
 describe('Poll', () => {
+  let props;
   let wrapper;
-  let props = {
-    polls: [],
-    fetched: false,
-    match: { params: { pollId: 1 } },
-    fetchPolls: jest.fn()
-  };
 
   beforeEach(() => {
+    props = {
+      polls: [],
+      fetched: false,
+      match: { params: { pollId: 1 } },
+      fetchPolls: jest.fn()
+    };
+
     wrapper = shallow(<Poll {...props} />);
   });
 

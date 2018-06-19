@@ -23,14 +23,14 @@ export const PollForm = props => {
 
         <Row>
           <Button
-            className="btn btn-cancel red white-text"
+            className="btn btn-back red white-text"
             onClick={props.onCancel}
           >
             Cancel
             <Icon left>close</Icon>
           </Button>
 
-          <Button className="btn-preview teal right white-text" waves="light">
+          <Button className="btn-next teal right white-text" waves="light">
             Next
             <Icon right>keyboard_arrow_right</Icon>
           </Button>
@@ -41,9 +41,9 @@ export const PollForm = props => {
 };
 PollForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  initialValues: PropTypes.object,
   onCancel: PropTypes.func.isRequired,
-  initialValues: PropTypes.object
+  onSubmit: PropTypes.func.isRequired
 };
 
 const choiceIcons = {

@@ -66,10 +66,10 @@ export class PollNew extends Component {
   }
 }
 PollNew.propTypes = {
-  createPoll: PropTypes.func.isRequired,
   auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  history: PropTypes.object.isRequired,
-  formValues: PropTypes.object.isRequired
+  createPoll: PropTypes.func.isRequired,
+  formValues: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {

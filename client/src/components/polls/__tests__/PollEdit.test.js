@@ -5,11 +5,18 @@ import PollForm from '../PollForm';
 import PollFormReview from '../PollFormReview';
 
 describe('PollEdit', () => {
-  let props = {};
-
+  let props;
   let wrapper;
 
   beforeEach(() => {
+    props = {
+      auth: true,
+      createPoll: jest.fn(),
+      formValues: {},
+      history: {},
+      onCancel: jest.fn()
+    };
+
     wrapper = shallow(<PollEdit {...props} />);
   });
 

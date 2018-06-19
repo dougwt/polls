@@ -53,11 +53,11 @@ export class PollEdit extends Component {
   }
 }
 PollEdit.propTypes = {
-  onCancel: PropTypes.func.isRequired,
+  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]).isRequired,
   createPoll: PropTypes.func.isRequired,
-  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  formValues: PropTypes.object,
-  history: PropTypes.object.isRequired
+  formValues: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
+  onCancel: PropTypes.func.isRequired
 };
 
 function mapStateToProps(state) {

@@ -13,8 +13,10 @@ let wrapper;
 describe('PollForm', () => {
   beforeEach(() => {
     props = {
-      onPollSubmit: jest.fn(),
-      handleSubmit: jest.fn()
+      handleSubmit: jest.fn(),
+      initialValues: {},
+      onCancel: jest.fn(),
+      onSubmit: jest.fn()
     };
 
     wrapper = shallow(<PollForm {...props} />);
@@ -37,11 +39,11 @@ describe('PollForm', () => {
   });
 
   it('shows a `Preview` button', () => {
-    expect(wrapper.find('.btn-preview').length).toEqual(1);
+    expect(wrapper.find('.btn-next').length).toEqual(1);
   });
 
   it('shows a `Cancel` button', () => {
-    expect(wrapper.find('.btn-cancel').length).toEqual(1);
+    expect(wrapper.find('.btn-back').length).toEqual(1);
   });
 
   describe('when the `Preview` button is clicked', () => {
@@ -64,7 +66,7 @@ describe('PollForm', () => {
     });
 
     it('submits the form', () => {
-      wrapper.find('Button.btn-preview').simulate('click');
+      wrapper.find('Button.btn-next').simulate('click');
       expect(props.handleSubmit).toHaveBeenCalled();
     });
 
@@ -73,7 +75,7 @@ describe('PollForm', () => {
         wrapper.find('input[name="question"]').simulate('change', {
           target: { value: 'Would you like to play a game?' }
         });
-        wrapper.find('Button.btn-preview').simulate('click');
+        wrapper.find('Button.btn-next').simulate('click');
         expect(props.handleSubmit).toHaveBeenCalled();
       });
 
@@ -100,7 +102,7 @@ describe('PollForm', () => {
         wrapper
           .find('input[name="choice_2"]')
           .simulate('change', { target: { value: 'No' } });
-        wrapper.find('Button.btn-preview').simulate('click');
+        wrapper.find('Button.btn-next').simulate('click');
         expect(props.handleSubmit).toHaveBeenCalled();
       });
 
@@ -116,8 +118,9 @@ describe('PollForm', () => {
   });
 
   describe('when the `Cancel` button is clicked', () => {
-    it('returns to the Dashboard when Back button is clicked', () => {
-      expect(wrapper.find('.btn-cancel').props().to).toEqual('/polls');
+    it('executes `onCancel` callback when Cancel button is clicked', () => {
+      wrapper.find('Button.btn-back').simulate('click');
+      expect(props.onCancel).toHaveBeenCalled();
     });
   });
 

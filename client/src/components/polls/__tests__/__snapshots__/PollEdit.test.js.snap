@@ -4,7 +4,13 @@ exports[`PollEdit renders properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PollEdit />,
+  Symbol(enzyme.__unrendered__): <PollEdit
+    auth={true}
+    createPoll={[Function]}
+    formValues={Object {}}
+    history={Object {}}
+    onCancel={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,8 +23,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "initialValues": undefined,
-      "onPollSubmit": [Function],
+      "initialValues": Object {},
+      "onCancel": [Function],
+      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": null,
@@ -30,8 +37,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "initialValues": undefined,
-        "onPollSubmit": [Function],
+        "initialValues": Object {},
+        "onCancel": [Function],
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": null,

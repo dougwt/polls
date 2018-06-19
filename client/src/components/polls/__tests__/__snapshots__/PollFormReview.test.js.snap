@@ -5,7 +5,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
-    createPoll={[Function]}
     error={null}
     formValues={
         Object {
@@ -22,6 +21,7 @@ ShallowWrapper {
     }
     history={Object {}}
     onCancel={[Function]}
+    onSave={[Function]}
     waiting={false}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -74,7 +74,7 @@ ShallowWrapper {
                     </Icon>
           </Button>
           <Button
-                    className="teal btn-create right white-text"
+                    className="teal btn-next right white-text"
                     node="button"
                     onClick={[Function]}
                     waves="light"
@@ -155,7 +155,7 @@ ShallowWrapper {
               </Icon>
 </Button>,
             <Button
-              className="teal btn-create right white-text"
+              className="teal btn-next right white-text"
               node="button"
               onClick={[Function]}
               waves="light"
@@ -220,7 +220,7 @@ ShallowWrapper {
                   create
 </Icon>,
               ],
-              "className": "teal btn-create right white-text",
+              "className": "teal btn-next right white-text",
               "node": "button",
               "onClick": [Function],
               "waves": "light",
@@ -293,7 +293,7 @@ ShallowWrapper {
                         </Icon>
             </Button>
             <Button
-                        className="teal btn-create right white-text"
+                        className="teal btn-next right white-text"
                         node="button"
                         onClick={[Function]}
                         waves="light"
@@ -374,7 +374,7 @@ ShallowWrapper {
                 </Icon>
 </Button>,
               <Button
-                className="teal btn-create right white-text"
+                className="teal btn-next right white-text"
                 node="button"
                 onClick={[Function]}
                 waves="light"
@@ -439,7 +439,7 @@ ShallowWrapper {
                     create
 </Icon>,
                 ],
-                "className": "teal btn-create right white-text",
+                "className": "teal btn-next right white-text",
                 "node": "button",
                 "onClick": [Function],
                 "waves": "light",

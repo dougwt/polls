@@ -5,10 +5,18 @@ import PollForm from '../PollForm';
 import PollFormReview from '../PollFormReview';
 
 describe('PollNew', () => {
+  let props;
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<PollNew />);
+    props = {
+      auth: {},
+      createPoll: jest.fn(),
+      formValues: {},
+      history: {}
+    };
+
+    wrapper = shallow(<PollNew {...props} />);
   });
 
   it('renders properly', () => {

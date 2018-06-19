@@ -32,21 +32,18 @@ export const PollFormReview = props => {
   );
 };
 PollFormReview.propTypes = {
-  onCancel: PropTypes.func.isRequired,
-  onSave: PropTypes.func.isRequired,
+  error: PropTypes.object,
   formValues: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
-  waiting: PropTypes.bool.isRequired,
-  error: PropTypes.object
+  onCancel: PropTypes.func.isRequired,
+  onSave: PropTypes.func.isRequired,
+  waiting: PropTypes.bool.isRequired
 };
 
 function renderAsyncButton({ onSave, waiting }) {
   if (waiting) {
     return (
-      <Button
-        className="teal btn-create disabled right white-text"
-        waves="light"
-      >
+      <Button className="teal btn-next disabled right white-text" waves="light">
         Saving...
         <Icon right>create</Icon>
       </Button>
@@ -55,7 +52,7 @@ function renderAsyncButton({ onSave, waiting }) {
 
   return (
     <Button
-      className="teal btn-create right white-text"
+      className="teal btn-next right white-text"
       waves="light"
       onClick={onSave}
     >
@@ -100,9 +97,9 @@ renderSpinner.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    waiting: state.poll.waiting,
     error: state.poll.error,
-    formValues: state.form.pollForm.values
+    formValues: state.form.pollForm.values,
+    waiting: state.poll.waiting
   };
 }
 

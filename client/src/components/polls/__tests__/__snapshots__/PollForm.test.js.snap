@@ -6,7 +6,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
     handleSubmit={[Function]}
-    onPollSubmit={[Function]}
+    initialValues={Object {}}
+    onCancel={[Function]}
+    onSubmit={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -38,10 +40,10 @@ ShallowWrapper {
                 />
         </Row>
         <Row>
-                <Link
-                        className="btn btn-cancel red white-text"
-                        replace={false}
-                        to="/polls"
+                <Button
+                        className="btn btn-back red white-text"
+                        node="button"
+                        onClick={[Function]}
                 >
                         Cancel
                         <Icon
@@ -49,13 +51,13 @@ ShallowWrapper {
                         >
                                 close
                         </Icon>
-                </Link>
+                </Button>
                 <Button
-                        className="btn-preview teal right white-text"
+                        className="btn-next teal right white-text"
                         node="button"
                         waves="light"
                 >
-                        Preview
+                        Next
                         <Icon
                                 right={true}
                         >
@@ -87,10 +89,10 @@ ShallowWrapper {
             />
 </Row>,
           <Row>
-            <Link
-                        className="btn btn-cancel red white-text"
-                        replace={false}
-                        to="/polls"
+            <Button
+                        className="btn btn-back red white-text"
+                        node="button"
+                        onClick={[Function]}
             >
                         Cancel
                         <Icon
@@ -98,13 +100,13 @@ ShallowWrapper {
                         >
                                     close
                         </Icon>
-            </Link>
+            </Button>
             <Button
-                        className="btn-preview teal right white-text"
+                        className="btn-next teal right white-text"
                         node="button"
                         waves="light"
             >
-                        Preview
+                        Next
                         <Icon
                                     right={true}
                         >
@@ -177,10 +179,10 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <Link
-                className="btn btn-cancel red white-text"
-                replace={false}
-                to="/polls"
+              <Button
+                className="btn btn-back red white-text"
+                node="button"
+                onClick={[Function]}
 >
                 Cancel
                 <Icon
@@ -188,13 +190,13 @@ ShallowWrapper {
                 >
                                 close
                 </Icon>
-</Link>,
+</Button>,
               <Button
-                className="btn-preview teal right white-text"
+                className="btn-next teal right white-text"
                 node="button"
                 waves="light"
 >
-                Preview
+                Next
                 <Icon
                                 right={true}
                 >
@@ -218,9 +220,9 @@ ShallowWrapper {
                     close
 </Icon>,
                 ],
-                "className": "btn btn-cancel red white-text",
-                "replace": false,
-                "to": "/polls",
+                "className": "btn btn-back red white-text",
+                "node": "button",
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": Array [
@@ -246,20 +248,20 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": Array [
-                  "Preview",
+                  "Next",
                   <Icon
                     right={true}
 >
                     keyboard_arrow_right
 </Icon>,
                 ],
-                "className": "btn-preview teal right white-text",
+                "className": "btn-next teal right white-text",
                 "node": "button",
                 "waves": "light",
               },
               "ref": null,
               "rendered": Array [
-                "Preview",
+                "Next",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -307,10 +309,10 @@ ShallowWrapper {
                     />
           </Row>
           <Row>
-                    <Link
-                              className="btn btn-cancel red white-text"
-                              replace={false}
-                              to="/polls"
+                    <Button
+                              className="btn btn-back red white-text"
+                              node="button"
+                              onClick={[Function]}
                     >
                               Cancel
                               <Icon
@@ -318,13 +320,13 @@ ShallowWrapper {
                               >
                                         close
                               </Icon>
-                    </Link>
+                    </Button>
                     <Button
-                              className="btn-preview teal right white-text"
+                              className="btn-next teal right white-text"
                               node="button"
                               waves="light"
                     >
-                              Preview
+                              Next
                               <Icon
                                         right={true}
                               >
@@ -356,10 +358,10 @@ ShallowWrapper {
               />
 </Row>,
             <Row>
-              <Link
-                            className="btn btn-cancel red white-text"
-                            replace={false}
-                            to="/polls"
+              <Button
+                            className="btn btn-back red white-text"
+                            node="button"
+                            onClick={[Function]}
               >
                             Cancel
                             <Icon
@@ -367,13 +369,13 @@ ShallowWrapper {
                             >
                                           close
                             </Icon>
-              </Link>
+              </Button>
               <Button
-                            className="btn-preview teal right white-text"
+                            className="btn-next teal right white-text"
                             node="button"
                             waves="light"
               >
-                            Preview
+                            Next
                             <Icon
                                           right={true}
                             >
@@ -446,10 +448,10 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": Array [
-                <Link
-                  className="btn btn-cancel red white-text"
-                  replace={false}
-                  to="/polls"
+                <Button
+                  className="btn btn-back red white-text"
+                  node="button"
+                  onClick={[Function]}
 >
                   Cancel
                   <Icon
@@ -457,13 +459,13 @@ ShallowWrapper {
                   >
                                     close
                   </Icon>
-</Link>,
+</Button>,
                 <Button
-                  className="btn-preview teal right white-text"
+                  className="btn-next teal right white-text"
                   node="button"
                   waves="light"
 >
-                  Preview
+                  Next
                   <Icon
                                     right={true}
                   >
@@ -487,9 +489,9 @@ ShallowWrapper {
                       close
 </Icon>,
                   ],
-                  "className": "btn btn-cancel red white-text",
-                  "replace": false,
-                  "to": "/polls",
+                  "className": "btn btn-back red white-text",
+                  "node": "button",
+                  "onClick": [Function],
                 },
                 "ref": null,
                 "rendered": Array [
@@ -515,20 +517,20 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "children": Array [
-                    "Preview",
+                    "Next",
                     <Icon
                       right={true}
 >
                       keyboard_arrow_right
 </Icon>,
                   ],
-                  "className": "btn-preview teal right white-text",
+                  "className": "btn-next teal right white-text",
                   "node": "button",
                   "waves": "light",
                 },
                 "ref": null,
                 "rendered": Array [
-                  "Preview",
+                  "Next",
                   Object {
                     "instance": null,
                     "key": undefined,
