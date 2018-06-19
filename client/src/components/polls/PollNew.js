@@ -35,8 +35,8 @@ export class PollNew extends Component {
             if (this.props.auth) {
               poll.owner = this.props.auth._id;
             }
-            this.props.createPoll(poll, () => {
-              this.props.history.push('/polls');
+            this.props.createPoll(poll, poll => {
+              this.props.history.push(`/polls/${poll._id}`);
             });
           }}
         />

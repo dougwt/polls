@@ -18,15 +18,29 @@ export const fetchPolls = () => {
 };
 
 export const createPoll = (poll, callback) => dispatch => {
-  dispatch({ type: types.CREATE_POLL_REQUEST });
+  dispatch({ type: types.SAVE_POLL_REQUEST });
 
   axios
     .post('/api/polls/new', poll)
     .then(res => {
-      dispatch({ type: types.CREATE_POLL_SUCCESS, payload: res.data });
-      callback();
+      dispatch({ type: types.SAVE_POLL_SUCCESS, payload: res.data });
+      callback(res.data);
     })
     .catch(err => {
-      dispatch({ type: types.CREATE_POLL_FAILURE, payload: err });
+      dispatch({ type: types.SAVE_POLL_FAILURE, payload: err });
+    });
+};
+
+export const editPoll = (pollId, poll, callback) => dispatch => {
+  dispatch({ type: types.SAVE_POLL_REQUEST });
+
+  axios
+    .post(`/api/polls/${pollId}`, poll)
+    .then(res => {
+      dispatch({ type: types.SAVE_POLL_SUCCESS, payload: res.data });
+      callback(res.data);
+    })
+    .catch(err => {
+      dispatch({ type: types.SAVE_POLL_FAILURE, payload: err });
     });
 };

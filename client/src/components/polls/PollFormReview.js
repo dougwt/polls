@@ -34,13 +34,12 @@ export const PollFormReview = props => {
 PollFormReview.propTypes = {
   error: PropTypes.object,
   formValues: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired,
   onCancel: PropTypes.func.isRequired,
   onSave: PropTypes.func.isRequired,
   waiting: PropTypes.bool.isRequired
 };
 
-function renderAsyncButton({ onSave, waiting }) {
+function renderAsyncButton({ onSave, waiting, formValues }) {
   if (waiting) {
     return (
       <Button className="teal btn-next disabled right white-text" waves="light">
@@ -54,7 +53,7 @@ function renderAsyncButton({ onSave, waiting }) {
     <Button
       className="teal btn-next right white-text"
       waves="light"
-      onClick={onSave}
+      onClick={() => onSave(formValues)}
     >
       Create
       <Icon right>create</Icon>
@@ -62,6 +61,7 @@ function renderAsyncButton({ onSave, waiting }) {
   );
 }
 renderAsyncButton.propTypes = {
+  formValues: PropTypes.object.isRequired,
   onSave: PropTypes.func.isRequired,
   waiting: PropTypes.bool.isRequired
 };

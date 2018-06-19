@@ -31,8 +31,8 @@ export class PollEdit extends Component {
             if (this.props.auth) {
               poll.owner = this.props.auth._id;
             }
-            this.props.createPoll(poll, () => {
-              this.props.history.push('/polls');
+            this.props.editPoll(this.props.pollId, poll, poll => {
+              this.props.history.push(`/polls/${poll._id}`);
             });
           }}
         />
@@ -54,10 +54,12 @@ export class PollEdit extends Component {
 }
 PollEdit.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]).isRequired,
-  createPoll: PropTypes.func.isRequired,
+  editPoll: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
-  onCancel: PropTypes.func.isRequired
+  onCancel: PropTypes.func.isRequired,
+  polls: PropTypes.array,
+  pollId: PropTypes.string
 };
 
 function mapStateToProps(state) {

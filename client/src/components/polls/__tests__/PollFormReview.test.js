@@ -13,7 +13,6 @@ describe('PollFormReview', () => {
         choices: [0, 1, undefined, undefined, undefined, undefined],
         question: 'Who is your favorite Starfleet captain?'
       },
-      history: {},
       onCancel: jest.fn(),
       onSave: jest.fn(),
       waiting: false

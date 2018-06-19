@@ -49,6 +49,7 @@ export class Poll extends Component {
       return (
         <PollEdit
           poll={poll}
+          pollId={pollId}
           formValues={convertPollToFormValues(poll)}
           onCancel={() => this.setState({ showEdit: false })}
         />

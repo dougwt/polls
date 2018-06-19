@@ -19,7 +19,6 @@ ShallowWrapper {
             "question": "Who is your favorite Starfleet captain?",
           }
     }
-    history={Object {}}
     onCancel={[Function]}
     onSave={[Function]}
     waiting={false}

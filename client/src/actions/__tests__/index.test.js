@@ -75,7 +75,7 @@ describe('actions', () => {
 
       it('creates an action on request', () => {
         const expectedAction = {
-          type: types.CREATE_POLL_REQUEST
+          type: types.SAVE_POLL_REQUEST
         };
         expect(action[0]).toEqual(expectedAction);
       });
@@ -85,7 +85,7 @@ describe('actions', () => {
       });
 
       it('creates an action on failure', () => {
-        expect(action[1].type).toEqual(types.CREATE_POLL_FAILURE);
+        expect(action[1].type).toEqual(types.SAVE_POLL_FAILURE);
         expect(action[1].payload.response.status).toEqual(400);
         expect(action[1].payload.response.data).toEqual({
           error: 'ERROR MESSAGE '
@@ -106,18 +106,95 @@ describe('actions', () => {
 
       it('creates an action on request', () => {
         const expectedAction = {
-          type: types.CREATE_POLL_REQUEST
+          type: types.SAVE_POLL_REQUEST
         };
         expect(action[0]).toEqual(expectedAction);
       });
 
       it('executes the callback function', () => {
-        expect(callback).toHaveBeenCalledWith();
+        expect(callback).toHaveBeenCalled();
       });
 
       it('creates an action on success', () => {
         const expectedAction = {
-          type: types.CREATE_POLL_SUCCESS,
+          type: types.SAVE_POLL_SUCCESS,
+          payload: poll
+        };
+        expect(action[1]).toEqual(expectedAction);
+      });
+    });
+  });
+
+  describe('editPoll', () => {
+    let callback;
+    let action;
+
+    describe('failure', () => {
+      beforeEach(async done => {
+        const mock = new MockAdapter(axios);
+        mock
+          .onPost('/api/polls/fakepollid')
+          .reply(400, { error: 'ERROR MESSAGE ' });
+
+        callback = jest.fn();
+
+        action = await getAsyncActions(actions.editPoll, [
+          'fakepollid',
+          {},
+          callback
+        ]);
+        done();
+      });
+
+      it('creates an action on request', () => {
+        const expectedAction = {
+          type: types.SAVE_POLL_REQUEST
+        };
+        expect(action[0]).toEqual(expectedAction);
+      });
+
+      it('does NOT execute the callback function', () => {
+        expect(callback).toHaveBeenCalledTimes(0);
+      });
+
+      it('creates an action on failure', () => {
+        expect(action[1].type).toEqual(types.SAVE_POLL_FAILURE);
+        expect(action[1].payload.response.status).toEqual(400);
+        expect(action[1].payload.response.data).toEqual({
+          error: 'ERROR MESSAGE '
+        });
+      });
+    });
+
+    describe('success', () => {
+      beforeEach(async done => {
+        const mock = new MockAdapter(axios);
+        mock.onPost('/api/polls/1').reply(200, poll);
+
+        callback = jest.fn();
+
+        action = await getAsyncActions(actions.editPoll, [
+          1,
+          { ...poll, _id: 1 },
+          callback
+        ]);
+        done();
+      });
+
+      it('creates an action on request', () => {
+        const expectedAction = {
+          type: types.SAVE_POLL_REQUEST
+        };
+        expect(action[0]).toEqual(expectedAction);
+      });
+
+      it('executes the callback function', () => {
+        expect(callback).toHaveBeenCalled();
+      });
+
+      it('creates an action on success', () => {
+        const expectedAction = {
+          type: types.SAVE_POLL_SUCCESS,
           payload: poll
         };
         expect(action[1]).toEqual(expectedAction);
