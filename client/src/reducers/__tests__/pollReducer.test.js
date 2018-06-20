@@ -64,7 +64,7 @@ describe('pollReducer', () => {
         {},
         {
           type: SAVE_POLL_SUCCESS,
-          payload: { data: { _id: 3, ...poll } }
+          payload: { _id: 3, ...poll }
         }
       );
       expect(state.waiting).toEqual(false);

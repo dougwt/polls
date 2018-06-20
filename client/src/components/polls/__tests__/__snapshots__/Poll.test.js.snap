@@ -14,7 +14,7 @@ ShallowWrapper {
             },
           }
     }
-    polls={Array []}
+    polls={Object {}}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -36,36 +36,7 @@ ShallowWrapper {
                         Poll
                 </h3>
         </Row>
-        <div>
-                <PollDetail
-                        formValues={
-                                Object {
-                                        "choices": Array [],
-                                        "question": "",
-                                      }
-                        }
-                        poll={Array []}
-                />
-                <Row
-                        className="right-align"
-                >
-                        <Button
-                                className="btn"
-                                flat={true}
-                                id="edit"
-                                node="a"
-                                onClick={[Function]}
-                                waves="light"
-                        >
-                                Edit
-                                <Icon
-                                        right={true}
-                                >
-                                        edit
-                                </Icon>
-                        </Button>
-                </Row>
-        </div>
+        Loading...
 </Container>,
       "node": "div",
     },
@@ -83,36 +54,7 @@ ShallowWrapper {
                         Poll
             </h3>
 </Row>,
-          <div>
-            <PollDetail
-                        formValues={
-                                    Object {
-                                                "choices": Array [],
-                                                "question": "",
-                                              }
-                        }
-                        poll={Array []}
-            />
-            <Row
-                        className="right-align"
-            >
-                        <Button
-                                    className="btn"
-                                    flat={true}
-                                    id="edit"
-                                    node="a"
-                                    onClick={[Function]}
-                                    waves="light"
-                        >
-                                    Edit
-                                    <Icon
-                                                right={true}
-                                    >
-                                                edit
-                                    </Icon>
-                        </Button>
-            </Row>
-</div>,
+          "Loading...",
         ],
       },
       "ref": null,
@@ -143,125 +85,7 @@ ShallowWrapper {
           },
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <PollDetail
-                formValues={
-                                Object {
-                                                "choices": Array [],
-                                                "question": "",
-                                              }
-                }
-                poll={Array []}
-/>,
-              <Row
-                className="right-align"
->
-                <Button
-                                className="btn"
-                                flat={true}
-                                id="edit"
-                                node="a"
-                                onClick={[Function]}
-                                waves="light"
-                >
-                                Edit
-                                <Icon
-                                                right={true}
-                                >
-                                                edit
-                                </Icon>
-                </Button>
-</Row>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "formValues": Object {
-                  "choices": Array [],
-                  "question": "",
-                },
-                "poll": Array [],
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": <Button
-                  className="btn"
-                  flat={true}
-                  id="edit"
-                  node="a"
-                  onClick={[Function]}
-                  waves="light"
->
-                  Edit
-                  <Icon
-                                    right={true}
-                  >
-                                    edit
-                  </Icon>
-</Button>,
-                "className": "right-align",
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    "Edit",
-                    <Icon
-                      right={true}
->
-                      edit
-</Icon>,
-                  ],
-                  "className": "btn",
-                  "flat": true,
-                  "id": "edit",
-                  "node": "a",
-                  "onClick": [Function],
-                  "waves": "light",
-                },
-                "ref": null,
-                "rendered": Array [
-                  "Edit",
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": "edit",
-                      "right": true,
-                    },
-                    "ref": null,
-                    "rendered": "edit",
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-          ],
-          "type": "div",
-        },
+        "Loading...",
       ],
       "type": [Function],
     },
@@ -281,36 +105,7 @@ ShallowWrapper {
                               Poll
                     </h3>
           </Row>
-          <div>
-                    <PollDetail
-                              formValues={
-                                        Object {
-                                                  "choices": Array [],
-                                                  "question": "",
-                                                }
-                              }
-                              poll={Array []}
-                    />
-                    <Row
-                              className="right-align"
-                    >
-                              <Button
-                                        className="btn"
-                                        flat={true}
-                                        id="edit"
-                                        node="a"
-                                        onClick={[Function]}
-                                        waves="light"
-                              >
-                                        Edit
-                                        <Icon
-                                                  right={true}
-                                        >
-                                                  edit
-                                        </Icon>
-                              </Button>
-                    </Row>
-          </div>
+          Loading...
 </Container>,
         "node": "div",
       },
@@ -328,36 +123,7 @@ ShallowWrapper {
                             Poll
               </h3>
 </Row>,
-            <div>
-              <PollDetail
-                            formValues={
-                                          Object {
-                                                        "choices": Array [],
-                                                        "question": "",
-                                                      }
-                            }
-                            poll={Array []}
-              />
-              <Row
-                            className="right-align"
-              >
-                            <Button
-                                          className="btn"
-                                          flat={true}
-                                          id="edit"
-                                          node="a"
-                                          onClick={[Function]}
-                                          waves="light"
-                            >
-                                          Edit
-                                          <Icon
-                                                        right={true}
-                                          >
-                                                        edit
-                                          </Icon>
-                            </Button>
-              </Row>
-</div>,
+            "Loading...",
           ],
         },
         "ref": null,
@@ -388,125 +154,7 @@ ShallowWrapper {
             },
             "type": [Function],
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <PollDetail
-                  formValues={
-                                    Object {
-                                                      "choices": Array [],
-                                                      "question": "",
-                                                    }
-                  }
-                  poll={Array []}
-/>,
-                <Row
-                  className="right-align"
->
-                  <Button
-                                    className="btn"
-                                    flat={true}
-                                    id="edit"
-                                    node="a"
-                                    onClick={[Function]}
-                                    waves="light"
-                  >
-                                    Edit
-                                    <Icon
-                                                      right={true}
-                                    >
-                                                      edit
-                                    </Icon>
-                  </Button>
-</Row>,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "formValues": Object {
-                    "choices": Array [],
-                    "question": "",
-                  },
-                  "poll": Array [],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": <Button
-                    className="btn"
-                    flat={true}
-                    id="edit"
-                    node="a"
-                    onClick={[Function]}
-                    waves="light"
->
-                    Edit
-                    <Icon
-                                        right={true}
-                    >
-                                        edit
-                    </Icon>
-</Button>,
-                  "className": "right-align",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
-                      "Edit",
-                      <Icon
-                        right={true}
->
-                        edit
-</Icon>,
-                    ],
-                    "className": "btn",
-                    "flat": true,
-                    "id": "edit",
-                    "node": "a",
-                    "onClick": [Function],
-                    "waves": "light",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    "Edit",
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": "edit",
-                        "right": true,
-                      },
-                      "ref": null,
-                      "rendered": "edit",
-                      "type": [Function],
-                    },
-                  ],
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
+          "Loading...",
         ],
         "type": [Function],
       },

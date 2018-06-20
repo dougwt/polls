@@ -31,8 +31,8 @@ export class PollEdit extends Component {
             if (this.props.auth) {
               poll.owner = this.props.auth._id;
             }
-            this.props.editPoll(this.props.pollId, poll, poll => {
-              this.props.history.push(`/polls/${poll._id}`);
+            this.props.editPoll(this.props.pollId, poll, () => {
+              this.props.history.push('/polls');
             });
           }}
         />

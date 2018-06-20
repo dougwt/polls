@@ -70,8 +70,8 @@ function renderError(error) {
   if (error) {
     return (
       <Row className="red-text center-align error">
-        {/* <strong>Error:</strong> {error.message} */}
-        <strong>Error:</strong> {error.response.data.error}
+        <strong>Error:</strong> {error.message}
+        {/* <strong>Error:</strong> {error.response.data.error} */}
       </Row>
     );
   }

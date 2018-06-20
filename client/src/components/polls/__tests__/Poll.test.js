@@ -4,6 +4,7 @@ import { Poll } from '../Poll';
 import PollDetail from '../PollDetail';
 import PollEdit from '../PollEdit';
 import Root from '../../../Root';
+import { poll as pollFixture } from '../../../data/fixtures';
 
 describe('Poll', () => {
   let props;
@@ -11,7 +12,7 @@ describe('Poll', () => {
 
   beforeEach(() => {
     props = {
-      polls: [],
+      polls: {},
       fetched: false,
       match: { params: { pollId: 1 } },
       fetchPolls: jest.fn()
@@ -29,8 +30,12 @@ describe('Poll', () => {
       expect(wrapper.state('showEdit')).toEqual(false);
     });
 
-    it('shows the PollDetail component', () => {
-      expect(wrapper.find(PollDetail).length).toEqual(1);
+    it('shows a Loading message', () => {
+      expect(wrapper.render().text()).toContain('Loading...');
+    });
+
+    it('does not show the PollDetail component', () => {
+      expect(wrapper.find(PollDetail).length).toEqual(0);
     });
 
     it('calls the fetchPolls action creator', () => {
@@ -44,22 +49,38 @@ describe('Poll', () => {
     });
   });
 
-  describe('when the edit button is clicked', () => {
+  describe('when the users request has been fetched', () => {
     beforeEach(() => {
-      wrapper.find('#edit').simulate('click');
-      wrapper.update();
+      wrapper = shallow(
+        <Poll
+          {...props}
+          fetched={true}
+          polls={{ 1: { _id: 1, ...pollFixture } }}
+        />
+      );
     });
 
-    it('updates the component state', () => {
-      expect(wrapper.state('showEdit')).toEqual(true);
+    it('shows the PollDetail component', () => {
+      expect(wrapper.find(PollDetail).length).toEqual(1);
     });
 
-    it('shows the PollEdit component', () => {
-      expect(wrapper.find(PollEdit).length).toEqual(1);
-    });
+    describe('when the edit button is clicked', () => {
+      beforeEach(() => {
+        wrapper.find('#edit').simulate('click');
+        wrapper.update();
+      });
 
-    it('does not show the PollDetail component', () => {
-      expect(wrapper.find(PollDetail).length).toEqual(0);
+      it('updates the component state', () => {
+        expect(wrapper.state('showEdit')).toEqual(true);
+      });
+
+      it('shows the PollEdit component', () => {
+        expect(wrapper.find(PollEdit).length).toEqual(1);
+      });
+
+      it('does not show the PollDetail component', () => {
+        expect(wrapper.find(PollDetail).length).toEqual(0);
+      });
     });
   });
 });

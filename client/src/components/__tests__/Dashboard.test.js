@@ -9,6 +9,7 @@ describe('Dashboard', () => {
 
   beforeEach(() => {
     props = {
+      polls: {},
       fetchPolls: jest.fn()
     };
     wrapper = shallow(<Dashboard {...props} />);

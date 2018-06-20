@@ -27,19 +27,20 @@ export default function(state = initialState, action) {
     return { ...state, waiting: false, error: null };
   case SAVE_POLL_REQUEST:
     return { ...state, waiting: true, error: null };
-  case SAVE_POLL_SUCCESS:
+  case SAVE_POLL_SUCCESS: {
     return {
       ...state,
       waiting: false,
       error: null,
       polls: {
         ...state.polls,
-        [action.payload.data._id]: action.payload.data
+        [action.payload._id]: action.payload
       }
     };
-  case SAVE_POLL_FAILURE:
+  }
+  case SAVE_POLL_FAILURE: {
     return { ...state, waiting: false, error: action.payload };
-
+  }
   default:
     return state;
   }
