@@ -38,12 +38,12 @@ export class Poll extends Component {
   }
 
   renderContent() {
-    const { pollId } = this.props.match.params;
-    // TODO: this is inefficient! Switch to a map for faster lookups.
-    let poll = this.props.polls.filter(poll => poll._id === pollId);
-    if (poll.length > 0) {
-      poll = poll[0];
+    if (!this.props.fetched) {
+      return 'Loading...';
     }
+
+    const { pollId } = this.props.match.params;
+    const poll = this.props.polls[pollId];
 
     if (this.state.showEdit) {
       return (
@@ -91,7 +91,7 @@ export class Poll extends Component {
   }
 }
 Poll.propTypes = {
-  polls: PropTypes.array,
+  polls: PropTypes.object,
   fetched: PropTypes.bool,
   match: PropTypes.object,
   fetchPolls: PropTypes.func

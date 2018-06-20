@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import pollReducer from '../pollReducer';
 import {
   FETCH_POLLS,
@@ -15,11 +16,14 @@ describe('pollReducer', () => {
 
   it('fetches a list of polls', () => {
     const payload = {
-      data: [{ question: 'Question 1' }, { question: 'Question 2' }]
+      data: [
+        { _id: 1, question: 'Question 1' },
+        { _id: 2, question: 'Question 2' }
+      ]
     };
 
     expect(pollReducer({}, { type: FETCH_POLLS, payload }).polls).toEqual(
-      payload.data
+      _.keyBy(payload.data, '_id')
     );
   });
 
@@ -35,7 +39,7 @@ describe('pollReducer', () => {
         {},
         {
           type: SAVE_POLL_REQUEST,
-          payload: poll
+          payload: { data: poll }
         }
       );
       expect(state.waiting).toEqual(true);
@@ -60,15 +64,15 @@ describe('pollReducer', () => {
         {},
         {
           type: SAVE_POLL_SUCCESS,
-          payload: poll
+          payload: { data: { _id: 3, ...poll } }
         }
       );
       expect(state.waiting).toEqual(false);
       expect(state.error).toEqual(null);
-      // expect(state.polls.length).toEqual(1);
-      // expect(state.polls[0].question).toEqual(poll.question);
-      // expect(state.polls[0].choices).toEqual(poll.choices);
-      // expect(state.polls[0].respondents).toEqual(poll.respondents);
+      expect(Object.keys(state.polls).length).toEqual(1);
+      expect(state.polls[3].question).toEqual(poll.question);
+      expect(state.polls[3].choices).toEqual(poll.choices);
+      expect(state.polls[3].respondents).toEqual(poll.respondents);
     });
   });
 });

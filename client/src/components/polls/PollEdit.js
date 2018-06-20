@@ -58,7 +58,7 @@ PollEdit.propTypes = {
   formValues: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
   onCancel: PropTypes.func.isRequired,
-  polls: PropTypes.array,
+  polls: PropTypes.object,
   pollId: PropTypes.string
 };
 

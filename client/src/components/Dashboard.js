@@ -41,7 +41,7 @@ export class Dashboard extends Component {
             <div id="my" className="col s12">
               <PollList
                 title="Polls created by you:"
-                polls={(this.props.polls || []).filter(
+                polls={Object.values(this.props.polls).filter(
                   poll =>
                     poll.owner &&
                     this.props.auth &&
@@ -54,7 +54,7 @@ export class Dashboard extends Component {
             <div id="other" className="col s12">
               <PollList
                 title="Polls created by other users:"
-                polls={(this.props.polls || []).filter(
+                polls={Object.values(this.props.polls).filter(
                   poll =>
                     poll.owner &&
                     this.props.auth &&
@@ -72,7 +72,7 @@ export class Dashboard extends Component {
 }
 Dashboard.propTypes = {
   auth: PropTypes.object,
-  polls: PropTypes.array,
+  polls: PropTypes.object,
   fetchPolls: PropTypes.func
 };
 
