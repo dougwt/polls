@@ -17,14 +17,12 @@ export class PollEdit extends Component {
 
   onCancel() {
     this.setState({ showReview: false });
-
-    return false;
   }
 
   onDelete() {
-    console.log('delete this poll');
-
-    return false;
+    this.props.deletePoll(this.props.pollId, () => {
+      this.props.history.push('/polls');
+    });
   }
 
   onSave(formValues) {
@@ -73,6 +71,7 @@ export class PollEdit extends Component {
 }
 PollEdit.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]).isRequired,
+  deletePoll: PropTypes.func.isRequired,
   editPoll: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,

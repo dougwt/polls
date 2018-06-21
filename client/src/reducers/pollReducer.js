@@ -4,7 +4,11 @@ import {
   SAVE_POLL_RESET,
   SAVE_POLL_REQUEST,
   SAVE_POLL_SUCCESS,
-  SAVE_POLL_FAILURE
+  SAVE_POLL_FAILURE,
+  DELETE_POLL_RESET,
+  DELETE_POLL_REQUEST,
+  DELETE_POLL_SUCCESS,
+  DELETE_POLL_FAILURE
 } from '../actions/types';
 
 const initialState = {
@@ -24,8 +28,10 @@ export default function(state = initialState, action) {
     };
   }
   case SAVE_POLL_RESET:
+  case DELETE_POLL_RESET:
     return { ...state, waiting: false, error: null };
   case SAVE_POLL_REQUEST:
+  case DELETE_POLL_REQUEST:
     return { ...state, waiting: true, error: null };
   case SAVE_POLL_SUCCESS: {
     return {
@@ -38,7 +44,16 @@ export default function(state = initialState, action) {
       }
     };
   }
-  case SAVE_POLL_FAILURE: {
+  case DELETE_POLL_SUCCESS: {
+    return {
+      ...state,
+      waiting: false,
+      error: null,
+      polls: _.omit(state.polls, action.payload._id)
+    };
+  }
+  case SAVE_POLL_FAILURE:
+  case DELETE_POLL_FAILURE: {
     return { ...state, waiting: false, error: action.payload };
   }
   default:

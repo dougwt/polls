@@ -44,3 +44,17 @@ export const editPoll = (pollId, poll, callback) => dispatch => {
       dispatch({ type: types.SAVE_POLL_FAILURE, payload: err });
     });
 };
+
+export const deletePoll = (pollId, callback) => dispatch => {
+  dispatch({ type: types.DELETE_POLL_REQUEST });
+
+  axios
+    .delete(`/api/polls/${pollId}`)
+    .then(res => {
+      dispatch({ type: types.DELETE_POLL_SUCCESS, payload: res.data });
+      callback(res.data);
+    })
+    .catch(err => {
+      dispatch({ type: types.DELETE_POLL_FAILURE, payload: err });
+    });
+};

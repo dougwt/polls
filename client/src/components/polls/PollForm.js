@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Button, Row, Icon, ProgressBar } from 'react-materialize';
 import PollField from './PollField';
-import * as actions from '../../actions';
 import './PollForm.css';
 
 export const PollForm = props => {
@@ -56,7 +55,8 @@ PollForm.propTypes = {
   initialValues: PropTypes.object,
   onCancel: PropTypes.func.isRequired,
   onDelete: PropTypes.func,
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired,
+  waiting: PropTypes.bool.isRequired
 };
 
 const choiceIcons = {
@@ -243,5 +243,5 @@ export default compose(
     destroyOnUnmount: false,
     enableReinitialize: true
   }),
-  connect(mapStateToProps, actions)
+  connect(mapStateToProps)
 )(PollForm);
