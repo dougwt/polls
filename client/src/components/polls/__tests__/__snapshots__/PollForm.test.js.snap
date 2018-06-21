@@ -43,6 +43,7 @@ ShallowWrapper {
                         className="btn btn-back red white-text"
                         node="button"
                         onClick={[Function]}
+                        type="button"
                 >
                         Cancel
                         <Icon
@@ -51,6 +52,7 @@ ShallowWrapper {
                                 close
                         </Icon>
                 </Button>
+                
                 <Button
                         className="btn-next teal right white-text"
                         node="button"
@@ -92,6 +94,7 @@ ShallowWrapper {
                         className="btn btn-back red white-text"
                         node="button"
                         onClick={[Function]}
+                        type="button"
             >
                         Cancel
                         <Icon
@@ -100,6 +103,7 @@ ShallowWrapper {
                                     close
                         </Icon>
             </Button>
+            
             <Button
                         className="btn-next teal right white-text"
                         node="button"
@@ -182,6 +186,7 @@ ShallowWrapper {
                 className="btn btn-back red white-text"
                 node="button"
                 onClick={[Function]}
+                type="button"
 >
                 Cancel
                 <Icon
@@ -190,6 +195,7 @@ ShallowWrapper {
                                 close
                 </Icon>
 </Button>,
+              "",
               <Button
                 className="btn-next teal right white-text"
                 node="button"
@@ -222,6 +228,7 @@ ShallowWrapper {
                 "className": "btn btn-back red white-text",
                 "node": "button",
                 "onClick": [Function],
+                "type": "button",
               },
               "ref": null,
               "rendered": Array [
@@ -241,6 +248,7 @@ ShallowWrapper {
               ],
               "type": [Function],
             },
+            "",
             Object {
               "instance": null,
               "key": undefined,
@@ -312,6 +320,7 @@ ShallowWrapper {
                               className="btn btn-back red white-text"
                               node="button"
                               onClick={[Function]}
+                              type="button"
                     >
                               Cancel
                               <Icon
@@ -320,6 +329,7 @@ ShallowWrapper {
                                         close
                               </Icon>
                     </Button>
+                    
                     <Button
                               className="btn-next teal right white-text"
                               node="button"
@@ -361,6 +371,7 @@ ShallowWrapper {
                             className="btn btn-back red white-text"
                             node="button"
                             onClick={[Function]}
+                            type="button"
               >
                             Cancel
                             <Icon
@@ -369,6 +380,7 @@ ShallowWrapper {
                                           close
                             </Icon>
               </Button>
+              
               <Button
                             className="btn-next teal right white-text"
                             node="button"
@@ -451,6 +463,7 @@ ShallowWrapper {
                   className="btn btn-back red white-text"
                   node="button"
                   onClick={[Function]}
+                  type="button"
 >
                   Cancel
                   <Icon
@@ -459,6 +472,7 @@ ShallowWrapper {
                                     close
                   </Icon>
 </Button>,
+                "",
                 <Button
                   className="btn-next teal right white-text"
                   node="button"
@@ -491,6 +505,7 @@ ShallowWrapper {
                   "className": "btn btn-back red white-text",
                   "node": "button",
                   "onClick": [Function],
+                  "type": "button",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -510,6 +525,7 @@ ShallowWrapper {
                 ],
                 "type": [Function],
               },
+              "",
               Object {
                 "instance": null,
                 "key": undefined,

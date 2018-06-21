@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 import { reduxForm, Field, FieldArray } from 'redux-form';
-import { Button, Row, Icon } from 'react-materialize';
+import { Button, Row, Icon, ProgressBar } from 'react-materialize';
 import PollField from './PollField';
+import * as actions from '../../actions';
 import './PollForm.css';
 
 export const PollForm = props => {
@@ -22,6 +25,10 @@ export const PollForm = props => {
           <FieldArray name="choices" component={renderChoices} />
         </Row>
 
+        {renderError(props.error)
+          ? renderError(props.error)
+          : renderSpinner(props.waiting)}
+
         <Row>
           <Button
             className="btn btn-back red white-text"
@@ -32,18 +39,7 @@ export const PollForm = props => {
             <Icon left>close</Icon>
           </Button>
 
-          {props.onDelete
-            ? (() => (
-              <Button
-                className="btn btn-small btn-delete btn-flat btn-red red-text"
-                onClick={props.onDelete}
-                type="button"
-              >
-                  Delete Poll
-                <Icon left>delete</Icon>
-              </Button>
-            ))()
-            : ''}
+          {renderAsyncButton(props)}
 
           <Button className="btn-next teal right white-text" waves="light">
             Next
@@ -55,6 +51,7 @@ export const PollForm = props => {
   );
 };
 PollForm.propTypes = {
+  error: PropTypes.object,
   handleSubmit: PropTypes.func.isRequired,
   initialValues: PropTypes.object,
   onCancel: PropTypes.func.isRequired,
@@ -72,6 +69,68 @@ const choiceIcons = {
   7: 'looks_7',
   8: 'looks_8',
   9: 'looks_9'
+};
+
+function renderAsyncButton({ onDelete, waiting }) {
+  if (!onDelete) {
+    return;
+  }
+
+  if (waiting) {
+    return (
+      <Button
+        className="btn disabled btn-small btn-delete btn-flat btn-red red-text"
+        onClick={onDelete}
+        type="button"
+      >
+        Deleting...
+        <Icon left>delete</Icon>
+      </Button>
+    );
+  }
+
+  return (
+    <Button
+      className="btn btn-small btn-delete btn-flat btn-red red-text"
+      onClick={onDelete}
+      type="button"
+    >
+      Delete Poll
+      <Icon left>delete</Icon>
+    </Button>
+  );
+}
+renderAsyncButton.propTypes = {
+  onDelete: PropTypes.func.isRequired,
+  waiting: PropTypes.bool.isRequired
+};
+
+function renderError(error) {
+  if (error) {
+    return (
+      <Row className="red-text center-align error">
+        <strong>Error:</strong> {error.message}
+      </Row>
+    );
+  }
+}
+renderError.propTypes = {
+  error: PropTypes.object
+};
+
+function renderSpinner(waiting) {
+  if (waiting) {
+    return (
+      <Row>
+        <ProgressBar />
+      </Row>
+    );
+  }
+
+  return <Row>&nbsp;</Row>;
+}
+renderSpinner.propTypes = {
+  waiting: PropTypes.bool
 };
 
 function renderChoiceField(index) {
@@ -170,9 +229,19 @@ function validate(values) {
   return errors;
 }
 
-export default reduxForm({
-  validate,
-  form: 'pollForm',
-  destroyOnUnmount: false,
-  enableReinitialize: true
-})(PollForm);
+function mapStateToProps(state) {
+  return {
+    error: state.poll.error,
+    waiting: state.poll.waiting
+  };
+}
+
+export default compose(
+  reduxForm({
+    validate,
+    form: 'pollForm',
+    destroyOnUnmount: false,
+    enableReinitialize: true
+  }),
+  connect(mapStateToProps, actions)
+)(PollForm);
