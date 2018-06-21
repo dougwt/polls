@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { reduxForm, Field, FieldArray } from 'redux-form';
 import { Button, Row, Icon } from 'react-materialize';
 import PollField from './PollField';
+import './PollForm.css';
 
 export const PollForm = props => {
   return (
@@ -25,10 +26,24 @@ export const PollForm = props => {
           <Button
             className="btn btn-back red white-text"
             onClick={props.onCancel}
+            type="button"
           >
             Cancel
             <Icon left>close</Icon>
           </Button>
+
+          {props.onDelete
+            ? (() => (
+              <Button
+                className="btn btn-small btn-delete btn-flat btn-red red-text"
+                onClick={props.onDelete}
+                type="button"
+              >
+                  Delete Poll
+                <Icon left>delete</Icon>
+              </Button>
+            ))()
+            : ''}
 
           <Button className="btn-next teal right white-text" waves="light">
             Next
@@ -43,6 +58,7 @@ PollForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   initialValues: PropTypes.object,
   onCancel: PropTypes.func.isRequired,
+  onDelete: PropTypes.func,
   onSubmit: PropTypes.func.isRequired
 };
 

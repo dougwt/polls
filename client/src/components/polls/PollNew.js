@@ -16,37 +16,51 @@ export class PollNew extends Component {
     this.state = { showReview: false };
   }
 
+  onCancel() {
+    this.props.history.push('/polls');
+  }
+
+  onCancelReview() {
+    this.setState({ showReview: false });
+  }
+
+  onSave() {
+    const poll = {
+      question: this.props.formValues.question,
+      choices: this.props.formValues.choices.map((choice, i) => {
+        return {
+          text: this.props.formValues[`choice_${i + 1}`],
+          votes: 0
+        };
+      })
+    };
+
+    if (this.props.auth) {
+      poll.owner = this.props.auth._id;
+    }
+    this.props.createPoll(poll, () => {
+      this.props.history.push('/polls');
+    });
+  }
+
+  onSubmit() {
+    this.setState({ showReview: true });
+  }
+
   renderContent() {
     if (this.state.showReview) {
       return (
         <PollFormReview
-          onCancel={() => this.setState({ showReview: false })}
-          onSave={() => {
-            const poll = {
-              question: this.props.formValues.question,
-              choices: this.props.formValues.choices.map((choice, i) => {
-                return {
-                  text: this.props.formValues[`choice_${i + 1}`],
-                  votes: 0
-                };
-              })
-            };
-
-            if (this.props.auth) {
-              poll.owner = this.props.auth._id;
-            }
-            this.props.createPoll(poll, () => {
-              this.props.history.push('/polls');
-            });
-          }}
+          onCancel={this.onCancelReview.bind(this)}
+          onSave={this.onSave.bind(this)}
         />
       );
     }
 
     return (
       <PollForm
-        onCancel={() => this.props.history.push('/polls')}
-        onSubmit={() => this.setState({ showReview: true })}
+        onCancel={this.onCancel.bind(this)}
+        onSubmit={this.onSubmit.bind(this)}
         initialValues={initialValues}
       />
     );

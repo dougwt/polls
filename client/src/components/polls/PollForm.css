@@ -1,0 +1,12 @@
+.btn-delete {
+  margin-left: 2em;
+}
+.btn-delete:hover {
+  background-color: #f44336;
+  color: white !important;
+}
+.btn-small {
+  height: 32.4px;
+  line-height: 32.4px;
+  font-size: 13px;
+}

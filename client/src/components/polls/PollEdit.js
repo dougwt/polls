@@ -15,34 +15,53 @@ export class PollEdit extends Component {
     this.state = { showReview: false };
   }
 
+  onCancel() {
+    this.setState({ showReview: false });
+
+    return false;
+  }
+
+  onDelete() {
+    console.log('delete this poll');
+
+    return false;
+  }
+
+  onSave(formValues) {
+    const poll = {
+      question: formValues.question,
+      choices: formValues.choices.map((choice, i) => {
+        return { text: formValues[`choice_${i + 1}`], votes: 0 };
+      })
+    };
+
+    if (this.props.auth) {
+      poll.owner = this.props.auth._id;
+    }
+    this.props.editPoll(this.props.pollId, poll, () => {
+      this.props.history.push('/polls');
+    });
+  }
+
+  onSubmit() {
+    this.setState({ showReview: true });
+  }
+
   renderContent() {
     if (this.state.showReview) {
       return (
         <PollFormReview
-          onCancel={() => this.setState({ showReview: false })}
-          onSave={formValues => {
-            const poll = {
-              question: formValues.question,
-              choices: formValues.choices.map((choice, i) => {
-                return { text: formValues[`choice_${i + 1}`], votes: 0 };
-              })
-            };
-
-            if (this.props.auth) {
-              poll.owner = this.props.auth._id;
-            }
-            this.props.editPoll(this.props.pollId, poll, () => {
-              this.props.history.push('/polls');
-            });
-          }}
+          onCancel={this.onCancel.bind(this)}
+          onSave={this.onSave.bind(this)}
         />
       );
     }
 
     return (
       <PollForm
-        onCancel={this.props.onCancel}
-        onSubmit={() => this.setState({ showReview: true })}
+        onCancel={this.props.onCancel.bind(this)}
+        onDelete={this.onDelete.bind(this)}
+        onSubmit={this.onSubmit.bind(this)}
         initialValues={this.props.formValues}
       />
     );
