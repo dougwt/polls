@@ -11,3 +11,13 @@
   padding-top: 2em;
   padding-bottom: 2em;
 }
+
+.choices label,
+.choices .col {
+  width: 100%;
+}
+
+.choices label:hover {
+  color: #333;
+  font-size: 1.1em;
+}
