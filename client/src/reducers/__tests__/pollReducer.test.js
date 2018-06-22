@@ -5,7 +5,11 @@ import {
   SAVE_POLL_RESET,
   SAVE_POLL_REQUEST,
   SAVE_POLL_SUCCESS,
-  SAVE_POLL_FAILURE
+  SAVE_POLL_FAILURE,
+  DELETE_POLL_RESET,
+  DELETE_POLL_REQUEST,
+  DELETE_POLL_SUCCESS,
+  DELETE_POLL_FAILURE
 } from '../../actions/types';
 import { poll } from '../../data/fixtures';
 
@@ -38,8 +42,7 @@ describe('pollReducer', () => {
       const state = pollReducer(
         {},
         {
-          type: SAVE_POLL_REQUEST,
-          payload: { data: poll }
+          type: SAVE_POLL_REQUEST
         }
       );
       expect(state.waiting).toEqual(true);
@@ -73,6 +76,51 @@ describe('pollReducer', () => {
       expect(state.polls[3].question).toEqual(poll.question);
       expect(state.polls[3].choices).toEqual(poll.choices);
       expect(state.polls[3].respondents).toEqual(poll.respondents);
+    });
+  });
+
+  describe('DELETE_POLL', () => {
+    it('resets a Poll delete submission', () => {
+      const state = pollReducer({}, { type: DELETE_POLL_RESET });
+      expect(state.waiting).toEqual(false);
+      expect(state.error).toEqual(null);
+    });
+
+    it('can initialize a Poll delete submission', () => {
+      const state = pollReducer(
+        { polls: { 3: { _id: 3, ...poll } } },
+        {
+          type: DELETE_POLL_REQUEST
+        }
+      );
+      expect(state.waiting).toEqual(true);
+      expect(state.error).toEqual(null);
+    });
+
+    it('can handle a Poll delete submission request error', () => {
+      const error = { message: 'There was an error.' };
+      const state = pollReducer(
+        { polls: { 3: { _id: 3, ...poll } } },
+        {
+          type: DELETE_POLL_FAILURE,
+          payload: error
+        }
+      );
+      expect(state.waiting).toEqual(false);
+      expect(state.error).toEqual(error);
+    });
+
+    it('can handle a Poll delete submission request success', () => {
+      const state = pollReducer(
+        { polls: { 3: { _id: 3, ...poll } } },
+        {
+          type: DELETE_POLL_SUCCESS,
+          payload: { _id: 3, ...poll }
+        }
+      );
+      expect(state.waiting).toEqual(false);
+      expect(state.error).toEqual(null);
+      expect(Object.keys(state.polls).length).toEqual(0);
     });
   });
 });

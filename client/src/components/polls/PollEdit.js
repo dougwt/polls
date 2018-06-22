@@ -76,8 +76,8 @@ PollEdit.propTypes = {
   formValues: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
   onCancel: PropTypes.func.isRequired,
-  polls: PropTypes.object,
-  pollId: PropTypes.string
+  pollId: PropTypes.string,
+  polls: PropTypes.object
 };
 
 function mapStateToProps(state) {

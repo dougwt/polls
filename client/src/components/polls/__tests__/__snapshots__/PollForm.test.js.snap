@@ -5,9 +5,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Unknown
+    error={null}
     handleSubmit={[Function]}
     onCancel={[Function]}
     onSubmit={[Function]}
+    waiting={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -39,6 +41,9 @@ ShallowWrapper {
                 />
         </Row>
         <Row>
+                 
+        </Row>
+        <Row>
                 <Button
                         className="btn btn-back red white-text"
                         node="button"
@@ -52,7 +57,6 @@ ShallowWrapper {
                                 close
                         </Icon>
                 </Button>
-                
                 <Button
                         className="btn-next teal right white-text"
                         node="button"
@@ -90,6 +94,9 @@ ShallowWrapper {
             />
 </Row>,
           <Row>
+             
+</Row>,
+          <Row>
             <Button
                         className="btn btn-back red white-text"
                         node="button"
@@ -103,7 +110,6 @@ ShallowWrapper {
                                     close
                         </Icon>
             </Button>
-            
             <Button
                         className="btn-next teal right white-text"
                         node="button"
@@ -181,6 +187,17 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "children": " ",
+          },
+          "ref": null,
+          "rendered": " ",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
             "children": Array [
               <Button
                 className="btn btn-back red white-text"
@@ -195,7 +212,7 @@ ShallowWrapper {
                                 close
                 </Icon>
 </Button>,
-              "",
+              undefined,
               <Button
                 className="btn-next teal right white-text"
                 node="button"
@@ -248,7 +265,7 @@ ShallowWrapper {
               ],
               "type": [Function],
             },
-            "",
+            undefined,
             Object {
               "instance": null,
               "key": undefined,
@@ -316,6 +333,9 @@ ShallowWrapper {
                     />
           </Row>
           <Row>
+                     
+          </Row>
+          <Row>
                     <Button
                               className="btn btn-back red white-text"
                               node="button"
@@ -329,7 +349,6 @@ ShallowWrapper {
                                         close
                               </Icon>
                     </Button>
-                    
                     <Button
                               className="btn-next teal right white-text"
                               node="button"
@@ -367,6 +386,9 @@ ShallowWrapper {
               />
 </Row>,
             <Row>
+               
+</Row>,
+            <Row>
               <Button
                             className="btn btn-back red white-text"
                             node="button"
@@ -380,7 +402,6 @@ ShallowWrapper {
                                           close
                             </Icon>
               </Button>
-              
               <Button
                             className="btn-next teal right white-text"
                             node="button"
@@ -458,6 +479,17 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "children": " ",
+            },
+            "ref": null,
+            "rendered": " ",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
               "children": Array [
                 <Button
                   className="btn btn-back red white-text"
@@ -472,7 +504,7 @@ ShallowWrapper {
                                     close
                   </Icon>
 </Button>,
-                "",
+                undefined,
                 <Button
                   className="btn-next teal right white-text"
                   node="button"
@@ -525,7 +557,7 @@ ShallowWrapper {
                 ],
                 "type": [Function],
               },
-              "",
+              undefined,
               Object {
                 "instance": null,
                 "key": undefined,

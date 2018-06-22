@@ -1,11 +1,12 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { Provider } from 'react-redux';
-import { reducer as formReducer } from 'redux-form';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import promiseMiddleware from 'redux-promise';
+import reduxThunk from 'redux-thunk';
 import { StaticRouter } from 'react-router';
 import ReduxForm, { PollForm } from '../PollForm';
+import reducers from '../../../reducers';
 
 let props;
 let wrapper;
@@ -15,7 +16,9 @@ describe('PollForm', () => {
     props = {
       handleSubmit: jest.fn(),
       onCancel: jest.fn(),
-      onSubmit: jest.fn()
+      onSubmit: jest.fn(),
+      waiting: false,
+      error: null
     };
 
     wrapper = shallow(<PollForm {...props} />);
@@ -41,6 +44,10 @@ describe('PollForm', () => {
     expect(wrapper.find('.btn-next').length).toEqual(1);
   });
 
+  it('does NOT show a `Delete Poll` button', () => {
+    expect(wrapper.find('.btn-delete').length).toEqual(0);
+  });
+
   it('shows a `Cancel` button', () => {
     expect(wrapper.find('.btn-back').length).toEqual(1);
   });
@@ -50,8 +57,8 @@ describe('PollForm', () => {
 
     beforeEach(() => {
       store = createStore(
-        combineReducers({ form: formReducer }),
-        applyMiddleware(thunk)
+        reducers,
+        applyMiddleware(reduxThunk, promiseMiddleware)
       );
       const initialValues = { choices: [0, 1] };
 
@@ -123,14 +130,67 @@ describe('PollForm', () => {
     });
   });
 
+  describe('when the Delete Poll button is present', () => {
+    let store;
+
+    beforeEach(() => {
+      store = createStore(
+        reducers,
+        applyMiddleware(reduxThunk, promiseMiddleware)
+      );
+      props.onDelete = jest.fn();
+      const initialValues = { choices: [0, 1] };
+
+      wrapper = mount(
+        <Provider store={store}>
+          <StaticRouter context={{}}>
+            <ReduxForm {...props} initialValues={initialValues} />
+          </StaticRouter>
+        </Provider>
+      );
+    });
+
+    describe('when the Delete Poll button is clicked', () => {
+      it('executes the `onDelete` callback in props', () => {
+        wrapper.find('Button.btn-delete').simulate('click');
+        expect(props.onDelete).toHaveBeenCalled();
+      });
+
+      describe('when the delete operation is waiting', () => {
+        beforeEach(() => {
+          wrapper = shallow(<PollForm {...props} waiting={true} />);
+        });
+
+        it('can show a loading spinner during delete', () => {
+          expect(wrapper.find('ProgressBar').length).toEqual(1);
+        });
+      });
+
+      describe('when the delete operation fails', () => {
+        beforeEach(() => {
+          wrapper = shallow(
+            <PollForm
+              {...props}
+              error={{ response: { data: { error: 'owch!' } } }}
+            />
+          );
+        });
+
+        it('can show an error message', () => {
+          expect(wrapper.find('Row.error').length).toEqual(1);
+        });
+      });
+    });
+  });
+
   describe('when `initialValues` are present', () => {
     let store;
     let initialValues;
 
     beforeEach(() => {
       store = createStore(
-        combineReducers({ form: formReducer }),
-        applyMiddleware(thunk)
+        reducers,
+        applyMiddleware(reduxThunk, promiseMiddleware)
       );
       initialValues = {
         question: 'What should I choose?',
@@ -170,7 +230,7 @@ describe('PollForm', () => {
     let store;
 
     beforeEach(() => {
-      store = createStore(combineReducers({ form: formReducer }));
+      store = createStore(reducers);
     });
 
     describe('when there are 2 choices', () => {

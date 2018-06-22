@@ -11,6 +11,7 @@ describe('PollEdit', () => {
   beforeEach(() => {
     props = {
       auth: true,
+      deletePoll: jest.fn(),
       editPoll: jest.fn(),
       formValues: {},
       history: {},
