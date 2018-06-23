@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PollDetail from '../PollDetail';
+import { PollDetail } from '../PollDetail';
 
 describe('PollDetail', () => {
   let props = {
@@ -8,7 +8,9 @@ describe('PollDetail', () => {
       choices: [0, 1, undefined, undefined, undefined, undefined],
       question: 'Who is your favorite Starfleet captain?'
     },
-    disabled: false
+    disabled: false,
+    votePoll: jest.fn(),
+    waiting: false
   };
 
   let wrapper;

@@ -4,7 +4,7 @@ exports[`PollDetail renders properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PollDetail
+  Symbol(enzyme.__unrendered__): <Unknown
     disabled={false}
     formValues={
         Object {
@@ -19,6 +19,8 @@ ShallowWrapper {
             "question": "Who is your favorite Starfleet captain?",
           }
     }
+    votePoll={[Function]}
+    waiting={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -36,23 +38,28 @@ ShallowWrapper {
         className="darken-1"
         title="Who is your favorite Starfleet captain?"
 >
-        <div
-                className="choices"
+        <form
+                className="poll"
+                onSubmit={[Function]}
         >
-                
-        </div>
-        <Row
-                className="center-align"
-        >
-                <Button
-                        className="teal"
-                        disabled={false}
-                        node="button"
-                        onClick={[Function]}
+                <div
+                        className="choices"
                 >
-                        Vote
-                </Button>
-        </Row>
+                        
+                </div>
+                <Row
+                        className="center-align"
+                >
+                        <Button
+                                className="teal"
+                                disabled={undefined}
+                                node="button"
+                                onClick={undefined}
+                        >
+                                Vote
+                        </Button>
+                </Row>
+        </form>
 </Card>,
       "className": "container",
     },
@@ -62,89 +69,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": Array [
-          <div
-            className="choices"
->
-            
-</div>,
-          <Row
-            className="center-align"
->
-            <Button
-                        className="teal"
-                        disabled={false}
-                        node="button"
-                        onClick={[Function]}
-            >
-                        Vote
-            </Button>
-</Row>,
-        ],
-        "className": "darken-1",
-        "title": "Who is your favorite Starfleet captain?",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [],
-            "className": "choices",
-          },
-          "ref": null,
-          "rendered": Array [],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": <Button
-              className="teal"
-              disabled={false}
-              node="button"
-              onClick={[Function]}
->
-              Vote
-</Button>,
-            "className": "center-align",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "Vote",
-              "className": "teal",
-              "disabled": false,
-              "node": "button",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Vote",
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Card
-          className="darken-1"
-          title="Who is your favorite Starfleet captain?"
+        "children": <form
+          className="poll"
+          onSubmit={[Function]}
 >
           <div
                     className="choices"
@@ -156,21 +83,22 @@ ShallowWrapper {
           >
                     <Button
                               className="teal"
-                              disabled={false}
+                              disabled={undefined}
                               node="button"
-                              onClick={[Function]}
+                              onClick={undefined}
                     >
                               Vote
                     </Button>
           </Row>
-</Card>,
-        "className": "container",
+</form>,
+        "className": "darken-1",
+        "title": "Who is your favorite Starfleet captain?",
       },
       "ref": null,
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
           "children": Array [
             <div
@@ -183,16 +111,16 @@ ShallowWrapper {
 >
               <Button
                             className="teal"
-                            disabled={false}
+                            disabled={undefined}
                             node="button"
-                            onClick={[Function]}
+                            onClick={undefined}
               >
                             Vote
               </Button>
 </Row>,
           ],
-          "className": "darken-1",
-          "title": "Who is your favorite Starfleet captain?",
+          "className": "poll",
+          "onSubmit": [Function],
         },
         "ref": null,
         "rendered": Array [
@@ -215,9 +143,9 @@ ShallowWrapper {
             "props": Object {
               "children": <Button
                 className="teal"
-                disabled={false}
+                disabled={undefined}
                 node="button"
-                onClick={[Function]}
+                onClick={undefined}
 >
                 Vote
 </Button>,
@@ -231,9 +159,9 @@ ShallowWrapper {
               "props": Object {
                 "children": "Vote",
                 "className": "teal",
-                "disabled": false,
+                "disabled": undefined,
                 "node": "button",
-                "onClick": [Function],
+                "onClick": undefined,
               },
               "ref": null,
               "rendered": "Vote",
@@ -242,6 +170,156 @@ ShallowWrapper {
             "type": [Function],
           },
         ],
+        "type": "form",
+      },
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Card
+          className="darken-1"
+          title="Who is your favorite Starfleet captain?"
+>
+          <form
+                    className="poll"
+                    onSubmit={[Function]}
+          >
+                    <div
+                              className="choices"
+                    >
+                              
+                    </div>
+                    <Row
+                              className="center-align"
+                    >
+                              <Button
+                                        className="teal"
+                                        disabled={undefined}
+                                        node="button"
+                                        onClick={undefined}
+                              >
+                                        Vote
+                              </Button>
+                    </Row>
+          </form>
+</Card>,
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <form
+            className="poll"
+            onSubmit={[Function]}
+>
+            <div
+                        className="choices"
+            >
+                        
+            </div>
+            <Row
+                        className="center-align"
+            >
+                        <Button
+                                    className="teal"
+                                    disabled={undefined}
+                                    node="button"
+                                    onClick={undefined}
+                        >
+                                    Vote
+                        </Button>
+            </Row>
+</form>,
+          "className": "darken-1",
+          "title": "Who is your favorite Starfleet captain?",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="choices"
+>
+                
+</div>,
+              <Row
+                className="center-align"
+>
+                <Button
+                                className="teal"
+                                disabled={undefined}
+                                node="button"
+                                onClick={undefined}
+                >
+                                Vote
+                </Button>
+</Row>,
+            ],
+            "className": "poll",
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [],
+                "className": "choices",
+              },
+              "ref": null,
+              "rendered": Array [],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Button
+                  className="teal"
+                  disabled={undefined}
+                  node="button"
+                  onClick={undefined}
+>
+                  Vote
+</Button>,
+                "className": "center-align",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Vote",
+                  "className": "teal",
+                  "disabled": undefined,
+                  "node": "button",
+                  "onClick": undefined,
+                },
+                "ref": null,
+                "rendered": "Vote",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "form",
+        },
         "type": [Function],
       },
       "type": "div",

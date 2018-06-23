@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { PollFormReview } from '../PollFormReview';
+import PollDetail from '../PollDetail';
 
 describe('PollFormReview', () => {
   let props;
@@ -26,7 +27,7 @@ describe('PollFormReview', () => {
   });
 
   it('shows a PollDetail', () => {
-    expect(wrapper.find('PollDetail').length).toBe(1);
+    expect(wrapper.find(PollDetail).length).toBe(1);
   });
 
   it('shows a Back button', () => {

@@ -58,3 +58,17 @@ export const deletePoll = (pollId, callback) => dispatch => {
       dispatch({ type: types.DELETE_POLL_FAILURE, payload: err });
     });
 };
+
+export const votePoll = (pollId, choiceId, callback) => dispatch => {
+  dispatch({ type: types.VOTE_POLL_REQUEST });
+
+  axios
+    .post(`/api/polls/${pollId}/${choiceId}`)
+    .then(res => {
+      dispatch({ type: types.VOTE_POLL_SUCCESS, payload: res.data });
+      callback(res.data);
+    })
+    .catch(err => {
+      dispatch({ type: types.VOTE_POLL_FAILURE, payload: err });
+    });
+};

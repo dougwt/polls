@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Card, Input, Button, Row } from 'react-materialize';
+import { votePoll } from '../../actions';
 
 import './PollDetail.css';
 
@@ -15,57 +17,129 @@ const defaultPoll = {
   choice_6: 'Lorca (Discovery)'
 };
 
-const onVoteSubmit = () => {
-  // TODO: tell api server to save vote
-  console.log('ya voted! good on ya');
+const onVoteSubmit = (pollId, votePoll, disabled) => {
+  const checked = document.querySelector('Input[name="choices"]:checked');
+  const choiceId = checked ? checked.value : undefined;
+
+  if (!disabled && pollId && choiceId) {
+    votePoll(pollId, choiceId);
+  }
 };
 
-const PollDetail = ({ formValues = defaultPoll, disabled = false }) => {
+export const PollDetail = ({
+  auth,
+  poll,
+  formValues = defaultPoll,
+  disabled = false,
+  votePoll,
+  waiting
+}) => {
   return (
     <div className="container">
       <Card className="darken-1" title={formValues.question}>
-        {/* TODO: add spacing here via CSS */}
-
-        <div className="choices">{renderChoices(formValues)}</div>
-
-        <Row className="center-align">
-          <Button className="teal" disabled={disabled} onClick={onVoteSubmit}>
-            Vote
-          </Button>
-        </Row>
+        {poll && poll.respondents.includes(auth._id)
+          ? renderResults()
+          : renderForm(poll, formValues, disabled, votePoll, waiting)}
       </Card>
     </div>
   );
 };
 PollDetail.propTypes = {
+  auth: PropTypes.object,
+  poll: PropTypes.object,
   formValues: PropTypes.object,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  votePoll: PropTypes.func,
+  waiting: PropTypes.bool
 };
 
-function renderChoices(values) {
+function renderForm(poll, formValues, disabled, votePoll, waiting) {
+  return (
+    <form
+      className="poll"
+      onSubmit={event => {
+        event.preventDefault();
+        onVoteSubmit(poll._id, votePoll, disabled);
+      }}
+    >
+      {/* TODO: add spacing here via CSS */}
+
+      <div className="choices">{renderChoices(poll, formValues)}</div>
+
+      <Row className="center-align">
+        {renderAsyncButton(waiting, disabled, event => {
+          event.preventDefault();
+          onVoteSubmit(poll._id, votePoll, disabled);
+        })}
+      </Row>
+    </form>
+  );
+}
+
+function renderResults() {
+  return <div>Results</div>;
+}
+
+function renderChoices(poll, values) {
+  function renderChoice(key, value, label) {
+    return (
+      <Row key={key}>
+        <Input name="choices" type="radio" value={value} label={label} />
+      </Row>
+    );
+  }
+
   let choices = [];
 
-  for (
-    let choice = 1;
-    choice <= (values.choices ? values.choices.length : 0);
-    choice++
-  ) {
-    let field = `choice_${choice}`;
-    if (values[field]) {
-      choices.push(
-        <Row key={choice}>
-          <Input
-            name="choices"
-            type="radio"
-            value={choice.toString()}
-            label={values[field]}
-          />
-        </Row>
-      );
+  if (!poll) {
+    // If poll is undefined it has not been saved, so use fake ids
+    for (
+      let choice = 1;
+      choice <= (values.choices ? values.choices.length : 0);
+      choice++
+    ) {
+      let field = `choice_${choice}`;
+      if (values[field]) {
+        choices.push(renderChoice(choice, choice.toString(), values[field]));
+      }
     }
+  } else {
+    // If defined, we can use real ids from the existing poll
+    poll.choices.forEach(choice => {
+      choices.push(renderChoice(choice._id, choice._id, choice.text));
+    });
   }
 
   return choices;
 }
 
-export default PollDetail;
+function renderAsyncButton({ waiting, disabled, onClick }) {
+  if (waiting) {
+    return (
+      <Button className="teal" disabled={true}>
+        Saving...
+      </Button>
+    );
+  }
+
+  return (
+    <Button className="teal" disabled={disabled} onClick={onClick}>
+      Vote
+    </Button>
+  );
+}
+renderAsyncButton.propTypes = {
+  disabled: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+  waiting: PropTypes.bool.isRequired
+};
+
+function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+    error: state.poll.error,
+    waiting: state.poll.waiting
+  };
+}
+
+export default connect(mapStateToProps, { votePoll })(PollDetail);
