@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card, Input, Button, Row } from 'react-materialize';
 import { votePoll } from '../../actions';
+import { Pie } from 'react-chartjs-2';
 
 import './PollDetail.css';
 
@@ -38,7 +39,7 @@ export const PollDetail = ({
     <div className="container">
       <Card className="darken-1" title={formValues.question}>
         {poll && poll.respondents.includes(auth._id)
-          ? renderResults()
+          ? renderResults(poll)
           : renderForm(poll, formValues, disabled, votePoll, waiting)}
       </Card>
     </div>
@@ -76,8 +77,19 @@ function renderForm(poll, formValues, disabled, votePoll, waiting) {
   );
 }
 
-function renderResults() {
-  return <div>Results</div>;
+function renderResults(poll) {
+  const data = { datasets: [{ data: [] }], labels: [] };
+
+  poll.choices.forEach(choice => {
+    data.datasets[0].data.push(choice.votes);
+    data.labels.push(choice.text);
+  });
+
+  const options = {
+    legend: { position: 'bottom' }
+  };
+
+  return <Pie data={data} options={options} />;
 }
 
 function renderChoices(poll, values) {
