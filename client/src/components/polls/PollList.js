@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Row,
-  Collection,
-  CollectionItem,
-  Badge,
-  Pagination
-} from 'react-materialize';
+import { Link } from 'react-router-dom';
+import { Row, Collection, Badge, Pagination } from 'react-materialize';
 import { connect } from 'react-redux';
 
 export class PollList extends Component {
@@ -19,18 +14,20 @@ export class PollList extends Component {
   renderPolls(polls) {
     if (polls.length < 1) {
       return (
-        <CollectionItem className="center-align">
+        <li className="center-align collection-item">
           There are no polls to show. Why don&#x27;t you create one?
-        </CollectionItem>
+        </li>
       );
     }
 
     return polls.map(poll => {
       return (
-        <CollectionItem href={`/polls/${poll._id}`} key={poll._id}>
-          {poll.question}
-          <Badge>1</Badge>
-        </CollectionItem>
+        <li className="collection-item" key={poll._id}>
+          <Link to={`/polls/${poll._id}`}>
+            {poll.question}
+            <Badge>1</Badge>
+          </Link>
+        </li>
       );
     });
   }
