@@ -78,10 +78,13 @@ function renderForm(poll, formValues, disabled, votePoll, waiting) {
 }
 
 function renderResults(poll) {
-  const data = { datasets: [{ data: [] }], labels: [] };
+  const data = { datasets: [{ data: [], backgroundColor: [] }], labels: [] };
 
-  poll.choices.forEach(choice => {
+  const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'purple'];
+
+  poll.choices.forEach((choice, i) => {
     data.datasets[0].data.push(choice.votes);
+    data.datasets[0].backgroundColor.push(colors[i]);
     data.labels.push(choice.text);
   });
 
