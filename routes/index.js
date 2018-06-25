@@ -1,3 +1,5 @@
+const express = require('express');
+
 module.exports = app => {
   require('./authRoutes')(app);
   require('./pollRoutes')(app);
