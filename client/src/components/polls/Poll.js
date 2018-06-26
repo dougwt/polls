@@ -60,6 +60,18 @@ export class Poll extends Component {
       <div>
         <PollDetail poll={poll} formValues={convertPollToFormValues(poll)} />
 
+        {this.renderEditButton()}
+      </div>
+    );
+  }
+
+  renderEditButton() {
+    const { pollId } = this.props.match.params;
+    const poll = this.props.polls[pollId];
+    const auth = this.props.auth ? this.props.auth._id : '';
+
+    if (poll.owner === auth)
+      return (
         <Row className="right-align">
           <Button
             id="edit"
@@ -73,8 +85,7 @@ export class Poll extends Component {
             <Icon right>edit</Icon>
           </Button>
         </Row>
-      </div>
-    );
+      );
   }
 
   render() {
@@ -91,6 +102,7 @@ export class Poll extends Component {
   }
 }
 Poll.propTypes = {
+  auth: PropTypes.object,
   polls: PropTypes.object,
   fetched: PropTypes.bool,
   match: PropTypes.object,
@@ -99,6 +111,7 @@ Poll.propTypes = {
 
 function mapStateToProps(state) {
   return {
+    auth: state.auth,
     polls: state.poll.polls,
     fetched: state.poll.fetched
   };
