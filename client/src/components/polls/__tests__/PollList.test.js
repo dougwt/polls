@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { PollList } from '../PollList';
 
 describe('PollList', () => {
@@ -7,7 +8,12 @@ describe('PollList', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<PollList {...props} />);
+    wrapper = shallow(
+      <Router>
+        <PollList {...props} />
+      </Router>
+    );
+    wrapper = wrapper.find('PollList').dive();
   });
 
   it('renders properly', () => {
@@ -29,7 +35,12 @@ describe('PollList', () => {
   describe('0 polls', () => {
     beforeEach(() => {
       props = { title: 'Test Title', polls: [], fetched: true };
-      wrapper = shallow(<PollList {...props} />);
+      wrapper = shallow(
+        <Router>
+          <PollList {...props} />
+        </Router>
+      );
+      wrapper = wrapper.find('PollList').dive();
     });
 
     it('shows empty list message', () => {
@@ -44,7 +55,12 @@ describe('PollList', () => {
 
     it('sets pagination items to 1000 while polls are being fetched', () => {
       props = { ...props, fetched: false };
-      wrapper = shallow(<PollList {...props} />);
+      wrapper = shallow(
+        <Router>
+          <PollList {...props} />
+        </Router>
+      );
+      wrapper = wrapper.find('PollList').dive();
       expect(wrapper.find('Pagination').props().items).toEqual(1000);
     });
   });
@@ -58,16 +74,23 @@ describe('PollList', () => {
         maxButtons: 7,
         fetched: true
       };
-      wrapper = shallow(<PollList {...props} />);
+      wrapper = shallow(
+        <Router>
+          <PollList {...props} />
+        </Router>
+      );
+      wrapper = wrapper.find('PollList').dive();
     });
 
     it('shows a single poll', () => {
-      expect(wrapper.find('CollectionItem').length).toEqual(1);
+      expect(wrapper.find('.collection-item').length).toEqual(1);
     });
 
     it('shows the title of each poll', () => {
       props.polls.forEach(poll => {
-        expect(wrapper.find('CollectionItem').html()).toContain(poll.question);
+        expect(wrapper.find('.collection-item').debug()).toContain(
+          poll.question
+        );
       });
     });
 
@@ -88,20 +111,25 @@ describe('PollList', () => {
         maxButtons: 7,
         fetched: true
       };
-      wrapper = shallow(<PollList {...props} />);
+      wrapper = shallow(
+        <Router>
+          <PollList {...props} />
+        </Router>
+      );
+      wrapper = wrapper.find('PollList').dive();
     });
 
     it('shows two polls', () => {
-      expect(wrapper.find('CollectionItem').length).toEqual(2);
+      expect(wrapper.find('.collection-item').length).toEqual(2);
     });
 
     it('shows the title of each poll', () => {
       props.polls.forEach((poll, i) => {
         expect(
           wrapper
-            .find('CollectionItem')
+            .find('.collection-item')
             .at(i)
-            .html()
+            .debug()
         ).toContain(poll.question);
       });
     });
@@ -110,10 +138,11 @@ describe('PollList', () => {
       props.polls.forEach((poll, i) => {
         expect(
           wrapper
-            .find('CollectionItem')
+            .find('.collection-item')
             .at(i)
-            .html()
-        ).toContain(`href="/polls/${poll._id}"`);
+            .find('Link')
+            .props().to
+        ).toContain(`/polls/${poll._id}`);
       });
     });
 
@@ -142,20 +171,25 @@ describe('PollList', () => {
         maxButtons: 7,
         fetched: true
       };
-      wrapper = shallow(<PollList {...props} />);
+      wrapper = shallow(
+        <Router>
+          <PollList {...props} />
+        </Router>
+      );
+      wrapper = wrapper.find('PollList').dive();
     });
 
     it('shows ten polls', () => {
-      expect(wrapper.find('CollectionItem').length).toEqual(10);
+      expect(wrapper.find('.collection-item').length).toEqual(10);
     });
 
     it('shows the title of each poll', () => {
       props.polls.forEach((poll, i) => {
         expect(
           wrapper
-            .find('CollectionItem')
+            .find('.collection-item')
             .at(i)
-            .html()
+            .debug()
         ).toContain(poll.question);
       });
     });
@@ -164,10 +198,11 @@ describe('PollList', () => {
       props.polls.forEach((poll, i) => {
         expect(
           wrapper
-            .find('CollectionItem')
+            .find('.collection-item')
             .at(i)
-            .html()
-        ).toContain(`href="/polls/${poll._id}"`);
+            .find('Link')
+            .props().to
+        ).toContain(`/polls/${poll._id}`);
       });
     });
 
@@ -206,20 +241,25 @@ describe('PollList', () => {
         maxButtons: 7,
         fetched: true
       };
-      wrapper = shallow(<PollList {...props} />);
+      wrapper = shallow(
+        <Router>
+          <PollList {...props} />
+        </Router>
+      );
+      wrapper = wrapper.find('PollList').dive();
     });
 
     it('shows a limited number of polls', () => {
-      expect(wrapper.find('CollectionItem').length).toEqual(15);
+      expect(wrapper.find('.collection-item').length).toEqual(15);
     });
 
     it('shows the title of each poll', () => {
       props.polls.slice(0, 15).forEach((poll, i) => {
         expect(
           wrapper
-            .find('CollectionItem')
+            .find('.collection-item')
             .at(i)
-            .html()
+            .debug()
         ).toContain(poll.question);
       });
     });
@@ -228,10 +268,11 @@ describe('PollList', () => {
       props.polls.slice(0, 15).forEach((poll, i) => {
         expect(
           wrapper
-            .find('CollectionItem')
+            .find('.collection-item')
             .at(i)
-            .html()
-        ).toContain(`href="/polls/${poll._id}"`);
+            .find('Link')
+            .props().to
+        ).toContain(`/polls/${poll._id}`);
       });
     });
 

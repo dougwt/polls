@@ -30,7 +30,7 @@ ShallowWrapper {
         <Row>
           <Collection>
                     <li
-                              className="center-align collection-item"
+                              className="center-align collection-item empty"
                     >
                               There are no polls to show. Why don't you create one?
                     </li>
@@ -83,7 +83,7 @@ ShallowWrapper {
         "props": Object {
           "children": <Collection>
             <li
-                        className="center-align collection-item"
+                        className="center-align collection-item empty"
             >
                         There are no polls to show. Why don't you create one?
             </li>
@@ -96,7 +96,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <li
-              className="center-align collection-item"
+              className="center-align collection-item empty"
 >
               There are no polls to show. Why don't you create one?
 </li>,
@@ -108,7 +108,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "There are no polls to show. Why don't you create one?",
-              "className": "center-align collection-item",
+              "className": "center-align collection-item empty",
             },
             "ref": null,
             "rendered": "There are no polls to show. Why don't you create one?",
@@ -168,7 +168,7 @@ ShallowWrapper {
           <Row>
             <Collection>
                         <li
-                                    className="center-align collection-item"
+                                    className="center-align collection-item empty"
                         >
                                     There are no polls to show. Why don't you create one?
                         </li>
@@ -221,7 +221,7 @@ ShallowWrapper {
           "props": Object {
             "children": <Collection>
               <li
-                            className="center-align collection-item"
+                            className="center-align collection-item empty"
               >
                             There are no polls to show. Why don't you create one?
               </li>
@@ -234,7 +234,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <li
-                className="center-align collection-item"
+                className="center-align collection-item empty"
 >
                 There are no polls to show. Why don't you create one?
 </li>,
@@ -246,7 +246,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "There are no polls to show. Why don't you create one?",
-                "className": "center-align collection-item",
+                "className": "center-align collection-item empty",
               },
               "ref": null,
               "rendered": "There are no polls to show. Why don't you create one?",

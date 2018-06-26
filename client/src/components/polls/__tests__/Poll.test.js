@@ -64,22 +64,55 @@ describe('Poll', () => {
       expect(wrapper.find(PollDetail).length).toEqual(1);
     });
 
-    describe('when the edit button is clicked', () => {
+    describe('when the poll is owned by someone else', () => {
+      wrapper = shallow(
+        <Poll
+          {...props}
+          match={{ params: { pollId: 1 } }}
+          fetched={true}
+          auth={{ _id: 'someone' }}
+          polls={{ 1: { _id: 1, owner: 'someone', ...pollFixture } }}
+        />
+      );
+
+      it('does not show the Edit button', () => {
+        expect(wrapper.find('#edit').length).toEqual(0);
+      });
+    });
+
+    describe('when the poll is owned by the auth\'ed user', () => {
       beforeEach(() => {
-        wrapper.find('#edit').simulate('click');
-        wrapper.update();
+        wrapper = shallow(
+          <Poll
+            {...props}
+            fetched={true}
+            auth={{ _id: 'user' }}
+            polls={{ 1: { _id: 1, owner: 'user', ...pollFixture } }}
+          />
+        );
       });
 
-      it('updates the component state', () => {
-        expect(wrapper.state('showEdit')).toEqual(true);
+      it('shows the Edit button', () => {
+        expect(wrapper.find('#edit').length).toEqual(1);
       });
 
-      it('shows the PollEdit component', () => {
-        expect(wrapper.find(PollEdit).length).toEqual(1);
-      });
+      describe('when the edit button is clicked', () => {
+        beforeEach(() => {
+          wrapper.find('#edit').simulate('click');
+          wrapper.update();
+        });
 
-      it('does not show the PollDetail component', () => {
-        expect(wrapper.find(PollDetail).length).toEqual(0);
+        it('updates the component state', () => {
+          expect(wrapper.state('showEdit')).toEqual(true);
+        });
+
+        it('shows the PollEdit component', () => {
+          expect(wrapper.find(PollEdit).length).toEqual(1);
+        });
+
+        it('does not show the PollDetail component', () => {
+          expect(wrapper.find(PollDetail).length).toEqual(0);
+        });
       });
     });
   });
