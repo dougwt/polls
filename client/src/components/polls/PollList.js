@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Row, Collection, Badge, Pagination } from 'react-materialize';
 import { connect } from 'react-redux';
+import './PollList.css';
 
 export class PollList extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export class PollList extends Component {
   renderPolls(polls) {
     if (polls.length < 1) {
       return (
-        <li className="center-align collection-item">
+        <li className="center-align collection-item empty">
           There are no polls to show. Why don&#x27;t you create one?
         </li>
       );
