@@ -9,6 +9,7 @@ import Landing from './Landing';
 import Dashboard from './Dashboard';
 import PollNew from './polls/PollNew';
 import Poll from './polls/Poll';
+import './App.css';
 
 export class App extends Component {
   componentDidMount() {

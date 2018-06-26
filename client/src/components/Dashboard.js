@@ -6,6 +6,7 @@ import { Section, Container, Row } from 'react-materialize';
 import PollList from './polls/PollList';
 import requireAuth from './requireAuth';
 import { fetchPolls } from '../actions';
+import './Dashboard.css';
 
 const ITEMS_PER_PAGE = 15;
 const MAX_PAGINATION_BUTTONS = 7;

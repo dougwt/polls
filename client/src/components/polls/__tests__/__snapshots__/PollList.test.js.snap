@@ -29,11 +29,11 @@ ShallowWrapper {
 </Row>,
         <Row>
           <Collection>
-                    <CollectionItem
-                              className="center-align"
+                    <li
+                              className="center-align collection-item"
                     >
                               There are no polls to show. Why don't you create one?
-                    </CollectionItem>
+                    </li>
           </Collection>
 </Row>,
         <Row
@@ -82,11 +82,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <Collection>
-            <CollectionItem
-                        className="center-align"
+            <li
+                        className="center-align collection-item"
             >
                         There are no polls to show. Why don't you create one?
-            </CollectionItem>
+            </li>
 </Collection>,
         },
         "ref": null,
@@ -95,24 +95,24 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <CollectionItem
-              className="center-align"
+            "children": <li
+              className="center-align collection-item"
 >
               There are no polls to show. Why don't you create one?
-</CollectionItem>,
+</li>,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
               "children": "There are no polls to show. Why don't you create one?",
-              "className": "center-align",
+              "className": "center-align collection-item",
             },
             "ref": null,
             "rendered": "There are no polls to show. Why don't you create one?",
-            "type": [Function],
+            "type": "li",
           },
           "type": [Function],
         },
@@ -167,11 +167,11 @@ ShallowWrapper {
 </Row>,
           <Row>
             <Collection>
-                        <CollectionItem
-                                    className="center-align"
+                        <li
+                                    className="center-align collection-item"
                         >
                                     There are no polls to show. Why don't you create one?
-                        </CollectionItem>
+                        </li>
             </Collection>
 </Row>,
           <Row
@@ -220,11 +220,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <Collection>
-              <CollectionItem
-                            className="center-align"
+              <li
+                            className="center-align collection-item"
               >
                             There are no polls to show. Why don't you create one?
-              </CollectionItem>
+              </li>
 </Collection>,
           },
           "ref": null,
@@ -233,24 +233,24 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <CollectionItem
-                className="center-align"
+              "children": <li
+                className="center-align collection-item"
 >
                 There are no polls to show. Why don't you create one?
-</CollectionItem>,
+</li>,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
                 "children": "There are no polls to show. Why don't you create one?",
-                "className": "center-align",
+                "className": "center-align collection-item",
               },
               "ref": null,
               "rendered": "There are no polls to show. Why don't you create one?",
-              "type": [Function],
+              "type": "li",
             },
             "type": [Function],
           },

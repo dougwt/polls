@@ -1,0 +1,18 @@
+.tabs {
+  background: none;
+}
+.tabs .tab a,
+.tabs .tab a.active,
+.tabs .tab a.active:hover {
+  color: #06bad6;
+}
+.tabs .tab a:hover {
+  color: #ef476f;
+}
+.tabs .indicator {
+  background-color: #06bad6;
+}
+
+.pagination li.active {
+  background-color: #06bad6;
+}

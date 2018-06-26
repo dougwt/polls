@@ -1,0 +1,30 @@
+body {
+  background-color: #fcfcfc;
+}
+a {
+  color: #06bad6;
+}
+a:visited:hover,
+a:hover {
+  color: #ef476f;
+}
+a:visited {
+  color: #7c265d;
+}
+
+.btn:hover,
+.btn-large:hover {
+  background-color: #06d6a0;
+  color: #fcfcfc;
+}
+
+.btn:hover {
+}
+
+.teal {
+  background-color: #06d6a0 !important;
+}
+
+.red {
+  background-color: #ef476f !important;
+}
