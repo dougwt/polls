@@ -1,12 +1,25 @@
 nav {
   background-color: #06bad6;
 }
-nav a,
-nav a:visited,
-nav a:hover,
-nav a:visited:hover {
-  color: white;
+nav ul a,
+nav ul a:visited,
+nav ul a:hover,
+nav ul a:visited:hover {
+  margin-bottom: 2px;
+  color: #fcfcfc;
 }
+nav ul a:hover,
+nav ul a:visited:hover {
+  background-color: #ef476f;
+}
+nav ul {
+  font-family: 'Raleway', cursive;
+}
+
 .nav-wrapper.container {
   margin-top: 0;
+}
+.brand-logo img {
+  max-height: 40px;
+  margin: 10px 0;
 }

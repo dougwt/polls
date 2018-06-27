@@ -1,4 +1,23 @@
 footer,
 .page-footer {
   background-color: #06bad6;
+  line-height: 1.8rem;
+}
+
+.page-footer a:hover {
+  color: #ef476f !important;
+}
+
+.page-footer .nav ul {
+  font-family: 'Raleway', cursive;
+  font-size: 0.9rem;
+}
+
+.footer-copyright a {
+  color: #ffd166;
+  font-weight: bold;
+}
+
+.footer-copyright .heart {
+  color: #ef476f;
 }

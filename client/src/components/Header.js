@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
+import logo from '../images/logo.min.svg';
 
 const renderContent = auth => {
   switch (auth) {
@@ -40,7 +41,7 @@ export const Header = props => {
     <nav>
       <div className="nav-wrapper container">
         <Link to="/" className="brand-logo">
-          Simple Polls
+          <img src={logo} alt="Simple Polls" />
         </Link>
 
         <ul className="right">
