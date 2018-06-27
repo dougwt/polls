@@ -15,6 +15,7 @@ const renderContent = auth => {
         <a
           href="/auth/google"
           className="navbar-item waves-effect waves-light"
+          onClick={() => toggleNav(true)}
         >
           <i className="material-icons left">person</i>
             Sign In with Google
@@ -27,6 +28,7 @@ const renderContent = auth => {
         <a
           href="/api/logout"
           className="navbar-item waves-effect waves-light"
+          onClick={() => toggleNav(true)}
         >
           <i className="material-icons left">person</i>
             Sign Out
@@ -36,28 +38,55 @@ const renderContent = auth => {
   }
 };
 
+const toggleNav = (hide = false) => {
+  const nav = document.getElementById('main-nav');
+
+  if (hide || nav.className === 'unfold') {
+    nav.className = '';
+  } else {
+    nav.className = 'unfold';
+  }
+};
+
 export const Header = props => {
   return (
-    <nav>
+    <nav id="main-nav">
       <div className="nav-wrapper container">
         <Link to="/" className="brand-logo">
           <img src={logo} alt="Simple Polls" />
         </Link>
 
         <ul className="right">
-          <li>
-            <NavLink to="/polls" className="waves-effect waves-light">
-              <i className="material-icons left">dashboard</i>
-              Dashboard
-            </NavLink>
+          <ul className="responsive">
+            <li>
+              <NavLink
+                to="/polls"
+                className="waves-effect waves-light"
+                onClick={() => toggleNav(true)}
+              >
+                <i className="material-icons left">dashboard</i>
+                Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/polls/new"
+                className="waves-effect waves-light"
+                onClick={() => toggleNav(true)}
+              >
+                <i className="material-icons left">add</i>
+                Create a Poll
+              </NavLink>
+            </li>
+
+            {renderContent(props.auth)}
+          </ul>
+
+          <li className="toggle">
+            <a href="javascript:void(0);" onClick={() => toggleNav()}>
+              <i className="material-icons">menu</i>
+            </a>
           </li>
-          <li>
-            <NavLink to="/polls/new" className="waves-effect waves-light">
-              <i className="material-icons left">add</i>
-              Create a Poll
-            </NavLink>
-          </li>
-          {renderContent(props.auth)}
         </ul>
       </div>
     </nav>

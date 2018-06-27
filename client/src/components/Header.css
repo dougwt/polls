@@ -15,6 +15,9 @@ nav ul a:visited:hover {
 nav ul {
   font-family: 'Raleway', cursive;
 }
+nav ul .toggle {
+  display: none;
+}
 
 .nav-wrapper.container {
   margin-top: 0;
@@ -22,4 +25,37 @@ nav ul {
 .brand-logo img {
   max-height: 40px;
   margin: 10px 0;
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    /* background-color: #06bad6; */
+    z-index: 9;
+  }
+
+  nav ul .responsive {
+    display: none;
+  }
+
+  nav.unfold ul .responsive {
+    display: block;
+    width: 100%;
+    background-color: #06bad6;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    z-index: 10;
+  }
+  nav.unfold ul .responsive li {
+    display: block;
+    width: 100%;
+  }
+  nav.unfold ul .responsive a {
+    display: block;
+  }
+
+  nav ul .toggle {
+    display: block;
+    z-index: 1000;
+  }
 }
