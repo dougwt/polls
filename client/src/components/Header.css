@@ -29,7 +29,6 @@ nav ul .toggle {
 
 @media screen and (max-width: 992px) {
   nav {
-    /* background-color: #06bad6; */
     z-index: 9;
   }
 
