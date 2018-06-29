@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Card, Input, Button, Row } from 'react-materialize';
-import { votePoll, resetVotePoll } from '../../actions';
 import { Pie } from 'react-chartjs-2';
+import { votePoll, resetVotePoll } from '../../actions';
+import requireAuth from '../requireAuth';
 
 import './PollDetail.css';
 
@@ -162,6 +164,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { votePoll, resetVotePoll })(
-  PollDetail
-);
+export default compose(
+  connect(mapStateToProps, { votePoll, resetVotePoll }),
+  requireAuth
+)(PollDetail);
