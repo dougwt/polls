@@ -71,6 +71,7 @@ const toggleNav = (hide = false) => {
 };
 
 export const Header = props => {
+  /* eslint-disable no-script-url */
   return (
     <nav id="main-nav">
       <div className="nav-wrapper container">
@@ -90,6 +91,7 @@ export const Header = props => {
       </div>
     </nav>
   );
+  /* eslint-enable no-script-url */
 };
 Header.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
