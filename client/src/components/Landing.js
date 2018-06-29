@@ -1,8 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import './Landing.css';
-import { Link } from 'react-router-dom';
 
-const Landing = () => {
+const Landing = props => {
+  if (props.auth) {
+    props.history.push('/polls');
+  }
+
   return (
     <main>
       {/* Section 1 */}
@@ -154,5 +159,15 @@ const Landing = () => {
     </main>
   );
 };
+Landing.propTypes = {
+  auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  history: PropTypes.object.isRequired
+};
 
-export default Landing;
+function mapStateToProps(state) {
+  return {
+    auth: state.auth
+  };
+}
+
+export default connect(mapStateToProps)(Landing);
