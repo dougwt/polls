@@ -51,6 +51,7 @@ export class PollNew extends Component {
     if (this.state.showReview) {
       return (
         <PollFormReview
+          onReset={this.props.resetCreatePoll}
           onCancel={this.onCancelReview.bind(this)}
           onSave={this.onSave.bind(this)}
         />
@@ -81,6 +82,7 @@ export class PollNew extends Component {
 }
 PollNew.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
+  resetCreatePoll: PropTypes.func.isRequired,
   createPoll: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired

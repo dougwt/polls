@@ -4,7 +4,7 @@ exports[`PollDetail renders properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
+  Symbol(enzyme.__unrendered__): <PollDetail
     disabled={false}
     formValues={
         Object {
@@ -52,7 +52,7 @@ ShallowWrapper {
                 >
                         <Button
                                 className="teal"
-                                disabled={undefined}
+                                disabled={false}
                                 node="button"
                                 onClick={undefined}
                         >
@@ -83,7 +83,7 @@ ShallowWrapper {
           >
                     <Button
                               className="teal"
-                              disabled={undefined}
+                              disabled={false}
                               node="button"
                               onClick={undefined}
                     >
@@ -111,7 +111,7 @@ ShallowWrapper {
 >
               <Button
                             className="teal"
-                            disabled={undefined}
+                            disabled={false}
                             node="button"
                             onClick={undefined}
               >
@@ -143,7 +143,7 @@ ShallowWrapper {
             "props": Object {
               "children": <Button
                 className="teal"
-                disabled={undefined}
+                disabled={false}
                 node="button"
                 onClick={undefined}
 >
@@ -159,7 +159,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "Vote",
                 "className": "teal",
-                "disabled": undefined,
+                "disabled": false,
                 "node": "button",
                 "onClick": undefined,
               },
@@ -200,7 +200,7 @@ ShallowWrapper {
                     >
                               <Button
                                         className="teal"
-                                        disabled={undefined}
+                                        disabled={false}
                                         node="button"
                                         onClick={undefined}
                               >
@@ -231,7 +231,7 @@ ShallowWrapper {
             >
                         <Button
                                     className="teal"
-                                    disabled={undefined}
+                                    disabled={false}
                                     node="button"
                                     onClick={undefined}
                         >
@@ -259,7 +259,7 @@ ShallowWrapper {
 >
                 <Button
                                 className="teal"
-                                disabled={undefined}
+                                disabled={false}
                                 node="button"
                                 onClick={undefined}
                 >
@@ -291,7 +291,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <Button
                   className="teal"
-                  disabled={undefined}
+                  disabled={false}
                   node="button"
                   onClick={undefined}
 >
@@ -307,7 +307,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": "Vote",
                   "className": "teal",
-                  "disabled": undefined,
+                  "disabled": false,
                   "node": "button",
                   "onClick": undefined,
                 },

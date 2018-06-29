@@ -31,6 +31,10 @@ export const createPoll = (poll, callback) => dispatch => {
     });
 };
 
+export const resetCreatePoll = () => {
+  return { type: types.SAVE_POLL_RESET };
+};
+
 export const editPoll = (pollId, poll, callback) => dispatch => {
   dispatch({ type: types.SAVE_POLL_REQUEST });
 
@@ -43,6 +47,10 @@ export const editPoll = (pollId, poll, callback) => dispatch => {
     .catch(err => {
       dispatch({ type: types.SAVE_POLL_FAILURE, payload: err });
     });
+};
+
+export const resetEditPoll = () => {
+  return { type: types.SAVE_POLL_RESET };
 };
 
 export const deletePoll = (pollId, callback) => dispatch => {
@@ -59,6 +67,10 @@ export const deletePoll = (pollId, callback) => dispatch => {
     });
 };
 
+export const resetDeletePoll = () => {
+  return { type: types.DELETE_POLL_RESET };
+};
+
 export const votePoll = (pollId, choiceId, callback) => dispatch => {
   dispatch({ type: types.VOTE_POLL_REQUEST });
 
@@ -71,4 +83,8 @@ export const votePoll = (pollId, choiceId, callback) => dispatch => {
     .catch(err => {
       dispatch({ type: types.VOTE_POLL_FAILURE, payload: err });
     });
+};
+
+export const resetVotePoll = () => {
+  return { type: types.VOTE_POLL_RESET };
 };

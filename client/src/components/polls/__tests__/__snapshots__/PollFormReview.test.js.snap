@@ -4,7 +4,7 @@ exports[`PollFormReview renders properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
+  Symbol(enzyme.__unrendered__): <PollFormReview
     error={null}
     formValues={
         Object {
@@ -20,6 +20,7 @@ ShallowWrapper {
           }
     }
     onCancel={[Function]}
+    onReset={[Function]}
     onSave={[Function]}
     waiting={false}
 />,
@@ -39,7 +40,7 @@ ShallowWrapper {
         <h5>
           Please confirm your poll
 </h5>,
-        <Connect(Component)
+        <Connect(PollDetail)
           disabled={true}
           formValues={
                     Object {
@@ -258,7 +259,7 @@ ShallowWrapper {
           <h5>
             Please confirm your poll
 </h5>,
-          <Connect(Component)
+          <Connect(PollDetail)
             disabled={true}
             formValues={
                         Object {

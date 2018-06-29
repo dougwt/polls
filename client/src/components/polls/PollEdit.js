@@ -49,6 +49,7 @@ export class PollEdit extends Component {
     if (this.state.showReview) {
       return (
         <PollFormReview
+          onReset={this.props.resetVotePoll}
           onCancel={this.onCancel.bind(this)}
           onSave={this.onSave.bind(this)}
         />
@@ -57,6 +58,7 @@ export class PollEdit extends Component {
 
     return (
       <PollForm
+        onReset={this.props.resetDeletePoll}
         onCancel={this.props.onCancel.bind(this)}
         onDelete={this.onDelete.bind(this)}
         onSubmit={this.onSubmit.bind(this)}
@@ -71,7 +73,9 @@ export class PollEdit extends Component {
 }
 PollEdit.propTypes = {
   auth: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]).isRequired,
+  resetDeletePoll: PropTypes.func.isRequired,
   deletePoll: PropTypes.func.isRequired,
+  resetVotePoll: PropTypes.func.isRequired,
   editPoll: PropTypes.func.isRequired,
   formValues: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,
