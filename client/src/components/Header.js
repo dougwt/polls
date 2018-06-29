@@ -24,16 +24,38 @@ const renderContent = auth => {
     );
   default:
     return (
-      <li>
-        <a
-          href="/api/logout"
-          className="navbar-item waves-effect waves-light"
-          onClick={() => toggleNav(true)}
-        >
-          <i className="material-icons left">person</i>
-            Sign Out
-        </a>
-      </li>
+      <ul>
+        <li>
+          <NavLink
+            to="/polls"
+            className="waves-effect waves-light"
+            onClick={() => toggleNav(true)}
+          >
+            <i className="material-icons left">dashboard</i>
+              Dashboard
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/polls/new"
+            className="waves-effect waves-light"
+            onClick={() => toggleNav(true)}
+          >
+            <i className="material-icons left">add</i>
+              Create a Poll
+          </NavLink>
+        </li>
+        <li>
+          <a
+            href="/api/logout"
+            className="navbar-item waves-effect waves-light"
+            onClick={() => toggleNav(true)}
+          >
+            <i className="material-icons left">person</i>
+              Sign Out
+          </a>
+        </li>
+      </ul>
     );
   }
 };
@@ -57,30 +79,7 @@ export const Header = props => {
         </Link>
 
         <ul className="right">
-          <ul className="responsive">
-            <li>
-              <NavLink
-                to="/polls"
-                className="waves-effect waves-light"
-                onClick={() => toggleNav(true)}
-              >
-                <i className="material-icons left">dashboard</i>
-                Dashboard
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/polls/new"
-                className="waves-effect waves-light"
-                onClick={() => toggleNav(true)}
-              >
-                <i className="material-icons left">add</i>
-                Create a Poll
-              </NavLink>
-            </li>
-
-            {renderContent(props.auth)}
-          </ul>
+          <ul className="responsive">{renderContent(props.auth)}</ul>
 
           <li className="toggle">
             <a href="javascript:void(0);" onClick={() => toggleNav()}>
