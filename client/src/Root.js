@@ -7,11 +7,11 @@ import promiseMiddleware from 'redux-promise';
 import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 
-const localAuth = localStorage.getItem('auth');
+const localAuth = JSON.parse(localStorage.getItem('auth'));
 
 const Root = ({
   children,
-  initialState = { auth: localAuth ? JSON.parse(localAuth) : false }
+  initialState = { auth: localAuth ? localAuth : false }
 }) => {
   const store = createStore(
     reducers,
