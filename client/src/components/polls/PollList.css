@@ -8,3 +8,10 @@
 .pagination li.active {
   background-color: #06bad6;
 }
+
+@media screen and (max-width: 600px) {
+  .badge,
+  .header span {
+    display: none;
+  }
+}

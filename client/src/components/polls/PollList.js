@@ -26,7 +26,7 @@ export class PollList extends Component {
         <li className="collection-item" key={poll._id}>
           <Link to={`/polls/${poll._id}`}>
             {poll.question}
-            <Badge>1</Badge>
+            <Badge>{poll.respondents.length}</Badge>
           </Link>
         </li>
       );
@@ -58,7 +58,10 @@ export class PollList extends Component {
     return (
       <div>
         <Row>
-          <h6 className="header section-title">{this.props.title}</h6>
+          <h6 className="header section-title">
+            {this.props.title}
+            <span className="right">Respondents</span>
+          </h6>
         </Row>
 
         <Row>
