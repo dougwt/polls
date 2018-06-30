@@ -18,7 +18,7 @@ const Landing = props => {
         <div className="bg-container">
           <div className="container">
             <div className="section">
-              <h1 className="header center">Make. Choices. Easier.</h1>
+              <h1 className="header center">Crowdsource Everyday Decisions</h1>
               <div className="row center">
                 <h5 className="header col s12 light">
                   A community for creating, finding, and sharing simple polls.
@@ -45,50 +45,41 @@ const Landing = props => {
             <div className="row">
               <div className="col s12 m4">
                 <div className="icon-block">
-                  <h2 className="center">
-                    <i className="material-icons">flash_on</i>
-                  </h2>
-                  <h5 className="center">Lorem ipsum dolor</h5>
+                  <h5 className="center">
+                    <i className="material-icons">create</i>
+                  </h5>
+                  <h5 className="center">Create</h5>
 
-                  <p className="light">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Facere voluptatibus harum quam, odio ipsa tempora asperiores
-                    earum omnis deleniti obcaecati sint cum vel inventore
-                    consequuntur voluptatem blanditiis, deserunt in ex hic!
+                  <p className="light center">
+                    Create unlimited polls using an easy-to-use modern web
+                    interface
                   </p>
                 </div>
               </div>
 
               <div className="col s12 m4">
                 <div className="icon-block">
-                  <h2 className="center">
-                    <i className="material-icons">group</i>
-                  </h2>
-                  <h5 className="center">Lorem ipsum dolor</h5>
+                  <h5 className="center">
+                    <i className="material-icons">search</i>
+                  </h5>
+                  <h5 className="center">Browse</h5>
 
-                  <p className="light">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Vitae cum eius cumque totam praesentium ducimus voluptatem
-                    recusandae distinctio nemo? Architecto suscipit maxime ea
-                    dolorem aliquid ipsam repellendus dolore, totam laboriosam
-                    ullam accusamus!
+                  <p className="light center">
+                    Browse polls created by others to view and contribute your
+                    opinions
                   </p>
                 </div>
               </div>
 
               <div className="col s12 m4">
                 <div className="icon-block">
-                  <h2 className="center">
-                    <i className="material-icons">settings</i>
-                  </h2>
-                  <h5 className="center">Lorem ipsum dolor</h5>
+                  <h5 className="center">
+                    <i className="material-icons">share</i>
+                  </h5>
+                  <h5 className="center">Share</h5>
 
-                  <p className="light">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Provident voluptatem ducimus, nostrum perspiciatis ipsa.
-                    Ducimus, vitae. Officiis officia praesentium, saepe
-                    reiciendis est ex ducimus obcaecati! Dolore, cupiditate,
-                    nesciunt!
+                  <p className="light center">
+                    Share interesting polls to spark conversation with friends
                   </p>
                 </div>
               </div>
@@ -107,7 +98,8 @@ const Landing = props => {
             <div className="section">
               <div className="row center">
                 <h5 className="header col s12 light">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Sometimes asking others what they think can help you to
+                  discover your own true feelings
                 </h5>
               </div>
             </div>
@@ -149,8 +141,18 @@ const Landing = props => {
             <div className="section">
               <div className="row center">
                 <h5 className="header col s12 light">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Hone your decision-making instincts by joining our community
+                  of opinionated users.
                 </h5>
+              </div>
+              <div className="row center">
+                <a
+                  href="/auth/google"
+                  id="download-button"
+                  className="btn-large waves-effect waves-light"
+                >
+                  Get Started
+                </a>
               </div>
             </div>
           </div>

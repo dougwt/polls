@@ -36,15 +36,23 @@
   opacity: 0.4;
 }
 
-.section-1,
+.section-1 .btn-large:hover {
+  background-color: #e04a6e;
+  color: #fcfcfc;
+}
+
+.section-1 {
+  min-height: 50vh;
+}
+
 .section-2,
 .section-3 {
-  min-height: 50vh;
+  min-height: 25vh;
 }
 
 .section-4,
 .section-5 {
-  min-height: 35vh;
+  min-height: 40vh;
 }
 
 .section-1 .bg-image {
@@ -60,15 +68,14 @@
 }
 
 .section-2 {
-  background-color: #56d3a0;
+  background-color: #7c265c;
   color: #fcfcfc;
-  color: #7c265c;
 }
 .section-2 h2,
 .section-2 h3,
 .section-2 h4,
 .section-2 h5 {
-  color: #e04a6e;
+  color: #06bad6;
 }
 
 .section-3 .bg-image {
@@ -85,6 +92,16 @@
 .section-4 h4,
 .section-4 h5 {
   color: #f9cd69;
+}
+
+.section-5 .btn-large {
+  background-color: #56d3a0;
+  color: #fcfcfc;
+}
+
+.section-5 .btn-large:hover {
+  background-color: #e04a6e;
+  color: #fcfcfc;
 }
 
 .section-5 .bg-image {
