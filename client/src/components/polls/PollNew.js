@@ -8,8 +8,6 @@ import PollForm from './PollForm';
 import PollFormReview from './PollFormReview';
 import * as actions from '../../actions';
 
-const initialValues = { choices: [0, 1] };
-
 export class PollNew extends Component {
   constructor(props) {
     super(props);
@@ -60,9 +58,10 @@ export class PollNew extends Component {
 
     return (
       <PollForm
+        onReset={this.props.resetCreatePoll}
         onCancel={this.onCancel.bind(this)}
         onSubmit={this.onSubmit.bind(this)}
-        initialValues={initialValues}
+        initialValues={{ choices: [0, 1] }}
       />
     );
   }

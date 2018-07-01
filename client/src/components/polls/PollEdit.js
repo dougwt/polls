@@ -45,7 +45,7 @@ export class PollEdit extends Component {
     this.setState({ showReview: true });
   }
 
-  renderContent() {
+  render() {
     if (this.state.showReview) {
       return (
         <PollFormReview
@@ -65,10 +65,6 @@ export class PollEdit extends Component {
         initialValues={this.props.formValues}
       />
     );
-  }
-
-  render() {
-    return this.renderContent();
   }
 }
 PollEdit.propTypes = {
