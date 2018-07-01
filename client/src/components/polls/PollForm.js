@@ -28,10 +28,7 @@ export class PollForm extends Component {
           </Row>
 
           <Row>
-            <FieldArray
-              name="choices"
-              component={this.renderChoices.bind(this)}
-            />
+            <FieldArray name="choices" component={this.renderChoices} />
           </Row>
 
           {this.renderError() ? this.renderError() : this.renderSpinner()}
