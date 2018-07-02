@@ -4,6 +4,10 @@ footer,
   line-height: 1.8rem;
 }
 
+.page-footer p {
+  font-size: 0.9rem;
+}
+
 .page-footer a:hover {
   color: #ef476f !important;
 }
@@ -11,6 +15,11 @@ footer,
 .page-footer .nav ul {
   font-family: 'Raleway', cursive;
   font-size: 0.9rem;
+}
+
+.page-footer a,
+.page-footer a:visited {
+  color: #f9cd69;
 }
 
 .footer-copyright a {

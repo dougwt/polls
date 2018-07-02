@@ -8,11 +8,13 @@ const Footer = () => {
         <div className="row">
           <div className="col l9 s12">
             <h5 className="white-text">Simple Polls</h5>
-            <p className="grey-text text-lighten-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Dignissimos earum veritatis numquam beatae harum fuga culpa itaque
-              quaerat minus omnis accusantium ipsam aperiam esse mollitia,
-              tempore porro, a quasi libero!
+            <p className="grey-text text-lighten-3">
+              <strong>Hello!</strong> Thank you for visiting. This webapp was
+              created as a practice exercise for <a href="#">my portfolio</a>{' '}
+              and should be considered very
+              <em>experimental</em>. It was developed in JavaScript using React
+              and Express. To find out more, or to view the source code, visit
+              the <a href="#">GitHub repository</a>.
             </p>
           </div>
           <div className="col l3 s12 nav">
@@ -31,11 +33,6 @@ const Footer = () => {
               <li>
                 <a className="white-text" href="#!">
                   Create a Poll
-                </a>
-              </li>
-              <li>
-                <a className="white-text" href="#!">
-                  GitHub Repo
                 </a>
               </li>
             </ul>
