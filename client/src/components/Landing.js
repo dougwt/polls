@@ -45,9 +45,9 @@ const Landing = props => {
             <div className="row">
               <div className="col s12 m4">
                 <div className="icon-block">
-                  <h5 className="center">
+                  <h2 className="center">
                     <i className="material-icons">create</i>
-                  </h5>
+                  </h2>
                   <h5 className="center">Create</h5>
 
                   <p className="light center">
@@ -59,9 +59,9 @@ const Landing = props => {
 
               <div className="col s12 m4">
                 <div className="icon-block">
-                  <h5 className="center">
+                  <h2 className="center">
                     <i className="material-icons">search</i>
-                  </h5>
+                  </h2>
                   <h5 className="center">Browse</h5>
 
                   <p className="light center">
@@ -73,9 +73,9 @@ const Landing = props => {
 
               <div className="col s12 m4">
                 <div className="icon-block">
-                  <h5 className="center">
+                  <h2 className="center">
                     <i className="material-icons">share</i>
-                  </h5>
+                  </h2>
                   <h5 className="center">Share</h5>
 
                   <p className="light center">

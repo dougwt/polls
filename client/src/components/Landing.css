@@ -77,6 +77,9 @@
 .section-2 h5 {
   color: #06bad6;
 }
+.section-2 p {
+  line-height: 1.9em;
+}
 
 .section-3 .bg-image {
   background-image: radial-gradient(transparent, rgba(252, 252, 252, 0.7)),
