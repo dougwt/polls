@@ -10,11 +10,12 @@ const Footer = () => {
             <h5 className="white-text">Simple Polls</h5>
             <p className="grey-text text-lighten-3">
               <strong>Hello!</strong> Thank you for visiting. This webapp was
-              created as a practice exercise for <a href="#">my portfolio</a>{' '}
-              and should be considered very
-              <em>experimental</em>. It was developed in JavaScript using React
-              and Express. To find out more, or to view the source code, visit
-              the <a href="#">GitHub repository</a>.
+              created as a practice exercise for{' '}
+              <a href="https://dougwt.com">my portfolio</a> and should be
+              considered very <em>experimental</em>. It was developed in
+              JavaScript using React and Express. To find out more, or to view
+              the source code, visit the{' '}
+              <a href="https://github.com/dougwt/polls">GitHub repository</a>.
             </p>
           </div>
           <div className="col l3 s12 nav">
