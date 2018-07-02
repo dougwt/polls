@@ -11,6 +11,7 @@ describe('PollNew', () => {
   beforeEach(() => {
     props = {
       auth: {},
+      resetCreatePoll: jest.fn(),
       createPoll: jest.fn(),
       formValues: {},
       history: {}

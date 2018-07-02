@@ -9,6 +9,7 @@ ShallowWrapper {
     createPoll={[Function]}
     formValues={Object {}}
     history={Object {}}
+    resetCreatePoll={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -43,6 +44,7 @@ ShallowWrapper {
                                       }
                         }
                         onCancel={[Function]}
+                        onReset={[Function]}
                         onSubmit={[Function]}
                 />
         </div>
@@ -73,6 +75,7 @@ ShallowWrapper {
                                       }
                     }
                     onCancel={[Function]}
+                    onReset={[Function]}
                     onSubmit={[Function]}
           />
 </div>,
@@ -100,6 +103,7 @@ ShallowWrapper {
                                         }
               }
               onCancel={[Function]}
+              onReset={[Function]}
               onSubmit={[Function]}
 />,
           ],
@@ -131,6 +135,7 @@ ShallowWrapper {
                 ],
               },
               "onCancel": [Function],
+              "onReset": [Function],
               "onSubmit": [Function],
             },
             "ref": null,
@@ -171,6 +176,7 @@ ShallowWrapper {
                                                 }
                               }
                               onCancel={[Function]}
+                              onReset={[Function]}
                               onSubmit={[Function]}
                     />
           </div>
@@ -201,6 +207,7 @@ ShallowWrapper {
                                               }
                         }
                         onCancel={[Function]}
+                        onReset={[Function]}
                         onSubmit={[Function]}
             />
 </div>,
@@ -228,6 +235,7 @@ ShallowWrapper {
                                               }
                 }
                 onCancel={[Function]}
+                onReset={[Function]}
                 onSubmit={[Function]}
 />,
             ],
@@ -259,6 +267,7 @@ ShallowWrapper {
                   ],
                 },
                 "onCancel": [Function],
+                "onReset": [Function],
                 "onSubmit": [Function],
               },
               "ref": null,

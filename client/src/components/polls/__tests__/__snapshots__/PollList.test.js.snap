@@ -25,6 +25,11 @@ ShallowWrapper {
                     className="header section-title"
           >
                     Test Title
+                    <span
+                              className="right"
+                    >
+                              Respondents
+                    </span>
           </h6>
 </Row>,
         <Row>
@@ -59,6 +64,11 @@ ShallowWrapper {
             className="header section-title"
 >
             Test Title
+            <span
+                        className="right"
+            >
+                        Respondents
+            </span>
 </h6>,
         },
         "ref": null,
@@ -67,11 +77,32 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Test Title",
+            "children": Array [
+              "Test Title",
+              <span
+                className="right"
+>
+                Respondents
+</span>,
+            ],
             "className": "header section-title",
           },
           "ref": null,
-          "rendered": "Test Title",
+          "rendered": Array [
+            "Test Title",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Respondents",
+                "className": "right",
+              },
+              "ref": null,
+              "rendered": "Respondents",
+              "type": "span",
+            },
+          ],
           "type": "h6",
         },
         "type": [Function],
@@ -163,6 +194,11 @@ ShallowWrapper {
                         className="header section-title"
             >
                         Test Title
+                        <span
+                                    className="right"
+                        >
+                                    Respondents
+                        </span>
             </h6>
 </Row>,
           <Row>
@@ -197,6 +233,11 @@ ShallowWrapper {
               className="header section-title"
 >
               Test Title
+              <span
+                            className="right"
+              >
+                            Respondents
+              </span>
 </h6>,
           },
           "ref": null,
@@ -205,11 +246,32 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Test Title",
+              "children": Array [
+                "Test Title",
+                <span
+                  className="right"
+>
+                  Respondents
+</span>,
+              ],
               "className": "header section-title",
             },
             "ref": null,
-            "rendered": "Test Title",
+            "rendered": Array [
+              "Test Title",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Respondents",
+                  "className": "right",
+                },
+                "ref": null,
+                "rendered": "Respondents",
+                "type": "span",
+              },
+            ],
             "type": "h6",
           },
           "type": [Function],

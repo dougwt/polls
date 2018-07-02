@@ -26,7 +26,7 @@ export class PollList extends Component {
         <li className="collection-item" key={poll._id}>
           <Link to={`/polls/${poll._id}`}>
             {poll.question}
-            <Badge>{poll.respondents.length}</Badge>
+            <Badge>{poll.respondents ? poll.respondents.length : 0}</Badge>
           </Link>
         </li>
       );

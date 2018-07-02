@@ -40,7 +40,7 @@ ShallowWrapper {
         <h5>
           Please confirm your poll
 </h5>,
-        <Connect(PollDetail)
+        <Connect(Connect(ComposedComponent))
           disabled={true}
           formValues={
                     Object {
@@ -259,7 +259,7 @@ ShallowWrapper {
           <h5>
             Please confirm your poll
 </h5>,
-          <Connect(PollDetail)
+          <Connect(Connect(ComposedComponent))
             disabled={true}
             formValues={
                         Object {
