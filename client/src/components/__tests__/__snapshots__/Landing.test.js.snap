@@ -1,0 +1,3333 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing renders properly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    auth={undefined}
+    history={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="wrapper section-1 bg"
+>
+          <div
+                    className="bg-image-container"
+          >
+                    <div
+                              className="bg-image"
+                    />
+          </div>
+          <div
+                    className="bg-container"
+          >
+                    <div
+                              className="container"
+                    >
+                              <div
+                                        className="section"
+                              >
+                                        <h1
+                                                  className="header center"
+                                        >
+                                                  Crowdsource Everyday Decisions
+                                        </h1>
+                                        <div
+                                                  className="row center"
+                                        >
+                                                  <h5
+                                                            className="header col s12 light"
+                                                  >
+                                                            A community for creating, finding, and sharing simple polls.
+                                                  </h5>
+                                        </div>
+                                        <div
+                                                  className="row center"
+                                        >
+                                                  <a
+                                                            className="btn-large waves-effect waves-light"
+                                                            href="/auth/google"
+                                                            id="download-button"
+                                                  >
+                                                            Join For Free
+                                                  </a>
+                                        </div>
+                              </div>
+                    </div>
+          </div>
+</div>,
+        <div
+          className="wrapper section-2"
+>
+          <div
+                    className="container"
+          >
+                    <div
+                              className="section"
+                    >
+                              <div
+                                        className="row"
+                              >
+                                        <div
+                                                  className="col s12 m4"
+                                        >
+                                                  <div
+                                                            className="icon-block"
+                                                  >
+                                                            <h2
+                                                                      className="center"
+                                                            >
+                                                                      <i
+                                                                                className="material-icons"
+                                                                      >
+                                                                                create
+                                                                      </i>
+                                                            </h2>
+                                                            <h5
+                                                                      className="center"
+                                                            >
+                                                                      Create
+                                                            </h5>
+                                                            <p
+                                                                      className="light center"
+                                                            >
+                                                                      Create unlimited polls using an easy-to-use modern web interface
+                                                            </p>
+                                                  </div>
+                                        </div>
+                                        <div
+                                                  className="col s12 m4"
+                                        >
+                                                  <div
+                                                            className="icon-block"
+                                                  >
+                                                            <h2
+                                                                      className="center"
+                                                            >
+                                                                      <i
+                                                                                className="material-icons"
+                                                                      >
+                                                                                search
+                                                                      </i>
+                                                            </h2>
+                                                            <h5
+                                                                      className="center"
+                                                            >
+                                                                      Browse
+                                                            </h5>
+                                                            <p
+                                                                      className="light center"
+                                                            >
+                                                                      Browse polls created by others to view and contribute your opinions
+                                                            </p>
+                                                  </div>
+                                        </div>
+                                        <div
+                                                  className="col s12 m4"
+                                        >
+                                                  <div
+                                                            className="icon-block"
+                                                  >
+                                                            <h2
+                                                                      className="center"
+                                                            >
+                                                                      <i
+                                                                                className="material-icons"
+                                                                      >
+                                                                                share
+                                                                      </i>
+                                                            </h2>
+                                                            <h5
+                                                                      className="center"
+                                                            >
+                                                                      Share
+                                                            </h5>
+                                                            <p
+                                                                      className="light center"
+                                                            >
+                                                                      Share interesting polls to spark conversation with friends
+                                                            </p>
+                                                  </div>
+                                        </div>
+                              </div>
+                    </div>
+          </div>
+</div>,
+        <div
+          className="wrapper section-3 bg"
+>
+          <div
+                    className="bg-image-container"
+          >
+                    <div
+                              className="bg-image"
+                    />
+          </div>
+          <div
+                    className="bg-container"
+          >
+                    <div
+                              className="container"
+                    >
+                              <div
+                                        className="section"
+                              >
+                                        <div
+                                                  className="row center"
+                                        >
+                                                  <h5
+                                                            className="header col s12 light"
+                                                  >
+                                                            Sometimes asking others what they think can help you to discover your own true feelings
+                                                  </h5>
+                                        </div>
+                              </div>
+                    </div>
+          </div>
+</div>,
+        <div
+          className="wrapper section-4 bg"
+>
+          <div
+                    className="bg-image-container"
+          >
+                    <div
+                              className="bg-image"
+                    />
+          </div>
+          <div
+                    className="bg-container"
+          >
+                    <div
+                              className="container"
+                    >
+                              <div
+                                        className="section"
+                              >
+                                        <div
+                                                  className="row center"
+                                        >
+                                                  <h5
+                                                            className="header col s12 light"
+                                                  >
+                                                            Hone your decision-making instincts by joining our community of opinionated users.
+                                                  </h5>
+                                        </div>
+                                        <div
+                                                  className="row center"
+                                        >
+                                                  <a
+                                                            className="btn-large waves-effect waves-light"
+                                                            href="/auth/google"
+                                                            id="download-button"
+                                                  >
+                                                            Get Started
+                                                  </a>
+                                        </div>
+                              </div>
+                    </div>
+          </div>
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="bg-image-container"
+>
+              <div
+                            className="bg-image"
+              />
+</div>,
+            <div
+              className="bg-container"
+>
+              <div
+                            className="container"
+              >
+                            <div
+                                          className="section"
+                            >
+                                          <h1
+                                                        className="header center"
+                                          >
+                                                        Crowdsource Everyday Decisions
+                                          </h1>
+                                          <div
+                                                        className="row center"
+                                          >
+                                                        <h5
+                                                                      className="header col s12 light"
+                                                        >
+                                                                      A community for creating, finding, and sharing simple polls.
+                                                        </h5>
+                                          </div>
+                                          <div
+                                                        className="row center"
+                                          >
+                                                        <a
+                                                                      className="btn-large waves-effect waves-light"
+                                                                      href="/auth/google"
+                                                                      id="download-button"
+                                                        >
+                                                                      Join For Free
+                                                        </a>
+                                          </div>
+                            </div>
+              </div>
+</div>,
+          ],
+          "className": "wrapper section-1 bg",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="bg-image"
+/>,
+              "className": "bg-image-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "bg-image",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="container"
+>
+                <div
+                                className="section"
+                >
+                                <h1
+                                                className="header center"
+                                >
+                                                Crowdsource Everyday Decisions
+                                </h1>
+                                <div
+                                                className="row center"
+                                >
+                                                <h5
+                                                                className="header col s12 light"
+                                                >
+                                                                A community for creating, finding, and sharing simple polls.
+                                                </h5>
+                                </div>
+                                <div
+                                                className="row center"
+                                >
+                                                <a
+                                                                className="btn-large waves-effect waves-light"
+                                                                href="/auth/google"
+                                                                id="download-button"
+                                                >
+                                                                Join For Free
+                                                </a>
+                                </div>
+                </div>
+</div>,
+              "className": "bg-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="section"
+>
+                  <h1
+                                    className="header center"
+                  >
+                                    Crowdsource Everyday Decisions
+                  </h1>
+                  <div
+                                    className="row center"
+                  >
+                                    <h5
+                                                      className="header col s12 light"
+                                    >
+                                                      A community for creating, finding, and sharing simple polls.
+                                    </h5>
+                  </div>
+                  <div
+                                    className="row center"
+                  >
+                                    <a
+                                                      className="btn-large waves-effect waves-light"
+                                                      href="/auth/google"
+                                                      id="download-button"
+                                    >
+                                                      Join For Free
+                                    </a>
+                  </div>
+</div>,
+                "className": "container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h1
+                      className="header center"
+>
+                      Crowdsource Everyday Decisions
+</h1>,
+                    <div
+                      className="row center"
+>
+                      <h5
+                                            className="header col s12 light"
+                      >
+                                            A community for creating, finding, and sharing simple polls.
+                      </h5>
+</div>,
+                    <div
+                      className="row center"
+>
+                      <a
+                                            className="btn-large waves-effect waves-light"
+                                            href="/auth/google"
+                                            id="download-button"
+                      >
+                                            Join For Free
+                      </a>
+</div>,
+                  ],
+                  "className": "section",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Crowdsource Everyday Decisions",
+                      "className": "header center",
+                    },
+                    "ref": null,
+                    "rendered": "Crowdsource Everyday Decisions",
+                    "type": "h1",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <h5
+                        className="header col s12 light"
+>
+                        A community for creating, finding, and sharing simple polls.
+</h5>,
+                      "className": "row center",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "A community for creating, finding, and sharing simple polls.",
+                        "className": "header col s12 light",
+                      },
+                      "ref": null,
+                      "rendered": "A community for creating, finding, and sharing simple polls.",
+                      "type": "h5",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
+>
+                        Join For Free
+</a>,
+                      "className": "row center",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Join For Free",
+                        "className": "btn-large waves-effect waves-light",
+                        "href": "/auth/google",
+                        "id": "download-button",
+                      },
+                      "ref": null,
+                      "rendered": "Join For Free",
+                      "type": "a",
+                    },
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="container"
+>
+            <div
+                        className="section"
+            >
+                        <div
+                                    className="row"
+                        >
+                                    <div
+                                                className="col s12 m4"
+                                    >
+                                                <div
+                                                            className="icon-block"
+                                                >
+                                                            <h2
+                                                                        className="center"
+                                                            >
+                                                                        <i
+                                                                                    className="material-icons"
+                                                                        >
+                                                                                    create
+                                                                        </i>
+                                                            </h2>
+                                                            <h5
+                                                                        className="center"
+                                                            >
+                                                                        Create
+                                                            </h5>
+                                                            <p
+                                                                        className="light center"
+                                                            >
+                                                                        Create unlimited polls using an easy-to-use modern web interface
+                                                            </p>
+                                                </div>
+                                    </div>
+                                    <div
+                                                className="col s12 m4"
+                                    >
+                                                <div
+                                                            className="icon-block"
+                                                >
+                                                            <h2
+                                                                        className="center"
+                                                            >
+                                                                        <i
+                                                                                    className="material-icons"
+                                                                        >
+                                                                                    search
+                                                                        </i>
+                                                            </h2>
+                                                            <h5
+                                                                        className="center"
+                                                            >
+                                                                        Browse
+                                                            </h5>
+                                                            <p
+                                                                        className="light center"
+                                                            >
+                                                                        Browse polls created by others to view and contribute your opinions
+                                                            </p>
+                                                </div>
+                                    </div>
+                                    <div
+                                                className="col s12 m4"
+                                    >
+                                                <div
+                                                            className="icon-block"
+                                                >
+                                                            <h2
+                                                                        className="center"
+                                                            >
+                                                                        <i
+                                                                                    className="material-icons"
+                                                                        >
+                                                                                    share
+                                                                        </i>
+                                                            </h2>
+                                                            <h5
+                                                                        className="center"
+                                                            >
+                                                                        Share
+                                                            </h5>
+                                                            <p
+                                                                        className="light center"
+                                                            >
+                                                                        Share interesting polls to spark conversation with friends
+                                                            </p>
+                                                </div>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+          "className": "wrapper section-2",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="section"
+>
+              <div
+                            className="row"
+              >
+                            <div
+                                          className="col s12 m4"
+                            >
+                                          <div
+                                                        className="icon-block"
+                                          >
+                                                        <h2
+                                                                      className="center"
+                                                        >
+                                                                      <i
+                                                                                    className="material-icons"
+                                                                      >
+                                                                                    create
+                                                                      </i>
+                                                        </h2>
+                                                        <h5
+                                                                      className="center"
+                                                        >
+                                                                      Create
+                                                        </h5>
+                                                        <p
+                                                                      className="light center"
+                                                        >
+                                                                      Create unlimited polls using an easy-to-use modern web interface
+                                                        </p>
+                                          </div>
+                            </div>
+                            <div
+                                          className="col s12 m4"
+                            >
+                                          <div
+                                                        className="icon-block"
+                                          >
+                                                        <h2
+                                                                      className="center"
+                                                        >
+                                                                      <i
+                                                                                    className="material-icons"
+                                                                      >
+                                                                                    search
+                                                                      </i>
+                                                        </h2>
+                                                        <h5
+                                                                      className="center"
+                                                        >
+                                                                      Browse
+                                                        </h5>
+                                                        <p
+                                                                      className="light center"
+                                                        >
+                                                                      Browse polls created by others to view and contribute your opinions
+                                                        </p>
+                                          </div>
+                            </div>
+                            <div
+                                          className="col s12 m4"
+                            >
+                                          <div
+                                                        className="icon-block"
+                                          >
+                                                        <h2
+                                                                      className="center"
+                                                        >
+                                                                      <i
+                                                                                    className="material-icons"
+                                                                      >
+                                                                                    share
+                                                                      </i>
+                                                        </h2>
+                                                        <h5
+                                                                      className="center"
+                                                        >
+                                                                      Share
+                                                        </h5>
+                                                        <p
+                                                                      className="light center"
+                                                        >
+                                                                      Share interesting polls to spark conversation with friends
+                                                        </p>
+                                          </div>
+                            </div>
+              </div>
+</div>,
+            "className": "container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="row"
+>
+                <div
+                                className="col s12 m4"
+                >
+                                <div
+                                                className="icon-block"
+                                >
+                                                <h2
+                                                                className="center"
+                                                >
+                                                                <i
+                                                                                className="material-icons"
+                                                                >
+                                                                                create
+                                                                </i>
+                                                </h2>
+                                                <h5
+                                                                className="center"
+                                                >
+                                                                Create
+                                                </h5>
+                                                <p
+                                                                className="light center"
+                                                >
+                                                                Create unlimited polls using an easy-to-use modern web interface
+                                                </p>
+                                </div>
+                </div>
+                <div
+                                className="col s12 m4"
+                >
+                                <div
+                                                className="icon-block"
+                                >
+                                                <h2
+                                                                className="center"
+                                                >
+                                                                <i
+                                                                                className="material-icons"
+                                                                >
+                                                                                search
+                                                                </i>
+                                                </h2>
+                                                <h5
+                                                                className="center"
+                                                >
+                                                                Browse
+                                                </h5>
+                                                <p
+                                                                className="light center"
+                                                >
+                                                                Browse polls created by others to view and contribute your opinions
+                                                </p>
+                                </div>
+                </div>
+                <div
+                                className="col s12 m4"
+                >
+                                <div
+                                                className="icon-block"
+                                >
+                                                <h2
+                                                                className="center"
+                                                >
+                                                                <i
+                                                                                className="material-icons"
+                                                                >
+                                                                                share
+                                                                </i>
+                                                </h2>
+                                                <h5
+                                                                className="center"
+                                                >
+                                                                Share
+                                                </h5>
+                                                <p
+                                                                className="light center"
+                                                >
+                                                                Share interesting polls to spark conversation with friends
+                                                </p>
+                                </div>
+                </div>
+</div>,
+              "className": "section",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="col s12 m4"
+>
+                    <div
+                                        className="icon-block"
+                    >
+                                        <h2
+                                                            className="center"
+                                        >
+                                                            <i
+                                                                                className="material-icons"
+                                                            >
+                                                                                create
+                                                            </i>
+                                        </h2>
+                                        <h5
+                                                            className="center"
+                                        >
+                                                            Create
+                                        </h5>
+                                        <p
+                                                            className="light center"
+                                        >
+                                                            Create unlimited polls using an easy-to-use modern web interface
+                                        </p>
+                    </div>
+</div>,
+                  <div
+                    className="col s12 m4"
+>
+                    <div
+                                        className="icon-block"
+                    >
+                                        <h2
+                                                            className="center"
+                                        >
+                                                            <i
+                                                                                className="material-icons"
+                                                            >
+                                                                                search
+                                                            </i>
+                                        </h2>
+                                        <h5
+                                                            className="center"
+                                        >
+                                                            Browse
+                                        </h5>
+                                        <p
+                                                            className="light center"
+                                        >
+                                                            Browse polls created by others to view and contribute your opinions
+                                        </p>
+                    </div>
+</div>,
+                  <div
+                    className="col s12 m4"
+>
+                    <div
+                                        className="icon-block"
+                    >
+                                        <h2
+                                                            className="center"
+                                        >
+                                                            <i
+                                                                                className="material-icons"
+                                                            >
+                                                                                share
+                                                            </i>
+                                        </h2>
+                                        <h5
+                                                            className="center"
+                                        >
+                                                            Share
+                                        </h5>
+                                        <p
+                                                            className="light center"
+                                        >
+                                                            Share interesting polls to spark conversation with friends
+                                        </p>
+                    </div>
+</div>,
+                ],
+                "className": "row",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="icon-block"
+>
+                      <h2
+                                            className="center"
+                      >
+                                            <i
+                                                                  className="material-icons"
+                                            >
+                                                                  create
+                                            </i>
+                      </h2>
+                      <h5
+                                            className="center"
+                      >
+                                            Create
+                      </h5>
+                      <p
+                                            className="light center"
+                      >
+                                            Create unlimited polls using an easy-to-use modern web interface
+                      </p>
+</div>,
+                    "className": "col s12 m4",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h2
+                          className="center"
+>
+                          <i
+                                                    className="material-icons"
+                          >
+                                                    create
+                          </i>
+</h2>,
+                        <h5
+                          className="center"
+>
+                          Create
+</h5>,
+                        <p
+                          className="light center"
+>
+                          Create unlimited polls using an easy-to-use modern web interface
+</p>,
+                      ],
+                      "className": "icon-block",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <i
+                            className="material-icons"
+>
+                            create
+</i>,
+                          "className": "center",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "create",
+                            "className": "material-icons",
+                          },
+                          "ref": null,
+                          "rendered": "create",
+                          "type": "i",
+                        },
+                        "type": "h2",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Create",
+                          "className": "center",
+                        },
+                        "ref": null,
+                        "rendered": "Create",
+                        "type": "h5",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Create unlimited polls using an easy-to-use modern web interface",
+                          "className": "light center",
+                        },
+                        "ref": null,
+                        "rendered": "Create unlimited polls using an easy-to-use modern web interface",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="icon-block"
+>
+                      <h2
+                                            className="center"
+                      >
+                                            <i
+                                                                  className="material-icons"
+                                            >
+                                                                  search
+                                            </i>
+                      </h2>
+                      <h5
+                                            className="center"
+                      >
+                                            Browse
+                      </h5>
+                      <p
+                                            className="light center"
+                      >
+                                            Browse polls created by others to view and contribute your opinions
+                      </p>
+</div>,
+                    "className": "col s12 m4",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h2
+                          className="center"
+>
+                          <i
+                                                    className="material-icons"
+                          >
+                                                    search
+                          </i>
+</h2>,
+                        <h5
+                          className="center"
+>
+                          Browse
+</h5>,
+                        <p
+                          className="light center"
+>
+                          Browse polls created by others to view and contribute your opinions
+</p>,
+                      ],
+                      "className": "icon-block",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <i
+                            className="material-icons"
+>
+                            search
+</i>,
+                          "className": "center",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "search",
+                            "className": "material-icons",
+                          },
+                          "ref": null,
+                          "rendered": "search",
+                          "type": "i",
+                        },
+                        "type": "h2",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Browse",
+                          "className": "center",
+                        },
+                        "ref": null,
+                        "rendered": "Browse",
+                        "type": "h5",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Browse polls created by others to view and contribute your opinions",
+                          "className": "light center",
+                        },
+                        "ref": null,
+                        "rendered": "Browse polls created by others to view and contribute your opinions",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="icon-block"
+>
+                      <h2
+                                            className="center"
+                      >
+                                            <i
+                                                                  className="material-icons"
+                                            >
+                                                                  share
+                                            </i>
+                      </h2>
+                      <h5
+                                            className="center"
+                      >
+                                            Share
+                      </h5>
+                      <p
+                                            className="light center"
+                      >
+                                            Share interesting polls to spark conversation with friends
+                      </p>
+</div>,
+                    "className": "col s12 m4",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h2
+                          className="center"
+>
+                          <i
+                                                    className="material-icons"
+                          >
+                                                    share
+                          </i>
+</h2>,
+                        <h5
+                          className="center"
+>
+                          Share
+</h5>,
+                        <p
+                          className="light center"
+>
+                          Share interesting polls to spark conversation with friends
+</p>,
+                      ],
+                      "className": "icon-block",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <i
+                            className="material-icons"
+>
+                            share
+</i>,
+                          "className": "center",
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "share",
+                            "className": "material-icons",
+                          },
+                          "ref": null,
+                          "rendered": "share",
+                          "type": "i",
+                        },
+                        "type": "h2",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Share",
+                          "className": "center",
+                        },
+                        "ref": null,
+                        "rendered": "Share",
+                        "type": "h5",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Share interesting polls to spark conversation with friends",
+                          "className": "light center",
+                        },
+                        "ref": null,
+                        "rendered": "Share interesting polls to spark conversation with friends",
+                        "type": "p",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            "type": "div",
+          },
+          "type": "div",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="bg-image-container"
+>
+              <div
+                            className="bg-image"
+              />
+</div>,
+            <div
+              className="bg-container"
+>
+              <div
+                            className="container"
+              >
+                            <div
+                                          className="section"
+                            >
+                                          <div
+                                                        className="row center"
+                                          >
+                                                        <h5
+                                                                      className="header col s12 light"
+                                                        >
+                                                                      Sometimes asking others what they think can help you to discover your own true feelings
+                                                        </h5>
+                                          </div>
+                            </div>
+              </div>
+</div>,
+          ],
+          "className": "wrapper section-3 bg",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="bg-image"
+/>,
+              "className": "bg-image-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "bg-image",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="container"
+>
+                <div
+                                className="section"
+                >
+                                <div
+                                                className="row center"
+                                >
+                                                <h5
+                                                                className="header col s12 light"
+                                                >
+                                                                Sometimes asking others what they think can help you to discover your own true feelings
+                                                </h5>
+                                </div>
+                </div>
+</div>,
+              "className": "bg-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="section"
+>
+                  <div
+                                    className="row center"
+                  >
+                                    <h5
+                                                      className="header col s12 light"
+                                    >
+                                                      Sometimes asking others what they think can help you to discover your own true feelings
+                                    </h5>
+                  </div>
+</div>,
+                "className": "container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="row center"
+>
+                    <h5
+                                        className="header col s12 light"
+                    >
+                                        Sometimes asking others what they think can help you to discover your own true feelings
+                    </h5>
+</div>,
+                  "className": "section",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h5
+                      className="header col s12 light"
+>
+                      Sometimes asking others what they think can help you to discover your own true feelings
+</h5>,
+                    "className": "row center",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Sometimes asking others what they think can help you to discover your own true feelings",
+                      "className": "header col s12 light",
+                    },
+                    "ref": null,
+                    "rendered": "Sometimes asking others what they think can help you to discover your own true feelings",
+                    "type": "h5",
+                  },
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="bg-image-container"
+>
+              <div
+                            className="bg-image"
+              />
+</div>,
+            <div
+              className="bg-container"
+>
+              <div
+                            className="container"
+              >
+                            <div
+                                          className="section"
+                            >
+                                          <div
+                                                        className="row center"
+                                          >
+                                                        <h5
+                                                                      className="header col s12 light"
+                                                        >
+                                                                      Hone your decision-making instincts by joining our community of opinionated users.
+                                                        </h5>
+                                          </div>
+                                          <div
+                                                        className="row center"
+                                          >
+                                                        <a
+                                                                      className="btn-large waves-effect waves-light"
+                                                                      href="/auth/google"
+                                                                      id="download-button"
+                                                        >
+                                                                      Get Started
+                                                        </a>
+                                          </div>
+                            </div>
+              </div>
+</div>,
+          ],
+          "className": "wrapper section-4 bg",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="bg-image"
+/>,
+              "className": "bg-image-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "bg-image",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="container"
+>
+                <div
+                                className="section"
+                >
+                                <div
+                                                className="row center"
+                                >
+                                                <h5
+                                                                className="header col s12 light"
+                                                >
+                                                                Hone your decision-making instincts by joining our community of opinionated users.
+                                                </h5>
+                                </div>
+                                <div
+                                                className="row center"
+                                >
+                                                <a
+                                                                className="btn-large waves-effect waves-light"
+                                                                href="/auth/google"
+                                                                id="download-button"
+                                                >
+                                                                Get Started
+                                                </a>
+                                </div>
+                </div>
+</div>,
+              "className": "bg-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="section"
+>
+                  <div
+                                    className="row center"
+                  >
+                                    <h5
+                                                      className="header col s12 light"
+                                    >
+                                                      Hone your decision-making instincts by joining our community of opinionated users.
+                                    </h5>
+                  </div>
+                  <div
+                                    className="row center"
+                  >
+                                    <a
+                                                      className="btn-large waves-effect waves-light"
+                                                      href="/auth/google"
+                                                      id="download-button"
+                                    >
+                                                      Get Started
+                                    </a>
+                  </div>
+</div>,
+                "className": "container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="row center"
+>
+                      <h5
+                                            className="header col s12 light"
+                      >
+                                            Hone your decision-making instincts by joining our community of opinionated users.
+                      </h5>
+</div>,
+                    <div
+                      className="row center"
+>
+                      <a
+                                            className="btn-large waves-effect waves-light"
+                                            href="/auth/google"
+                                            id="download-button"
+                      >
+                                            Get Started
+                      </a>
+</div>,
+                  ],
+                  "className": "section",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <h5
+                        className="header col s12 light"
+>
+                        Hone your decision-making instincts by joining our community of opinionated users.
+</h5>,
+                      "className": "row center",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Hone your decision-making instincts by joining our community of opinionated users.",
+                        "className": "header col s12 light",
+                      },
+                      "ref": null,
+                      "rendered": "Hone your decision-making instincts by joining our community of opinionated users.",
+                      "type": "h5",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <a
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
+>
+                        Get Started
+</a>,
+                      "className": "row center",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Get Started",
+                        "className": "btn-large waves-effect waves-light",
+                        "href": "/auth/google",
+                        "id": "download-button",
+                      },
+                      "ref": null,
+                      "rendered": "Get Started",
+                      "type": "a",
+                    },
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="wrapper section-1 bg"
+>
+            <div
+                        className="bg-image-container"
+            >
+                        <div
+                                    className="bg-image"
+                        />
+            </div>
+            <div
+                        className="bg-container"
+            >
+                        <div
+                                    className="container"
+                        >
+                                    <div
+                                                className="section"
+                                    >
+                                                <h1
+                                                            className="header center"
+                                                >
+                                                            Crowdsource Everyday Decisions
+                                                </h1>
+                                                <div
+                                                            className="row center"
+                                                >
+                                                            <h5
+                                                                        className="header col s12 light"
+                                                            >
+                                                                        A community for creating, finding, and sharing simple polls.
+                                                            </h5>
+                                                </div>
+                                                <div
+                                                            className="row center"
+                                                >
+                                                            <a
+                                                                        className="btn-large waves-effect waves-light"
+                                                                        href="/auth/google"
+                                                                        id="download-button"
+                                                            >
+                                                                        Join For Free
+                                                            </a>
+                                                </div>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+          <div
+            className="wrapper section-2"
+>
+            <div
+                        className="container"
+            >
+                        <div
+                                    className="section"
+                        >
+                                    <div
+                                                className="row"
+                                    >
+                                                <div
+                                                            className="col s12 m4"
+                                                >
+                                                            <div
+                                                                        className="icon-block"
+                                                            >
+                                                                        <h2
+                                                                                    className="center"
+                                                                        >
+                                                                                    <i
+                                                                                                className="material-icons"
+                                                                                    >
+                                                                                                create
+                                                                                    </i>
+                                                                        </h2>
+                                                                        <h5
+                                                                                    className="center"
+                                                                        >
+                                                                                    Create
+                                                                        </h5>
+                                                                        <p
+                                                                                    className="light center"
+                                                                        >
+                                                                                    Create unlimited polls using an easy-to-use modern web interface
+                                                                        </p>
+                                                            </div>
+                                                </div>
+                                                <div
+                                                            className="col s12 m4"
+                                                >
+                                                            <div
+                                                                        className="icon-block"
+                                                            >
+                                                                        <h2
+                                                                                    className="center"
+                                                                        >
+                                                                                    <i
+                                                                                                className="material-icons"
+                                                                                    >
+                                                                                                search
+                                                                                    </i>
+                                                                        </h2>
+                                                                        <h5
+                                                                                    className="center"
+                                                                        >
+                                                                                    Browse
+                                                                        </h5>
+                                                                        <p
+                                                                                    className="light center"
+                                                                        >
+                                                                                    Browse polls created by others to view and contribute your opinions
+                                                                        </p>
+                                                            </div>
+                                                </div>
+                                                <div
+                                                            className="col s12 m4"
+                                                >
+                                                            <div
+                                                                        className="icon-block"
+                                                            >
+                                                                        <h2
+                                                                                    className="center"
+                                                                        >
+                                                                                    <i
+                                                                                                className="material-icons"
+                                                                                    >
+                                                                                                share
+                                                                                    </i>
+                                                                        </h2>
+                                                                        <h5
+                                                                                    className="center"
+                                                                        >
+                                                                                    Share
+                                                                        </h5>
+                                                                        <p
+                                                                                    className="light center"
+                                                                        >
+                                                                                    Share interesting polls to spark conversation with friends
+                                                                        </p>
+                                                            </div>
+                                                </div>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+          <div
+            className="wrapper section-3 bg"
+>
+            <div
+                        className="bg-image-container"
+            >
+                        <div
+                                    className="bg-image"
+                        />
+            </div>
+            <div
+                        className="bg-container"
+            >
+                        <div
+                                    className="container"
+                        >
+                                    <div
+                                                className="section"
+                                    >
+                                                <div
+                                                            className="row center"
+                                                >
+                                                            <h5
+                                                                        className="header col s12 light"
+                                                            >
+                                                                        Sometimes asking others what they think can help you to discover your own true feelings
+                                                            </h5>
+                                                </div>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+          <div
+            className="wrapper section-4 bg"
+>
+            <div
+                        className="bg-image-container"
+            >
+                        <div
+                                    className="bg-image"
+                        />
+            </div>
+            <div
+                        className="bg-container"
+            >
+                        <div
+                                    className="container"
+                        >
+                                    <div
+                                                className="section"
+                                    >
+                                                <div
+                                                            className="row center"
+                                                >
+                                                            <h5
+                                                                        className="header col s12 light"
+                                                            >
+                                                                        Hone your decision-making instincts by joining our community of opinionated users.
+                                                            </h5>
+                                                </div>
+                                                <div
+                                                            className="row center"
+                                                >
+                                                            <a
+                                                                        className="btn-large waves-effect waves-light"
+                                                                        href="/auth/google"
+                                                                        id="download-button"
+                                                            >
+                                                                        Get Started
+                                                            </a>
+                                                </div>
+                                    </div>
+                        </div>
+            </div>
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="bg-image-container"
+>
+                <div
+                                className="bg-image"
+                />
+</div>,
+              <div
+                className="bg-container"
+>
+                <div
+                                className="container"
+                >
+                                <div
+                                                className="section"
+                                >
+                                                <h1
+                                                                className="header center"
+                                                >
+                                                                Crowdsource Everyday Decisions
+                                                </h1>
+                                                <div
+                                                                className="row center"
+                                                >
+                                                                <h5
+                                                                                className="header col s12 light"
+                                                                >
+                                                                                A community for creating, finding, and sharing simple polls.
+                                                                </h5>
+                                                </div>
+                                                <div
+                                                                className="row center"
+                                                >
+                                                                <a
+                                                                                className="btn-large waves-effect waves-light"
+                                                                                href="/auth/google"
+                                                                                id="download-button"
+                                                                >
+                                                                                Join For Free
+                                                                </a>
+                                                </div>
+                                </div>
+                </div>
+</div>,
+            ],
+            "className": "wrapper section-1 bg",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="bg-image"
+/>,
+                "className": "bg-image-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "bg-image",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="container"
+>
+                  <div
+                                    className="section"
+                  >
+                                    <h1
+                                                      className="header center"
+                                    >
+                                                      Crowdsource Everyday Decisions
+                                    </h1>
+                                    <div
+                                                      className="row center"
+                                    >
+                                                      <h5
+                                                                        className="header col s12 light"
+                                                      >
+                                                                        A community for creating, finding, and sharing simple polls.
+                                                      </h5>
+                                    </div>
+                                    <div
+                                                      className="row center"
+                                    >
+                                                      <a
+                                                                        className="btn-large waves-effect waves-light"
+                                                                        href="/auth/google"
+                                                                        id="download-button"
+                                                      >
+                                                                        Join For Free
+                                                      </a>
+                                    </div>
+                  </div>
+</div>,
+                "className": "bg-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="section"
+>
+                    <h1
+                                        className="header center"
+                    >
+                                        Crowdsource Everyday Decisions
+                    </h1>
+                    <div
+                                        className="row center"
+                    >
+                                        <h5
+                                                            className="header col s12 light"
+                                        >
+                                                            A community for creating, finding, and sharing simple polls.
+                                        </h5>
+                    </div>
+                    <div
+                                        className="row center"
+                    >
+                                        <a
+                                                            className="btn-large waves-effect waves-light"
+                                                            href="/auth/google"
+                                                            id="download-button"
+                                        >
+                                                            Join For Free
+                                        </a>
+                    </div>
+</div>,
+                  "className": "container",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h1
+                        className="header center"
+>
+                        Crowdsource Everyday Decisions
+</h1>,
+                      <div
+                        className="row center"
+>
+                        <h5
+                                                className="header col s12 light"
+                        >
+                                                A community for creating, finding, and sharing simple polls.
+                        </h5>
+</div>,
+                      <div
+                        className="row center"
+>
+                        <a
+                                                className="btn-large waves-effect waves-light"
+                                                href="/auth/google"
+                                                id="download-button"
+                        >
+                                                Join For Free
+                        </a>
+</div>,
+                    ],
+                    "className": "section",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Crowdsource Everyday Decisions",
+                        "className": "header center",
+                      },
+                      "ref": null,
+                      "rendered": "Crowdsource Everyday Decisions",
+                      "type": "h1",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <h5
+                          className="header col s12 light"
+>
+                          A community for creating, finding, and sharing simple polls.
+</h5>,
+                        "className": "row center",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "A community for creating, finding, and sharing simple polls.",
+                          "className": "header col s12 light",
+                        },
+                        "ref": null,
+                        "rendered": "A community for creating, finding, and sharing simple polls.",
+                        "type": "h5",
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          className="btn-large waves-effect waves-light"
+                          href="/auth/google"
+                          id="download-button"
+>
+                          Join For Free
+</a>,
+                        "className": "row center",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Join For Free",
+                          "className": "btn-large waves-effect waves-light",
+                          "href": "/auth/google",
+                          "id": "download-button",
+                        },
+                        "ref": null,
+                        "rendered": "Join For Free",
+                        "type": "a",
+                      },
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="container"
+>
+              <div
+                            className="section"
+              >
+                            <div
+                                          className="row"
+                            >
+                                          <div
+                                                        className="col s12 m4"
+                                          >
+                                                        <div
+                                                                      className="icon-block"
+                                                        >
+                                                                      <h2
+                                                                                    className="center"
+                                                                      >
+                                                                                    <i
+                                                                                                  className="material-icons"
+                                                                                    >
+                                                                                                  create
+                                                                                    </i>
+                                                                      </h2>
+                                                                      <h5
+                                                                                    className="center"
+                                                                      >
+                                                                                    Create
+                                                                      </h5>
+                                                                      <p
+                                                                                    className="light center"
+                                                                      >
+                                                                                    Create unlimited polls using an easy-to-use modern web interface
+                                                                      </p>
+                                                        </div>
+                                          </div>
+                                          <div
+                                                        className="col s12 m4"
+                                          >
+                                                        <div
+                                                                      className="icon-block"
+                                                        >
+                                                                      <h2
+                                                                                    className="center"
+                                                                      >
+                                                                                    <i
+                                                                                                  className="material-icons"
+                                                                                    >
+                                                                                                  search
+                                                                                    </i>
+                                                                      </h2>
+                                                                      <h5
+                                                                                    className="center"
+                                                                      >
+                                                                                    Browse
+                                                                      </h5>
+                                                                      <p
+                                                                                    className="light center"
+                                                                      >
+                                                                                    Browse polls created by others to view and contribute your opinions
+                                                                      </p>
+                                                        </div>
+                                          </div>
+                                          <div
+                                                        className="col s12 m4"
+                                          >
+                                                        <div
+                                                                      className="icon-block"
+                                                        >
+                                                                      <h2
+                                                                                    className="center"
+                                                                      >
+                                                                                    <i
+                                                                                                  className="material-icons"
+                                                                                    >
+                                                                                                  share
+                                                                                    </i>
+                                                                      </h2>
+                                                                      <h5
+                                                                                    className="center"
+                                                                      >
+                                                                                    Share
+                                                                      </h5>
+                                                                      <p
+                                                                                    className="light center"
+                                                                      >
+                                                                                    Share interesting polls to spark conversation with friends
+                                                                      </p>
+                                                        </div>
+                                          </div>
+                            </div>
+              </div>
+</div>,
+            "className": "wrapper section-2",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="section"
+>
+                <div
+                                className="row"
+                >
+                                <div
+                                                className="col s12 m4"
+                                >
+                                                <div
+                                                                className="icon-block"
+                                                >
+                                                                <h2
+                                                                                className="center"
+                                                                >
+                                                                                <i
+                                                                                                className="material-icons"
+                                                                                >
+                                                                                                create
+                                                                                </i>
+                                                                </h2>
+                                                                <h5
+                                                                                className="center"
+                                                                >
+                                                                                Create
+                                                                </h5>
+                                                                <p
+                                                                                className="light center"
+                                                                >
+                                                                                Create unlimited polls using an easy-to-use modern web interface
+                                                                </p>
+                                                </div>
+                                </div>
+                                <div
+                                                className="col s12 m4"
+                                >
+                                                <div
+                                                                className="icon-block"
+                                                >
+                                                                <h2
+                                                                                className="center"
+                                                                >
+                                                                                <i
+                                                                                                className="material-icons"
+                                                                                >
+                                                                                                search
+                                                                                </i>
+                                                                </h2>
+                                                                <h5
+                                                                                className="center"
+                                                                >
+                                                                                Browse
+                                                                </h5>
+                                                                <p
+                                                                                className="light center"
+                                                                >
+                                                                                Browse polls created by others to view and contribute your opinions
+                                                                </p>
+                                                </div>
+                                </div>
+                                <div
+                                                className="col s12 m4"
+                                >
+                                                <div
+                                                                className="icon-block"
+                                                >
+                                                                <h2
+                                                                                className="center"
+                                                                >
+                                                                                <i
+                                                                                                className="material-icons"
+                                                                                >
+                                                                                                share
+                                                                                </i>
+                                                                </h2>
+                                                                <h5
+                                                                                className="center"
+                                                                >
+                                                                                Share
+                                                                </h5>
+                                                                <p
+                                                                                className="light center"
+                                                                >
+                                                                                Share interesting polls to spark conversation with friends
+                                                                </p>
+                                                </div>
+                                </div>
+                </div>
+</div>,
+              "className": "container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="row"
+>
+                  <div
+                                    className="col s12 m4"
+                  >
+                                    <div
+                                                      className="icon-block"
+                                    >
+                                                      <h2
+                                                                        className="center"
+                                                      >
+                                                                        <i
+                                                                                          className="material-icons"
+                                                                        >
+                                                                                          create
+                                                                        </i>
+                                                      </h2>
+                                                      <h5
+                                                                        className="center"
+                                                      >
+                                                                        Create
+                                                      </h5>
+                                                      <p
+                                                                        className="light center"
+                                                      >
+                                                                        Create unlimited polls using an easy-to-use modern web interface
+                                                      </p>
+                                    </div>
+                  </div>
+                  <div
+                                    className="col s12 m4"
+                  >
+                                    <div
+                                                      className="icon-block"
+                                    >
+                                                      <h2
+                                                                        className="center"
+                                                      >
+                                                                        <i
+                                                                                          className="material-icons"
+                                                                        >
+                                                                                          search
+                                                                        </i>
+                                                      </h2>
+                                                      <h5
+                                                                        className="center"
+                                                      >
+                                                                        Browse
+                                                      </h5>
+                                                      <p
+                                                                        className="light center"
+                                                      >
+                                                                        Browse polls created by others to view and contribute your opinions
+                                                      </p>
+                                    </div>
+                  </div>
+                  <div
+                                    className="col s12 m4"
+                  >
+                                    <div
+                                                      className="icon-block"
+                                    >
+                                                      <h2
+                                                                        className="center"
+                                                      >
+                                                                        <i
+                                                                                          className="material-icons"
+                                                                        >
+                                                                                          share
+                                                                        </i>
+                                                      </h2>
+                                                      <h5
+                                                                        className="center"
+                                                      >
+                                                                        Share
+                                                      </h5>
+                                                      <p
+                                                                        className="light center"
+                                                      >
+                                                                        Share interesting polls to spark conversation with friends
+                                                      </p>
+                                    </div>
+                  </div>
+</div>,
+                "className": "section",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="col s12 m4"
+>
+                      <div
+                                            className="icon-block"
+                      >
+                                            <h2
+                                                                  className="center"
+                                            >
+                                                                  <i
+                                                                                        className="material-icons"
+                                                                  >
+                                                                                        create
+                                                                  </i>
+                                            </h2>
+                                            <h5
+                                                                  className="center"
+                                            >
+                                                                  Create
+                                            </h5>
+                                            <p
+                                                                  className="light center"
+                                            >
+                                                                  Create unlimited polls using an easy-to-use modern web interface
+                                            </p>
+                      </div>
+</div>,
+                    <div
+                      className="col s12 m4"
+>
+                      <div
+                                            className="icon-block"
+                      >
+                                            <h2
+                                                                  className="center"
+                                            >
+                                                                  <i
+                                                                                        className="material-icons"
+                                                                  >
+                                                                                        search
+                                                                  </i>
+                                            </h2>
+                                            <h5
+                                                                  className="center"
+                                            >
+                                                                  Browse
+                                            </h5>
+                                            <p
+                                                                  className="light center"
+                                            >
+                                                                  Browse polls created by others to view and contribute your opinions
+                                            </p>
+                      </div>
+</div>,
+                    <div
+                      className="col s12 m4"
+>
+                      <div
+                                            className="icon-block"
+                      >
+                                            <h2
+                                                                  className="center"
+                                            >
+                                                                  <i
+                                                                                        className="material-icons"
+                                                                  >
+                                                                                        share
+                                                                  </i>
+                                            </h2>
+                                            <h5
+                                                                  className="center"
+                                            >
+                                                                  Share
+                                            </h5>
+                                            <p
+                                                                  className="light center"
+                                            >
+                                                                  Share interesting polls to spark conversation with friends
+                                            </p>
+                      </div>
+</div>,
+                  ],
+                  "className": "row",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <div
+                        className="icon-block"
+>
+                        <h2
+                                                className="center"
+                        >
+                                                <i
+                                                                        className="material-icons"
+                                                >
+                                                                        create
+                                                </i>
+                        </h2>
+                        <h5
+                                                className="center"
+                        >
+                                                Create
+                        </h5>
+                        <p
+                                                className="light center"
+                        >
+                                                Create unlimited polls using an easy-to-use modern web interface
+                        </p>
+</div>,
+                      "className": "col s12 m4",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h2
+                            className="center"
+>
+                            <i
+                                                        className="material-icons"
+                            >
+                                                        create
+                            </i>
+</h2>,
+                          <h5
+                            className="center"
+>
+                            Create
+</h5>,
+                          <p
+                            className="light center"
+>
+                            Create unlimited polls using an easy-to-use modern web interface
+</p>,
+                        ],
+                        "className": "icon-block",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <i
+                              className="material-icons"
+>
+                              create
+</i>,
+                            "className": "center",
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "create",
+                              "className": "material-icons",
+                            },
+                            "ref": null,
+                            "rendered": "create",
+                            "type": "i",
+                          },
+                          "type": "h2",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Create",
+                            "className": "center",
+                          },
+                          "ref": null,
+                          "rendered": "Create",
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Create unlimited polls using an easy-to-use modern web interface",
+                            "className": "light center",
+                          },
+                          "ref": null,
+                          "rendered": "Create unlimited polls using an easy-to-use modern web interface",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <div
+                        className="icon-block"
+>
+                        <h2
+                                                className="center"
+                        >
+                                                <i
+                                                                        className="material-icons"
+                                                >
+                                                                        search
+                                                </i>
+                        </h2>
+                        <h5
+                                                className="center"
+                        >
+                                                Browse
+                        </h5>
+                        <p
+                                                className="light center"
+                        >
+                                                Browse polls created by others to view and contribute your opinions
+                        </p>
+</div>,
+                      "className": "col s12 m4",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h2
+                            className="center"
+>
+                            <i
+                                                        className="material-icons"
+                            >
+                                                        search
+                            </i>
+</h2>,
+                          <h5
+                            className="center"
+>
+                            Browse
+</h5>,
+                          <p
+                            className="light center"
+>
+                            Browse polls created by others to view and contribute your opinions
+</p>,
+                        ],
+                        "className": "icon-block",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <i
+                              className="material-icons"
+>
+                              search
+</i>,
+                            "className": "center",
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "search",
+                              "className": "material-icons",
+                            },
+                            "ref": null,
+                            "rendered": "search",
+                            "type": "i",
+                          },
+                          "type": "h2",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Browse",
+                            "className": "center",
+                          },
+                          "ref": null,
+                          "rendered": "Browse",
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Browse polls created by others to view and contribute your opinions",
+                            "className": "light center",
+                          },
+                          "ref": null,
+                          "rendered": "Browse polls created by others to view and contribute your opinions",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <div
+                        className="icon-block"
+>
+                        <h2
+                                                className="center"
+                        >
+                                                <i
+                                                                        className="material-icons"
+                                                >
+                                                                        share
+                                                </i>
+                        </h2>
+                        <h5
+                                                className="center"
+                        >
+                                                Share
+                        </h5>
+                        <p
+                                                className="light center"
+                        >
+                                                Share interesting polls to spark conversation with friends
+                        </p>
+</div>,
+                      "className": "col s12 m4",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h2
+                            className="center"
+>
+                            <i
+                                                        className="material-icons"
+                            >
+                                                        share
+                            </i>
+</h2>,
+                          <h5
+                            className="center"
+>
+                            Share
+</h5>,
+                          <p
+                            className="light center"
+>
+                            Share interesting polls to spark conversation with friends
+</p>,
+                        ],
+                        "className": "icon-block",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <i
+                              className="material-icons"
+>
+                              share
+</i>,
+                            "className": "center",
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "share",
+                              "className": "material-icons",
+                            },
+                            "ref": null,
+                            "rendered": "share",
+                            "type": "i",
+                          },
+                          "type": "h2",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Share",
+                            "className": "center",
+                          },
+                          "ref": null,
+                          "rendered": "Share",
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Share interesting polls to spark conversation with friends",
+                            "className": "light center",
+                          },
+                          "ref": null,
+                          "rendered": "Share interesting polls to spark conversation with friends",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+            "type": "div",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="bg-image-container"
+>
+                <div
+                                className="bg-image"
+                />
+</div>,
+              <div
+                className="bg-container"
+>
+                <div
+                                className="container"
+                >
+                                <div
+                                                className="section"
+                                >
+                                                <div
+                                                                className="row center"
+                                                >
+                                                                <h5
+                                                                                className="header col s12 light"
+                                                                >
+                                                                                Sometimes asking others what they think can help you to discover your own true feelings
+                                                                </h5>
+                                                </div>
+                                </div>
+                </div>
+</div>,
+            ],
+            "className": "wrapper section-3 bg",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="bg-image"
+/>,
+                "className": "bg-image-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "bg-image",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="container"
+>
+                  <div
+                                    className="section"
+                  >
+                                    <div
+                                                      className="row center"
+                                    >
+                                                      <h5
+                                                                        className="header col s12 light"
+                                                      >
+                                                                        Sometimes asking others what they think can help you to discover your own true feelings
+                                                      </h5>
+                                    </div>
+                  </div>
+</div>,
+                "className": "bg-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="section"
+>
+                    <div
+                                        className="row center"
+                    >
+                                        <h5
+                                                            className="header col s12 light"
+                                        >
+                                                            Sometimes asking others what they think can help you to discover your own true feelings
+                                        </h5>
+                    </div>
+</div>,
+                  "className": "container",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="row center"
+>
+                      <h5
+                                            className="header col s12 light"
+                      >
+                                            Sometimes asking others what they think can help you to discover your own true feelings
+                      </h5>
+</div>,
+                    "className": "section",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <h5
+                        className="header col s12 light"
+>
+                        Sometimes asking others what they think can help you to discover your own true feelings
+</h5>,
+                      "className": "row center",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Sometimes asking others what they think can help you to discover your own true feelings",
+                        "className": "header col s12 light",
+                      },
+                      "ref": null,
+                      "rendered": "Sometimes asking others what they think can help you to discover your own true feelings",
+                      "type": "h5",
+                    },
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="bg-image-container"
+>
+                <div
+                                className="bg-image"
+                />
+</div>,
+              <div
+                className="bg-container"
+>
+                <div
+                                className="container"
+                >
+                                <div
+                                                className="section"
+                                >
+                                                <div
+                                                                className="row center"
+                                                >
+                                                                <h5
+                                                                                className="header col s12 light"
+                                                                >
+                                                                                Hone your decision-making instincts by joining our community of opinionated users.
+                                                                </h5>
+                                                </div>
+                                                <div
+                                                                className="row center"
+                                                >
+                                                                <a
+                                                                                className="btn-large waves-effect waves-light"
+                                                                                href="/auth/google"
+                                                                                id="download-button"
+                                                                >
+                                                                                Get Started
+                                                                </a>
+                                                </div>
+                                </div>
+                </div>
+</div>,
+            ],
+            "className": "wrapper section-4 bg",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="bg-image"
+/>,
+                "className": "bg-image-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "bg-image",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="container"
+>
+                  <div
+                                    className="section"
+                  >
+                                    <div
+                                                      className="row center"
+                                    >
+                                                      <h5
+                                                                        className="header col s12 light"
+                                                      >
+                                                                        Hone your decision-making instincts by joining our community of opinionated users.
+                                                      </h5>
+                                    </div>
+                                    <div
+                                                      className="row center"
+                                    >
+                                                      <a
+                                                                        className="btn-large waves-effect waves-light"
+                                                                        href="/auth/google"
+                                                                        id="download-button"
+                                                      >
+                                                                        Get Started
+                                                      </a>
+                                    </div>
+                  </div>
+</div>,
+                "className": "bg-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="section"
+>
+                    <div
+                                        className="row center"
+                    >
+                                        <h5
+                                                            className="header col s12 light"
+                                        >
+                                                            Hone your decision-making instincts by joining our community of opinionated users.
+                                        </h5>
+                    </div>
+                    <div
+                                        className="row center"
+                    >
+                                        <a
+                                                            className="btn-large waves-effect waves-light"
+                                                            href="/auth/google"
+                                                            id="download-button"
+                                        >
+                                                            Get Started
+                                        </a>
+                    </div>
+</div>,
+                  "className": "container",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="row center"
+>
+                        <h5
+                                                className="header col s12 light"
+                        >
+                                                Hone your decision-making instincts by joining our community of opinionated users.
+                        </h5>
+</div>,
+                      <div
+                        className="row center"
+>
+                        <a
+                                                className="btn-large waves-effect waves-light"
+                                                href="/auth/google"
+                                                id="download-button"
+                        >
+                                                Get Started
+                        </a>
+</div>,
+                    ],
+                    "className": "section",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <h5
+                          className="header col s12 light"
+>
+                          Hone your decision-making instincts by joining our community of opinionated users.
+</h5>,
+                        "className": "row center",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Hone your decision-making instincts by joining our community of opinionated users.",
+                          "className": "header col s12 light",
+                        },
+                        "ref": null,
+                        "rendered": "Hone your decision-making instincts by joining our community of opinionated users.",
+                        "type": "h5",
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          className="btn-large waves-effect waves-light"
+                          href="/auth/google"
+                          id="download-button"
+>
+                          Get Started
+</a>,
+                        "className": "row center",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Get Started",
+                          "className": "btn-large waves-effect waves-light",
+                          "href": "/auth/google",
+                          "id": "download-button",
+                        },
+                        "ref": null,
+                        "rendered": "Get Started",
+                        "type": "a",
+                      },
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

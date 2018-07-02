@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './Landing.css';
 
-const Landing = props => {
+export const Landing = props => {
   if (props.auth) {
     props.history.push('/polls');
   }
