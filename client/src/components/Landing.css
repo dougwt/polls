@@ -47,11 +47,10 @@
 
 .section-2,
 .section-3 {
-  min-height: 25vh;
+  min-height: 30vh;
 }
 
-.section-4,
-.section-5 {
+.section-4 {
   min-height: 40vh;
 }
 
@@ -90,24 +89,13 @@
   background-color: #25547d;
   color: #fcfcfc;
 }
-.section-4 h2,
-.section-4 h3,
-.section-4 h4,
-.section-4 h5 {
-  color: #f9cd69;
-}
 
-.section-5 .btn-large {
+.section-4 .btn-large {
   background-color: #56d3a0;
   color: #fcfcfc;
 }
 
-.section-5 .btn-large:hover {
+.section-4 .btn-large:hover {
   background-color: #e04a6e;
   color: #fcfcfc;
-}
-
-.section-5 .bg-image {
-  background-image: radial-gradient(transparent, rgba(252, 252, 252, 0.7)),
-    url('../images/image3.jpg');
 }

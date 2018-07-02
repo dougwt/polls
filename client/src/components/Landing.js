@@ -108,31 +108,7 @@ const Landing = props => {
       </div>
 
       {/* Section 4 */}
-      <div className="wrapper section-4">
-        <div className="container">
-          <div className="section">
-            <div className="row">
-              <div className="col s12 center">
-                <h3>
-                  <i className="mdi-content-send brown-text" />
-                </h3>
-                <h4>Contact Us</h4>
-                <p className="left-align light">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eligendi necessitatibus numquam, dolores qui facere magni
-                  vitae odio laboriosam architecto nulla modi earum a voluptates
-                  libero cum, ad dolore omnis voluptatem consequatur ea,
-                  blanditiis velit aliquam adipisci est. Consectetur, dolores,
-                  cum!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Section 5 */}
-      <div className="wrapper section-5 bg">
+      <div className="wrapper section-4 bg">
         <div className="bg-image-container">
           <div className="bg-image" />
         </div>
