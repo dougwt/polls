@@ -9,7 +9,9 @@
     "test": "nodemon --exec 'mocha -R min'",
     "client": "npm run start --prefix client",
     "init": "npm install && cd client && npm install",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test-travis":
+      "NODE_ENV=test CI=true cd client && npm install && npm run test-travis -- --coverage"
   },
   "author": "",
   "license": "ISC",

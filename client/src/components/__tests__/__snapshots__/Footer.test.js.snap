@@ -33,9 +33,30 @@ ShallowWrapper {
                                         Simple Polls
                               </h5>
                               <p
-                                        className="grey-text text-lighten-4"
+                                        className="grey-text text-lighten-3"
                               >
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!
+                                        <strong>
+                                                  Hello!
+                                        </strong>
+                                         Thank you for visiting. This webapp was created as a practice exercise for
+                                         
+                                        <a
+                                                  href="https://dougwt.com"
+                                        >
+                                                  my portfolio
+                                        </a>
+                                         and should be considered very 
+                                        <em>
+                                                  experimental
+                                        </em>
+                                        . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                                         
+                                        <a
+                                                  href="https://github.com/dougwt/polls"
+                                        >
+                                                  GitHub repository
+                                        </a>
+                                        .
                               </p>
                     </div>
                     <div
@@ -69,14 +90,6 @@ ShallowWrapper {
                                                             href="#!"
                                                   >
                                                             Create a Poll
-                                                  </a>
-                                        </li>
-                                        <li>
-                                                  <a
-                                                            className="white-text"
-                                                            href="#!"
-                                                  >
-                                                            GitHub Repo
                                                   </a>
                                         </li>
                               </ul>
@@ -127,9 +140,30 @@ ShallowWrapper {
                                     Simple Polls
                         </h5>
                         <p
-                                    className="grey-text text-lighten-4"
+                                    className="grey-text text-lighten-3"
                         >
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!
+                                    <strong>
+                                                Hello!
+                                    </strong>
+                                     Thank you for visiting. This webapp was created as a practice exercise for
+                                     
+                                    <a
+                                                href="https://dougwt.com"
+                                    >
+                                                my portfolio
+                                    </a>
+                                     and should be considered very 
+                                    <em>
+                                                experimental
+                                    </em>
+                                    . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                                     
+                                    <a
+                                                href="https://github.com/dougwt/polls"
+                                    >
+                                                GitHub repository
+                                    </a>
+                                    .
                         </p>
             </div>
             <div
@@ -165,14 +199,6 @@ ShallowWrapper {
                                                             Create a Poll
                                                 </a>
                                     </li>
-                                    <li>
-                                                <a
-                                                            className="white-text"
-                                                            href="#!"
-                                                >
-                                                            GitHub Repo
-                                                </a>
-                                    </li>
                         </ul>
             </div>
 </div>,
@@ -194,9 +220,30 @@ ShallowWrapper {
                                 Simple Polls
                 </h5>
                 <p
-                                className="grey-text text-lighten-4"
+                                className="grey-text text-lighten-3"
                 >
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!
+                                <strong>
+                                                Hello!
+                                </strong>
+                                 Thank you for visiting. This webapp was created as a practice exercise for
+                                 
+                                <a
+                                                href="https://dougwt.com"
+                                >
+                                                my portfolio
+                                </a>
+                                 and should be considered very 
+                                <em>
+                                                experimental
+                                </em>
+                                . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                                 
+                                <a
+                                                href="https://github.com/dougwt/polls"
+                                >
+                                                GitHub repository
+                                </a>
+                                .
                 </p>
 </div>,
               <div
@@ -232,14 +279,6 @@ ShallowWrapper {
                                                                 Create a Poll
                                                 </a>
                                 </li>
-                                <li>
-                                                <a
-                                                                className="white-text"
-                                                                href="#!"
-                                                >
-                                                                GitHub Repo
-                                                </a>
-                                </li>
                 </ul>
 </div>,
             ],
@@ -259,9 +298,30 @@ ShallowWrapper {
                     Simple Polls
 </h5>,
                   <p
-                    className="grey-text text-lighten-4"
+                    className="grey-text text-lighten-3"
 >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!
+                    <strong>
+                                        Hello!
+                    </strong>
+                     Thank you for visiting. This webapp was created as a practice exercise for
+                     
+                    <a
+                                        href="https://dougwt.com"
+                    >
+                                        my portfolio
+                    </a>
+                     and should be considered very 
+                    <em>
+                                        experimental
+                    </em>
+                    . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                     
+                    <a
+                                        href="https://github.com/dougwt/polls"
+                    >
+                                        GitHub repository
+                    </a>
+                    .
 </p>,
                 ],
                 "className": "col l9 s12",
@@ -285,11 +345,87 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!",
-                    "className": "grey-text text-lighten-4",
+                    "children": Array [
+                      <strong>
+                        Hello!
+</strong>,
+                      " Thank you for visiting. This webapp was created as a practice exercise for",
+                      " ",
+                      <a
+                        href="https://dougwt.com"
+>
+                        my portfolio
+</a>,
+                      " and should be considered very ",
+                      <em>
+                        experimental
+</em>,
+                      ". It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the",
+                      " ",
+                      <a
+                        href="https://github.com/dougwt/polls"
+>
+                        GitHub repository
+</a>,
+                      ".",
+                    ],
+                    "className": "grey-text text-lighten-3",
                   },
                   "ref": null,
-                  "rendered": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!",
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Hello!",
+                      },
+                      "ref": null,
+                      "rendered": "Hello!",
+                      "type": "strong",
+                    },
+                    " Thank you for visiting. This webapp was created as a practice exercise for",
+                    " ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "my portfolio",
+                        "href": "https://dougwt.com",
+                      },
+                      "ref": null,
+                      "rendered": "my portfolio",
+                      "type": "a",
+                    },
+                    " and should be considered very ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "experimental",
+                      },
+                      "ref": null,
+                      "rendered": "experimental",
+                      "type": "em",
+                    },
+                    ". It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the",
+                    " ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "GitHub repository",
+                        "href": "https://github.com/dougwt/polls",
+                      },
+                      "ref": null,
+                      "rendered": "GitHub repository",
+                      "type": "a",
+                    },
+                    ".",
+                  ],
                   "type": "p",
                 },
               ],
@@ -329,14 +465,6 @@ ShallowWrapper {
                                                             href="#!"
                                         >
                                                             Create a Poll
-                                        </a>
-                    </li>
-                    <li>
-                                        <a
-                                                            className="white-text"
-                                                            href="#!"
-                                        >
-                                                            GitHub Repo
                                         </a>
                     </li>
 </ul>,
@@ -385,14 +513,6 @@ ShallowWrapper {
                                                 href="#!"
                         >
                                                 Create a Poll
-                        </a>
-</li>,
-                      <li>
-                        <a
-                                                className="white-text"
-                                                href="#!"
-                        >
-                                                GitHub Repo
                         </a>
 </li>,
                     ],
@@ -479,34 +599,6 @@ ShallowWrapper {
                         },
                         "ref": null,
                         "rendered": "Create a Poll",
-                        "type": "a",
-                      },
-                      "type": "li",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <a
-                          className="white-text"
-                          href="#!"
->
-                          GitHub Repo
-</a>,
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "GitHub Repo",
-                          "className": "white-text",
-                          "href": "#!",
-                        },
-                        "ref": null,
-                        "rendered": "GitHub Repo",
                         "type": "a",
                       },
                       "type": "li",
@@ -631,9 +723,30 @@ ShallowWrapper {
                                                 Simple Polls
                                     </h5>
                                     <p
-                                                className="grey-text text-lighten-4"
+                                                className="grey-text text-lighten-3"
                                     >
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!
+                                                <strong>
+                                                            Hello!
+                                                </strong>
+                                                 Thank you for visiting. This webapp was created as a practice exercise for
+                                                 
+                                                <a
+                                                            href="https://dougwt.com"
+                                                >
+                                                            my portfolio
+                                                </a>
+                                                 and should be considered very 
+                                                <em>
+                                                            experimental
+                                                </em>
+                                                . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                                                 
+                                                <a
+                                                            href="https://github.com/dougwt/polls"
+                                                >
+                                                            GitHub repository
+                                                </a>
+                                                .
                                     </p>
                         </div>
                         <div
@@ -667,14 +780,6 @@ ShallowWrapper {
                                                                         href="#!"
                                                             >
                                                                         Create a Poll
-                                                            </a>
-                                                </li>
-                                                <li>
-                                                            <a
-                                                                        className="white-text"
-                                                                        href="#!"
-                                                            >
-                                                                        GitHub Repo
                                                             </a>
                                                 </li>
                                     </ul>
@@ -725,9 +830,30 @@ ShallowWrapper {
                                           Simple Polls
                             </h5>
                             <p
-                                          className="grey-text text-lighten-4"
+                                          className="grey-text text-lighten-3"
                             >
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!
+                                          <strong>
+                                                        Hello!
+                                          </strong>
+                                           Thank you for visiting. This webapp was created as a practice exercise for
+                                           
+                                          <a
+                                                        href="https://dougwt.com"
+                                          >
+                                                        my portfolio
+                                          </a>
+                                           and should be considered very 
+                                          <em>
+                                                        experimental
+                                          </em>
+                                          . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                                           
+                                          <a
+                                                        href="https://github.com/dougwt/polls"
+                                          >
+                                                        GitHub repository
+                                          </a>
+                                          .
                             </p>
               </div>
               <div
@@ -763,14 +889,6 @@ ShallowWrapper {
                                                                       Create a Poll
                                                         </a>
                                           </li>
-                                          <li>
-                                                        <a
-                                                                      className="white-text"
-                                                                      href="#!"
-                                                        >
-                                                                      GitHub Repo
-                                                        </a>
-                                          </li>
                             </ul>
               </div>
 </div>,
@@ -792,9 +910,30 @@ ShallowWrapper {
                                     Simple Polls
                   </h5>
                   <p
-                                    className="grey-text text-lighten-4"
+                                    className="grey-text text-lighten-3"
                   >
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!
+                                    <strong>
+                                                      Hello!
+                                    </strong>
+                                     Thank you for visiting. This webapp was created as a practice exercise for
+                                     
+                                    <a
+                                                      href="https://dougwt.com"
+                                    >
+                                                      my portfolio
+                                    </a>
+                                     and should be considered very 
+                                    <em>
+                                                      experimental
+                                    </em>
+                                    . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                                     
+                                    <a
+                                                      href="https://github.com/dougwt/polls"
+                                    >
+                                                      GitHub repository
+                                    </a>
+                                    .
                   </p>
 </div>,
                 <div
@@ -830,14 +969,6 @@ ShallowWrapper {
                                                                         Create a Poll
                                                       </a>
                                     </li>
-                                    <li>
-                                                      <a
-                                                                        className="white-text"
-                                                                        href="#!"
-                                                      >
-                                                                        GitHub Repo
-                                                      </a>
-                                    </li>
                   </ul>
 </div>,
               ],
@@ -857,9 +988,30 @@ ShallowWrapper {
                       Simple Polls
 </h5>,
                     <p
-                      className="grey-text text-lighten-4"
+                      className="grey-text text-lighten-3"
 >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!
+                      <strong>
+                                            Hello!
+                      </strong>
+                       Thank you for visiting. This webapp was created as a practice exercise for
+                       
+                      <a
+                                            href="https://dougwt.com"
+                      >
+                                            my portfolio
+                      </a>
+                       and should be considered very 
+                      <em>
+                                            experimental
+                      </em>
+                      . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                       
+                      <a
+                                            href="https://github.com/dougwt/polls"
+                      >
+                                            GitHub repository
+                      </a>
+                      .
 </p>,
                   ],
                   "className": "col l9 s12",
@@ -883,11 +1035,87 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!",
-                      "className": "grey-text text-lighten-4",
+                      "children": Array [
+                        <strong>
+                          Hello!
+</strong>,
+                        " Thank you for visiting. This webapp was created as a practice exercise for",
+                        " ",
+                        <a
+                          href="https://dougwt.com"
+>
+                          my portfolio
+</a>,
+                        " and should be considered very ",
+                        <em>
+                          experimental
+</em>,
+                        ". It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the",
+                        " ",
+                        <a
+                          href="https://github.com/dougwt/polls"
+>
+                          GitHub repository
+</a>,
+                        ".",
+                      ],
+                      "className": "grey-text text-lighten-3",
                     },
                     "ref": null,
-                    "rendered": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos earum veritatis numquam beatae harum fuga culpa itaque quaerat minus omnis accusantium ipsam aperiam esse mollitia, tempore porro, a quasi libero!",
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Hello!",
+                        },
+                        "ref": null,
+                        "rendered": "Hello!",
+                        "type": "strong",
+                      },
+                      " Thank you for visiting. This webapp was created as a practice exercise for",
+                      " ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "my portfolio",
+                          "href": "https://dougwt.com",
+                        },
+                        "ref": null,
+                        "rendered": "my portfolio",
+                        "type": "a",
+                      },
+                      " and should be considered very ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "experimental",
+                        },
+                        "ref": null,
+                        "rendered": "experimental",
+                        "type": "em",
+                      },
+                      ". It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the",
+                      " ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "GitHub repository",
+                          "href": "https://github.com/dougwt/polls",
+                        },
+                        "ref": null,
+                        "rendered": "GitHub repository",
+                        "type": "a",
+                      },
+                      ".",
+                    ],
                     "type": "p",
                   },
                 ],
@@ -927,14 +1155,6 @@ ShallowWrapper {
                                                                   href="#!"
                                             >
                                                                   Create a Poll
-                                            </a>
-                      </li>
-                      <li>
-                                            <a
-                                                                  className="white-text"
-                                                                  href="#!"
-                                            >
-                                                                  GitHub Repo
                                             </a>
                       </li>
 </ul>,
@@ -983,14 +1203,6 @@ ShallowWrapper {
                                                     href="#!"
                           >
                                                     Create a Poll
-                          </a>
-</li>,
-                        <li>
-                          <a
-                                                    className="white-text"
-                                                    href="#!"
-                          >
-                                                    GitHub Repo
                           </a>
 </li>,
                       ],
@@ -1077,34 +1289,6 @@ ShallowWrapper {
                           },
                           "ref": null,
                           "rendered": "Create a Poll",
-                          "type": "a",
-                        },
-                        "type": "li",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": <a
-                            className="white-text"
-                            href="#!"
->
-                            GitHub Repo
-</a>,
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": "GitHub Repo",
-                            "className": "white-text",
-                            "href": "#!",
-                          },
-                          "ref": null,
-                          "rendered": "GitHub Repo",
                           "type": "a",
                         },
                         "type": "li",
