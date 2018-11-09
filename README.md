@@ -15,13 +15,13 @@ If you would like to run a local instance of this app in developer mode, the eas
 
 2.  Install the required JavaScript dependencies using npm
 
-`npm install`
+`npm run init`
 
 ### Running the API server
 
 To quickly start up an instance of the microservice:
 
-`npm start`
+`npm run server`
 
 ### Running the API server tests
 
@@ -33,7 +33,7 @@ To run the included tests:
 
 To quickly start up an instance of the microservice:
 
-`cd client && npm start`
+`npm run client`
 
 ### Running the Client tests
 
