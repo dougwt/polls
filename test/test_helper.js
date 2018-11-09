@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 before(done => {
-  mongoose.connect('mongodb://localhost/polls_test');
+  mongoose.connect(
+    'mongodb://localhost/polls_test',
+    { useNewUrlParser: true }
+  );
   mongoose.connection
     .once('open', () => done())
     .on('error', error => console.warn('Warning:', error));
