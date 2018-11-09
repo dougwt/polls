@@ -29,7 +29,6 @@
     "mocha": "^5.2.0",
     "passport-mock": "0.0.3",
     "prettier": "^1.15.1",
-    "prettier-eslint": "^8.8.2",
     "sinon": "^5.1.1",
     "supertest": "^3.3.0"
   }

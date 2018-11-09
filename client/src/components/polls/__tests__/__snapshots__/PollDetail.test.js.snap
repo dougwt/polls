@@ -2,30 +2,30 @@
 
 exports[`PollDetail renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PollDetail
     disabled={false}
     formValues={
-        Object {
-            "choices": Array [
-              0,
-              1,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-            ],
-            "question": "Who is your favorite Starfleet captain?",
-          }
+      Object {
+        "choices": Array [
+          0,
+          1,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+        ],
+        "question": "Who is your favorite Starfleet captain?",
+      }
     }
-    votePoll={[Function]}
+    votePoll={[MockFunction]}
     waiting={false}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -37,30 +37,27 @@ ShallowWrapper {
       "children": <Card
         className="darken-1"
         title="Who is your favorite Starfleet captain?"
->
+      >
         <form
-                className="poll"
-                onSubmit={[Function]}
+          className="poll"
+          onSubmit={[Function]}
         >
-                <div
-                        className="choices"
-                >
-                        
-                </div>
-                <Row
-                        className="center-align"
-                >
-                        <Button
-                                className="teal"
-                                disabled={false}
-                                node="button"
-                                onClick={undefined}
-                        >
-                                Vote
-                        </Button>
-                </Row>
+          <div
+            className="choices"
+          />
+          <Row
+            className="center-align"
+          >
+            <Button
+              className="teal"
+              disabled={false}
+              node="button"
+            >
+              Vote
+            </Button>
+          </Row>
         </form>
-</Card>,
+      </Card>,
       "className": "container",
     },
     "ref": null,
@@ -72,25 +69,22 @@ ShallowWrapper {
         "children": <form
           className="poll"
           onSubmit={[Function]}
->
+        >
           <div
-                    className="choices"
-          >
-                    
-          </div>
+            className="choices"
+          />
           <Row
-                    className="center-align"
+            className="center-align"
           >
-                    <Button
-                              className="teal"
-                              disabled={false}
-                              node="button"
-                              onClick={undefined}
-                    >
-                              Vote
-                    </Button>
+            <Button
+              className="teal"
+              disabled={false}
+              node="button"
+            >
+              Vote
+            </Button>
           </Row>
-</form>,
+        </form>,
         "className": "darken-1",
         "title": "Who is your favorite Starfleet captain?",
       },
@@ -103,21 +97,18 @@ ShallowWrapper {
           "children": Array [
             <div
               className="choices"
->
-              
-</div>,
+            />,
             <Row
               className="center-align"
->
+            >
               <Button
-                            className="teal"
-                            disabled={false}
-                            node="button"
-                            onClick={undefined}
+                className="teal"
+                disabled={false}
+                node="button"
               >
-                            Vote
+                Vote
               </Button>
-</Row>,
+            </Row>,
           ],
           "className": "poll",
           "onSubmit": [Function],
@@ -145,10 +136,9 @@ ShallowWrapper {
                 className="teal"
                 disabled={false}
                 node="button"
-                onClick={undefined}
->
+              >
                 Vote
-</Button>,
+              </Button>,
               "className": "center-align",
             },
             "ref": null,
@@ -185,30 +175,27 @@ ShallowWrapper {
         "children": <Card
           className="darken-1"
           title="Who is your favorite Starfleet captain?"
->
+        >
           <form
-                    className="poll"
-                    onSubmit={[Function]}
+            className="poll"
+            onSubmit={[Function]}
           >
-                    <div
-                              className="choices"
-                    >
-                              
-                    </div>
-                    <Row
-                              className="center-align"
-                    >
-                              <Button
-                                        className="teal"
-                                        disabled={false}
-                                        node="button"
-                                        onClick={undefined}
-                              >
-                                        Vote
-                              </Button>
-                    </Row>
+            <div
+              className="choices"
+            />
+            <Row
+              className="center-align"
+            >
+              <Button
+                className="teal"
+                disabled={false}
+                node="button"
+              >
+                Vote
+              </Button>
+            </Row>
           </form>
-</Card>,
+        </Card>,
         "className": "container",
       },
       "ref": null,
@@ -220,25 +207,22 @@ ShallowWrapper {
           "children": <form
             className="poll"
             onSubmit={[Function]}
->
+          >
             <div
-                        className="choices"
-            >
-                        
-            </div>
+              className="choices"
+            />
             <Row
-                        className="center-align"
+              className="center-align"
             >
-                        <Button
-                                    className="teal"
-                                    disabled={false}
-                                    node="button"
-                                    onClick={undefined}
-                        >
-                                    Vote
-                        </Button>
+              <Button
+                className="teal"
+                disabled={false}
+                node="button"
+              >
+                Vote
+              </Button>
             </Row>
-</form>,
+          </form>,
           "className": "darken-1",
           "title": "Who is your favorite Starfleet captain?",
         },
@@ -251,21 +235,18 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="choices"
->
-                
-</div>,
+              />,
               <Row
                 className="center-align"
->
+              >
                 <Button
-                                className="teal"
-                                disabled={false}
-                                node="button"
-                                onClick={undefined}
+                  className="teal"
+                  disabled={false}
+                  node="button"
                 >
-                                Vote
+                  Vote
                 </Button>
-</Row>,
+              </Row>,
             ],
             "className": "poll",
             "onSubmit": [Function],
@@ -293,10 +274,9 @@ ShallowWrapper {
                   className="teal"
                   disabled={false}
                   node="button"
-                  onClick={undefined}
->
+                >
                   Vote
-</Button>,
+                </Button>,
                 "className": "center-align",
               },
               "ref": null,
@@ -329,6 +309,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,

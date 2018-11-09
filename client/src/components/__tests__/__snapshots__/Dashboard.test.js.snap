@@ -2,16 +2,16 @@
 
 exports[`Dashboard renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Dashboard
-    fetchPolls={[Function]}
+    fetchPolls={[MockFunction]}
     polls={Object {}}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -22,57 +22,57 @@ ShallowWrapper {
     "props": Object {
       "children": <Container>
         <Row>
-                <h3>
-                        Dashboard
-                </h3>
-                <ul
-                        className="tabs"
-                >
-                        <li
-                                className="tab col s3"
-                        >
-                                <a
-                                        href="#my"
-                                >
-                                        My Polls
-                                </a>
-                        </li>
-                        <li
-                                className="tab col s3"
-                        >
-                                <a
-                                        href="#other"
-                                >
-                                        Other Polls
-                                </a>
-                        </li>
-                </ul>
+          <h3>
+            Dashboard
+          </h3>
+          <ul
+            className="tabs"
+          >
+            <li
+              className="tab col s3"
+            >
+              <a
+                href="#my"
+              >
+                My Polls
+              </a>
+            </li>
+            <li
+              className="tab col s3"
+            >
+              <a
+                href="#other"
+              >
+                Other Polls
+              </a>
+            </li>
+          </ul>
         </Row>
         <Row>
-                <div
-                        className="col s12"
-                        id="my"
-                >
-                        <Connect(PollList)
-                                itemsPerPage={15}
-                                maxButtons={7}
-                                polls={Array []}
-                                title="Polls created by you:"
-                        />
-                </div>
-                <div
-                        className="col s12"
-                        id="other"
-                >
-                        <Connect(PollList)
-                                itemsPerPage={15}
-                                maxButtons={7}
-                                polls={Array []}
-                                title="Polls created by other users:"
-                        />
-                </div>
+          <div
+            className="col s12"
+            id="my"
+          >
+            <Connect(PollList)
+              itemsPerPage={15}
+              maxButtons={7}
+              polls={Array []}
+              title="Polls created by you:"
+            />
+          </div>
+          <div
+            className="col s12"
+            id="other"
+          >
+            <Connect(PollList)
+              itemsPerPage={15}
+              maxButtons={7}
+              polls={Array []}
+              title="Polls created by other users:"
+            />
+          </div>
         </Row>
-</Container>,
+      </Container>,
       "node": "div",
     },
     "ref": null,
@@ -84,55 +84,55 @@ ShallowWrapper {
         "children": Array [
           <Row>
             <h3>
-                        Dashboard
+              Dashboard
             </h3>
             <ul
-                        className="tabs"
+              className="tabs"
             >
-                        <li
-                                    className="tab col s3"
-                        >
-                                    <a
-                                                href="#my"
-                                    >
-                                                My Polls
-                                    </a>
-                        </li>
-                        <li
-                                    className="tab col s3"
-                        >
-                                    <a
-                                                href="#other"
-                                    >
-                                                Other Polls
-                                    </a>
-                        </li>
+              <li
+                className="tab col s3"
+              >
+                <a
+                  href="#my"
+                >
+                  My Polls
+                </a>
+              </li>
+              <li
+                className="tab col s3"
+              >
+                <a
+                  href="#other"
+                >
+                  Other Polls
+                </a>
+              </li>
             </ul>
-</Row>,
+          </Row>,
           <Row>
             <div
-                        className="col s12"
-                        id="my"
+              className="col s12"
+              id="my"
             >
-                        <Connect(PollList)
-                                    itemsPerPage={15}
-                                    maxButtons={7}
-                                    polls={Array []}
-                                    title="Polls created by you:"
-                        />
+              <Connect(PollList)
+                itemsPerPage={15}
+                maxButtons={7}
+                polls={Array []}
+                title="Polls created by you:"
+              />
             </div>
             <div
-                        className="col s12"
-                        id="other"
+              className="col s12"
+              id="other"
             >
-                        <Connect(PollList)
-                                    itemsPerPage={15}
-                                    maxButtons={7}
-                                    polls={Array []}
-                                    title="Polls created by other users:"
-                        />
+              <Connect(PollList)
+                itemsPerPage={15}
+                maxButtons={7}
+                polls={Array []}
+                title="Polls created by other users:"
+              />
             </div>
-</Row>,
+          </Row>,
         ],
       },
       "ref": null,
@@ -145,29 +145,29 @@ ShallowWrapper {
             "children": Array [
               <h3>
                 Dashboard
-</h3>,
+              </h3>,
               <ul
                 className="tabs"
->
+              >
                 <li
-                                className="tab col s3"
+                  className="tab col s3"
                 >
-                                <a
-                                                href="#my"
-                                >
-                                                My Polls
-                                </a>
+                  <a
+                    href="#my"
+                  >
+                    My Polls
+                  </a>
                 </li>
                 <li
-                                className="tab col s3"
+                  className="tab col s3"
                 >
-                                <a
-                                                href="#other"
-                                >
-                                                Other Polls
-                                </a>
+                  <a
+                    href="#other"
+                  >
+                    Other Polls
+                  </a>
                 </li>
-</ul>,
+              </ul>,
             ],
           },
           "ref": null,
@@ -191,22 +191,22 @@ ShallowWrapper {
                 "children": Array [
                   <li
                     className="tab col s3"
->
+                  >
                     <a
-                                        href="#my"
+                      href="#my"
                     >
-                                        My Polls
+                      My Polls
                     </a>
-</li>,
+                  </li>,
                   <li
                     className="tab col s3"
->
+                  >
                     <a
-                                        href="#other"
+                      href="#other"
                     >
-                                        Other Polls
+                      Other Polls
                     </a>
-</li>,
+                  </li>,
                 ],
                 "className": "tabs",
               },
@@ -219,9 +219,9 @@ ShallowWrapper {
                   "props": Object {
                     "children": <a
                       href="#my"
->
+                    >
                       My Polls
-</a>,
+                    </a>,
                     "className": "tab col s3",
                   },
                   "ref": null,
@@ -246,9 +246,9 @@ ShallowWrapper {
                   "props": Object {
                     "children": <a
                       href="#other"
->
+                    >
                       Other Polls
-</a>,
+                    </a>,
                     "className": "tab col s3",
                   },
                   "ref": null,
@@ -281,25 +281,25 @@ ShallowWrapper {
               <div
                 className="col s12"
                 id="my"
->
+              >
                 <Connect(PollList)
-                                itemsPerPage={15}
-                                maxButtons={7}
-                                polls={Array []}
-                                title="Polls created by you:"
+                  itemsPerPage={15}
+                  maxButtons={7}
+                  polls={Array []}
+                  title="Polls created by you:"
                 />
-</div>,
+              </div>,
               <div
                 className="col s12"
                 id="other"
->
+              >
                 <Connect(PollList)
-                                itemsPerPage={15}
-                                maxButtons={7}
-                                polls={Array []}
-                                title="Polls created by other users:"
+                  itemsPerPage={15}
+                  maxButtons={7}
+                  polls={Array []}
+                  title="Polls created by other users:"
                 />
-</div>,
+              </div>,
             ],
           },
           "ref": null,
@@ -314,7 +314,7 @@ ShallowWrapper {
                   maxButtons={7}
                   polls={Array []}
                   title="Polls created by you:"
-/>,
+                />,
                 "className": "col s12",
                 "id": "my",
               },
@@ -345,7 +345,7 @@ ShallowWrapper {
                   maxButtons={7}
                   polls={Array []}
                   title="Polls created by other users:"
-/>,
+                />,
                 "className": "col s12",
                 "id": "other",
               },
@@ -382,57 +382,57 @@ ShallowWrapper {
       "props": Object {
         "children": <Container>
           <Row>
-                    <h3>
-                              Dashboard
-                    </h3>
-                    <ul
-                              className="tabs"
-                    >
-                              <li
-                                        className="tab col s3"
-                              >
-                                        <a
-                                                  href="#my"
-                                        >
-                                                  My Polls
-                                        </a>
-                              </li>
-                              <li
-                                        className="tab col s3"
-                              >
-                                        <a
-                                                  href="#other"
-                                        >
-                                                  Other Polls
-                                        </a>
-                              </li>
-                    </ul>
+            <h3>
+              Dashboard
+            </h3>
+            <ul
+              className="tabs"
+            >
+              <li
+                className="tab col s3"
+              >
+                <a
+                  href="#my"
+                >
+                  My Polls
+                </a>
+              </li>
+              <li
+                className="tab col s3"
+              >
+                <a
+                  href="#other"
+                >
+                  Other Polls
+                </a>
+              </li>
+            </ul>
           </Row>
           <Row>
-                    <div
-                              className="col s12"
-                              id="my"
-                    >
-                              <Connect(PollList)
-                                        itemsPerPage={15}
-                                        maxButtons={7}
-                                        polls={Array []}
-                                        title="Polls created by you:"
-                              />
-                    </div>
-                    <div
-                              className="col s12"
-                              id="other"
-                    >
-                              <Connect(PollList)
-                                        itemsPerPage={15}
-                                        maxButtons={7}
-                                        polls={Array []}
-                                        title="Polls created by other users:"
-                              />
-                    </div>
+            <div
+              className="col s12"
+              id="my"
+            >
+              <Connect(PollList)
+                itemsPerPage={15}
+                maxButtons={7}
+                polls={Array []}
+                title="Polls created by you:"
+              />
+            </div>
+            <div
+              className="col s12"
+              id="other"
+            >
+              <Connect(PollList)
+                itemsPerPage={15}
+                maxButtons={7}
+                polls={Array []}
+                title="Polls created by other users:"
+              />
+            </div>
           </Row>
-</Container>,
+        </Container>,
         "node": "div",
       },
       "ref": null,
@@ -444,55 +444,55 @@ ShallowWrapper {
           "children": Array [
             <Row>
               <h3>
-                            Dashboard
+                Dashboard
               </h3>
               <ul
-                            className="tabs"
+                className="tabs"
               >
-                            <li
-                                          className="tab col s3"
-                            >
-                                          <a
-                                                        href="#my"
-                                          >
-                                                        My Polls
-                                          </a>
-                            </li>
-                            <li
-                                          className="tab col s3"
-                            >
-                                          <a
-                                                        href="#other"
-                                          >
-                                                        Other Polls
-                                          </a>
-                            </li>
+                <li
+                  className="tab col s3"
+                >
+                  <a
+                    href="#my"
+                  >
+                    My Polls
+                  </a>
+                </li>
+                <li
+                  className="tab col s3"
+                >
+                  <a
+                    href="#other"
+                  >
+                    Other Polls
+                  </a>
+                </li>
               </ul>
-</Row>,
+            </Row>,
             <Row>
               <div
-                            className="col s12"
-                            id="my"
+                className="col s12"
+                id="my"
               >
-                            <Connect(PollList)
-                                          itemsPerPage={15}
-                                          maxButtons={7}
-                                          polls={Array []}
-                                          title="Polls created by you:"
-                            />
+                <Connect(PollList)
+                  itemsPerPage={15}
+                  maxButtons={7}
+                  polls={Array []}
+                  title="Polls created by you:"
+                />
               </div>
               <div
-                            className="col s12"
-                            id="other"
+                className="col s12"
+                id="other"
               >
-                            <Connect(PollList)
-                                          itemsPerPage={15}
-                                          maxButtons={7}
-                                          polls={Array []}
-                                          title="Polls created by other users:"
-                            />
+                <Connect(PollList)
+                  itemsPerPage={15}
+                  maxButtons={7}
+                  polls={Array []}
+                  title="Polls created by other users:"
+                />
               </div>
-</Row>,
+            </Row>,
           ],
         },
         "ref": null,
@@ -505,29 +505,29 @@ ShallowWrapper {
               "children": Array [
                 <h3>
                   Dashboard
-</h3>,
+                </h3>,
                 <ul
                   className="tabs"
->
+                >
                   <li
-                                    className="tab col s3"
+                    className="tab col s3"
                   >
-                                    <a
-                                                      href="#my"
-                                    >
-                                                      My Polls
-                                    </a>
+                    <a
+                      href="#my"
+                    >
+                      My Polls
+                    </a>
                   </li>
                   <li
-                                    className="tab col s3"
+                    className="tab col s3"
                   >
-                                    <a
-                                                      href="#other"
-                                    >
-                                                      Other Polls
-                                    </a>
+                    <a
+                      href="#other"
+                    >
+                      Other Polls
+                    </a>
                   </li>
-</ul>,
+                </ul>,
               ],
             },
             "ref": null,
@@ -551,22 +551,22 @@ ShallowWrapper {
                   "children": Array [
                     <li
                       className="tab col s3"
->
+                    >
                       <a
-                                            href="#my"
+                        href="#my"
                       >
-                                            My Polls
+                        My Polls
                       </a>
-</li>,
+                    </li>,
                     <li
                       className="tab col s3"
->
+                    >
                       <a
-                                            href="#other"
+                        href="#other"
                       >
-                                            Other Polls
+                        Other Polls
                       </a>
-</li>,
+                    </li>,
                   ],
                   "className": "tabs",
                 },
@@ -579,9 +579,9 @@ ShallowWrapper {
                     "props": Object {
                       "children": <a
                         href="#my"
->
+                      >
                         My Polls
-</a>,
+                      </a>,
                       "className": "tab col s3",
                     },
                     "ref": null,
@@ -606,9 +606,9 @@ ShallowWrapper {
                     "props": Object {
                       "children": <a
                         href="#other"
->
+                      >
                         Other Polls
-</a>,
+                      </a>,
                       "className": "tab col s3",
                     },
                     "ref": null,
@@ -641,25 +641,25 @@ ShallowWrapper {
                 <div
                   className="col s12"
                   id="my"
->
+                >
                   <Connect(PollList)
-                                    itemsPerPage={15}
-                                    maxButtons={7}
-                                    polls={Array []}
-                                    title="Polls created by you:"
+                    itemsPerPage={15}
+                    maxButtons={7}
+                    polls={Array []}
+                    title="Polls created by you:"
                   />
-</div>,
+                </div>,
                 <div
                   className="col s12"
                   id="other"
->
+                >
                   <Connect(PollList)
-                                    itemsPerPage={15}
-                                    maxButtons={7}
-                                    polls={Array []}
-                                    title="Polls created by other users:"
+                    itemsPerPage={15}
+                    maxButtons={7}
+                    polls={Array []}
+                    title="Polls created by other users:"
                   />
-</div>,
+                </div>,
               ],
             },
             "ref": null,
@@ -674,7 +674,7 @@ ShallowWrapper {
                     maxButtons={7}
                     polls={Array []}
                     title="Polls created by you:"
-/>,
+                  />,
                   "className": "col s12",
                   "id": "my",
                 },
@@ -705,7 +705,7 @@ ShallowWrapper {
                     maxButtons={7}
                     polls={Array []}
                     title="Polls created by other users:"
-/>,
+                  />,
                   "className": "col s12",
                   "id": "other",
                 },
@@ -739,6 +739,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,

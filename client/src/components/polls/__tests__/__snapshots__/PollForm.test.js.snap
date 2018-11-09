@@ -2,19 +2,33 @@
 
 exports[`PollForm renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PollForm
     error={null}
-    handleSubmit={[Function]}
-    onCancel={[Function]}
-    onSubmit={[Function]}
+    handleSubmit={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            [MockFunction],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    onCancel={[MockFunction]}
+    onSubmit={[MockFunction]}
     waiting={false}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -23,54 +37,52 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <form
-        onSubmit={undefined}
->
+      "children": <form>
         <Row>
-                <Field
-                        component={[Function]}
-                        icon="question_answer"
-                        label="What question would you like to ask?"
-                        name="question"
-                />
+          <Field
+            component={[Function]}
+            icon="question_answer"
+            label="What question would you like to ask?"
+            name="question"
+          />
         </Row>
         <Row>
-                <FieldArray
-                        component={[Function]}
-                        name="choices"
-                />
+          <FieldArray
+            component={[Function]}
+            name="choices"
+          />
         </Row>
         <Row>
-                 
+           
         </Row>
         <Row>
-                <Button
-                        className="btn btn-back red white-text"
-                        node="button"
-                        onClick={[Function]}
-                        type="button"
-                >
-                        Cancel
-                        <Icon
-                                left={true}
-                        >
-                                close
-                        </Icon>
-                </Button>
-                <Button
-                        className="btn-next teal right white-text"
-                        node="button"
-                        waves="light"
-                >
-                        Next
-                        <Icon
-                                right={true}
-                        >
-                                keyboard_arrow_right
-                        </Icon>
-                </Button>
+          <Button
+            className="btn btn-back red white-text"
+            node="button"
+            onClick={[MockFunction]}
+            type="button"
+          >
+            Cancel
+            <Icon
+              left={true}
+            >
+              close
+            </Icon>
+          </Button>
+          <Button
+            className="btn-next teal right white-text"
+            node="button"
+            waves="light"
+          >
+            Next
+            <Icon
+              right={true}
+            >
+              keyboard_arrow_right
+            </Icon>
+          </Button>
         </Row>
-</form>,
+      </form>,
     },
     "ref": null,
     "rendered": Object {
@@ -81,48 +93,48 @@ ShallowWrapper {
         "children": Array [
           <Row>
             <Field
-                        component={[Function]}
-                        icon="question_answer"
-                        label="What question would you like to ask?"
-                        name="question"
+              component={[Function]}
+              icon="question_answer"
+              label="What question would you like to ask?"
+              name="question"
             />
-</Row>,
+          </Row>,
           <Row>
             <FieldArray
-                        component={[Function]}
-                        name="choices"
+              component={[Function]}
+              name="choices"
             />
-</Row>,
+          </Row>,
           <Row>
              
-</Row>,
+          </Row>,
           <Row>
             <Button
-                        className="btn btn-back red white-text"
-                        node="button"
-                        onClick={[Function]}
-                        type="button"
+              className="btn btn-back red white-text"
+              node="button"
+              onClick={[MockFunction]}
+              type="button"
             >
-                        Cancel
-                        <Icon
-                                    left={true}
-                        >
-                                    close
-                        </Icon>
+              Cancel
+              <Icon
+                left={true}
+              >
+                close
+              </Icon>
             </Button>
             <Button
-                        className="btn-next teal right white-text"
-                        node="button"
-                        waves="light"
+              className="btn-next teal right white-text"
+              node="button"
+              waves="light"
             >
-                        Next
-                        <Icon
-                                    right={true}
-                        >
-                                    keyboard_arrow_right
-                        </Icon>
+              Next
+              <Icon
+                right={true}
+              >
+                keyboard_arrow_right
+              </Icon>
             </Button>
-</Row>,
+          </Row>,
         ],
         "onSubmit": undefined,
       },
@@ -138,7 +150,7 @@ ShallowWrapper {
               icon="question_answer"
               label="What question would you like to ask?"
               name="question"
-/>,
+            />,
           },
           "ref": null,
           "rendered": Object {
@@ -165,7 +177,7 @@ ShallowWrapper {
             "children": <FieldArray
               component={[Function]}
               name="choices"
-/>,
+            />,
           },
           "ref": null,
           "rendered": Object {
@@ -202,29 +214,29 @@ ShallowWrapper {
               <Button
                 className="btn btn-back red white-text"
                 node="button"
-                onClick={[Function]}
+                onClick={[MockFunction]}
                 type="button"
->
+              >
                 Cancel
                 <Icon
-                                left={true}
+                  left={true}
                 >
-                                close
+                  close
                 </Icon>
-</Button>,
+              </Button>,
               undefined,
               <Button
                 className="btn-next teal right white-text"
                 node="button"
                 waves="light"
->
+              >
                 Next
                 <Icon
-                                right={true}
+                  right={true}
                 >
-                                keyboard_arrow_right
+                  keyboard_arrow_right
                 </Icon>
-</Button>,
+              </Button>,
             ],
           },
           "ref": null,
@@ -238,13 +250,13 @@ ShallowWrapper {
                   "Cancel",
                   <Icon
                     left={true}
->
+                  >
                     close
-</Icon>,
+                  </Icon>,
                 ],
                 "className": "btn btn-back red white-text",
                 "node": "button",
-                "onClick": [Function],
+                "onClick": [MockFunction],
                 "type": "button",
               },
               "ref": null,
@@ -253,7 +265,7 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "close",
                     "left": true,
@@ -275,9 +287,9 @@ ShallowWrapper {
                   "Next",
                   <Icon
                     right={true}
->
+                  >
                     keyboard_arrow_right
-</Icon>,
+                  </Icon>,
                 ],
                 "className": "btn-next teal right white-text",
                 "node": "button",
@@ -289,7 +301,7 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "keyboard_arrow_right",
                     "right": true,
@@ -315,54 +327,52 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <form
-          onSubmit={undefined}
->
+        "children": <form>
           <Row>
-                    <Field
-                              component={[Function]}
-                              icon="question_answer"
-                              label="What question would you like to ask?"
-                              name="question"
-                    />
+            <Field
+              component={[Function]}
+              icon="question_answer"
+              label="What question would you like to ask?"
+              name="question"
+            />
           </Row>
           <Row>
-                    <FieldArray
-                              component={[Function]}
-                              name="choices"
-                    />
+            <FieldArray
+              component={[Function]}
+              name="choices"
+            />
           </Row>
           <Row>
-                     
+             
           </Row>
           <Row>
-                    <Button
-                              className="btn btn-back red white-text"
-                              node="button"
-                              onClick={[Function]}
-                              type="button"
-                    >
-                              Cancel
-                              <Icon
-                                        left={true}
-                              >
-                                        close
-                              </Icon>
-                    </Button>
-                    <Button
-                              className="btn-next teal right white-text"
-                              node="button"
-                              waves="light"
-                    >
-                              Next
-                              <Icon
-                                        right={true}
-                              >
-                                        keyboard_arrow_right
-                              </Icon>
-                    </Button>
+            <Button
+              className="btn btn-back red white-text"
+              node="button"
+              onClick={[MockFunction]}
+              type="button"
+            >
+              Cancel
+              <Icon
+                left={true}
+              >
+                close
+              </Icon>
+            </Button>
+            <Button
+              className="btn-next teal right white-text"
+              node="button"
+              waves="light"
+            >
+              Next
+              <Icon
+                right={true}
+              >
+                keyboard_arrow_right
+              </Icon>
+            </Button>
           </Row>
-</form>,
+        </form>,
       },
       "ref": null,
       "rendered": Object {
@@ -373,48 +383,48 @@ ShallowWrapper {
           "children": Array [
             <Row>
               <Field
-                            component={[Function]}
-                            icon="question_answer"
-                            label="What question would you like to ask?"
-                            name="question"
+                component={[Function]}
+                icon="question_answer"
+                label="What question would you like to ask?"
+                name="question"
               />
-</Row>,
+            </Row>,
             <Row>
               <FieldArray
-                            component={[Function]}
-                            name="choices"
+                component={[Function]}
+                name="choices"
               />
-</Row>,
+            </Row>,
             <Row>
                
-</Row>,
+            </Row>,
             <Row>
               <Button
-                            className="btn btn-back red white-text"
-                            node="button"
-                            onClick={[Function]}
-                            type="button"
+                className="btn btn-back red white-text"
+                node="button"
+                onClick={[MockFunction]}
+                type="button"
               >
-                            Cancel
-                            <Icon
-                                          left={true}
-                            >
-                                          close
-                            </Icon>
+                Cancel
+                <Icon
+                  left={true}
+                >
+                  close
+                </Icon>
               </Button>
               <Button
-                            className="btn-next teal right white-text"
-                            node="button"
-                            waves="light"
+                className="btn-next teal right white-text"
+                node="button"
+                waves="light"
               >
-                            Next
-                            <Icon
-                                          right={true}
-                            >
-                                          keyboard_arrow_right
-                            </Icon>
+                Next
+                <Icon
+                  right={true}
+                >
+                  keyboard_arrow_right
+                </Icon>
               </Button>
-</Row>,
+            </Row>,
           ],
           "onSubmit": undefined,
         },
@@ -430,7 +440,7 @@ ShallowWrapper {
                 icon="question_answer"
                 label="What question would you like to ask?"
                 name="question"
-/>,
+              />,
             },
             "ref": null,
             "rendered": Object {
@@ -457,7 +467,7 @@ ShallowWrapper {
               "children": <FieldArray
                 component={[Function]}
                 name="choices"
-/>,
+              />,
             },
             "ref": null,
             "rendered": Object {
@@ -494,29 +504,29 @@ ShallowWrapper {
                 <Button
                   className="btn btn-back red white-text"
                   node="button"
-                  onClick={[Function]}
+                  onClick={[MockFunction]}
                   type="button"
->
+                >
                   Cancel
                   <Icon
-                                    left={true}
+                    left={true}
                   >
-                                    close
+                    close
                   </Icon>
-</Button>,
+                </Button>,
                 undefined,
                 <Button
                   className="btn-next teal right white-text"
                   node="button"
                   waves="light"
->
+                >
                   Next
                   <Icon
-                                    right={true}
+                    right={true}
                   >
-                                    keyboard_arrow_right
+                    keyboard_arrow_right
                   </Icon>
-</Button>,
+                </Button>,
               ],
             },
             "ref": null,
@@ -530,13 +540,13 @@ ShallowWrapper {
                     "Cancel",
                     <Icon
                       left={true}
->
+                    >
                       close
-</Icon>,
+                    </Icon>,
                   ],
                   "className": "btn btn-back red white-text",
                   "node": "button",
-                  "onClick": [Function],
+                  "onClick": [MockFunction],
                   "type": "button",
                 },
                 "ref": null,
@@ -545,7 +555,7 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
                       "children": "close",
                       "left": true,
@@ -567,9 +577,9 @@ ShallowWrapper {
                     "Next",
                     <Icon
                       right={true}
->
+                    >
                       keyboard_arrow_right
-</Icon>,
+                    </Icon>,
                   ],
                   "className": "btn-next teal right white-text",
                   "node": "button",
@@ -581,7 +591,7 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "class",
                     "props": Object {
                       "children": "keyboard_arrow_right",
                       "right": true,
@@ -606,6 +616,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,

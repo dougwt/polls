@@ -2,15 +2,15 @@
 
 exports[`PollList renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PollList
     title="Test Title"
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -22,35 +22,34 @@ ShallowWrapper {
       "children": Array [
         <Row>
           <h6
-                    className="header section-title"
+            className="header section-title"
           >
-                    Test Title
-                    <span
-                              className="right"
-                    >
-                              Respondents
-                    </span>
+            Test Title
+            <span
+              className="right"
+            >
+              Respondents
+            </span>
           </h6>
-</Row>,
+        </Row>,
         <Row>
           <Collection>
-                    <li
-                              className="center-align collection-item empty"
-                    >
-                              There are no polls to show. Why don't you create one?
-                    </li>
+            <li
+              className="center-align collection-item empty"
+            >
+              There are no polls to show. Why don't you create one?
+            </li>
           </Collection>
-</Row>,
+        </Row>,
         <Row
           className="center-align"
->
+        >
           <Pagination
-                    activePage={1}
-                    items={1000}
-                    maxButtons={undefined}
-                    onSelect={[Function]}
+            activePage={1}
+            items={1000}
+            onSelect={[Function]}
           />
-</Row>,
+        </Row>,
       ],
     },
     "ref": null,
@@ -62,14 +61,14 @@ ShallowWrapper {
         "props": Object {
           "children": <h6
             className="header section-title"
->
+          >
             Test Title
             <span
-                        className="right"
+              className="right"
             >
-                        Respondents
+              Respondents
             </span>
-</h6>,
+          </h6>,
         },
         "ref": null,
         "rendered": Object {
@@ -81,9 +80,9 @@ ShallowWrapper {
               "Test Title",
               <span
                 className="right"
->
+              >
                 Respondents
-</span>,
+              </span>,
             ],
             "className": "header section-title",
           },
@@ -114,11 +113,11 @@ ShallowWrapper {
         "props": Object {
           "children": <Collection>
             <li
-                        className="center-align collection-item empty"
+              className="center-align collection-item empty"
             >
-                        There are no polls to show. Why don't you create one?
+              There are no polls to show. Why don't you create one?
             </li>
-</Collection>,
+          </Collection>,
         },
         "ref": null,
         "rendered": Object {
@@ -128,9 +127,9 @@ ShallowWrapper {
           "props": Object {
             "children": <li
               className="center-align collection-item empty"
->
+            >
               There are no polls to show. Why don't you create one?
-</li>,
+            </li>,
           },
           "ref": null,
           "rendered": Object {
@@ -157,9 +156,8 @@ ShallowWrapper {
           "children": <Pagination
             activePage={1}
             items={1000}
-            maxButtons={undefined}
             onSelect={[Function]}
-/>,
+          />,
           "className": "center-align",
         },
         "ref": null,
@@ -191,35 +189,34 @@ ShallowWrapper {
         "children": Array [
           <Row>
             <h6
-                        className="header section-title"
+              className="header section-title"
             >
-                        Test Title
-                        <span
-                                    className="right"
-                        >
-                                    Respondents
-                        </span>
+              Test Title
+              <span
+                className="right"
+              >
+                Respondents
+              </span>
             </h6>
-</Row>,
+          </Row>,
           <Row>
             <Collection>
-                        <li
-                                    className="center-align collection-item empty"
-                        >
-                                    There are no polls to show. Why don't you create one?
-                        </li>
+              <li
+                className="center-align collection-item empty"
+              >
+                There are no polls to show. Why don't you create one?
+              </li>
             </Collection>
-</Row>,
+          </Row>,
           <Row
             className="center-align"
->
+          >
             <Pagination
-                        activePage={1}
-                        items={1000}
-                        maxButtons={undefined}
-                        onSelect={[Function]}
+              activePage={1}
+              items={1000}
+              onSelect={[Function]}
             />
-</Row>,
+          </Row>,
         ],
       },
       "ref": null,
@@ -231,14 +228,14 @@ ShallowWrapper {
           "props": Object {
             "children": <h6
               className="header section-title"
->
+            >
               Test Title
               <span
-                            className="right"
+                className="right"
               >
-                            Respondents
+                Respondents
               </span>
-</h6>,
+            </h6>,
           },
           "ref": null,
           "rendered": Object {
@@ -250,9 +247,9 @@ ShallowWrapper {
                 "Test Title",
                 <span
                   className="right"
->
+                >
                   Respondents
-</span>,
+                </span>,
               ],
               "className": "header section-title",
             },
@@ -283,11 +280,11 @@ ShallowWrapper {
           "props": Object {
             "children": <Collection>
               <li
-                            className="center-align collection-item empty"
+                className="center-align collection-item empty"
               >
-                            There are no polls to show. Why don't you create one?
+                There are no polls to show. Why don't you create one?
               </li>
-</Collection>,
+            </Collection>,
           },
           "ref": null,
           "rendered": Object {
@@ -297,9 +294,9 @@ ShallowWrapper {
             "props": Object {
               "children": <li
                 className="center-align collection-item empty"
->
+              >
                 There are no polls to show. Why don't you create one?
-</li>,
+              </li>,
             },
             "ref": null,
             "rendered": Object {
@@ -326,9 +323,8 @@ ShallowWrapper {
             "children": <Pagination
               activePage={1}
               items={1000}
-              maxButtons={undefined}
               onSelect={[Function]}
-/>,
+            />,
             "className": "center-align",
           },
           "ref": null,
@@ -356,6 +352,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,

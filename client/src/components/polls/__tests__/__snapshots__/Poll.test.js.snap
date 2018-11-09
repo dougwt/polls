@@ -2,24 +2,24 @@
 
 exports[`Poll renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Poll
-    fetchPolls={[Function]}
+    fetchPolls={[MockFunction]}
     fetched={false}
     match={
-        Object {
-            "params": Object {
-              "pollId": 1,
-            },
-          }
+      Object {
+        "params": Object {
+          "pollId": 1,
+        },
+      }
     }
     polls={Object {}}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -30,14 +30,14 @@ ShallowWrapper {
     "props": Object {
       "children": <Container>
         <Row>
-                <h3
-                        className="header section-title"
-                >
-                        Poll
-                </h3>
+          <h3
+            className="header section-title"
+          >
+            Poll
+          </h3>
         </Row>
         Loading...
-</Container>,
+      </Container>,
       "node": "div",
     },
     "ref": null,
@@ -49,11 +49,11 @@ ShallowWrapper {
         "children": Array [
           <Row>
             <h3
-                        className="header section-title"
+              className="header section-title"
             >
-                        Poll
+              Poll
             </h3>
-</Row>,
+          </Row>,
           "Loading...",
         ],
       },
@@ -66,9 +66,9 @@ ShallowWrapper {
           "props": Object {
             "children": <h3
               className="header section-title"
->
+            >
               Poll
-</h3>,
+            </h3>,
           },
           "ref": null,
           "rendered": Object {
@@ -99,14 +99,14 @@ ShallowWrapper {
       "props": Object {
         "children": <Container>
           <Row>
-                    <h3
-                              className="header section-title"
-                    >
-                              Poll
-                    </h3>
+            <h3
+              className="header section-title"
+            >
+              Poll
+            </h3>
           </Row>
           Loading...
-</Container>,
+        </Container>,
         "node": "div",
       },
       "ref": null,
@@ -118,11 +118,11 @@ ShallowWrapper {
           "children": Array [
             <Row>
               <h3
-                            className="header section-title"
+                className="header section-title"
               >
-                            Poll
+                Poll
               </h3>
-</Row>,
+            </Row>,
             "Loading...",
           ],
         },
@@ -135,9 +135,9 @@ ShallowWrapper {
             "props": Object {
               "children": <h3
                 className="header section-title"
->
+              >
                 Poll
-</h3>,
+              </h3>,
             },
             "ref": null,
             "rendered": Object {
@@ -165,6 +165,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,
