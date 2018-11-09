@@ -32,7 +32,9 @@ module.exports = {
 
         // Update the respondents list
         User.findById(userId).then(user => {
-          results = poll.respondents.filter(responder => responder === userId);
+          results = poll.respondents.filter(responder =>
+            responder.equals(userId)
+          );
           // Reject if userId has already voted on this poll
           if (results.length > 0) {
             return res
