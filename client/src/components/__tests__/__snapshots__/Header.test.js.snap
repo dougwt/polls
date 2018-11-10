@@ -2,15 +2,13 @@
 
 exports[`Header renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
-    auth={undefined}
-/>,
+  Symbol(enzyme.__unrendered__): <Header />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -21,88 +19,88 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="nav-wrapper container"
->
+      >
         <Link
-                className="brand-logo"
-                replace={false}
-                to="/"
+          className="brand-logo"
+          replace={false}
+          to="/"
         >
-                <img
-                        alt="Simple Polls"
-                        src="logo.min.svg"
-                />
+          <img
+            alt="Simple Polls"
+            src="logo.min.svg"
+          />
         </Link>
         <ul
-                className="right"
+          className="right"
         >
-                <ul
-                        className="responsive"
+          <ul
+            className="responsive"
+          >
+            <ul>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="waves-effect waves-light"
+                  onClick={[Function]}
+                  to="/polls"
                 >
-                        <ul>
-                                <li>
-                                        <NavLink
-                                                activeClassName="active"
-                                                aria-current="page"
-                                                className="waves-effect waves-light"
-                                                onClick={[Function]}
-                                                to="/polls"
-                                        >
-                                                <i
-                                                        className="material-icons left"
-                                                >
-                                                        dashboard
-                                                </i>
-                                                Dashboard
-                                        </NavLink>
-                                </li>
-                                <li>
-                                        <NavLink
-                                                activeClassName="active"
-                                                aria-current="page"
-                                                className="waves-effect waves-light"
-                                                onClick={[Function]}
-                                                to="/polls/new"
-                                        >
-                                                <i
-                                                        className="material-icons left"
-                                                >
-                                                        add
-                                                </i>
-                                                Create a Poll
-                                        </NavLink>
-                                </li>
-                                <li>
-                                        <a
-                                                className="navbar-item waves-effect waves-light"
-                                                href="/api/logout"
-                                                onClick={[Function]}
-                                        >
-                                                <i
-                                                        className="material-icons left"
-                                                >
-                                                        person
-                                                </i>
-                                                Sign Out
-                                        </a>
-                                </li>
-                        </ul>
-                </ul>
-                <li
-                        className="toggle"
+                  <i
+                    className="material-icons left"
+                  >
+                    dashboard
+                  </i>
+                  Dashboard
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="waves-effect waves-light"
+                  onClick={[Function]}
+                  to="/polls/new"
                 >
-                        <a
-                                href="javascript:void(0);"
-                                onClick={[Function]}
-                        >
-                                <i
-                                        className="material-icons"
-                                >
-                                        menu
-                                </i>
-                        </a>
-                </li>
+                  <i
+                    className="material-icons left"
+                  >
+                    add
+                  </i>
+                  Create a Poll
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  className="navbar-item waves-effect waves-light"
+                  href="/api/logout"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="material-icons left"
+                  >
+                    person
+                  </i>
+                  Sign Out
+                </a>
+              </li>
+            </ul>
+          </ul>
+          <li
+            className="toggle"
+          >
+            <a
+              href="javascript:void(0);"
+              onClick={[Function]}
+            >
+              <i
+                className="material-icons"
+              >
+                menu
+              </i>
+            </a>
+          </li>
         </ul>
-</div>,
+      </div>,
       "id": "main-nav",
     },
     "ref": null,
@@ -116,82 +114,82 @@ ShallowWrapper {
             className="brand-logo"
             replace={false}
             to="/"
->
+          >
             <img
-                        alt="Simple Polls"
-                        src="logo.min.svg"
+              alt="Simple Polls"
+              src="logo.min.svg"
             />
-</Link>,
+          </Link>,
           <ul
             className="right"
->
+          >
             <ul
-                        className="responsive"
+              className="responsive"
             >
-                        <ul>
-                                    <li>
-                                                <NavLink
-                                                            activeClassName="active"
-                                                            aria-current="page"
-                                                            className="waves-effect waves-light"
-                                                            onClick={[Function]}
-                                                            to="/polls"
-                                                >
-                                                            <i
-                                                                        className="material-icons left"
-                                                            >
-                                                                        dashboard
-                                                            </i>
-                                                            Dashboard
-                                                </NavLink>
-                                    </li>
-                                    <li>
-                                                <NavLink
-                                                            activeClassName="active"
-                                                            aria-current="page"
-                                                            className="waves-effect waves-light"
-                                                            onClick={[Function]}
-                                                            to="/polls/new"
-                                                >
-                                                            <i
-                                                                        className="material-icons left"
-                                                            >
-                                                                        add
-                                                            </i>
-                                                            Create a Poll
-                                                </NavLink>
-                                    </li>
-                                    <li>
-                                                <a
-                                                            className="navbar-item waves-effect waves-light"
-                                                            href="/api/logout"
-                                                            onClick={[Function]}
-                                                >
-                                                            <i
-                                                                        className="material-icons left"
-                                                            >
-                                                                        person
-                                                            </i>
-                                                            Sign Out
-                                                </a>
-                                    </li>
-                        </ul>
+              <ul>
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="waves-effect waves-light"
+                    onClick={[Function]}
+                    to="/polls"
+                  >
+                    <i
+                      className="material-icons left"
+                    >
+                      dashboard
+                    </i>
+                    Dashboard
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="waves-effect waves-light"
+                    onClick={[Function]}
+                    to="/polls/new"
+                  >
+                    <i
+                      className="material-icons left"
+                    >
+                      add
+                    </i>
+                    Create a Poll
+                  </NavLink>
+                </li>
+                <li>
+                  <a
+                    className="navbar-item waves-effect waves-light"
+                    href="/api/logout"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="material-icons left"
+                    >
+                      person
+                    </i>
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
             </ul>
             <li
-                        className="toggle"
+              className="toggle"
             >
-                        <a
-                                    href="javascript:void(0);"
-                                    onClick={[Function]}
-                        >
-                                    <i
-                                                className="material-icons"
-                                    >
-                                                menu
-                                    </i>
-                        </a>
+              <a
+                href="javascript:void(0);"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons"
+                >
+                  menu
+                </i>
+              </a>
             </li>
-</ul>,
+          </ul>,
         ],
         "className": "nav-wrapper container",
       },
@@ -205,7 +203,7 @@ ShallowWrapper {
             "children": <img
               alt="Simple Polls"
               src="logo.min.svg"
-/>,
+            />,
             "className": "brand-logo",
             "replace": false,
             "to": "/",
@@ -233,70 +231,70 @@ ShallowWrapper {
             "children": Array [
               <ul
                 className="responsive"
->
+              >
                 <ul>
-                                <li>
-                                                <NavLink
-                                                                activeClassName="active"
-                                                                aria-current="page"
-                                                                className="waves-effect waves-light"
-                                                                onClick={[Function]}
-                                                                to="/polls"
-                                                >
-                                                                <i
-                                                                                className="material-icons left"
-                                                                >
-                                                                                dashboard
-                                                                </i>
-                                                                Dashboard
-                                                </NavLink>
-                                </li>
-                                <li>
-                                                <NavLink
-                                                                activeClassName="active"
-                                                                aria-current="page"
-                                                                className="waves-effect waves-light"
-                                                                onClick={[Function]}
-                                                                to="/polls/new"
-                                                >
-                                                                <i
-                                                                                className="material-icons left"
-                                                                >
-                                                                                add
-                                                                </i>
-                                                                Create a Poll
-                                                </NavLink>
-                                </li>
-                                <li>
-                                                <a
-                                                                className="navbar-item waves-effect waves-light"
-                                                                href="/api/logout"
-                                                                onClick={[Function]}
-                                                >
-                                                                <i
-                                                                                className="material-icons left"
-                                                                >
-                                                                                person
-                                                                </i>
-                                                                Sign Out
-                                                </a>
-                                </li>
+                  <li>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="waves-effect waves-light"
+                      onClick={[Function]}
+                      to="/polls"
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        dashboard
+                      </i>
+                      Dashboard
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="waves-effect waves-light"
+                      onClick={[Function]}
+                      to="/polls/new"
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        add
+                      </i>
+                      Create a Poll
+                    </NavLink>
+                  </li>
+                  <li>
+                    <a
+                      className="navbar-item waves-effect waves-light"
+                      href="/api/logout"
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        person
+                      </i>
+                      Sign Out
+                    </a>
+                  </li>
                 </ul>
-</ul>,
+              </ul>,
               <li
                 className="toggle"
->
+              >
                 <a
-                                href="javascript:void(0);"
-                                onClick={[Function]}
+                  href="javascript:void(0);"
+                  onClick={[Function]}
                 >
-                                <i
-                                                className="material-icons"
-                                >
-                                                menu
-                                </i>
+                  <i
+                    className="material-icons"
+                  >
+                    menu
+                  </i>
                 </a>
-</li>,
+              </li>,
             ],
             "className": "right",
           },
@@ -309,52 +307,52 @@ ShallowWrapper {
               "props": Object {
                 "children": <ul>
                   <li>
-                                    <NavLink
-                                                      activeClassName="active"
-                                                      aria-current="page"
-                                                      className="waves-effect waves-light"
-                                                      onClick={[Function]}
-                                                      to="/polls"
-                                    >
-                                                      <i
-                                                                        className="material-icons left"
-                                                      >
-                                                                        dashboard
-                                                      </i>
-                                                      Dashboard
-                                    </NavLink>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="waves-effect waves-light"
+                      onClick={[Function]}
+                      to="/polls"
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        dashboard
+                      </i>
+                      Dashboard
+                    </NavLink>
                   </li>
                   <li>
-                                    <NavLink
-                                                      activeClassName="active"
-                                                      aria-current="page"
-                                                      className="waves-effect waves-light"
-                                                      onClick={[Function]}
-                                                      to="/polls/new"
-                                    >
-                                                      <i
-                                                                        className="material-icons left"
-                                                      >
-                                                                        add
-                                                      </i>
-                                                      Create a Poll
-                                    </NavLink>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="waves-effect waves-light"
+                      onClick={[Function]}
+                      to="/polls/new"
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        add
+                      </i>
+                      Create a Poll
+                    </NavLink>
                   </li>
                   <li>
-                                    <a
-                                                      className="navbar-item waves-effect waves-light"
-                                                      href="/api/logout"
-                                                      onClick={[Function]}
-                                    >
-                                                      <i
-                                                                        className="material-icons left"
-                                                      >
-                                                                        person
-                                                      </i>
-                                                      Sign Out
-                                    </a>
+                    <a
+                      className="navbar-item waves-effect waves-light"
+                      href="/api/logout"
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        person
+                      </i>
+                      Sign Out
+                    </a>
                   </li>
-</ul>,
+                </ul>,
                 "className": "responsive",
               },
               "ref": null,
@@ -366,50 +364,50 @@ ShallowWrapper {
                   "children": Array [
                     <li>
                       <NavLink
-                                            activeClassName="active"
-                                            aria-current="page"
-                                            className="waves-effect waves-light"
-                                            onClick={[Function]}
-                                            to="/polls"
+                        activeClassName="active"
+                        aria-current="page"
+                        className="waves-effect waves-light"
+                        onClick={[Function]}
+                        to="/polls"
                       >
-                                            <i
-                                                                  className="material-icons left"
-                                            >
-                                                                  dashboard
-                                            </i>
-                                            Dashboard
+                        <i
+                          className="material-icons left"
+                        >
+                          dashboard
+                        </i>
+                        Dashboard
                       </NavLink>
-</li>,
+                    </li>,
                     <li>
                       <NavLink
-                                            activeClassName="active"
-                                            aria-current="page"
-                                            className="waves-effect waves-light"
-                                            onClick={[Function]}
-                                            to="/polls/new"
+                        activeClassName="active"
+                        aria-current="page"
+                        className="waves-effect waves-light"
+                        onClick={[Function]}
+                        to="/polls/new"
                       >
-                                            <i
-                                                                  className="material-icons left"
-                                            >
-                                                                  add
-                                            </i>
-                                            Create a Poll
+                        <i
+                          className="material-icons left"
+                        >
+                          add
+                        </i>
+                        Create a Poll
                       </NavLink>
-</li>,
+                    </li>,
                     <li>
                       <a
-                                            className="navbar-item waves-effect waves-light"
-                                            href="/api/logout"
-                                            onClick={[Function]}
+                        className="navbar-item waves-effect waves-light"
+                        href="/api/logout"
+                        onClick={[Function]}
                       >
-                                            <i
-                                                                  className="material-icons left"
-                                            >
-                                                                  person
-                                            </i>
-                                            Sign Out
+                        <i
+                          className="material-icons left"
+                        >
+                          person
+                        </i>
+                        Sign Out
                       </a>
-</li>,
+                    </li>,
                   ],
                 },
                 "ref": null,
@@ -425,14 +423,14 @@ ShallowWrapper {
                         className="waves-effect waves-light"
                         onClick={[Function]}
                         to="/polls"
->
+                      >
                         <i
-                                                className="material-icons left"
+                          className="material-icons left"
                         >
-                                                dashboard
+                          dashboard
                         </i>
                         Dashboard
-</NavLink>,
+                      </NavLink>,
                     },
                     "ref": null,
                     "rendered": Object {
@@ -445,9 +443,9 @@ ShallowWrapper {
                         "children": Array [
                           <i
                             className="material-icons left"
->
+                          >
                             dashboard
-</i>,
+                          </i>,
                           "Dashboard",
                         ],
                         "className": "waves-effect waves-light",
@@ -485,14 +483,14 @@ ShallowWrapper {
                         className="waves-effect waves-light"
                         onClick={[Function]}
                         to="/polls/new"
->
+                      >
                         <i
-                                                className="material-icons left"
+                          className="material-icons left"
                         >
-                                                add
+                          add
                         </i>
                         Create a Poll
-</NavLink>,
+                      </NavLink>,
                     },
                     "ref": null,
                     "rendered": Object {
@@ -505,9 +503,9 @@ ShallowWrapper {
                         "children": Array [
                           <i
                             className="material-icons left"
->
+                          >
                             add
-</i>,
+                          </i>,
                           "Create a Poll",
                         ],
                         "className": "waves-effect waves-light",
@@ -543,14 +541,14 @@ ShallowWrapper {
                         className="navbar-item waves-effect waves-light"
                         href="/api/logout"
                         onClick={[Function]}
->
+                      >
                         <i
-                                                className="material-icons left"
+                          className="material-icons left"
                         >
-                                                person
+                          person
                         </i>
                         Sign Out
-</a>,
+                      </a>,
                     },
                     "ref": null,
                     "rendered": Object {
@@ -561,9 +559,9 @@ ShallowWrapper {
                         "children": Array [
                           <i
                             className="material-icons left"
->
+                          >
                             person
-</i>,
+                          </i>,
                           "Sign Out",
                         ],
                         "className": "navbar-item waves-effect waves-light",
@@ -603,13 +601,13 @@ ShallowWrapper {
                 "children": <a
                   href="javascript:void(0);"
                   onClick={[Function]}
->
+                >
                   <i
-                                    className="material-icons"
+                    className="material-icons"
                   >
-                                    menu
+                    menu
                   </i>
-</a>,
+                </a>,
                 "className": "toggle",
               },
               "ref": null,
@@ -620,9 +618,9 @@ ShallowWrapper {
                 "props": Object {
                   "children": <i
                     className="material-icons"
->
+                  >
                     menu
-</i>,
+                  </i>,
                   "href": "javascript:void(0);",
                   "onClick": [Function],
                 },
@@ -659,88 +657,88 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="nav-wrapper container"
->
+        >
           <Link
-                    className="brand-logo"
-                    replace={false}
-                    to="/"
+            className="brand-logo"
+            replace={false}
+            to="/"
           >
-                    <img
-                              alt="Simple Polls"
-                              src="logo.min.svg"
-                    />
+            <img
+              alt="Simple Polls"
+              src="logo.min.svg"
+            />
           </Link>
           <ul
-                    className="right"
+            className="right"
           >
-                    <ul
-                              className="responsive"
+            <ul
+              className="responsive"
+            >
+              <ul>
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="waves-effect waves-light"
+                    onClick={[Function]}
+                    to="/polls"
+                  >
+                    <i
+                      className="material-icons left"
                     >
-                              <ul>
-                                        <li>
-                                                  <NavLink
-                                                            activeClassName="active"
-                                                            aria-current="page"
-                                                            className="waves-effect waves-light"
-                                                            onClick={[Function]}
-                                                            to="/polls"
-                                                  >
-                                                            <i
-                                                                      className="material-icons left"
-                                                            >
-                                                                      dashboard
-                                                            </i>
-                                                            Dashboard
-                                                  </NavLink>
-                                        </li>
-                                        <li>
-                                                  <NavLink
-                                                            activeClassName="active"
-                                                            aria-current="page"
-                                                            className="waves-effect waves-light"
-                                                            onClick={[Function]}
-                                                            to="/polls/new"
-                                                  >
-                                                            <i
-                                                                      className="material-icons left"
-                                                            >
-                                                                      add
-                                                            </i>
-                                                            Create a Poll
-                                                  </NavLink>
-                                        </li>
-                                        <li>
-                                                  <a
-                                                            className="navbar-item waves-effect waves-light"
-                                                            href="/api/logout"
-                                                            onClick={[Function]}
-                                                  >
-                                                            <i
-                                                                      className="material-icons left"
-                                                            >
-                                                                      person
-                                                            </i>
-                                                            Sign Out
-                                                  </a>
-                                        </li>
-                              </ul>
-                    </ul>
-                    <li
-                              className="toggle"
+                      dashboard
+                    </i>
+                    Dashboard
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="waves-effect waves-light"
+                    onClick={[Function]}
+                    to="/polls/new"
+                  >
+                    <i
+                      className="material-icons left"
                     >
-                              <a
-                                        href="javascript:void(0);"
-                                        onClick={[Function]}
-                              >
-                                        <i
-                                                  className="material-icons"
-                                        >
-                                                  menu
-                                        </i>
-                              </a>
-                    </li>
+                      add
+                    </i>
+                    Create a Poll
+                  </NavLink>
+                </li>
+                <li>
+                  <a
+                    className="navbar-item waves-effect waves-light"
+                    href="/api/logout"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="material-icons left"
+                    >
+                      person
+                    </i>
+                    Sign Out
+                  </a>
+                </li>
+              </ul>
+            </ul>
+            <li
+              className="toggle"
+            >
+              <a
+                href="javascript:void(0);"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons"
+                >
+                  menu
+                </i>
+              </a>
+            </li>
           </ul>
-</div>,
+        </div>,
         "id": "main-nav",
       },
       "ref": null,
@@ -754,82 +752,82 @@ ShallowWrapper {
               className="brand-logo"
               replace={false}
               to="/"
->
+            >
               <img
-                            alt="Simple Polls"
-                            src="logo.min.svg"
+                alt="Simple Polls"
+                src="logo.min.svg"
               />
-</Link>,
+            </Link>,
             <ul
               className="right"
->
+            >
               <ul
-                            className="responsive"
+                className="responsive"
               >
-                            <ul>
-                                          <li>
-                                                        <NavLink
-                                                                      activeClassName="active"
-                                                                      aria-current="page"
-                                                                      className="waves-effect waves-light"
-                                                                      onClick={[Function]}
-                                                                      to="/polls"
-                                                        >
-                                                                      <i
-                                                                                    className="material-icons left"
-                                                                      >
-                                                                                    dashboard
-                                                                      </i>
-                                                                      Dashboard
-                                                        </NavLink>
-                                          </li>
-                                          <li>
-                                                        <NavLink
-                                                                      activeClassName="active"
-                                                                      aria-current="page"
-                                                                      className="waves-effect waves-light"
-                                                                      onClick={[Function]}
-                                                                      to="/polls/new"
-                                                        >
-                                                                      <i
-                                                                                    className="material-icons left"
-                                                                      >
-                                                                                    add
-                                                                      </i>
-                                                                      Create a Poll
-                                                        </NavLink>
-                                          </li>
-                                          <li>
-                                                        <a
-                                                                      className="navbar-item waves-effect waves-light"
-                                                                      href="/api/logout"
-                                                                      onClick={[Function]}
-                                                        >
-                                                                      <i
-                                                                                    className="material-icons left"
-                                                                      >
-                                                                                    person
-                                                                      </i>
-                                                                      Sign Out
-                                                        </a>
-                                          </li>
-                            </ul>
+                <ul>
+                  <li>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="waves-effect waves-light"
+                      onClick={[Function]}
+                      to="/polls"
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        dashboard
+                      </i>
+                      Dashboard
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="waves-effect waves-light"
+                      onClick={[Function]}
+                      to="/polls/new"
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        add
+                      </i>
+                      Create a Poll
+                    </NavLink>
+                  </li>
+                  <li>
+                    <a
+                      className="navbar-item waves-effect waves-light"
+                      href="/api/logout"
+                      onClick={[Function]}
+                    >
+                      <i
+                        className="material-icons left"
+                      >
+                        person
+                      </i>
+                      Sign Out
+                    </a>
+                  </li>
+                </ul>
               </ul>
               <li
-                            className="toggle"
+                className="toggle"
               >
-                            <a
-                                          href="javascript:void(0);"
-                                          onClick={[Function]}
-                            >
-                                          <i
-                                                        className="material-icons"
-                                          >
-                                                        menu
-                                          </i>
-                            </a>
+                <a
+                  href="javascript:void(0);"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="material-icons"
+                  >
+                    menu
+                  </i>
+                </a>
               </li>
-</ul>,
+            </ul>,
           ],
           "className": "nav-wrapper container",
         },
@@ -843,7 +841,7 @@ ShallowWrapper {
               "children": <img
                 alt="Simple Polls"
                 src="logo.min.svg"
-/>,
+              />,
               "className": "brand-logo",
               "replace": false,
               "to": "/",
@@ -871,70 +869,70 @@ ShallowWrapper {
               "children": Array [
                 <ul
                   className="responsive"
->
+                >
                   <ul>
-                                    <li>
-                                                      <NavLink
-                                                                        activeClassName="active"
-                                                                        aria-current="page"
-                                                                        className="waves-effect waves-light"
-                                                                        onClick={[Function]}
-                                                                        to="/polls"
-                                                      >
-                                                                        <i
-                                                                                          className="material-icons left"
-                                                                        >
-                                                                                          dashboard
-                                                                        </i>
-                                                                        Dashboard
-                                                      </NavLink>
-                                    </li>
-                                    <li>
-                                                      <NavLink
-                                                                        activeClassName="active"
-                                                                        aria-current="page"
-                                                                        className="waves-effect waves-light"
-                                                                        onClick={[Function]}
-                                                                        to="/polls/new"
-                                                      >
-                                                                        <i
-                                                                                          className="material-icons left"
-                                                                        >
-                                                                                          add
-                                                                        </i>
-                                                                        Create a Poll
-                                                      </NavLink>
-                                    </li>
-                                    <li>
-                                                      <a
-                                                                        className="navbar-item waves-effect waves-light"
-                                                                        href="/api/logout"
-                                                                        onClick={[Function]}
-                                                      >
-                                                                        <i
-                                                                                          className="material-icons left"
-                                                                        >
-                                                                                          person
-                                                                        </i>
-                                                                        Sign Out
-                                                      </a>
-                                    </li>
+                    <li>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="waves-effect waves-light"
+                        onClick={[Function]}
+                        to="/polls"
+                      >
+                        <i
+                          className="material-icons left"
+                        >
+                          dashboard
+                        </i>
+                        Dashboard
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="waves-effect waves-light"
+                        onClick={[Function]}
+                        to="/polls/new"
+                      >
+                        <i
+                          className="material-icons left"
+                        >
+                          add
+                        </i>
+                        Create a Poll
+                      </NavLink>
+                    </li>
+                    <li>
+                      <a
+                        className="navbar-item waves-effect waves-light"
+                        href="/api/logout"
+                        onClick={[Function]}
+                      >
+                        <i
+                          className="material-icons left"
+                        >
+                          person
+                        </i>
+                        Sign Out
+                      </a>
+                    </li>
                   </ul>
-</ul>,
+                </ul>,
                 <li
                   className="toggle"
->
+                >
                   <a
-                                    href="javascript:void(0);"
-                                    onClick={[Function]}
+                    href="javascript:void(0);"
+                    onClick={[Function]}
                   >
-                                    <i
-                                                      className="material-icons"
-                                    >
-                                                      menu
-                                    </i>
+                    <i
+                      className="material-icons"
+                    >
+                      menu
+                    </i>
                   </a>
-</li>,
+                </li>,
               ],
               "className": "right",
             },
@@ -947,52 +945,52 @@ ShallowWrapper {
                 "props": Object {
                   "children": <ul>
                     <li>
-                                        <NavLink
-                                                            activeClassName="active"
-                                                            aria-current="page"
-                                                            className="waves-effect waves-light"
-                                                            onClick={[Function]}
-                                                            to="/polls"
-                                        >
-                                                            <i
-                                                                                className="material-icons left"
-                                                            >
-                                                                                dashboard
-                                                            </i>
-                                                            Dashboard
-                                        </NavLink>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="waves-effect waves-light"
+                        onClick={[Function]}
+                        to="/polls"
+                      >
+                        <i
+                          className="material-icons left"
+                        >
+                          dashboard
+                        </i>
+                        Dashboard
+                      </NavLink>
                     </li>
                     <li>
-                                        <NavLink
-                                                            activeClassName="active"
-                                                            aria-current="page"
-                                                            className="waves-effect waves-light"
-                                                            onClick={[Function]}
-                                                            to="/polls/new"
-                                        >
-                                                            <i
-                                                                                className="material-icons left"
-                                                            >
-                                                                                add
-                                                            </i>
-                                                            Create a Poll
-                                        </NavLink>
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="waves-effect waves-light"
+                        onClick={[Function]}
+                        to="/polls/new"
+                      >
+                        <i
+                          className="material-icons left"
+                        >
+                          add
+                        </i>
+                        Create a Poll
+                      </NavLink>
                     </li>
                     <li>
-                                        <a
-                                                            className="navbar-item waves-effect waves-light"
-                                                            href="/api/logout"
-                                                            onClick={[Function]}
-                                        >
-                                                            <i
-                                                                                className="material-icons left"
-                                                            >
-                                                                                person
-                                                            </i>
-                                                            Sign Out
-                                        </a>
+                      <a
+                        className="navbar-item waves-effect waves-light"
+                        href="/api/logout"
+                        onClick={[Function]}
+                      >
+                        <i
+                          className="material-icons left"
+                        >
+                          person
+                        </i>
+                        Sign Out
+                      </a>
                     </li>
-</ul>,
+                  </ul>,
                   "className": "responsive",
                 },
                 "ref": null,
@@ -1004,50 +1002,50 @@ ShallowWrapper {
                     "children": Array [
                       <li>
                         <NavLink
-                                                activeClassName="active"
-                                                aria-current="page"
-                                                className="waves-effect waves-light"
-                                                onClick={[Function]}
-                                                to="/polls"
+                          activeClassName="active"
+                          aria-current="page"
+                          className="waves-effect waves-light"
+                          onClick={[Function]}
+                          to="/polls"
                         >
-                                                <i
-                                                                        className="material-icons left"
-                                                >
-                                                                        dashboard
-                                                </i>
-                                                Dashboard
+                          <i
+                            className="material-icons left"
+                          >
+                            dashboard
+                          </i>
+                          Dashboard
                         </NavLink>
-</li>,
+                      </li>,
                       <li>
                         <NavLink
-                                                activeClassName="active"
-                                                aria-current="page"
-                                                className="waves-effect waves-light"
-                                                onClick={[Function]}
-                                                to="/polls/new"
+                          activeClassName="active"
+                          aria-current="page"
+                          className="waves-effect waves-light"
+                          onClick={[Function]}
+                          to="/polls/new"
                         >
-                                                <i
-                                                                        className="material-icons left"
-                                                >
-                                                                        add
-                                                </i>
-                                                Create a Poll
+                          <i
+                            className="material-icons left"
+                          >
+                            add
+                          </i>
+                          Create a Poll
                         </NavLink>
-</li>,
+                      </li>,
                       <li>
                         <a
-                                                className="navbar-item waves-effect waves-light"
-                                                href="/api/logout"
-                                                onClick={[Function]}
+                          className="navbar-item waves-effect waves-light"
+                          href="/api/logout"
+                          onClick={[Function]}
                         >
-                                                <i
-                                                                        className="material-icons left"
-                                                >
-                                                                        person
-                                                </i>
-                                                Sign Out
+                          <i
+                            className="material-icons left"
+                          >
+                            person
+                          </i>
+                          Sign Out
                         </a>
-</li>,
+                      </li>,
                     ],
                   },
                   "ref": null,
@@ -1063,14 +1061,14 @@ ShallowWrapper {
                           className="waves-effect waves-light"
                           onClick={[Function]}
                           to="/polls"
->
+                        >
                           <i
-                                                    className="material-icons left"
+                            className="material-icons left"
                           >
-                                                    dashboard
+                            dashboard
                           </i>
                           Dashboard
-</NavLink>,
+                        </NavLink>,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -1083,9 +1081,9 @@ ShallowWrapper {
                           "children": Array [
                             <i
                               className="material-icons left"
->
+                            >
                               dashboard
-</i>,
+                            </i>,
                             "Dashboard",
                           ],
                           "className": "waves-effect waves-light",
@@ -1123,14 +1121,14 @@ ShallowWrapper {
                           className="waves-effect waves-light"
                           onClick={[Function]}
                           to="/polls/new"
->
+                        >
                           <i
-                                                    className="material-icons left"
+                            className="material-icons left"
                           >
-                                                    add
+                            add
                           </i>
                           Create a Poll
-</NavLink>,
+                        </NavLink>,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -1143,9 +1141,9 @@ ShallowWrapper {
                           "children": Array [
                             <i
                               className="material-icons left"
->
+                            >
                               add
-</i>,
+                            </i>,
                             "Create a Poll",
                           ],
                           "className": "waves-effect waves-light",
@@ -1181,14 +1179,14 @@ ShallowWrapper {
                           className="navbar-item waves-effect waves-light"
                           href="/api/logout"
                           onClick={[Function]}
->
+                        >
                           <i
-                                                    className="material-icons left"
+                            className="material-icons left"
                           >
-                                                    person
+                            person
                           </i>
                           Sign Out
-</a>,
+                        </a>,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -1199,9 +1197,9 @@ ShallowWrapper {
                           "children": Array [
                             <i
                               className="material-icons left"
->
+                            >
                               person
-</i>,
+                            </i>,
                             "Sign Out",
                           ],
                           "className": "navbar-item waves-effect waves-light",
@@ -1241,13 +1239,13 @@ ShallowWrapper {
                   "children": <a
                     href="javascript:void(0);"
                     onClick={[Function]}
->
+                  >
                     <i
-                                        className="material-icons"
+                      className="material-icons"
                     >
-                                        menu
+                      menu
                     </i>
-</a>,
+                  </a>,
                   "className": "toggle",
                 },
                 "ref": null,
@@ -1258,9 +1256,9 @@ ShallowWrapper {
                   "props": Object {
                     "children": <i
                       className="material-icons"
->
+                    >
                       menu
-</i>,
+                    </i>,
                     "href": "javascript:void(0);",
                     "onClick": [Function],
                   },
@@ -1294,6 +1292,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,

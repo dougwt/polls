@@ -2,16 +2,15 @@
 
 exports[`Landing renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
-    auth={undefined}
+  Symbol(enzyme.__unrendered__): <Landing
     history={Object {}}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -23,224 +22,224 @@ ShallowWrapper {
       "children": Array [
         <div
           className="wrapper section-1 bg"
->
+        >
           <div
-                    className="bg-image-container"
+            className="bg-image-container"
           >
-                    <div
-                              className="bg-image"
-                    />
+            <div
+              className="bg-image"
+            />
           </div>
           <div
-                    className="bg-container"
+            className="bg-container"
           >
-                    <div
-                              className="container"
-                    >
-                              <div
-                                        className="section"
-                              >
-                                        <h1
-                                                  className="header center"
-                                        >
-                                                  Crowdsource Everyday Decisions
-                                        </h1>
-                                        <div
-                                                  className="row center"
-                                        >
-                                                  <h5
-                                                            className="header col s12 light"
-                                                  >
-                                                            A community for creating, finding, and sharing simple polls.
-                                                  </h5>
-                                        </div>
-                                        <div
-                                                  className="row center"
-                                        >
-                                                  <a
-                                                            className="btn-large waves-effect waves-light"
-                                                            href="/auth/google"
-                                                            id="download-button"
-                                                  >
-                                                            Join For Free
-                                                  </a>
-                                        </div>
-                              </div>
-                    </div>
+            <div
+              className="container"
+            >
+              <div
+                className="section"
+              >
+                <h1
+                  className="header center"
+                >
+                  Crowdsource Everyday Decisions
+                </h1>
+                <div
+                  className="row center"
+                >
+                  <h5
+                    className="header col s12 light"
+                  >
+                    A community for creating, finding, and sharing simple polls.
+                  </h5>
+                </div>
+                <div
+                  className="row center"
+                >
+                  <a
+                    className="btn-large waves-effect waves-light"
+                    href="/auth/google"
+                    id="download-button"
+                  >
+                    Join For Free
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-</div>,
+        </div>,
         <div
           className="wrapper section-2"
->
+        >
           <div
-                    className="container"
+            className="container"
           >
-                    <div
-                              className="section"
+            <div
+              className="section"
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
                     >
-                              <div
-                                        className="row"
-                              >
-                                        <div
-                                                  className="col s12 m4"
-                                        >
-                                                  <div
-                                                            className="icon-block"
-                                                  >
-                                                            <h2
-                                                                      className="center"
-                                                            >
-                                                                      <i
-                                                                                className="material-icons"
-                                                                      >
-                                                                                create
-                                                                      </i>
-                                                            </h2>
-                                                            <h5
-                                                                      className="center"
-                                                            >
-                                                                      Create
-                                                            </h5>
-                                                            <p
-                                                                      className="light center"
-                                                            >
-                                                                      Create unlimited polls using an easy-to-use modern web interface
-                                                            </p>
-                                                  </div>
-                                        </div>
-                                        <div
-                                                  className="col s12 m4"
-                                        >
-                                                  <div
-                                                            className="icon-block"
-                                                  >
-                                                            <h2
-                                                                      className="center"
-                                                            >
-                                                                      <i
-                                                                                className="material-icons"
-                                                                      >
-                                                                                search
-                                                                      </i>
-                                                            </h2>
-                                                            <h5
-                                                                      className="center"
-                                                            >
-                                                                      Browse
-                                                            </h5>
-                                                            <p
-                                                                      className="light center"
-                                                            >
-                                                                      Browse polls created by others to view and contribute your opinions
-                                                            </p>
-                                                  </div>
-                                        </div>
-                                        <div
-                                                  className="col s12 m4"
-                                        >
-                                                  <div
-                                                            className="icon-block"
-                                                  >
-                                                            <h2
-                                                                      className="center"
-                                                            >
-                                                                      <i
-                                                                                className="material-icons"
-                                                                      >
-                                                                                share
-                                                                      </i>
-                                                            </h2>
-                                                            <h5
-                                                                      className="center"
-                                                            >
-                                                                      Share
-                                                            </h5>
-                                                            <p
-                                                                      className="light center"
-                                                            >
-                                                                      Share interesting polls to spark conversation with friends
-                                                            </p>
-                                                  </div>
-                                        </div>
-                              </div>
-                    </div>
+                      <i
+                        className="material-icons"
+                      >
+                        create
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Create
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Create unlimited polls using an easy-to-use modern web interface
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        search
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Browse
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Browse polls created by others to view and contribute your opinions
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        share
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Share
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Share interesting polls to spark conversation with friends
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-</div>,
+        </div>,
         <div
           className="wrapper section-3 bg"
->
+        >
           <div
-                    className="bg-image-container"
+            className="bg-image-container"
           >
-                    <div
-                              className="bg-image"
-                    />
+            <div
+              className="bg-image"
+            />
           </div>
           <div
-                    className="bg-container"
+            className="bg-container"
           >
-                    <div
-                              className="container"
-                    >
-                              <div
-                                        className="section"
-                              >
-                                        <div
-                                                  className="row center"
-                                        >
-                                                  <h5
-                                                            className="header col s12 light"
-                                                  >
-                                                            Sometimes asking others what they think can help you to discover your own true feelings
-                                                  </h5>
-                                        </div>
-                              </div>
-                    </div>
+            <div
+              className="container"
+            >
+              <div
+                className="section"
+              >
+                <div
+                  className="row center"
+                >
+                  <h5
+                    className="header col s12 light"
+                  >
+                    Sometimes asking others what they think can help you to discover your own true feelings
+                  </h5>
+                </div>
+              </div>
+            </div>
           </div>
-</div>,
+        </div>,
         <div
           className="wrapper section-4 bg"
->
+        >
           <div
-                    className="bg-image-container"
+            className="bg-image-container"
           >
-                    <div
-                              className="bg-image"
-                    />
+            <div
+              className="bg-image"
+            />
           </div>
           <div
-                    className="bg-container"
+            className="bg-container"
           >
-                    <div
-                              className="container"
-                    >
-                              <div
-                                        className="section"
-                              >
-                                        <div
-                                                  className="row center"
-                                        >
-                                                  <h5
-                                                            className="header col s12 light"
-                                                  >
-                                                            Hone your decision-making instincts by joining our community of opinionated users.
-                                                  </h5>
-                                        </div>
-                                        <div
-                                                  className="row center"
-                                        >
-                                                  <a
-                                                            className="btn-large waves-effect waves-light"
-                                                            href="/auth/google"
-                                                            id="download-button"
-                                                  >
-                                                            Get Started
-                                                  </a>
-                                        </div>
-                              </div>
-                    </div>
+            <div
+              className="container"
+            >
+              <div
+                className="section"
+              >
+                <div
+                  className="row center"
+                >
+                  <h5
+                    className="header col s12 light"
+                  >
+                    Hone your decision-making instincts by joining our community of opinionated users.
+                  </h5>
+                </div>
+                <div
+                  className="row center"
+                >
+                  <a
+                    className="btn-large waves-effect waves-light"
+                    href="/auth/google"
+                    id="download-button"
+                  >
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-</div>,
+        </div>,
       ],
     },
     "ref": null,
@@ -253,48 +252,48 @@ ShallowWrapper {
           "children": Array [
             <div
               className="bg-image-container"
->
+            >
               <div
-                            className="bg-image"
+                className="bg-image"
               />
-</div>,
+            </div>,
             <div
               className="bg-container"
->
+            >
               <div
-                            className="container"
+                className="container"
               >
-                            <div
-                                          className="section"
-                            >
-                                          <h1
-                                                        className="header center"
-                                          >
-                                                        Crowdsource Everyday Decisions
-                                          </h1>
-                                          <div
-                                                        className="row center"
-                                          >
-                                                        <h5
-                                                                      className="header col s12 light"
-                                                        >
-                                                                      A community for creating, finding, and sharing simple polls.
-                                                        </h5>
-                                          </div>
-                                          <div
-                                                        className="row center"
-                                          >
-                                                        <a
-                                                                      className="btn-large waves-effect waves-light"
-                                                                      href="/auth/google"
-                                                                      id="download-button"
-                                                        >
-                                                                      Join For Free
-                                                        </a>
-                                          </div>
-                            </div>
+                <div
+                  className="section"
+                >
+                  <h1
+                    className="header center"
+                  >
+                    Crowdsource Everyday Decisions
+                  </h1>
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      A community for creating, finding, and sharing simple polls.
+                    </h5>
+                  </div>
+                  <div
+                    className="row center"
+                  >
+                    <a
+                      className="btn-large waves-effect waves-light"
+                      href="/auth/google"
+                      id="download-button"
+                    >
+                      Join For Free
+                    </a>
+                  </div>
+                </div>
               </div>
-</div>,
+            </div>,
           ],
           "className": "wrapper section-1 bg",
         },
@@ -307,7 +306,7 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="bg-image"
-/>,
+              />,
               "className": "bg-image-container",
             },
             "ref": null,
@@ -331,37 +330,37 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="container"
->
+              >
                 <div
-                                className="section"
+                  className="section"
                 >
-                                <h1
-                                                className="header center"
-                                >
-                                                Crowdsource Everyday Decisions
-                                </h1>
-                                <div
-                                                className="row center"
-                                >
-                                                <h5
-                                                                className="header col s12 light"
-                                                >
-                                                                A community for creating, finding, and sharing simple polls.
-                                                </h5>
-                                </div>
-                                <div
-                                                className="row center"
-                                >
-                                                <a
-                                                                className="btn-large waves-effect waves-light"
-                                                                href="/auth/google"
-                                                                id="download-button"
-                                                >
-                                                                Join For Free
-                                                </a>
-                                </div>
+                  <h1
+                    className="header center"
+                  >
+                    Crowdsource Everyday Decisions
+                  </h1>
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      A community for creating, finding, and sharing simple polls.
+                    </h5>
+                  </div>
+                  <div
+                    className="row center"
+                  >
+                    <a
+                      className="btn-large waves-effect waves-light"
+                      href="/auth/google"
+                      id="download-button"
+                    >
+                      Join For Free
+                    </a>
+                  </div>
                 </div>
-</div>,
+              </div>,
               "className": "bg-container",
             },
             "ref": null,
@@ -372,33 +371,33 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="section"
->
+                >
                   <h1
-                                    className="header center"
+                    className="header center"
                   >
-                                    Crowdsource Everyday Decisions
+                    Crowdsource Everyday Decisions
                   </h1>
                   <div
-                                    className="row center"
+                    className="row center"
                   >
-                                    <h5
-                                                      className="header col s12 light"
-                                    >
-                                                      A community for creating, finding, and sharing simple polls.
-                                    </h5>
+                    <h5
+                      className="header col s12 light"
+                    >
+                      A community for creating, finding, and sharing simple polls.
+                    </h5>
                   </div>
                   <div
-                                    className="row center"
+                    className="row center"
                   >
-                                    <a
-                                                      className="btn-large waves-effect waves-light"
-                                                      href="/auth/google"
-                                                      id="download-button"
-                                    >
-                                                      Join For Free
-                                    </a>
+                    <a
+                      className="btn-large waves-effect waves-light"
+                      href="/auth/google"
+                      id="download-button"
+                    >
+                      Join For Free
+                    </a>
                   </div>
-</div>,
+                </div>,
                 "className": "container",
               },
               "ref": null,
@@ -410,29 +409,29 @@ ShallowWrapper {
                   "children": Array [
                     <h1
                       className="header center"
->
+                    >
                       Crowdsource Everyday Decisions
-</h1>,
+                    </h1>,
                     <div
                       className="row center"
->
+                    >
                       <h5
-                                            className="header col s12 light"
+                        className="header col s12 light"
                       >
-                                            A community for creating, finding, and sharing simple polls.
+                        A community for creating, finding, and sharing simple polls.
                       </h5>
-</div>,
+                    </div>,
                     <div
                       className="row center"
->
+                    >
                       <a
-                                            className="btn-large waves-effect waves-light"
-                                            href="/auth/google"
-                                            id="download-button"
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
                       >
-                                            Join For Free
+                        Join For Free
                       </a>
-</div>,
+                    </div>,
                   ],
                   "className": "section",
                 },
@@ -457,9 +456,9 @@ ShallowWrapper {
                     "props": Object {
                       "children": <h5
                         className="header col s12 light"
->
+                      >
                         A community for creating, finding, and sharing simple polls.
-</h5>,
+                      </h5>,
                       "className": "row center",
                     },
                     "ref": null,
@@ -486,9 +485,9 @@ ShallowWrapper {
                         className="btn-large waves-effect waves-light"
                         href="/auth/google"
                         id="download-button"
->
+                      >
                         Join For Free
-</a>,
+                      </a>,
                       "className": "row center",
                     },
                     "ref": null,
@@ -525,97 +524,97 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="container"
->
+          >
             <div
-                        className="section"
+              className="section"
             >
-                        <div
-                                    className="row"
-                        >
-                                    <div
-                                                className="col s12 m4"
-                                    >
-                                                <div
-                                                            className="icon-block"
-                                                >
-                                                            <h2
-                                                                        className="center"
-                                                            >
-                                                                        <i
-                                                                                    className="material-icons"
-                                                                        >
-                                                                                    create
-                                                                        </i>
-                                                            </h2>
-                                                            <h5
-                                                                        className="center"
-                                                            >
-                                                                        Create
-                                                            </h5>
-                                                            <p
-                                                                        className="light center"
-                                                            >
-                                                                        Create unlimited polls using an easy-to-use modern web interface
-                                                            </p>
-                                                </div>
-                                    </div>
-                                    <div
-                                                className="col s12 m4"
-                                    >
-                                                <div
-                                                            className="icon-block"
-                                                >
-                                                            <h2
-                                                                        className="center"
-                                                            >
-                                                                        <i
-                                                                                    className="material-icons"
-                                                                        >
-                                                                                    search
-                                                                        </i>
-                                                            </h2>
-                                                            <h5
-                                                                        className="center"
-                                                            >
-                                                                        Browse
-                                                            </h5>
-                                                            <p
-                                                                        className="light center"
-                                                            >
-                                                                        Browse polls created by others to view and contribute your opinions
-                                                            </p>
-                                                </div>
-                                    </div>
-                                    <div
-                                                className="col s12 m4"
-                                    >
-                                                <div
-                                                            className="icon-block"
-                                                >
-                                                            <h2
-                                                                        className="center"
-                                                            >
-                                                                        <i
-                                                                                    className="material-icons"
-                                                                        >
-                                                                                    share
-                                                                        </i>
-                                                            </h2>
-                                                            <h5
-                                                                        className="center"
-                                                            >
-                                                                        Share
-                                                            </h5>
-                                                            <p
-                                                                        className="light center"
-                                                            >
-                                                                        Share interesting polls to spark conversation with friends
-                                                            </p>
-                                                </div>
-                                    </div>
-                        </div>
+              <div
+                className="row"
+              >
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        create
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Create
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Create unlimited polls using an easy-to-use modern web interface
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        search
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Browse
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Browse polls created by others to view and contribute your opinions
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        share
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Share
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Share interesting polls to spark conversation with friends
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-</div>,
+          </div>,
           "className": "wrapper section-2",
         },
         "ref": null,
@@ -626,93 +625,93 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="section"
->
+            >
               <div
-                            className="row"
+                className="row"
               >
-                            <div
-                                          className="col s12 m4"
-                            >
-                                          <div
-                                                        className="icon-block"
-                                          >
-                                                        <h2
-                                                                      className="center"
-                                                        >
-                                                                      <i
-                                                                                    className="material-icons"
-                                                                      >
-                                                                                    create
-                                                                      </i>
-                                                        </h2>
-                                                        <h5
-                                                                      className="center"
-                                                        >
-                                                                      Create
-                                                        </h5>
-                                                        <p
-                                                                      className="light center"
-                                                        >
-                                                                      Create unlimited polls using an easy-to-use modern web interface
-                                                        </p>
-                                          </div>
-                            </div>
-                            <div
-                                          className="col s12 m4"
-                            >
-                                          <div
-                                                        className="icon-block"
-                                          >
-                                                        <h2
-                                                                      className="center"
-                                                        >
-                                                                      <i
-                                                                                    className="material-icons"
-                                                                      >
-                                                                                    search
-                                                                      </i>
-                                                        </h2>
-                                                        <h5
-                                                                      className="center"
-                                                        >
-                                                                      Browse
-                                                        </h5>
-                                                        <p
-                                                                      className="light center"
-                                                        >
-                                                                      Browse polls created by others to view and contribute your opinions
-                                                        </p>
-                                          </div>
-                            </div>
-                            <div
-                                          className="col s12 m4"
-                            >
-                                          <div
-                                                        className="icon-block"
-                                          >
-                                                        <h2
-                                                                      className="center"
-                                                        >
-                                                                      <i
-                                                                                    className="material-icons"
-                                                                      >
-                                                                                    share
-                                                                      </i>
-                                                        </h2>
-                                                        <h5
-                                                                      className="center"
-                                                        >
-                                                                      Share
-                                                        </h5>
-                                                        <p
-                                                                      className="light center"
-                                                        >
-                                                                      Share interesting polls to spark conversation with friends
-                                                        </p>
-                                          </div>
-                            </div>
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        create
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Create
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Create unlimited polls using an easy-to-use modern web interface
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        search
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Browse
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Browse polls created by others to view and contribute your opinions
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="col s12 m4"
+                >
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        share
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Share
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Share interesting polls to spark conversation with friends
+                    </p>
+                  </div>
+                </div>
               </div>
-</div>,
+            </div>,
             "className": "container",
           },
           "ref": null,
@@ -723,89 +722,89 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="row"
->
+              >
                 <div
-                                className="col s12 m4"
+                  className="col s12 m4"
                 >
-                                <div
-                                                className="icon-block"
-                                >
-                                                <h2
-                                                                className="center"
-                                                >
-                                                                <i
-                                                                                className="material-icons"
-                                                                >
-                                                                                create
-                                                                </i>
-                                                </h2>
-                                                <h5
-                                                                className="center"
-                                                >
-                                                                Create
-                                                </h5>
-                                                <p
-                                                                className="light center"
-                                                >
-                                                                Create unlimited polls using an easy-to-use modern web interface
-                                                </p>
-                                </div>
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        create
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Create
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Create unlimited polls using an easy-to-use modern web interface
+                    </p>
+                  </div>
                 </div>
                 <div
-                                className="col s12 m4"
+                  className="col s12 m4"
                 >
-                                <div
-                                                className="icon-block"
-                                >
-                                                <h2
-                                                                className="center"
-                                                >
-                                                                <i
-                                                                                className="material-icons"
-                                                                >
-                                                                                search
-                                                                </i>
-                                                </h2>
-                                                <h5
-                                                                className="center"
-                                                >
-                                                                Browse
-                                                </h5>
-                                                <p
-                                                                className="light center"
-                                                >
-                                                                Browse polls created by others to view and contribute your opinions
-                                                </p>
-                                </div>
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        search
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Browse
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Browse polls created by others to view and contribute your opinions
+                    </p>
+                  </div>
                 </div>
                 <div
-                                className="col s12 m4"
+                  className="col s12 m4"
                 >
-                                <div
-                                                className="icon-block"
-                                >
-                                                <h2
-                                                                className="center"
-                                                >
-                                                                <i
-                                                                                className="material-icons"
-                                                                >
-                                                                                share
-                                                                </i>
-                                                </h2>
-                                                <h5
-                                                                className="center"
-                                                >
-                                                                Share
-                                                </h5>
-                                                <p
-                                                                className="light center"
-                                                >
-                                                                Share interesting polls to spark conversation with friends
-                                                </p>
-                                </div>
+                  <div
+                    className="icon-block"
+                  >
+                    <h2
+                      className="center"
+                    >
+                      <i
+                        className="material-icons"
+                      >
+                        share
+                      </i>
+                    </h2>
+                    <h5
+                      className="center"
+                    >
+                      Share
+                    </h5>
+                    <p
+                      className="light center"
+                    >
+                      Share interesting polls to spark conversation with friends
+                    </p>
+                  </div>
                 </div>
-</div>,
+              </div>,
               "className": "section",
             },
             "ref": null,
@@ -817,85 +816,85 @@ ShallowWrapper {
                 "children": Array [
                   <div
                     className="col s12 m4"
->
+                  >
                     <div
-                                        className="icon-block"
+                      className="icon-block"
                     >
-                                        <h2
-                                                            className="center"
-                                        >
-                                                            <i
-                                                                                className="material-icons"
-                                                            >
-                                                                                create
-                                                            </i>
-                                        </h2>
-                                        <h5
-                                                            className="center"
-                                        >
-                                                            Create
-                                        </h5>
-                                        <p
-                                                            className="light center"
-                                        >
-                                                            Create unlimited polls using an easy-to-use modern web interface
-                                        </p>
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          create
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Create
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Create unlimited polls using an easy-to-use modern web interface
+                      </p>
                     </div>
-</div>,
+                  </div>,
                   <div
                     className="col s12 m4"
->
+                  >
                     <div
-                                        className="icon-block"
+                      className="icon-block"
                     >
-                                        <h2
-                                                            className="center"
-                                        >
-                                                            <i
-                                                                                className="material-icons"
-                                                            >
-                                                                                search
-                                                            </i>
-                                        </h2>
-                                        <h5
-                                                            className="center"
-                                        >
-                                                            Browse
-                                        </h5>
-                                        <p
-                                                            className="light center"
-                                        >
-                                                            Browse polls created by others to view and contribute your opinions
-                                        </p>
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          search
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Browse
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Browse polls created by others to view and contribute your opinions
+                      </p>
                     </div>
-</div>,
+                  </div>,
                   <div
                     className="col s12 m4"
->
+                  >
                     <div
-                                        className="icon-block"
+                      className="icon-block"
                     >
-                                        <h2
-                                                            className="center"
-                                        >
-                                                            <i
-                                                                                className="material-icons"
-                                                            >
-                                                                                share
-                                                            </i>
-                                        </h2>
-                                        <h5
-                                                            className="center"
-                                        >
-                                                            Share
-                                        </h5>
-                                        <p
-                                                            className="light center"
-                                        >
-                                                            Share interesting polls to spark conversation with friends
-                                        </p>
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          share
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Share
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Share interesting polls to spark conversation with friends
+                      </p>
                     </div>
-</div>,
+                  </div>,
                 ],
                 "className": "row",
               },
@@ -908,27 +907,27 @@ ShallowWrapper {
                   "props": Object {
                     "children": <div
                       className="icon-block"
->
+                    >
                       <h2
-                                            className="center"
+                        className="center"
                       >
-                                            <i
-                                                                  className="material-icons"
-                                            >
-                                                                  create
-                                            </i>
+                        <i
+                          className="material-icons"
+                        >
+                          create
+                        </i>
                       </h2>
                       <h5
-                                            className="center"
+                        className="center"
                       >
-                                            Create
+                        Create
                       </h5>
                       <p
-                                            className="light center"
+                        className="light center"
                       >
-                                            Create unlimited polls using an easy-to-use modern web interface
+                        Create unlimited polls using an easy-to-use modern web interface
                       </p>
-</div>,
+                    </div>,
                     "className": "col s12 m4",
                   },
                   "ref": null,
@@ -940,23 +939,23 @@ ShallowWrapper {
                       "children": Array [
                         <h2
                           className="center"
->
+                        >
                           <i
-                                                    className="material-icons"
+                            className="material-icons"
                           >
-                                                    create
+                            create
                           </i>
-</h2>,
+                        </h2>,
                         <h5
                           className="center"
->
+                        >
                           Create
-</h5>,
+                        </h5>,
                         <p
                           className="light center"
->
+                        >
                           Create unlimited polls using an easy-to-use modern web interface
-</p>,
+                        </p>,
                       ],
                       "className": "icon-block",
                     },
@@ -969,9 +968,9 @@ ShallowWrapper {
                         "props": Object {
                           "children": <i
                             className="material-icons"
->
+                          >
                             create
-</i>,
+                          </i>,
                           "className": "center",
                         },
                         "ref": null,
@@ -1025,27 +1024,27 @@ ShallowWrapper {
                   "props": Object {
                     "children": <div
                       className="icon-block"
->
+                    >
                       <h2
-                                            className="center"
+                        className="center"
                       >
-                                            <i
-                                                                  className="material-icons"
-                                            >
-                                                                  search
-                                            </i>
+                        <i
+                          className="material-icons"
+                        >
+                          search
+                        </i>
                       </h2>
                       <h5
-                                            className="center"
+                        className="center"
                       >
-                                            Browse
+                        Browse
                       </h5>
                       <p
-                                            className="light center"
+                        className="light center"
                       >
-                                            Browse polls created by others to view and contribute your opinions
+                        Browse polls created by others to view and contribute your opinions
                       </p>
-</div>,
+                    </div>,
                     "className": "col s12 m4",
                   },
                   "ref": null,
@@ -1057,23 +1056,23 @@ ShallowWrapper {
                       "children": Array [
                         <h2
                           className="center"
->
+                        >
                           <i
-                                                    className="material-icons"
+                            className="material-icons"
                           >
-                                                    search
+                            search
                           </i>
-</h2>,
+                        </h2>,
                         <h5
                           className="center"
->
+                        >
                           Browse
-</h5>,
+                        </h5>,
                         <p
                           className="light center"
->
+                        >
                           Browse polls created by others to view and contribute your opinions
-</p>,
+                        </p>,
                       ],
                       "className": "icon-block",
                     },
@@ -1086,9 +1085,9 @@ ShallowWrapper {
                         "props": Object {
                           "children": <i
                             className="material-icons"
->
+                          >
                             search
-</i>,
+                          </i>,
                           "className": "center",
                         },
                         "ref": null,
@@ -1142,27 +1141,27 @@ ShallowWrapper {
                   "props": Object {
                     "children": <div
                       className="icon-block"
->
+                    >
                       <h2
-                                            className="center"
+                        className="center"
                       >
-                                            <i
-                                                                  className="material-icons"
-                                            >
-                                                                  share
-                                            </i>
+                        <i
+                          className="material-icons"
+                        >
+                          share
+                        </i>
                       </h2>
                       <h5
-                                            className="center"
+                        className="center"
                       >
-                                            Share
+                        Share
                       </h5>
                       <p
-                                            className="light center"
+                        className="light center"
                       >
-                                            Share interesting polls to spark conversation with friends
+                        Share interesting polls to spark conversation with friends
                       </p>
-</div>,
+                    </div>,
                     "className": "col s12 m4",
                   },
                   "ref": null,
@@ -1174,23 +1173,23 @@ ShallowWrapper {
                       "children": Array [
                         <h2
                           className="center"
->
+                        >
                           <i
-                                                    className="material-icons"
+                            className="material-icons"
                           >
-                                                    share
+                            share
                           </i>
-</h2>,
+                        </h2>,
                         <h5
                           className="center"
->
+                        >
                           Share
-</h5>,
+                        </h5>,
                         <p
                           className="light center"
->
+                        >
                           Share interesting polls to spark conversation with friends
-</p>,
+                        </p>,
                       ],
                       "className": "icon-block",
                     },
@@ -1203,9 +1202,9 @@ ShallowWrapper {
                         "props": Object {
                           "children": <i
                             className="material-icons"
->
+                          >
                             share
-</i>,
+                          </i>,
                           "className": "center",
                         },
                         "ref": null,
@@ -1269,32 +1268,32 @@ ShallowWrapper {
           "children": Array [
             <div
               className="bg-image-container"
->
+            >
               <div
-                            className="bg-image"
+                className="bg-image"
               />
-</div>,
+            </div>,
             <div
               className="bg-container"
->
+            >
               <div
-                            className="container"
+                className="container"
               >
-                            <div
-                                          className="section"
-                            >
-                                          <div
-                                                        className="row center"
-                                          >
-                                                        <h5
-                                                                      className="header col s12 light"
-                                                        >
-                                                                      Sometimes asking others what they think can help you to discover your own true feelings
-                                                        </h5>
-                                          </div>
-                            </div>
+                <div
+                  className="section"
+                >
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      Sometimes asking others what they think can help you to discover your own true feelings
+                    </h5>
+                  </div>
+                </div>
               </div>
-</div>,
+            </div>,
           ],
           "className": "wrapper section-3 bg",
         },
@@ -1307,7 +1306,7 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="bg-image"
-/>,
+              />,
               "className": "bg-image-container",
             },
             "ref": null,
@@ -1331,21 +1330,21 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="container"
->
+              >
                 <div
-                                className="section"
+                  className="section"
                 >
-                                <div
-                                                className="row center"
-                                >
-                                                <h5
-                                                                className="header col s12 light"
-                                                >
-                                                                Sometimes asking others what they think can help you to discover your own true feelings
-                                                </h5>
-                                </div>
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      Sometimes asking others what they think can help you to discover your own true feelings
+                    </h5>
+                  </div>
                 </div>
-</div>,
+              </div>,
               "className": "bg-container",
             },
             "ref": null,
@@ -1356,17 +1355,17 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="section"
->
+                >
                   <div
-                                    className="row center"
+                    className="row center"
                   >
-                                    <h5
-                                                      className="header col s12 light"
-                                    >
-                                                      Sometimes asking others what they think can help you to discover your own true feelings
-                                    </h5>
+                    <h5
+                      className="header col s12 light"
+                    >
+                      Sometimes asking others what they think can help you to discover your own true feelings
+                    </h5>
                   </div>
-</div>,
+                </div>,
                 "className": "container",
               },
               "ref": null,
@@ -1377,13 +1376,13 @@ ShallowWrapper {
                 "props": Object {
                   "children": <div
                     className="row center"
->
+                  >
                     <h5
-                                        className="header col s12 light"
+                      className="header col s12 light"
                     >
-                                        Sometimes asking others what they think can help you to discover your own true feelings
+                      Sometimes asking others what they think can help you to discover your own true feelings
                     </h5>
-</div>,
+                  </div>,
                   "className": "section",
                 },
                 "ref": null,
@@ -1394,9 +1393,9 @@ ShallowWrapper {
                   "props": Object {
                     "children": <h5
                       className="header col s12 light"
->
+                    >
                       Sometimes asking others what they think can help you to discover your own true feelings
-</h5>,
+                    </h5>,
                     "className": "row center",
                   },
                   "ref": null,
@@ -1431,43 +1430,43 @@ ShallowWrapper {
           "children": Array [
             <div
               className="bg-image-container"
->
+            >
               <div
-                            className="bg-image"
+                className="bg-image"
               />
-</div>,
+            </div>,
             <div
               className="bg-container"
->
+            >
               <div
-                            className="container"
+                className="container"
               >
-                            <div
-                                          className="section"
-                            >
-                                          <div
-                                                        className="row center"
-                                          >
-                                                        <h5
-                                                                      className="header col s12 light"
-                                                        >
-                                                                      Hone your decision-making instincts by joining our community of opinionated users.
-                                                        </h5>
-                                          </div>
-                                          <div
-                                                        className="row center"
-                                          >
-                                                        <a
-                                                                      className="btn-large waves-effect waves-light"
-                                                                      href="/auth/google"
-                                                                      id="download-button"
-                                                        >
-                                                                      Get Started
-                                                        </a>
-                                          </div>
-                            </div>
+                <div
+                  className="section"
+                >
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      Hone your decision-making instincts by joining our community of opinionated users.
+                    </h5>
+                  </div>
+                  <div
+                    className="row center"
+                  >
+                    <a
+                      className="btn-large waves-effect waves-light"
+                      href="/auth/google"
+                      id="download-button"
+                    >
+                      Get Started
+                    </a>
+                  </div>
+                </div>
               </div>
-</div>,
+            </div>,
           ],
           "className": "wrapper section-4 bg",
         },
@@ -1480,7 +1479,7 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="bg-image"
-/>,
+              />,
               "className": "bg-image-container",
             },
             "ref": null,
@@ -1504,32 +1503,32 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="container"
->
+              >
                 <div
-                                className="section"
+                  className="section"
                 >
-                                <div
-                                                className="row center"
-                                >
-                                                <h5
-                                                                className="header col s12 light"
-                                                >
-                                                                Hone your decision-making instincts by joining our community of opinionated users.
-                                                </h5>
-                                </div>
-                                <div
-                                                className="row center"
-                                >
-                                                <a
-                                                                className="btn-large waves-effect waves-light"
-                                                                href="/auth/google"
-                                                                id="download-button"
-                                                >
-                                                                Get Started
-                                                </a>
-                                </div>
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      Hone your decision-making instincts by joining our community of opinionated users.
+                    </h5>
+                  </div>
+                  <div
+                    className="row center"
+                  >
+                    <a
+                      className="btn-large waves-effect waves-light"
+                      href="/auth/google"
+                      id="download-button"
+                    >
+                      Get Started
+                    </a>
+                  </div>
                 </div>
-</div>,
+              </div>,
               "className": "bg-container",
             },
             "ref": null,
@@ -1540,28 +1539,28 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="section"
->
+                >
                   <div
-                                    className="row center"
+                    className="row center"
                   >
-                                    <h5
-                                                      className="header col s12 light"
-                                    >
-                                                      Hone your decision-making instincts by joining our community of opinionated users.
-                                    </h5>
+                    <h5
+                      className="header col s12 light"
+                    >
+                      Hone your decision-making instincts by joining our community of opinionated users.
+                    </h5>
                   </div>
                   <div
-                                    className="row center"
+                    className="row center"
                   >
-                                    <a
-                                                      className="btn-large waves-effect waves-light"
-                                                      href="/auth/google"
-                                                      id="download-button"
-                                    >
-                                                      Get Started
-                                    </a>
+                    <a
+                      className="btn-large waves-effect waves-light"
+                      href="/auth/google"
+                      id="download-button"
+                    >
+                      Get Started
+                    </a>
                   </div>
-</div>,
+                </div>,
                 "className": "container",
               },
               "ref": null,
@@ -1573,24 +1572,24 @@ ShallowWrapper {
                   "children": Array [
                     <div
                       className="row center"
->
+                    >
                       <h5
-                                            className="header col s12 light"
+                        className="header col s12 light"
                       >
-                                            Hone your decision-making instincts by joining our community of opinionated users.
+                        Hone your decision-making instincts by joining our community of opinionated users.
                       </h5>
-</div>,
+                    </div>,
                     <div
                       className="row center"
->
+                    >
                       <a
-                                            className="btn-large waves-effect waves-light"
-                                            href="/auth/google"
-                                            id="download-button"
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
                       >
-                                            Get Started
+                        Get Started
                       </a>
-</div>,
+                    </div>,
                   ],
                   "className": "section",
                 },
@@ -1603,9 +1602,9 @@ ShallowWrapper {
                     "props": Object {
                       "children": <h5
                         className="header col s12 light"
->
+                      >
                         Hone your decision-making instincts by joining our community of opinionated users.
-</h5>,
+                      </h5>,
                       "className": "row center",
                     },
                     "ref": null,
@@ -1632,9 +1631,9 @@ ShallowWrapper {
                         className="btn-large waves-effect waves-light"
                         href="/auth/google"
                         id="download-button"
->
+                      >
                         Get Started
-</a>,
+                      </a>,
                       "className": "row center",
                     },
                     "ref": null,
@@ -1676,224 +1675,224 @@ ShallowWrapper {
         "children": Array [
           <div
             className="wrapper section-1 bg"
->
+          >
             <div
-                        className="bg-image-container"
+              className="bg-image-container"
             >
-                        <div
-                                    className="bg-image"
-                        />
+              <div
+                className="bg-image"
+              />
             </div>
             <div
-                        className="bg-container"
+              className="bg-container"
             >
-                        <div
-                                    className="container"
-                        >
-                                    <div
-                                                className="section"
-                                    >
-                                                <h1
-                                                            className="header center"
-                                                >
-                                                            Crowdsource Everyday Decisions
-                                                </h1>
-                                                <div
-                                                            className="row center"
-                                                >
-                                                            <h5
-                                                                        className="header col s12 light"
-                                                            >
-                                                                        A community for creating, finding, and sharing simple polls.
-                                                            </h5>
-                                                </div>
-                                                <div
-                                                            className="row center"
-                                                >
-                                                            <a
-                                                                        className="btn-large waves-effect waves-light"
-                                                                        href="/auth/google"
-                                                                        id="download-button"
-                                                            >
-                                                                        Join For Free
-                                                            </a>
-                                                </div>
-                                    </div>
-                        </div>
+              <div
+                className="container"
+              >
+                <div
+                  className="section"
+                >
+                  <h1
+                    className="header center"
+                  >
+                    Crowdsource Everyday Decisions
+                  </h1>
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      A community for creating, finding, and sharing simple polls.
+                    </h5>
+                  </div>
+                  <div
+                    className="row center"
+                  >
+                    <a
+                      className="btn-large waves-effect waves-light"
+                      href="/auth/google"
+                      id="download-button"
+                    >
+                      Join For Free
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-</div>,
+          </div>,
           <div
             className="wrapper section-2"
->
+          >
             <div
-                        className="container"
+              className="container"
             >
-                        <div
-                                    className="section"
+              <div
+                className="section"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
                         >
-                                    <div
-                                                className="row"
-                                    >
-                                                <div
-                                                            className="col s12 m4"
-                                                >
-                                                            <div
-                                                                        className="icon-block"
-                                                            >
-                                                                        <h2
-                                                                                    className="center"
-                                                                        >
-                                                                                    <i
-                                                                                                className="material-icons"
-                                                                                    >
-                                                                                                create
-                                                                                    </i>
-                                                                        </h2>
-                                                                        <h5
-                                                                                    className="center"
-                                                                        >
-                                                                                    Create
-                                                                        </h5>
-                                                                        <p
-                                                                                    className="light center"
-                                                                        >
-                                                                                    Create unlimited polls using an easy-to-use modern web interface
-                                                                        </p>
-                                                            </div>
-                                                </div>
-                                                <div
-                                                            className="col s12 m4"
-                                                >
-                                                            <div
-                                                                        className="icon-block"
-                                                            >
-                                                                        <h2
-                                                                                    className="center"
-                                                                        >
-                                                                                    <i
-                                                                                                className="material-icons"
-                                                                                    >
-                                                                                                search
-                                                                                    </i>
-                                                                        </h2>
-                                                                        <h5
-                                                                                    className="center"
-                                                                        >
-                                                                                    Browse
-                                                                        </h5>
-                                                                        <p
-                                                                                    className="light center"
-                                                                        >
-                                                                                    Browse polls created by others to view and contribute your opinions
-                                                                        </p>
-                                                            </div>
-                                                </div>
-                                                <div
-                                                            className="col s12 m4"
-                                                >
-                                                            <div
-                                                                        className="icon-block"
-                                                            >
-                                                                        <h2
-                                                                                    className="center"
-                                                                        >
-                                                                                    <i
-                                                                                                className="material-icons"
-                                                                                    >
-                                                                                                share
-                                                                                    </i>
-                                                                        </h2>
-                                                                        <h5
-                                                                                    className="center"
-                                                                        >
-                                                                                    Share
-                                                                        </h5>
-                                                                        <p
-                                                                                    className="light center"
-                                                                        >
-                                                                                    Share interesting polls to spark conversation with friends
-                                                                        </p>
-                                                            </div>
-                                                </div>
-                                    </div>
-                        </div>
+                          create
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Create
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Create unlimited polls using an easy-to-use modern web interface
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          search
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Browse
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Browse polls created by others to view and contribute your opinions
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          share
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Share
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Share interesting polls to spark conversation with friends
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-</div>,
+          </div>,
           <div
             className="wrapper section-3 bg"
->
+          >
             <div
-                        className="bg-image-container"
+              className="bg-image-container"
             >
-                        <div
-                                    className="bg-image"
-                        />
+              <div
+                className="bg-image"
+              />
             </div>
             <div
-                        className="bg-container"
+              className="bg-container"
             >
-                        <div
-                                    className="container"
-                        >
-                                    <div
-                                                className="section"
-                                    >
-                                                <div
-                                                            className="row center"
-                                                >
-                                                            <h5
-                                                                        className="header col s12 light"
-                                                            >
-                                                                        Sometimes asking others what they think can help you to discover your own true feelings
-                                                            </h5>
-                                                </div>
-                                    </div>
-                        </div>
+              <div
+                className="container"
+              >
+                <div
+                  className="section"
+                >
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      Sometimes asking others what they think can help you to discover your own true feelings
+                    </h5>
+                  </div>
+                </div>
+              </div>
             </div>
-</div>,
+          </div>,
           <div
             className="wrapper section-4 bg"
->
+          >
             <div
-                        className="bg-image-container"
+              className="bg-image-container"
             >
-                        <div
-                                    className="bg-image"
-                        />
+              <div
+                className="bg-image"
+              />
             </div>
             <div
-                        className="bg-container"
+              className="bg-container"
             >
-                        <div
-                                    className="container"
-                        >
-                                    <div
-                                                className="section"
-                                    >
-                                                <div
-                                                            className="row center"
-                                                >
-                                                            <h5
-                                                                        className="header col s12 light"
-                                                            >
-                                                                        Hone your decision-making instincts by joining our community of opinionated users.
-                                                            </h5>
-                                                </div>
-                                                <div
-                                                            className="row center"
-                                                >
-                                                            <a
-                                                                        className="btn-large waves-effect waves-light"
-                                                                        href="/auth/google"
-                                                                        id="download-button"
-                                                            >
-                                                                        Get Started
-                                                            </a>
-                                                </div>
-                                    </div>
-                        </div>
+              <div
+                className="container"
+              >
+                <div
+                  className="section"
+                >
+                  <div
+                    className="row center"
+                  >
+                    <h5
+                      className="header col s12 light"
+                    >
+                      Hone your decision-making instincts by joining our community of opinionated users.
+                    </h5>
+                  </div>
+                  <div
+                    className="row center"
+                  >
+                    <a
+                      className="btn-large waves-effect waves-light"
+                      href="/auth/google"
+                      id="download-button"
+                    >
+                      Get Started
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-</div>,
+          </div>,
         ],
       },
       "ref": null,
@@ -1906,48 +1905,48 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="bg-image-container"
->
+              >
                 <div
-                                className="bg-image"
+                  className="bg-image"
                 />
-</div>,
+              </div>,
               <div
                 className="bg-container"
->
+              >
                 <div
-                                className="container"
+                  className="container"
                 >
-                                <div
-                                                className="section"
-                                >
-                                                <h1
-                                                                className="header center"
-                                                >
-                                                                Crowdsource Everyday Decisions
-                                                </h1>
-                                                <div
-                                                                className="row center"
-                                                >
-                                                                <h5
-                                                                                className="header col s12 light"
-                                                                >
-                                                                                A community for creating, finding, and sharing simple polls.
-                                                                </h5>
-                                                </div>
-                                                <div
-                                                                className="row center"
-                                                >
-                                                                <a
-                                                                                className="btn-large waves-effect waves-light"
-                                                                                href="/auth/google"
-                                                                                id="download-button"
-                                                                >
-                                                                                Join For Free
-                                                                </a>
-                                                </div>
-                                </div>
+                  <div
+                    className="section"
+                  >
+                    <h1
+                      className="header center"
+                    >
+                      Crowdsource Everyday Decisions
+                    </h1>
+                    <div
+                      className="row center"
+                    >
+                      <h5
+                        className="header col s12 light"
+                      >
+                        A community for creating, finding, and sharing simple polls.
+                      </h5>
+                    </div>
+                    <div
+                      className="row center"
+                    >
+                      <a
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
+                      >
+                        Join For Free
+                      </a>
+                    </div>
+                  </div>
                 </div>
-</div>,
+              </div>,
             ],
             "className": "wrapper section-1 bg",
           },
@@ -1960,7 +1959,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="bg-image"
-/>,
+                />,
                 "className": "bg-image-container",
               },
               "ref": null,
@@ -1984,37 +1983,37 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="container"
->
+                >
                   <div
-                                    className="section"
+                    className="section"
                   >
-                                    <h1
-                                                      className="header center"
-                                    >
-                                                      Crowdsource Everyday Decisions
-                                    </h1>
-                                    <div
-                                                      className="row center"
-                                    >
-                                                      <h5
-                                                                        className="header col s12 light"
-                                                      >
-                                                                        A community for creating, finding, and sharing simple polls.
-                                                      </h5>
-                                    </div>
-                                    <div
-                                                      className="row center"
-                                    >
-                                                      <a
-                                                                        className="btn-large waves-effect waves-light"
-                                                                        href="/auth/google"
-                                                                        id="download-button"
-                                                      >
-                                                                        Join For Free
-                                                      </a>
-                                    </div>
+                    <h1
+                      className="header center"
+                    >
+                      Crowdsource Everyday Decisions
+                    </h1>
+                    <div
+                      className="row center"
+                    >
+                      <h5
+                        className="header col s12 light"
+                      >
+                        A community for creating, finding, and sharing simple polls.
+                      </h5>
+                    </div>
+                    <div
+                      className="row center"
+                    >
+                      <a
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
+                      >
+                        Join For Free
+                      </a>
+                    </div>
                   </div>
-</div>,
+                </div>,
                 "className": "bg-container",
               },
               "ref": null,
@@ -2025,33 +2024,33 @@ ShallowWrapper {
                 "props": Object {
                   "children": <div
                     className="section"
->
+                  >
                     <h1
-                                        className="header center"
+                      className="header center"
                     >
-                                        Crowdsource Everyday Decisions
+                      Crowdsource Everyday Decisions
                     </h1>
                     <div
-                                        className="row center"
+                      className="row center"
                     >
-                                        <h5
-                                                            className="header col s12 light"
-                                        >
-                                                            A community for creating, finding, and sharing simple polls.
-                                        </h5>
+                      <h5
+                        className="header col s12 light"
+                      >
+                        A community for creating, finding, and sharing simple polls.
+                      </h5>
                     </div>
                     <div
-                                        className="row center"
+                      className="row center"
                     >
-                                        <a
-                                                            className="btn-large waves-effect waves-light"
-                                                            href="/auth/google"
-                                                            id="download-button"
-                                        >
-                                                            Join For Free
-                                        </a>
+                      <a
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
+                      >
+                        Join For Free
+                      </a>
                     </div>
-</div>,
+                  </div>,
                   "className": "container",
                 },
                 "ref": null,
@@ -2063,29 +2062,29 @@ ShallowWrapper {
                     "children": Array [
                       <h1
                         className="header center"
->
+                      >
                         Crowdsource Everyday Decisions
-</h1>,
+                      </h1>,
                       <div
                         className="row center"
->
+                      >
                         <h5
-                                                className="header col s12 light"
+                          className="header col s12 light"
                         >
-                                                A community for creating, finding, and sharing simple polls.
+                          A community for creating, finding, and sharing simple polls.
                         </h5>
-</div>,
+                      </div>,
                       <div
                         className="row center"
->
+                      >
                         <a
-                                                className="btn-large waves-effect waves-light"
-                                                href="/auth/google"
-                                                id="download-button"
+                          className="btn-large waves-effect waves-light"
+                          href="/auth/google"
+                          id="download-button"
                         >
-                                                Join For Free
+                          Join For Free
                         </a>
-</div>,
+                      </div>,
                     ],
                     "className": "section",
                   },
@@ -2110,9 +2109,9 @@ ShallowWrapper {
                       "props": Object {
                         "children": <h5
                           className="header col s12 light"
->
+                        >
                           A community for creating, finding, and sharing simple polls.
-</h5>,
+                        </h5>,
                         "className": "row center",
                       },
                       "ref": null,
@@ -2139,9 +2138,9 @@ ShallowWrapper {
                           className="btn-large waves-effect waves-light"
                           href="/auth/google"
                           id="download-button"
->
+                        >
                           Join For Free
-</a>,
+                        </a>,
                         "className": "row center",
                       },
                       "ref": null,
@@ -2178,97 +2177,97 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="container"
->
+            >
               <div
-                            className="section"
+                className="section"
               >
-                            <div
-                                          className="row"
-                            >
-                                          <div
-                                                        className="col s12 m4"
-                                          >
-                                                        <div
-                                                                      className="icon-block"
-                                                        >
-                                                                      <h2
-                                                                                    className="center"
-                                                                      >
-                                                                                    <i
-                                                                                                  className="material-icons"
-                                                                                    >
-                                                                                                  create
-                                                                                    </i>
-                                                                      </h2>
-                                                                      <h5
-                                                                                    className="center"
-                                                                      >
-                                                                                    Create
-                                                                      </h5>
-                                                                      <p
-                                                                                    className="light center"
-                                                                      >
-                                                                                    Create unlimited polls using an easy-to-use modern web interface
-                                                                      </p>
-                                                        </div>
-                                          </div>
-                                          <div
-                                                        className="col s12 m4"
-                                          >
-                                                        <div
-                                                                      className="icon-block"
-                                                        >
-                                                                      <h2
-                                                                                    className="center"
-                                                                      >
-                                                                                    <i
-                                                                                                  className="material-icons"
-                                                                                    >
-                                                                                                  search
-                                                                                    </i>
-                                                                      </h2>
-                                                                      <h5
-                                                                                    className="center"
-                                                                      >
-                                                                                    Browse
-                                                                      </h5>
-                                                                      <p
-                                                                                    className="light center"
-                                                                      >
-                                                                                    Browse polls created by others to view and contribute your opinions
-                                                                      </p>
-                                                        </div>
-                                          </div>
-                                          <div
-                                                        className="col s12 m4"
-                                          >
-                                                        <div
-                                                                      className="icon-block"
-                                                        >
-                                                                      <h2
-                                                                                    className="center"
-                                                                      >
-                                                                                    <i
-                                                                                                  className="material-icons"
-                                                                                    >
-                                                                                                  share
-                                                                                    </i>
-                                                                      </h2>
-                                                                      <h5
-                                                                                    className="center"
-                                                                      >
-                                                                                    Share
-                                                                      </h5>
-                                                                      <p
-                                                                                    className="light center"
-                                                                      >
-                                                                                    Share interesting polls to spark conversation with friends
-                                                                      </p>
-                                                        </div>
-                                          </div>
-                            </div>
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          create
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Create
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Create unlimited polls using an easy-to-use modern web interface
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          search
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Browse
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Browse polls created by others to view and contribute your opinions
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          share
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Share
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Share interesting polls to spark conversation with friends
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-</div>,
+            </div>,
             "className": "wrapper section-2",
           },
           "ref": null,
@@ -2279,93 +2278,93 @@ ShallowWrapper {
             "props": Object {
               "children": <div
                 className="section"
->
+              >
                 <div
-                                className="row"
+                  className="row"
                 >
-                                <div
-                                                className="col s12 m4"
-                                >
-                                                <div
-                                                                className="icon-block"
-                                                >
-                                                                <h2
-                                                                                className="center"
-                                                                >
-                                                                                <i
-                                                                                                className="material-icons"
-                                                                                >
-                                                                                                create
-                                                                                </i>
-                                                                </h2>
-                                                                <h5
-                                                                                className="center"
-                                                                >
-                                                                                Create
-                                                                </h5>
-                                                                <p
-                                                                                className="light center"
-                                                                >
-                                                                                Create unlimited polls using an easy-to-use modern web interface
-                                                                </p>
-                                                </div>
-                                </div>
-                                <div
-                                                className="col s12 m4"
-                                >
-                                                <div
-                                                                className="icon-block"
-                                                >
-                                                                <h2
-                                                                                className="center"
-                                                                >
-                                                                                <i
-                                                                                                className="material-icons"
-                                                                                >
-                                                                                                search
-                                                                                </i>
-                                                                </h2>
-                                                                <h5
-                                                                                className="center"
-                                                                >
-                                                                                Browse
-                                                                </h5>
-                                                                <p
-                                                                                className="light center"
-                                                                >
-                                                                                Browse polls created by others to view and contribute your opinions
-                                                                </p>
-                                                </div>
-                                </div>
-                                <div
-                                                className="col s12 m4"
-                                >
-                                                <div
-                                                                className="icon-block"
-                                                >
-                                                                <h2
-                                                                                className="center"
-                                                                >
-                                                                                <i
-                                                                                                className="material-icons"
-                                                                                >
-                                                                                                share
-                                                                                </i>
-                                                                </h2>
-                                                                <h5
-                                                                                className="center"
-                                                                >
-                                                                                Share
-                                                                </h5>
-                                                                <p
-                                                                                className="light center"
-                                                                >
-                                                                                Share interesting polls to spark conversation with friends
-                                                                </p>
-                                                </div>
-                                </div>
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          create
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Create
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Create unlimited polls using an easy-to-use modern web interface
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          search
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Browse
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Browse polls created by others to view and contribute your opinions
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className="col s12 m4"
+                  >
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          share
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Share
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Share interesting polls to spark conversation with friends
+                      </p>
+                    </div>
+                  </div>
                 </div>
-</div>,
+              </div>,
               "className": "container",
             },
             "ref": null,
@@ -2376,89 +2375,89 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="row"
->
+                >
                   <div
-                                    className="col s12 m4"
+                    className="col s12 m4"
                   >
-                                    <div
-                                                      className="icon-block"
-                                    >
-                                                      <h2
-                                                                        className="center"
-                                                      >
-                                                                        <i
-                                                                                          className="material-icons"
-                                                                        >
-                                                                                          create
-                                                                        </i>
-                                                      </h2>
-                                                      <h5
-                                                                        className="center"
-                                                      >
-                                                                        Create
-                                                      </h5>
-                                                      <p
-                                                                        className="light center"
-                                                      >
-                                                                        Create unlimited polls using an easy-to-use modern web interface
-                                                      </p>
-                                    </div>
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          create
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Create
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Create unlimited polls using an easy-to-use modern web interface
+                      </p>
+                    </div>
                   </div>
                   <div
-                                    className="col s12 m4"
+                    className="col s12 m4"
                   >
-                                    <div
-                                                      className="icon-block"
-                                    >
-                                                      <h2
-                                                                        className="center"
-                                                      >
-                                                                        <i
-                                                                                          className="material-icons"
-                                                                        >
-                                                                                          search
-                                                                        </i>
-                                                      </h2>
-                                                      <h5
-                                                                        className="center"
-                                                      >
-                                                                        Browse
-                                                      </h5>
-                                                      <p
-                                                                        className="light center"
-                                                      >
-                                                                        Browse polls created by others to view and contribute your opinions
-                                                      </p>
-                                    </div>
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          search
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Browse
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Browse polls created by others to view and contribute your opinions
+                      </p>
+                    </div>
                   </div>
                   <div
-                                    className="col s12 m4"
+                    className="col s12 m4"
                   >
-                                    <div
-                                                      className="icon-block"
-                                    >
-                                                      <h2
-                                                                        className="center"
-                                                      >
-                                                                        <i
-                                                                                          className="material-icons"
-                                                                        >
-                                                                                          share
-                                                                        </i>
-                                                      </h2>
-                                                      <h5
-                                                                        className="center"
-                                                      >
-                                                                        Share
-                                                      </h5>
-                                                      <p
-                                                                        className="light center"
-                                                      >
-                                                                        Share interesting polls to spark conversation with friends
-                                                      </p>
-                                    </div>
+                    <div
+                      className="icon-block"
+                    >
+                      <h2
+                        className="center"
+                      >
+                        <i
+                          className="material-icons"
+                        >
+                          share
+                        </i>
+                      </h2>
+                      <h5
+                        className="center"
+                      >
+                        Share
+                      </h5>
+                      <p
+                        className="light center"
+                      >
+                        Share interesting polls to spark conversation with friends
+                      </p>
+                    </div>
                   </div>
-</div>,
+                </div>,
                 "className": "section",
               },
               "ref": null,
@@ -2470,85 +2469,85 @@ ShallowWrapper {
                   "children": Array [
                     <div
                       className="col s12 m4"
->
+                    >
                       <div
-                                            className="icon-block"
+                        className="icon-block"
                       >
-                                            <h2
-                                                                  className="center"
-                                            >
-                                                                  <i
-                                                                                        className="material-icons"
-                                                                  >
-                                                                                        create
-                                                                  </i>
-                                            </h2>
-                                            <h5
-                                                                  className="center"
-                                            >
-                                                                  Create
-                                            </h5>
-                                            <p
-                                                                  className="light center"
-                                            >
-                                                                  Create unlimited polls using an easy-to-use modern web interface
-                                            </p>
+                        <h2
+                          className="center"
+                        >
+                          <i
+                            className="material-icons"
+                          >
+                            create
+                          </i>
+                        </h2>
+                        <h5
+                          className="center"
+                        >
+                          Create
+                        </h5>
+                        <p
+                          className="light center"
+                        >
+                          Create unlimited polls using an easy-to-use modern web interface
+                        </p>
                       </div>
-</div>,
+                    </div>,
                     <div
                       className="col s12 m4"
->
+                    >
                       <div
-                                            className="icon-block"
+                        className="icon-block"
                       >
-                                            <h2
-                                                                  className="center"
-                                            >
-                                                                  <i
-                                                                                        className="material-icons"
-                                                                  >
-                                                                                        search
-                                                                  </i>
-                                            </h2>
-                                            <h5
-                                                                  className="center"
-                                            >
-                                                                  Browse
-                                            </h5>
-                                            <p
-                                                                  className="light center"
-                                            >
-                                                                  Browse polls created by others to view and contribute your opinions
-                                            </p>
+                        <h2
+                          className="center"
+                        >
+                          <i
+                            className="material-icons"
+                          >
+                            search
+                          </i>
+                        </h2>
+                        <h5
+                          className="center"
+                        >
+                          Browse
+                        </h5>
+                        <p
+                          className="light center"
+                        >
+                          Browse polls created by others to view and contribute your opinions
+                        </p>
                       </div>
-</div>,
+                    </div>,
                     <div
                       className="col s12 m4"
->
+                    >
                       <div
-                                            className="icon-block"
+                        className="icon-block"
                       >
-                                            <h2
-                                                                  className="center"
-                                            >
-                                                                  <i
-                                                                                        className="material-icons"
-                                                                  >
-                                                                                        share
-                                                                  </i>
-                                            </h2>
-                                            <h5
-                                                                  className="center"
-                                            >
-                                                                  Share
-                                            </h5>
-                                            <p
-                                                                  className="light center"
-                                            >
-                                                                  Share interesting polls to spark conversation with friends
-                                            </p>
+                        <h2
+                          className="center"
+                        >
+                          <i
+                            className="material-icons"
+                          >
+                            share
+                          </i>
+                        </h2>
+                        <h5
+                          className="center"
+                        >
+                          Share
+                        </h5>
+                        <p
+                          className="light center"
+                        >
+                          Share interesting polls to spark conversation with friends
+                        </p>
                       </div>
-</div>,
+                    </div>,
                   ],
                   "className": "row",
                 },
@@ -2561,27 +2560,27 @@ ShallowWrapper {
                     "props": Object {
                       "children": <div
                         className="icon-block"
->
+                      >
                         <h2
-                                                className="center"
+                          className="center"
                         >
-                                                <i
-                                                                        className="material-icons"
-                                                >
-                                                                        create
-                                                </i>
+                          <i
+                            className="material-icons"
+                          >
+                            create
+                          </i>
                         </h2>
                         <h5
-                                                className="center"
+                          className="center"
                         >
-                                                Create
+                          Create
                         </h5>
                         <p
-                                                className="light center"
+                          className="light center"
                         >
-                                                Create unlimited polls using an easy-to-use modern web interface
+                          Create unlimited polls using an easy-to-use modern web interface
                         </p>
-</div>,
+                      </div>,
                       "className": "col s12 m4",
                     },
                     "ref": null,
@@ -2593,23 +2592,23 @@ ShallowWrapper {
                         "children": Array [
                           <h2
                             className="center"
->
+                          >
                             <i
-                                                        className="material-icons"
+                              className="material-icons"
                             >
-                                                        create
+                              create
                             </i>
-</h2>,
+                          </h2>,
                           <h5
                             className="center"
->
+                          >
                             Create
-</h5>,
+                          </h5>,
                           <p
                             className="light center"
->
+                          >
                             Create unlimited polls using an easy-to-use modern web interface
-</p>,
+                          </p>,
                         ],
                         "className": "icon-block",
                       },
@@ -2622,9 +2621,9 @@ ShallowWrapper {
                           "props": Object {
                             "children": <i
                               className="material-icons"
->
+                            >
                               create
-</i>,
+                            </i>,
                             "className": "center",
                           },
                           "ref": null,
@@ -2678,27 +2677,27 @@ ShallowWrapper {
                     "props": Object {
                       "children": <div
                         className="icon-block"
->
+                      >
                         <h2
-                                                className="center"
+                          className="center"
                         >
-                                                <i
-                                                                        className="material-icons"
-                                                >
-                                                                        search
-                                                </i>
+                          <i
+                            className="material-icons"
+                          >
+                            search
+                          </i>
                         </h2>
                         <h5
-                                                className="center"
+                          className="center"
                         >
-                                                Browse
+                          Browse
                         </h5>
                         <p
-                                                className="light center"
+                          className="light center"
                         >
-                                                Browse polls created by others to view and contribute your opinions
+                          Browse polls created by others to view and contribute your opinions
                         </p>
-</div>,
+                      </div>,
                       "className": "col s12 m4",
                     },
                     "ref": null,
@@ -2710,23 +2709,23 @@ ShallowWrapper {
                         "children": Array [
                           <h2
                             className="center"
->
+                          >
                             <i
-                                                        className="material-icons"
+                              className="material-icons"
                             >
-                                                        search
+                              search
                             </i>
-</h2>,
+                          </h2>,
                           <h5
                             className="center"
->
+                          >
                             Browse
-</h5>,
+                          </h5>,
                           <p
                             className="light center"
->
+                          >
                             Browse polls created by others to view and contribute your opinions
-</p>,
+                          </p>,
                         ],
                         "className": "icon-block",
                       },
@@ -2739,9 +2738,9 @@ ShallowWrapper {
                           "props": Object {
                             "children": <i
                               className="material-icons"
->
+                            >
                               search
-</i>,
+                            </i>,
                             "className": "center",
                           },
                           "ref": null,
@@ -2795,27 +2794,27 @@ ShallowWrapper {
                     "props": Object {
                       "children": <div
                         className="icon-block"
->
+                      >
                         <h2
-                                                className="center"
+                          className="center"
                         >
-                                                <i
-                                                                        className="material-icons"
-                                                >
-                                                                        share
-                                                </i>
+                          <i
+                            className="material-icons"
+                          >
+                            share
+                          </i>
                         </h2>
                         <h5
-                                                className="center"
+                          className="center"
                         >
-                                                Share
+                          Share
                         </h5>
                         <p
-                                                className="light center"
+                          className="light center"
                         >
-                                                Share interesting polls to spark conversation with friends
+                          Share interesting polls to spark conversation with friends
                         </p>
-</div>,
+                      </div>,
                       "className": "col s12 m4",
                     },
                     "ref": null,
@@ -2827,23 +2826,23 @@ ShallowWrapper {
                         "children": Array [
                           <h2
                             className="center"
->
+                          >
                             <i
-                                                        className="material-icons"
+                              className="material-icons"
                             >
-                                                        share
+                              share
                             </i>
-</h2>,
+                          </h2>,
                           <h5
                             className="center"
->
+                          >
                             Share
-</h5>,
+                          </h5>,
                           <p
                             className="light center"
->
+                          >
                             Share interesting polls to spark conversation with friends
-</p>,
+                          </p>,
                         ],
                         "className": "icon-block",
                       },
@@ -2856,9 +2855,9 @@ ShallowWrapper {
                           "props": Object {
                             "children": <i
                               className="material-icons"
->
+                            >
                               share
-</i>,
+                            </i>,
                             "className": "center",
                           },
                           "ref": null,
@@ -2922,32 +2921,32 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="bg-image-container"
->
+              >
                 <div
-                                className="bg-image"
+                  className="bg-image"
                 />
-</div>,
+              </div>,
               <div
                 className="bg-container"
->
+              >
                 <div
-                                className="container"
+                  className="container"
                 >
-                                <div
-                                                className="section"
-                                >
-                                                <div
-                                                                className="row center"
-                                                >
-                                                                <h5
-                                                                                className="header col s12 light"
-                                                                >
-                                                                                Sometimes asking others what they think can help you to discover your own true feelings
-                                                                </h5>
-                                                </div>
-                                </div>
+                  <div
+                    className="section"
+                  >
+                    <div
+                      className="row center"
+                    >
+                      <h5
+                        className="header col s12 light"
+                      >
+                        Sometimes asking others what they think can help you to discover your own true feelings
+                      </h5>
+                    </div>
+                  </div>
                 </div>
-</div>,
+              </div>,
             ],
             "className": "wrapper section-3 bg",
           },
@@ -2960,7 +2959,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="bg-image"
-/>,
+                />,
                 "className": "bg-image-container",
               },
               "ref": null,
@@ -2984,21 +2983,21 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="container"
->
+                >
                   <div
-                                    className="section"
+                    className="section"
                   >
-                                    <div
-                                                      className="row center"
-                                    >
-                                                      <h5
-                                                                        className="header col s12 light"
-                                                      >
-                                                                        Sometimes asking others what they think can help you to discover your own true feelings
-                                                      </h5>
-                                    </div>
+                    <div
+                      className="row center"
+                    >
+                      <h5
+                        className="header col s12 light"
+                      >
+                        Sometimes asking others what they think can help you to discover your own true feelings
+                      </h5>
+                    </div>
                   </div>
-</div>,
+                </div>,
                 "className": "bg-container",
               },
               "ref": null,
@@ -3009,17 +3008,17 @@ ShallowWrapper {
                 "props": Object {
                   "children": <div
                     className="section"
->
+                  >
                     <div
-                                        className="row center"
+                      className="row center"
                     >
-                                        <h5
-                                                            className="header col s12 light"
-                                        >
-                                                            Sometimes asking others what they think can help you to discover your own true feelings
-                                        </h5>
+                      <h5
+                        className="header col s12 light"
+                      >
+                        Sometimes asking others what they think can help you to discover your own true feelings
+                      </h5>
                     </div>
-</div>,
+                  </div>,
                   "className": "container",
                 },
                 "ref": null,
@@ -3030,13 +3029,13 @@ ShallowWrapper {
                   "props": Object {
                     "children": <div
                       className="row center"
->
+                    >
                       <h5
-                                            className="header col s12 light"
+                        className="header col s12 light"
                       >
-                                            Sometimes asking others what they think can help you to discover your own true feelings
+                        Sometimes asking others what they think can help you to discover your own true feelings
                       </h5>
-</div>,
+                    </div>,
                     "className": "section",
                   },
                   "ref": null,
@@ -3047,9 +3046,9 @@ ShallowWrapper {
                     "props": Object {
                       "children": <h5
                         className="header col s12 light"
->
+                      >
                         Sometimes asking others what they think can help you to discover your own true feelings
-</h5>,
+                      </h5>,
                       "className": "row center",
                     },
                     "ref": null,
@@ -3084,43 +3083,43 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="bg-image-container"
->
+              >
                 <div
-                                className="bg-image"
+                  className="bg-image"
                 />
-</div>,
+              </div>,
               <div
                 className="bg-container"
->
+              >
                 <div
-                                className="container"
+                  className="container"
                 >
-                                <div
-                                                className="section"
-                                >
-                                                <div
-                                                                className="row center"
-                                                >
-                                                                <h5
-                                                                                className="header col s12 light"
-                                                                >
-                                                                                Hone your decision-making instincts by joining our community of opinionated users.
-                                                                </h5>
-                                                </div>
-                                                <div
-                                                                className="row center"
-                                                >
-                                                                <a
-                                                                                className="btn-large waves-effect waves-light"
-                                                                                href="/auth/google"
-                                                                                id="download-button"
-                                                                >
-                                                                                Get Started
-                                                                </a>
-                                                </div>
-                                </div>
+                  <div
+                    className="section"
+                  >
+                    <div
+                      className="row center"
+                    >
+                      <h5
+                        className="header col s12 light"
+                      >
+                        Hone your decision-making instincts by joining our community of opinionated users.
+                      </h5>
+                    </div>
+                    <div
+                      className="row center"
+                    >
+                      <a
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
+                      >
+                        Get Started
+                      </a>
+                    </div>
+                  </div>
                 </div>
-</div>,
+              </div>,
             ],
             "className": "wrapper section-4 bg",
           },
@@ -3133,7 +3132,7 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="bg-image"
-/>,
+                />,
                 "className": "bg-image-container",
               },
               "ref": null,
@@ -3157,32 +3156,32 @@ ShallowWrapper {
               "props": Object {
                 "children": <div
                   className="container"
->
+                >
                   <div
-                                    className="section"
+                    className="section"
                   >
-                                    <div
-                                                      className="row center"
-                                    >
-                                                      <h5
-                                                                        className="header col s12 light"
-                                                      >
-                                                                        Hone your decision-making instincts by joining our community of opinionated users.
-                                                      </h5>
-                                    </div>
-                                    <div
-                                                      className="row center"
-                                    >
-                                                      <a
-                                                                        className="btn-large waves-effect waves-light"
-                                                                        href="/auth/google"
-                                                                        id="download-button"
-                                                      >
-                                                                        Get Started
-                                                      </a>
-                                    </div>
+                    <div
+                      className="row center"
+                    >
+                      <h5
+                        className="header col s12 light"
+                      >
+                        Hone your decision-making instincts by joining our community of opinionated users.
+                      </h5>
+                    </div>
+                    <div
+                      className="row center"
+                    >
+                      <a
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
+                      >
+                        Get Started
+                      </a>
+                    </div>
                   </div>
-</div>,
+                </div>,
                 "className": "bg-container",
               },
               "ref": null,
@@ -3193,28 +3192,28 @@ ShallowWrapper {
                 "props": Object {
                   "children": <div
                     className="section"
->
+                  >
                     <div
-                                        className="row center"
+                      className="row center"
                     >
-                                        <h5
-                                                            className="header col s12 light"
-                                        >
-                                                            Hone your decision-making instincts by joining our community of opinionated users.
-                                        </h5>
+                      <h5
+                        className="header col s12 light"
+                      >
+                        Hone your decision-making instincts by joining our community of opinionated users.
+                      </h5>
                     </div>
                     <div
-                                        className="row center"
+                      className="row center"
                     >
-                                        <a
-                                                            className="btn-large waves-effect waves-light"
-                                                            href="/auth/google"
-                                                            id="download-button"
-                                        >
-                                                            Get Started
-                                        </a>
+                      <a
+                        className="btn-large waves-effect waves-light"
+                        href="/auth/google"
+                        id="download-button"
+                      >
+                        Get Started
+                      </a>
                     </div>
-</div>,
+                  </div>,
                   "className": "container",
                 },
                 "ref": null,
@@ -3226,24 +3225,24 @@ ShallowWrapper {
                     "children": Array [
                       <div
                         className="row center"
->
+                      >
                         <h5
-                                                className="header col s12 light"
+                          className="header col s12 light"
                         >
-                                                Hone your decision-making instincts by joining our community of opinionated users.
+                          Hone your decision-making instincts by joining our community of opinionated users.
                         </h5>
-</div>,
+                      </div>,
                       <div
                         className="row center"
->
+                      >
                         <a
-                                                className="btn-large waves-effect waves-light"
-                                                href="/auth/google"
-                                                id="download-button"
+                          className="btn-large waves-effect waves-light"
+                          href="/auth/google"
+                          id="download-button"
                         >
-                                                Get Started
+                          Get Started
                         </a>
-</div>,
+                      </div>,
                     ],
                     "className": "section",
                   },
@@ -3256,9 +3255,9 @@ ShallowWrapper {
                       "props": Object {
                         "children": <h5
                           className="header col s12 light"
->
+                        >
                           Hone your decision-making instincts by joining our community of opinionated users.
-</h5>,
+                        </h5>,
                         "className": "row center",
                       },
                       "ref": null,
@@ -3285,9 +3284,9 @@ ShallowWrapper {
                           className="btn-large waves-effect waves-light"
                           href="/auth/google"
                           id="download-button"
->
+                        >
                           Get Started
-</a>,
+                        </a>,
                         "className": "row center",
                       },
                       "ref": null,
@@ -3325,6 +3324,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,

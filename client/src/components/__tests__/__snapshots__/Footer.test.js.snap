@@ -2,13 +2,13 @@
 
 exports[`Footer renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Footer />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -20,104 +20,104 @@ ShallowWrapper {
       "children": Array [
         <div
           className="container"
->
+        >
           <div
-                    className="row"
+            className="row"
           >
-                    <div
-                              className="col l9 s12"
-                    >
-                              <h5
-                                        className="white-text"
-                              >
-                                        Simple Polls
-                              </h5>
-                              <p
-                                        className="grey-text text-lighten-3"
-                              >
-                                        <strong>
-                                                  Hello!
-                                        </strong>
-                                         Thank you for visiting. This webapp was created as a practice exercise for
-                                         
-                                        <a
-                                                  href="https://dougwt.com"
-                                        >
-                                                  my portfolio
-                                        </a>
-                                         and should be considered very 
-                                        <em>
-                                                  experimental
-                                        </em>
-                                        . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
-                                         
-                                        <a
-                                                  href="https://github.com/dougwt/polls"
-                                        >
-                                                  GitHub repository
-                                        </a>
-                                        .
-                              </p>
-                    </div>
-                    <div
-                              className="col l3 s12 nav"
-                    >
-                              <h5
-                                        className="white-text"
-                              >
-                                        Site Navigation
-                              </h5>
-                              <ul>
-                                        <li>
-                                                  <a
-                                                            className="white-text"
-                                                            href="#!"
-                                                  >
-                                                            Homepage
-                                                  </a>
-                                        </li>
-                                        <li>
-                                                  <a
-                                                            className="white-text"
-                                                            href="#!"
-                                                  >
-                                                            Dashboard
-                                                  </a>
-                                        </li>
-                                        <li>
-                                                  <a
-                                                            className="white-text"
-                                                            href="#!"
-                                                  >
-                                                            Create a Poll
-                                                  </a>
-                                        </li>
-                              </ul>
-                    </div>
+            <div
+              className="col l9 s12"
+            >
+              <h5
+                className="white-text"
+              >
+                Simple Polls
+              </h5>
+              <p
+                className="grey-text text-lighten-3"
+              >
+                <strong>
+                  Hello!
+                </strong>
+                 Thank you for visiting. This webapp was created as a practice exercise for
+                 
+                <a
+                  href="https://dougwt.com"
+                >
+                  my portfolio
+                </a>
+                 and should be considered very 
+                <em>
+                  experimental
+                </em>
+                . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                 
+                <a
+                  href="https://github.com/dougwt/polls"
+                >
+                  GitHub repository
+                </a>
+                .
+              </p>
+            </div>
+            <div
+              className="col l3 s12 nav"
+            >
+              <h5
+                className="white-text"
+              >
+                Site Navigation
+              </h5>
+              <ul>
+                <li>
+                  <a
+                    className="white-text"
+                    href="#!"
+                  >
+                    Homepage
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="white-text"
+                    href="#!"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="white-text"
+                    href="#!"
+                  >
+                    Create a Poll
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-</div>,
+        </div>,
         <div
           className="footer-copyright"
->
+        >
           <div
-                    className="container"
+            className="container"
           >
-                    Made with 
-                    <span
-                              className="heart"
-                    >
-                              ♥
-                    </span>
-                     by
-                     
-                    <a
-                              className="text-lighten-3"
-                              href="https://dougwt.com"
-                    >
-                              @dougwt
-                    </a>
+            Made with 
+            <span
+              className="heart"
+            >
+              ♥
+            </span>
+             by
+             
+            <a
+              className="text-lighten-3"
+              href="https://dougwt.com"
+            >
+              @dougwt
+            </a>
           </div>
-</div>,
+        </div>,
       ],
       "className": "page-footer",
     },
@@ -130,78 +130,78 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="row"
->
+          >
             <div
-                        className="col l9 s12"
+              className="col l9 s12"
             >
-                        <h5
-                                    className="white-text"
-                        >
-                                    Simple Polls
-                        </h5>
-                        <p
-                                    className="grey-text text-lighten-3"
-                        >
-                                    <strong>
-                                                Hello!
-                                    </strong>
-                                     Thank you for visiting. This webapp was created as a practice exercise for
-                                     
-                                    <a
-                                                href="https://dougwt.com"
-                                    >
-                                                my portfolio
-                                    </a>
-                                     and should be considered very 
-                                    <em>
-                                                experimental
-                                    </em>
-                                    . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
-                                     
-                                    <a
-                                                href="https://github.com/dougwt/polls"
-                                    >
-                                                GitHub repository
-                                    </a>
-                                    .
-                        </p>
+              <h5
+                className="white-text"
+              >
+                Simple Polls
+              </h5>
+              <p
+                className="grey-text text-lighten-3"
+              >
+                <strong>
+                  Hello!
+                </strong>
+                 Thank you for visiting. This webapp was created as a practice exercise for
+                 
+                <a
+                  href="https://dougwt.com"
+                >
+                  my portfolio
+                </a>
+                 and should be considered very 
+                <em>
+                  experimental
+                </em>
+                . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                 
+                <a
+                  href="https://github.com/dougwt/polls"
+                >
+                  GitHub repository
+                </a>
+                .
+              </p>
             </div>
             <div
-                        className="col l3 s12 nav"
+              className="col l3 s12 nav"
             >
-                        <h5
-                                    className="white-text"
-                        >
-                                    Site Navigation
-                        </h5>
-                        <ul>
-                                    <li>
-                                                <a
-                                                            className="white-text"
-                                                            href="#!"
-                                                >
-                                                            Homepage
-                                                </a>
-                                    </li>
-                                    <li>
-                                                <a
-                                                            className="white-text"
-                                                            href="#!"
-                                                >
-                                                            Dashboard
-                                                </a>
-                                    </li>
-                                    <li>
-                                                <a
-                                                            className="white-text"
-                                                            href="#!"
-                                                >
-                                                            Create a Poll
-                                                </a>
-                                    </li>
-                        </ul>
+              <h5
+                className="white-text"
+              >
+                Site Navigation
+              </h5>
+              <ul>
+                <li>
+                  <a
+                    className="white-text"
+                    href="#!"
+                  >
+                    Homepage
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="white-text"
+                    href="#!"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="white-text"
+                    href="#!"
+                  >
+                    Create a Poll
+                  </a>
+                </li>
+              </ul>
             </div>
-</div>,
+          </div>,
           "className": "container",
         },
         "ref": null,
@@ -213,74 +213,74 @@ ShallowWrapper {
             "children": Array [
               <div
                 className="col l9 s12"
->
+              >
                 <h5
-                                className="white-text"
+                  className="white-text"
                 >
-                                Simple Polls
+                  Simple Polls
                 </h5>
                 <p
-                                className="grey-text text-lighten-3"
+                  className="grey-text text-lighten-3"
                 >
-                                <strong>
-                                                Hello!
-                                </strong>
-                                 Thank you for visiting. This webapp was created as a practice exercise for
-                                 
-                                <a
-                                                href="https://dougwt.com"
-                                >
-                                                my portfolio
-                                </a>
-                                 and should be considered very 
-                                <em>
-                                                experimental
-                                </em>
-                                . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
-                                 
-                                <a
-                                                href="https://github.com/dougwt/polls"
-                                >
-                                                GitHub repository
-                                </a>
-                                .
+                  <strong>
+                    Hello!
+                  </strong>
+                   Thank you for visiting. This webapp was created as a practice exercise for
+                   
+                  <a
+                    href="https://dougwt.com"
+                  >
+                    my portfolio
+                  </a>
+                   and should be considered very 
+                  <em>
+                    experimental
+                  </em>
+                  . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                   
+                  <a
+                    href="https://github.com/dougwt/polls"
+                  >
+                    GitHub repository
+                  </a>
+                  .
                 </p>
-</div>,
+              </div>,
               <div
                 className="col l3 s12 nav"
->
+              >
                 <h5
-                                className="white-text"
+                  className="white-text"
                 >
-                                Site Navigation
+                  Site Navigation
                 </h5>
                 <ul>
-                                <li>
-                                                <a
-                                                                className="white-text"
-                                                                href="#!"
-                                                >
-                                                                Homepage
-                                                </a>
-                                </li>
-                                <li>
-                                                <a
-                                                                className="white-text"
-                                                                href="#!"
-                                                >
-                                                                Dashboard
-                                                </a>
-                                </li>
-                                <li>
-                                                <a
-                                                                className="white-text"
-                                                                href="#!"
-                                                >
-                                                                Create a Poll
-                                                </a>
-                                </li>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Homepage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Create a Poll
+                    </a>
+                  </li>
                 </ul>
-</div>,
+              </div>,
             ],
             "className": "row",
           },
@@ -294,35 +294,35 @@ ShallowWrapper {
                 "children": Array [
                   <h5
                     className="white-text"
->
+                  >
                     Simple Polls
-</h5>,
+                  </h5>,
                   <p
                     className="grey-text text-lighten-3"
->
+                  >
                     <strong>
-                                        Hello!
+                      Hello!
                     </strong>
                      Thank you for visiting. This webapp was created as a practice exercise for
                      
                     <a
-                                        href="https://dougwt.com"
+                      href="https://dougwt.com"
                     >
-                                        my portfolio
+                      my portfolio
                     </a>
                      and should be considered very 
                     <em>
-                                        experimental
+                      experimental
                     </em>
                     . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
                      
                     <a
-                                        href="https://github.com/dougwt/polls"
+                      href="https://github.com/dougwt/polls"
                     >
-                                        GitHub repository
+                      GitHub repository
                     </a>
                     .
-</p>,
+                  </p>,
                 ],
                 "className": "col l9 s12",
               },
@@ -348,25 +348,25 @@ ShallowWrapper {
                     "children": Array [
                       <strong>
                         Hello!
-</strong>,
+                      </strong>,
                       " Thank you for visiting. This webapp was created as a practice exercise for",
                       " ",
                       <a
                         href="https://dougwt.com"
->
+                      >
                         my portfolio
-</a>,
+                      </a>,
                       " and should be considered very ",
                       <em>
                         experimental
-</em>,
+                      </em>,
                       ". It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the",
                       " ",
                       <a
                         href="https://github.com/dougwt/polls"
->
+                      >
                         GitHub repository
-</a>,
+                      </a>,
                       ".",
                     ],
                     "className": "grey-text text-lighten-3",
@@ -439,35 +439,35 @@ ShallowWrapper {
                 "children": Array [
                   <h5
                     className="white-text"
->
+                  >
                     Site Navigation
-</h5>,
+                  </h5>,
                   <ul>
                     <li>
-                                        <a
-                                                            className="white-text"
-                                                            href="#!"
-                                        >
-                                                            Homepage
-                                        </a>
+                      <a
+                        className="white-text"
+                        href="#!"
+                      >
+                        Homepage
+                      </a>
                     </li>
                     <li>
-                                        <a
-                                                            className="white-text"
-                                                            href="#!"
-                                        >
-                                                            Dashboard
-                                        </a>
+                      <a
+                        className="white-text"
+                        href="#!"
+                      >
+                        Dashboard
+                      </a>
                     </li>
                     <li>
-                                        <a
-                                                            className="white-text"
-                                                            href="#!"
-                                        >
-                                                            Create a Poll
-                                        </a>
+                      <a
+                        className="white-text"
+                        href="#!"
+                      >
+                        Create a Poll
+                      </a>
                     </li>
-</ul>,
+                  </ul>,
                 ],
                 "className": "col l3 s12 nav",
               },
@@ -493,28 +493,28 @@ ShallowWrapper {
                     "children": Array [
                       <li>
                         <a
-                                                className="white-text"
-                                                href="#!"
+                          className="white-text"
+                          href="#!"
                         >
-                                                Homepage
+                          Homepage
                         </a>
-</li>,
+                      </li>,
                       <li>
                         <a
-                                                className="white-text"
-                                                href="#!"
+                          className="white-text"
+                          href="#!"
                         >
-                                                Dashboard
+                          Dashboard
                         </a>
-</li>,
+                      </li>,
                       <li>
                         <a
-                                                className="white-text"
-                                                href="#!"
+                          className="white-text"
+                          href="#!"
                         >
-                                                Create a Poll
+                          Create a Poll
                         </a>
-</li>,
+                      </li>,
                     ],
                   },
                   "ref": null,
@@ -527,9 +527,9 @@ ShallowWrapper {
                         "children": <a
                           className="white-text"
                           href="#!"
->
+                        >
                           Homepage
-</a>,
+                        </a>,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -555,9 +555,9 @@ ShallowWrapper {
                         "children": <a
                           className="white-text"
                           href="#!"
->
+                        >
                           Dashboard
-</a>,
+                        </a>,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -583,9 +583,9 @@ ShallowWrapper {
                         "children": <a
                           className="white-text"
                           href="#!"
->
+                        >
                           Create a Poll
-</a>,
+                        </a>,
                       },
                       "ref": null,
                       "rendered": Object {
@@ -621,22 +621,22 @@ ShallowWrapper {
         "props": Object {
           "children": <div
             className="container"
->
+          >
             Made with 
             <span
-                        className="heart"
+              className="heart"
             >
-                        ♥
+              ♥
             </span>
              by
              
             <a
-                        className="text-lighten-3"
-                        href="https://dougwt.com"
+              className="text-lighten-3"
+              href="https://dougwt.com"
             >
-                        @dougwt
+              @dougwt
             </a>
-</div>,
+          </div>,
           "className": "footer-copyright",
         },
         "ref": null,
@@ -649,17 +649,17 @@ ShallowWrapper {
               "Made with ",
               <span
                 className="heart"
->
+              >
                 ♥
-</span>,
+              </span>,
               " by",
               " ",
               <a
                 className="text-lighten-3"
                 href="https://dougwt.com"
->
+              >
                 @dougwt
-</a>,
+              </a>,
             ],
             "className": "container",
           },
@@ -710,104 +710,104 @@ ShallowWrapper {
         "children": Array [
           <div
             className="container"
->
+          >
             <div
-                        className="row"
+              className="row"
             >
-                        <div
-                                    className="col l9 s12"
-                        >
-                                    <h5
-                                                className="white-text"
-                                    >
-                                                Simple Polls
-                                    </h5>
-                                    <p
-                                                className="grey-text text-lighten-3"
-                                    >
-                                                <strong>
-                                                            Hello!
-                                                </strong>
-                                                 Thank you for visiting. This webapp was created as a practice exercise for
-                                                 
-                                                <a
-                                                            href="https://dougwt.com"
-                                                >
-                                                            my portfolio
-                                                </a>
-                                                 and should be considered very 
-                                                <em>
-                                                            experimental
-                                                </em>
-                                                . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
-                                                 
-                                                <a
-                                                            href="https://github.com/dougwt/polls"
-                                                >
-                                                            GitHub repository
-                                                </a>
-                                                .
-                                    </p>
-                        </div>
-                        <div
-                                    className="col l3 s12 nav"
-                        >
-                                    <h5
-                                                className="white-text"
-                                    >
-                                                Site Navigation
-                                    </h5>
-                                    <ul>
-                                                <li>
-                                                            <a
-                                                                        className="white-text"
-                                                                        href="#!"
-                                                            >
-                                                                        Homepage
-                                                            </a>
-                                                </li>
-                                                <li>
-                                                            <a
-                                                                        className="white-text"
-                                                                        href="#!"
-                                                            >
-                                                                        Dashboard
-                                                            </a>
-                                                </li>
-                                                <li>
-                                                            <a
-                                                                        className="white-text"
-                                                                        href="#!"
-                                                            >
-                                                                        Create a Poll
-                                                            </a>
-                                                </li>
-                                    </ul>
-                        </div>
+              <div
+                className="col l9 s12"
+              >
+                <h5
+                  className="white-text"
+                >
+                  Simple Polls
+                </h5>
+                <p
+                  className="grey-text text-lighten-3"
+                >
+                  <strong>
+                    Hello!
+                  </strong>
+                   Thank you for visiting. This webapp was created as a practice exercise for
+                   
+                  <a
+                    href="https://dougwt.com"
+                  >
+                    my portfolio
+                  </a>
+                   and should be considered very 
+                  <em>
+                    experimental
+                  </em>
+                  . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                   
+                  <a
+                    href="https://github.com/dougwt/polls"
+                  >
+                    GitHub repository
+                  </a>
+                  .
+                </p>
+              </div>
+              <div
+                className="col l3 s12 nav"
+              >
+                <h5
+                  className="white-text"
+                >
+                  Site Navigation
+                </h5>
+                <ul>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Homepage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Create a Poll
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-</div>,
+          </div>,
           <div
             className="footer-copyright"
->
+          >
             <div
-                        className="container"
+              className="container"
             >
-                        Made with 
-                        <span
-                                    className="heart"
-                        >
-                                    ♥
-                        </span>
-                         by
-                         
-                        <a
-                                    className="text-lighten-3"
-                                    href="https://dougwt.com"
-                        >
-                                    @dougwt
-                        </a>
+              Made with 
+              <span
+                className="heart"
+              >
+                ♥
+              </span>
+               by
+               
+              <a
+                className="text-lighten-3"
+                href="https://dougwt.com"
+              >
+                @dougwt
+              </a>
             </div>
-</div>,
+          </div>,
         ],
         "className": "page-footer",
       },
@@ -820,78 +820,78 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="row"
->
+            >
               <div
-                            className="col l9 s12"
+                className="col l9 s12"
               >
-                            <h5
-                                          className="white-text"
-                            >
-                                          Simple Polls
-                            </h5>
-                            <p
-                                          className="grey-text text-lighten-3"
-                            >
-                                          <strong>
-                                                        Hello!
-                                          </strong>
-                                           Thank you for visiting. This webapp was created as a practice exercise for
-                                           
-                                          <a
-                                                        href="https://dougwt.com"
-                                          >
-                                                        my portfolio
-                                          </a>
-                                           and should be considered very 
-                                          <em>
-                                                        experimental
-                                          </em>
-                                          . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
-                                           
-                                          <a
-                                                        href="https://github.com/dougwt/polls"
-                                          >
-                                                        GitHub repository
-                                          </a>
-                                          .
-                            </p>
+                <h5
+                  className="white-text"
+                >
+                  Simple Polls
+                </h5>
+                <p
+                  className="grey-text text-lighten-3"
+                >
+                  <strong>
+                    Hello!
+                  </strong>
+                   Thank you for visiting. This webapp was created as a practice exercise for
+                   
+                  <a
+                    href="https://dougwt.com"
+                  >
+                    my portfolio
+                  </a>
+                   and should be considered very 
+                  <em>
+                    experimental
+                  </em>
+                  . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                   
+                  <a
+                    href="https://github.com/dougwt/polls"
+                  >
+                    GitHub repository
+                  </a>
+                  .
+                </p>
               </div>
               <div
-                            className="col l3 s12 nav"
+                className="col l3 s12 nav"
               >
-                            <h5
-                                          className="white-text"
-                            >
-                                          Site Navigation
-                            </h5>
-                            <ul>
-                                          <li>
-                                                        <a
-                                                                      className="white-text"
-                                                                      href="#!"
-                                                        >
-                                                                      Homepage
-                                                        </a>
-                                          </li>
-                                          <li>
-                                                        <a
-                                                                      className="white-text"
-                                                                      href="#!"
-                                                        >
-                                                                      Dashboard
-                                                        </a>
-                                          </li>
-                                          <li>
-                                                        <a
-                                                                      className="white-text"
-                                                                      href="#!"
-                                                        >
-                                                                      Create a Poll
-                                                        </a>
-                                          </li>
-                            </ul>
+                <h5
+                  className="white-text"
+                >
+                  Site Navigation
+                </h5>
+                <ul>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Homepage
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="white-text"
+                      href="#!"
+                    >
+                      Create a Poll
+                    </a>
+                  </li>
+                </ul>
               </div>
-</div>,
+            </div>,
             "className": "container",
           },
           "ref": null,
@@ -903,74 +903,74 @@ ShallowWrapper {
               "children": Array [
                 <div
                   className="col l9 s12"
->
+                >
                   <h5
-                                    className="white-text"
+                    className="white-text"
                   >
-                                    Simple Polls
+                    Simple Polls
                   </h5>
                   <p
-                                    className="grey-text text-lighten-3"
+                    className="grey-text text-lighten-3"
                   >
-                                    <strong>
-                                                      Hello!
-                                    </strong>
-                                     Thank you for visiting. This webapp was created as a practice exercise for
-                                     
-                                    <a
-                                                      href="https://dougwt.com"
-                                    >
-                                                      my portfolio
-                                    </a>
-                                     and should be considered very 
-                                    <em>
-                                                      experimental
-                                    </em>
-                                    . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
-                                     
-                                    <a
-                                                      href="https://github.com/dougwt/polls"
-                                    >
-                                                      GitHub repository
-                                    </a>
-                                    .
+                    <strong>
+                      Hello!
+                    </strong>
+                     Thank you for visiting. This webapp was created as a practice exercise for
+                     
+                    <a
+                      href="https://dougwt.com"
+                    >
+                      my portfolio
+                    </a>
+                     and should be considered very 
+                    <em>
+                      experimental
+                    </em>
+                    . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
+                     
+                    <a
+                      href="https://github.com/dougwt/polls"
+                    >
+                      GitHub repository
+                    </a>
+                    .
                   </p>
-</div>,
+                </div>,
                 <div
                   className="col l3 s12 nav"
->
+                >
                   <h5
-                                    className="white-text"
+                    className="white-text"
                   >
-                                    Site Navigation
+                    Site Navigation
                   </h5>
                   <ul>
-                                    <li>
-                                                      <a
-                                                                        className="white-text"
-                                                                        href="#!"
-                                                      >
-                                                                        Homepage
-                                                      </a>
-                                    </li>
-                                    <li>
-                                                      <a
-                                                                        className="white-text"
-                                                                        href="#!"
-                                                      >
-                                                                        Dashboard
-                                                      </a>
-                                    </li>
-                                    <li>
-                                                      <a
-                                                                        className="white-text"
-                                                                        href="#!"
-                                                      >
-                                                                        Create a Poll
-                                                      </a>
-                                    </li>
+                    <li>
+                      <a
+                        className="white-text"
+                        href="#!"
+                      >
+                        Homepage
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="white-text"
+                        href="#!"
+                      >
+                        Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="white-text"
+                        href="#!"
+                      >
+                        Create a Poll
+                      </a>
+                    </li>
                   </ul>
-</div>,
+                </div>,
               ],
               "className": "row",
             },
@@ -984,35 +984,35 @@ ShallowWrapper {
                   "children": Array [
                     <h5
                       className="white-text"
->
+                    >
                       Simple Polls
-</h5>,
+                    </h5>,
                     <p
                       className="grey-text text-lighten-3"
->
+                    >
                       <strong>
-                                            Hello!
+                        Hello!
                       </strong>
                        Thank you for visiting. This webapp was created as a practice exercise for
                        
                       <a
-                                            href="https://dougwt.com"
+                        href="https://dougwt.com"
                       >
-                                            my portfolio
+                        my portfolio
                       </a>
                        and should be considered very 
                       <em>
-                                            experimental
+                        experimental
                       </em>
                       . It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the
                        
                       <a
-                                            href="https://github.com/dougwt/polls"
+                        href="https://github.com/dougwt/polls"
                       >
-                                            GitHub repository
+                        GitHub repository
                       </a>
                       .
-</p>,
+                    </p>,
                   ],
                   "className": "col l9 s12",
                 },
@@ -1038,25 +1038,25 @@ ShallowWrapper {
                       "children": Array [
                         <strong>
                           Hello!
-</strong>,
+                        </strong>,
                         " Thank you for visiting. This webapp was created as a practice exercise for",
                         " ",
                         <a
                           href="https://dougwt.com"
->
+                        >
                           my portfolio
-</a>,
+                        </a>,
                         " and should be considered very ",
                         <em>
                           experimental
-</em>,
+                        </em>,
                         ". It was developed in JavaScript using React and Express. To find out more, or to view the source code, visit the",
                         " ",
                         <a
                           href="https://github.com/dougwt/polls"
->
+                        >
                           GitHub repository
-</a>,
+                        </a>,
                         ".",
                       ],
                       "className": "grey-text text-lighten-3",
@@ -1129,35 +1129,35 @@ ShallowWrapper {
                   "children": Array [
                     <h5
                       className="white-text"
->
+                    >
                       Site Navigation
-</h5>,
+                    </h5>,
                     <ul>
                       <li>
-                                            <a
-                                                                  className="white-text"
-                                                                  href="#!"
-                                            >
-                                                                  Homepage
-                                            </a>
+                        <a
+                          className="white-text"
+                          href="#!"
+                        >
+                          Homepage
+                        </a>
                       </li>
                       <li>
-                                            <a
-                                                                  className="white-text"
-                                                                  href="#!"
-                                            >
-                                                                  Dashboard
-                                            </a>
+                        <a
+                          className="white-text"
+                          href="#!"
+                        >
+                          Dashboard
+                        </a>
                       </li>
                       <li>
-                                            <a
-                                                                  className="white-text"
-                                                                  href="#!"
-                                            >
-                                                                  Create a Poll
-                                            </a>
+                        <a
+                          className="white-text"
+                          href="#!"
+                        >
+                          Create a Poll
+                        </a>
                       </li>
-</ul>,
+                    </ul>,
                   ],
                   "className": "col l3 s12 nav",
                 },
@@ -1183,28 +1183,28 @@ ShallowWrapper {
                       "children": Array [
                         <li>
                           <a
-                                                    className="white-text"
-                                                    href="#!"
+                            className="white-text"
+                            href="#!"
                           >
-                                                    Homepage
+                            Homepage
                           </a>
-</li>,
+                        </li>,
                         <li>
                           <a
-                                                    className="white-text"
-                                                    href="#!"
+                            className="white-text"
+                            href="#!"
                           >
-                                                    Dashboard
+                            Dashboard
                           </a>
-</li>,
+                        </li>,
                         <li>
                           <a
-                                                    className="white-text"
-                                                    href="#!"
+                            className="white-text"
+                            href="#!"
                           >
-                                                    Create a Poll
+                            Create a Poll
                           </a>
-</li>,
+                        </li>,
                       ],
                     },
                     "ref": null,
@@ -1217,9 +1217,9 @@ ShallowWrapper {
                           "children": <a
                             className="white-text"
                             href="#!"
->
+                          >
                             Homepage
-</a>,
+                          </a>,
                         },
                         "ref": null,
                         "rendered": Object {
@@ -1245,9 +1245,9 @@ ShallowWrapper {
                           "children": <a
                             className="white-text"
                             href="#!"
->
+                          >
                             Dashboard
-</a>,
+                          </a>,
                         },
                         "ref": null,
                         "rendered": Object {
@@ -1273,9 +1273,9 @@ ShallowWrapper {
                           "children": <a
                             className="white-text"
                             href="#!"
->
+                          >
                             Create a Poll
-</a>,
+                          </a>,
                         },
                         "ref": null,
                         "rendered": Object {
@@ -1311,22 +1311,22 @@ ShallowWrapper {
           "props": Object {
             "children": <div
               className="container"
->
+            >
               Made with 
               <span
-                            className="heart"
+                className="heart"
               >
-                            ♥
+                ♥
               </span>
                by
                
               <a
-                            className="text-lighten-3"
-                            href="https://dougwt.com"
+                className="text-lighten-3"
+                href="https://dougwt.com"
               >
-                            @dougwt
+                @dougwt
               </a>
-</div>,
+            </div>,
             "className": "footer-copyright",
           },
           "ref": null,
@@ -1339,17 +1339,17 @@ ShallowWrapper {
                 "Made with ",
                 <span
                   className="heart"
->
+                >
                   ♥
-</span>,
+                </span>,
                 " by",
                 " ",
                 <a
                   className="text-lighten-3"
                   href="https://dougwt.com"
->
+                >
                   @dougwt
-</a>,
+                </a>,
               ],
               "className": "container",
             },
@@ -1396,6 +1396,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,

@@ -2,32 +2,32 @@
 
 exports[`PollFormReview renders properly 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PollFormReview
     error={null}
     formValues={
-        Object {
-            "choices": Array [
-              0,
-              1,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-            ],
-            "question": "Who is your favorite Starfleet captain?",
-          }
+      Object {
+        "choices": Array [
+          0,
+          1,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+        ],
+        "question": "Who is your favorite Starfleet captain?",
+      }
     }
-    onCancel={[Function]}
-    onReset={[Function]}
-    onSave={[Function]}
+    onCancel={[MockFunction]}
+    onReset={[MockFunction]}
+    onSave={[MockFunction]}
     waiting={false}
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -39,54 +39,54 @@ ShallowWrapper {
       "children": Array [
         <h5>
           Please confirm your poll
-</h5>,
+        </h5>,
         <Connect(Connect(ComposedComponent))
           disabled={true}
           formValues={
-                    Object {
-                              "choices": Array [
-                                0,
-                                1,
-                                undefined,
-                                undefined,
-                                undefined,
-                                undefined,
-                              ],
-                              "question": "Who is your favorite Starfleet captain?",
-                            }
+            Object {
+              "choices": Array [
+                0,
+                1,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ],
+              "question": "Who is your favorite Starfleet captain?",
+            }
           }
-/>,
+        />,
         <Row>
            
-</Row>,
+        </Row>,
         <Row>
           <Button
-                    className="red btn-back white-text"
-                    node="a"
-                    onClick={[Function]}
-                    waves="light"
+            className="red btn-back white-text"
+            node="a"
+            onClick={[MockFunction]}
+            waves="light"
           >
-                    Back
-                    <Icon
-                              left={true}
-                    >
-                              keyboard_arrow_left
-                    </Icon>
+            Back
+            <Icon
+              left={true}
+            >
+              keyboard_arrow_left
+            </Icon>
           </Button>
           <Button
-                    className="teal btn-next right white-text"
-                    node="button"
-                    onClick={[Function]}
-                    waves="light"
+            className="teal btn-next right white-text"
+            node="button"
+            onClick={[Function]}
+            waves="light"
           >
-                    Create
-                    <Icon
-                              right={true}
-                    >
-                              create
-                    </Icon>
+            Create
+            <Icon
+              right={true}
+            >
+              create
+            </Icon>
           </Button>
-</Row>,
+        </Row>,
       ],
     },
     "ref": null,
@@ -144,29 +144,29 @@ ShallowWrapper {
             <Button
               className="red btn-back white-text"
               node="a"
-              onClick={[Function]}
+              onClick={[MockFunction]}
               waves="light"
->
+            >
               Back
               <Icon
-                            left={true}
+                left={true}
               >
-                            keyboard_arrow_left
+                keyboard_arrow_left
               </Icon>
-</Button>,
+            </Button>,
             <Button
               className="teal btn-next right white-text"
               node="button"
               onClick={[Function]}
               waves="light"
->
+            >
               Create
               <Icon
-                            right={true}
+                right={true}
               >
-                            create
+                create
               </Icon>
-</Button>,
+            </Button>,
           ],
         },
         "ref": null,
@@ -180,13 +180,13 @@ ShallowWrapper {
                 "Back",
                 <Icon
                   left={true}
->
+                >
                   keyboard_arrow_left
-</Icon>,
+                </Icon>,
               ],
               "className": "red btn-back white-text",
               "node": "a",
-              "onClick": [Function],
+              "onClick": [MockFunction],
               "waves": "light",
             },
             "ref": null,
@@ -195,7 +195,7 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "children": "keyboard_arrow_left",
                   "left": true,
@@ -216,9 +216,9 @@ ShallowWrapper {
                 "Create",
                 <Icon
                   right={true}
->
+                >
                   create
-</Icon>,
+                </Icon>,
               ],
               "className": "teal btn-next right white-text",
               "node": "button",
@@ -231,7 +231,7 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "function",
+                "nodeType": "class",
                 "props": Object {
                   "children": "create",
                   "right": true,
@@ -258,54 +258,54 @@ ShallowWrapper {
         "children": Array [
           <h5>
             Please confirm your poll
-</h5>,
+          </h5>,
           <Connect(Connect(ComposedComponent))
             disabled={true}
             formValues={
-                        Object {
-                                    "choices": Array [
-                                      0,
-                                      1,
-                                      undefined,
-                                      undefined,
-                                      undefined,
-                                      undefined,
-                                    ],
-                                    "question": "Who is your favorite Starfleet captain?",
-                                  }
+              Object {
+                "choices": Array [
+                  0,
+                  1,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ],
+                "question": "Who is your favorite Starfleet captain?",
+              }
             }
-/>,
+          />,
           <Row>
              
-</Row>,
+          </Row>,
           <Row>
             <Button
-                        className="red btn-back white-text"
-                        node="a"
-                        onClick={[Function]}
-                        waves="light"
+              className="red btn-back white-text"
+              node="a"
+              onClick={[MockFunction]}
+              waves="light"
             >
-                        Back
-                        <Icon
-                                    left={true}
-                        >
-                                    keyboard_arrow_left
-                        </Icon>
+              Back
+              <Icon
+                left={true}
+              >
+                keyboard_arrow_left
+              </Icon>
             </Button>
             <Button
-                        className="teal btn-next right white-text"
-                        node="button"
-                        onClick={[Function]}
-                        waves="light"
+              className="teal btn-next right white-text"
+              node="button"
+              onClick={[Function]}
+              waves="light"
             >
-                        Create
-                        <Icon
-                                    right={true}
-                        >
-                                    create
-                        </Icon>
+              Create
+              <Icon
+                right={true}
+              >
+                create
+              </Icon>
             </Button>
-</Row>,
+          </Row>,
         ],
       },
       "ref": null,
@@ -363,29 +363,29 @@ ShallowWrapper {
               <Button
                 className="red btn-back white-text"
                 node="a"
-                onClick={[Function]}
+                onClick={[MockFunction]}
                 waves="light"
->
+              >
                 Back
                 <Icon
-                                left={true}
+                  left={true}
                 >
-                                keyboard_arrow_left
+                  keyboard_arrow_left
                 </Icon>
-</Button>,
+              </Button>,
               <Button
                 className="teal btn-next right white-text"
                 node="button"
                 onClick={[Function]}
                 waves="light"
->
+              >
                 Create
                 <Icon
-                                right={true}
+                  right={true}
                 >
-                                create
+                  create
                 </Icon>
-</Button>,
+              </Button>,
             ],
           },
           "ref": null,
@@ -399,13 +399,13 @@ ShallowWrapper {
                   "Back",
                   <Icon
                     left={true}
->
+                  >
                     keyboard_arrow_left
-</Icon>,
+                  </Icon>,
                 ],
                 "className": "red btn-back white-text",
                 "node": "a",
-                "onClick": [Function],
+                "onClick": [MockFunction],
                 "waves": "light",
               },
               "ref": null,
@@ -414,7 +414,7 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "keyboard_arrow_left",
                     "left": true,
@@ -435,9 +435,9 @@ ShallowWrapper {
                   "Create",
                   <Icon
                     right={true}
->
+                  >
                     create
-</Icon>,
+                  </Icon>,
                 ],
                 "className": "teal btn-next right white-text",
                 "node": "button",
@@ -450,7 +450,7 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "class",
                   "props": Object {
                     "children": "create",
                     "right": true,
@@ -473,6 +473,16 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "disableLifecycleMethods": true,
