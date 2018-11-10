@@ -8,9 +8,10 @@
     "server": "nodemon index.js",
     "test": "nodemon --exec 'mocha -R min'",
     "client": "npm run start --prefix client",
-    "init": "npm install && cd client && npm install",
+    "init": "npm install && cd client && npm install && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test-travis": "NODE_ENV=test CI=true cd client && npm install && npm run test-travis -- --coverage"
+    "test-travis": "NODE_ENV=test CI=true cd client && npm install && npm run test-travis -- --coverage",
+    "now-build": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
