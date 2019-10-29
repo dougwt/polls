@@ -5,19 +5,5 @@ env:
   mocha: true
   mongo: true
 extends:
-  - 'eslint:recommended'
-parserOptions:
-  ecmaVersion: 9
-rules:
-  indent:
-    - error
-    - 2
-  linebreak-style:
-    - error
-    - unix
-  quotes:
-    - error
-    - single
-  semi:
-    - error
-    - always
+  - 'airbnb'
+  - 'plugin:prettier/recommended'
