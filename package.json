@@ -1,17 +1,11 @@
 {
   "name": "polls",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js",
-    "test": "nodemon --exec 'mocha -R min'",
-    "client": "npm run start --prefix client",
-    "init": "npm install && cd client && npm install && npm run build",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test-travis": "NODE_ENV=test CI=true cd client && npm install && npm run test-travis -- --coverage",
-    "now-build": "cd client && react-scripts build"
+    "dev": "BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "",
   "license": "ISC",
