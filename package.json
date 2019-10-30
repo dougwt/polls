@@ -11,30 +11,49 @@
     "init": "npm install && cd client && npm install && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test-travis": "NODE_ENV=test CI=true cd client && npm install && npm run test-travis -- --coverage",
-    "now-build": "cd client && npm install && npm run build"
+    "now-build": "cd client && react-scripts build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.3.10"
+    "mongoose": "^5.3.10",
+    "axios": "^0.18.0",
+    "chart.js": "^2.7.3",
+    "http-proxy-middleware": "^0.19.0",
+    "materialize-css": "^0.100.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-chartjs-2": "^2.7.4",
+    "react-dom": "^16.6.1",
+    "react-materialize": "^2.4.8",
+    "react-redux": "^5.1.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-form": "^7.4.2",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "concurrently": "^3.6.1",
+    "axios-mock-adapter": "^1.15.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-node": "^4.0.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "mocha": "^5.2.0",
-    "passport-mock": "0.0.3",
     "prettier": "^1.18.2",
-    "sinon": "^5.1.1",
-    "supertest": "^3.3.0"
-  }
+    "redux-mock-store": "^1.5.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
