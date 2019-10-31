@@ -1,0 +1,9 @@
+{
+  "env": {
+    "NODE_ENV": "production",
+    "MONGO_URI": "@polls-mongo-connection",
+    "COOKIE_KEY": "@polls-cookie-key",
+    "GOOGLE_CLIENT_ID": "@polls-google-client-id",
+    "GOOGLE_CLIENT_SECRET": "@polls-google-client-secret"
+  }
+}
