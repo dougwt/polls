@@ -1,5 +1,11 @@
-const passport = require('passport');
+const withPassport = require('../../../lib/withPassport');
+const passport = withPassport.passport;
 
-module.exports = (req, res) => {
-  res.send('google callback');
-};
+function handler(req, res) {
+  passport.authenticate('google')(req, res, (...args) => {
+    console.log('auth callback', args);
+    return true;
+  });
+}
+
+export default withPassport(handler);
