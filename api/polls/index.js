@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const appConfig = require('../../lib/appConfig');
 const Poll = require('../../models/Poll');
 
 module.exports = (req, res) => {
@@ -7,7 +8,7 @@ module.exports = (req, res) => {
   }
 
   mongoose.Promise = global.Promise;
-  mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
+  mongoose.connect(appConfig.db.mongoURI, { useNewUrlParser: true });
 
   try {
     Poll.find({}).then(polls => {
