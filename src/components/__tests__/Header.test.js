@@ -39,11 +39,11 @@ describe('Header', () => {
     });
 
     it('doesnt show a `Sign In` lin', () => {
-      expect(wrapper.find('[href="/auth/google"]').length).toBe(0);
+      expect(wrapper.find('[href="/api/auth/google"]').length).toBe(0);
     });
 
     it('shows a `Sign Out` link', () => {
-      expect(wrapper.find('[href="/api/logout"]').length).toBe(1);
+      expect(wrapper.find('[href="/api/auth/logout"]').length).toBe(1);
     });
   });
 
@@ -57,11 +57,11 @@ describe('Header', () => {
     });
 
     it('shows a `Sign In` link', () => {
-      expect(wrapper.find('[href="/auth/google"]').length).toBe(1);
+      expect(wrapper.find('[href="/api/auth/google"]').length).toBe(1);
     });
 
     it('doesnt show a `Sign Out` link', () => {
-      expect(wrapper.find('[href="/api/logout"]').length).toBe(0);
+      expect(wrapper.find('[href="/api/auth/logout"]').length).toBe(0);
     });
   });
 });

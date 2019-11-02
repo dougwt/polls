@@ -22,13 +22,13 @@ describe('actions', () => {
 
     beforeEach(async done => {
       const mock = new MockAdapter(axios);
-      mock.onGet('/api/current_user').reply(200, 'PAYLOAD');
+      mock.onGet('/api/auth/current_user').reply(200, 'PAYLOAD');
 
       action = await getAsyncActions(actions.fetchUser);
       done();
     });
 
-    it('creates an action to fetch the currently auth\'d user', () => {
+    it("creates an action to fetch the currently auth'd user", () => {
       expect(action[0].type).toEqual(types.FETCH_USER);
       expect(action[0].payload.data).toEqual('PAYLOAD');
     });

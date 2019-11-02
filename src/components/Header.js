@@ -7,56 +7,56 @@ import logo from '../images/logo.min.svg';
 
 const renderContent = auth => {
   switch (auth) {
-  case null:
-    return;
-  case false:
-    return (
-      <li>
-        <a
-          href="/auth/google"
-          className="navbar-item waves-effect waves-light"
-          onClick={() => toggleNav(true)}
-        >
-          <i className="material-icons left">person</i>
-            Sign In with Google
-        </a>
-      </li>
-    );
-  default:
-    return (
-      <ul>
-        <li>
-          <NavLink
-            to="/polls"
-            className="waves-effect waves-light"
-            onClick={() => toggleNav(true)}
-          >
-            <i className="material-icons left">dashboard</i>
-              Dashboard
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/polls/new"
-            className="waves-effect waves-light"
-            onClick={() => toggleNav(true)}
-          >
-            <i className="material-icons left">add</i>
-              Create a Poll
-          </NavLink>
-        </li>
+    case null:
+      return;
+    case false:
+      return (
         <li>
           <a
-            href="/api/logout"
+            href="/api/auth/google"
             className="navbar-item waves-effect waves-light"
             onClick={() => toggleNav(true)}
           >
             <i className="material-icons left">person</i>
-              Sign Out
+            Sign In with Google
           </a>
         </li>
-      </ul>
-    );
+      );
+    default:
+      return (
+        <ul>
+          <li>
+            <NavLink
+              to="/polls"
+              className="waves-effect waves-light"
+              onClick={() => toggleNav(true)}
+            >
+              <i className="material-icons left">dashboard</i>
+              Dashboard
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/polls/new"
+              className="waves-effect waves-light"
+              onClick={() => toggleNav(true)}
+            >
+              <i className="material-icons left">add</i>
+              Create a Poll
+            </NavLink>
+          </li>
+          <li>
+            <a
+              href="/api/auth/logout"
+              className="navbar-item waves-effect waves-light"
+              onClick={() => toggleNav(true)}
+            >
+              <i className="material-icons left">person</i>
+              Sign Out
+            </a>
+          </li>
+        </ul>
+      );
   }
 };
 
