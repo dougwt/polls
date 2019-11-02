@@ -1,6 +1,6 @@
 const { applyMiddleware } = require('micro-mw');
+const passport = require('passport');
 const withPassport = require('../../../lib/withPassport');
-const passport = withPassport.passport;
 
 module.exports = applyMiddleware([withPassport], async (req, res) => {
   passport.authenticate('google')(req, res, (...args) => {
