@@ -1,20 +1,16 @@
-const mongoose = require('mongoose');
-const appConfig = require('../../lib/appConfig');
+const { applyMiddleware } = require('micro-mw');
 const Poll = require('../../models/Poll');
+const withMongoose = require('../../lib/withMongoose');
 
-module.exports = (req, res) => {
+module.exports = applyMiddleware([withMongoose], async (req, res) => {
   if (req.method !== 'GET') {
     return res.status(404).send({ error: 'Unsupported request method' });
   }
 
-  mongoose.Promise = global.Promise;
-  mongoose.connect(appConfig.db.mongoURI, { useNewUrlParser: true });
-
   try {
-    Poll.find({}).then(polls => {
-      return res.send(polls);
-    });
+    const polls = await Poll.find({});
+    res.send(polls);
   } catch (err) {
-    console.error(`Unable to connect to database: ${err}`);
+    console.error(`Unable to query database: ${err}`);
   }
-};
+});

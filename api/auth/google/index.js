@@ -1,10 +1,10 @@
+const { applyMiddleware } = require('micro-mw');
 const withPassport = require('../../../lib/withPassport');
 const passport = withPassport.passport;
+const withMongoose = require('../../../lib/withMongoose');
 
-function handler(req, res) {
+module.exports = applyMiddleware([withMongoose, withPassport], (req, res) => {
   passport.authenticate('google')(req, res, (...args) => {
     console.log('passport authenticated', args);
   });
-}
-
-export default withPassport(handler);
+});
