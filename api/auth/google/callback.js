@@ -1,10 +1,11 @@
 const { applyMiddleware } = require('micro-mw');
 const passport = require('passport');
 const withPassport = require('../../../lib/withPassport');
+const withMongoose = require('../../../lib/withMongoose');
 
-module.exports = applyMiddleware([withPassport], async (req, res) => {
+module.exports = applyMiddleware([withMongoose, withPassport], (req, res) => {
+  console.log('you reached the callback URI');
   passport.authenticate('google')(req, res, (...args) => {
-    console.log('auth callback', args);
-    return true;
+    res.redirect('/api/polls');
   });
 });
