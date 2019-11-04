@@ -26,7 +26,7 @@ export const Landing = props => {
               </div>
               <div className="row center">
                 <a
-                  href="/auth/google"
+                  href="/api/auth/google"
                   id="download-button"
                   className="btn-large waves-effect waves-light"
                 >
@@ -123,7 +123,7 @@ export const Landing = props => {
               </div>
               <div className="row center">
                 <a
-                  href="/auth/google"
+                  href="/api/auth/google"
                   id="download-button"
                   className="btn-large waves-effect waves-light"
                 >
