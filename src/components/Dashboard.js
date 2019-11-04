@@ -17,7 +17,8 @@ export class Dashboard extends Component {
     // is mounted. Without this, they only appear when the component is
     // present during the initial page load. This ensures that it works
     // properly when the user loads another page and navigates here.
-    window.$('ul.tabs').tabs();
+    // TODO: temporarily commented out while I determine how to fix
+    // window.$('ul.tabs').tabs();
 
     this.props.fetchPolls();
   }
@@ -84,6 +85,10 @@ function mapStateToProps(state) {
   };
 }
 
-export default compose(connect(mapStateToProps, { fetchPolls }), requireAuth)(
-  Dashboard
-);
+export default compose(
+  connect(
+    mapStateToProps,
+    { fetchPolls }
+  ),
+  requireAuth
+)(Dashboard);
