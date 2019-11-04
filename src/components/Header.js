@@ -8,7 +8,7 @@ import logo from '../images/logo.min.svg';
 const renderContent = auth => {
   switch (auth) {
     case null:
-      return;
+      return null;
     case false:
       return (
         <li>
@@ -83,9 +83,9 @@ export const Header = props => {
           <ul className="responsive">{renderContent(props.auth)}</ul>
 
           <li className="toggle">
-            <a href="javascript:void(0);" onClick={() => toggleNav()}>
+            <button type="button" onClick={() => toggleNav()}>
               <i className="material-icons">menu</i>
-            </a>
+            </button>
           </li>
         </ul>
       </div>

@@ -32,6 +32,21 @@ nav ul .toggle {
     z-index: 9;
   }
 
+  nav button,
+  nav button:focus {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: #fcfcfc;
+  }
+
+  nav button:hover {
+    background-color: #ef476f;
+  }
+
   nav ul .responsive {
     display: none;
   }
