@@ -1,4 +1,8 @@
+const { applyMiddleware } = require('micro-mw');
 const Poll = require('../../../models/Poll');
+const withMongoose = require('../../../lib/withMongoose');
+const withPassport = require('../../../lib/withPassport');
+const requireLogin = require('../../../lib/requireLogin');
 
 function fetchById(req, res) {
   const { id } = req.params;
@@ -82,15 +86,18 @@ function deleteById(req, res, next) {
     });
 }
 
-module.exports = (req, res) => {
-  switch (req.method) {
-    case 'POST':
-      return updateById(req, res);
-    case 'DELETE':
-      return deleteById(req, res);
-    case 'GET':
-      return fetchById(req, res);
-    default:
-      return res.status(404).send({ error: 'Unsupported request method' });
+module.exports = applyMiddleware(
+  [withMongoose, withPassport, requireLogin],
+  (req, res) => {
+    switch (req.method) {
+      case 'POST':
+        return updateById(req, res);
+      case 'DELETE':
+        return deleteById(req, res);
+      case 'GET':
+        return fetchById(req, res);
+      default:
+        return res.status(404).send({ error: 'Unsupported request method' });
+    }
   }
-};
+);
