@@ -39,7 +39,7 @@ nav ul .toggle {
     cursor: pointer;
     display: inline;
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     color: #fcfcfc;
   }
 
