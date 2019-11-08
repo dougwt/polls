@@ -4,6 +4,7 @@ const Poll = require('../../models/Poll');
 const withMongoose = require('../../lib/withMongoose');
 const withPassport = require('../../lib/withPassport');
 const requireLogin = require('../../lib/requireLogin');
+const logger = require('../../lib/logger');
 
 module.exports = applyMiddleware(
   [withMongoose, withPassport, requireLogin],
