@@ -6,6 +6,6 @@ const logger = require('../../../lib/logger');
 
 module.exports = applyMiddleware([withMongoose, withPassport], (req, res) => {
   passport.authenticate('google')(req, res, (...args) => {
-    logger.info('passport authenticated', args);
+    logger.debug('passport authenticated', args);
   });
 });
