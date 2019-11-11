@@ -1,5 +1,5 @@
-const { applyMiddleware } = require('micro-mw');
 const Poll = require('../../models/Poll');
+const { applyMiddleware, RequestError } = require('../../lib/applyMiddleware');
 const withLogger = require('../../lib/withLogger');
 const withMongoose = require('../../lib/withMongoose');
 const withPassport = require('../../lib/withPassport');
@@ -9,14 +9,14 @@ module.exports = applyMiddleware(
   [withLogger, withMongoose, withPassport, requireLogin],
   async (req, res) => {
     if (req.method !== 'GET') {
-      return res.status(404).json({ error: 'Unsupported request method' });
+      throw new RequestError(404, 'Unsupported request method');
     }
 
     try {
       const polls = await Poll.find({});
       return res.json(polls);
     } catch (err) {
-      return res.status(500).json({ error: '`Unable to query database' });
+      throw new RequestError(500, 'Unable to query database');
     }
   }
 );

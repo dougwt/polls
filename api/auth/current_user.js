@@ -1,4 +1,4 @@
-const { applyMiddleware } = require('micro-mw');
+const { applyMiddleware } = require('../../lib/applyMiddleware');
 const withLogger = require('../../lib/withLogger');
 const withPassport = require('../../lib/withPassport');
 const withMongoose = require('../../lib/withMongoose');
